@@ -1,0 +1,39 @@
+name: Update bills data
+
+on:
+  schedule:
+    # Once a day at 03:00 UTC (~08:30 IST). Parliament bill status changes
+    # slowly enough that daily is plenty — increase frequency during
+    # active sessions if you want, via cron syntax below.
+    - cron: "0 3 * * *"
+  workflow_dispatch: {}  # lets you trigger a run manually from the Actions tab
+
+permissions:
+  contents: write  # needed to commit the updated database + JSON back to the repo
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r scraper/requirements.txt
+
+      - name: Run scraper + scorer
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        working-directory: scraper
+        run: python update_bills.py
+
+      - name: Commit updated data
+        run: |
+          git config user.name "ceew-bills-bot"
+          git config user.email "actions@github.com"
+          git add data/bills.db site/data/bills.json
+          git diff --cached --quiet || git commit -m "Update bills data [automated]"
+          git push
