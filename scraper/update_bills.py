@@ -4,10 +4,10 @@ Entry point for the scheduled update job (run by
 
 Flow:
   1. Fetch the current bill listing from PRS (title, url, status)
-  2. For any bill not yet in the DB, whose status has changed, or whose
-     existing score is older than the current rubric version, (re)score it
-  3. Score newly-added, status-changed, or rubric-stale bills (skipping
-     any with a manual override)
+  2. For any bill not yet in the DB, or whose status has changed since
+     last scrape, fetch the full detail page
+  3. Score newly-added or status-changed bills (skipping any with a
+     manual override)
   4. Apply overrides.json (always re-applied, so an edit takes effect
      on the next run without needing a re-scrape)
   5. Export everything to site/data/bills.json for the Next.js frontend
@@ -23,6 +23,7 @@ from __future__ import annotations
 import argparse
 import json
 import logging
+import re
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -51,6 +52,13 @@ def now_iso() -> str:
 
 def _cutoff_year() -> int:
     return datetime.now(timezone.utc).year - CUTOFF_YEARS
+
+
+def _normalize_title(title: str) -> str:
+    """Lowercase, punctuation-stripped title, used only to catch duplicate
+    bill entries that ended up under two different slugs (see
+    prs_client._slug_from_url) — not used for anything user-facing."""
+    return re.sub(r"[^a-z0-9]+", " ", title.lower()).strip()
 
 
 def run(year: int | None, skip_scoring: bool, limit: int | None):
@@ -130,7 +138,7 @@ def export_json():
         rows = db.all_bills_with_scores(conn)
 
     cutoff_year = _cutoff_year()
-    bills = []
+    best_by_title: dict[str, dict] = {}
     for row in rows:
         d = dict(row)
         if d.get("year") is not None and d["year"] < cutoff_year:
@@ -141,7 +149,25 @@ def export_json():
         d["issues_bullets"] = json.loads(d.pop("issues_bullets") or "[]")
         d["needs_review"] = bool(d.get("needs_review"))
         d["is_manual_override"] = bool(d.get("is_manual_override"))
-        bills.append(d)
+
+        # Dedup safety net: if the same bill ended up under two different
+        # slugs (see prs_client._slug_from_url), keep whichever copy is
+        # actually classified over one that's null, and among equally-
+        # classified copies keep the more recently scraped one.
+        key = _normalize_title(d["title"])
+        existing = best_by_title.get(key)
+        if existing is None:
+            best_by_title[key] = d
+        else:
+            existing_classified = existing.get("sectoral_primary_area") is not None
+            new_classified = d.get("sectoral_primary_area") is not None
+            if new_classified and not existing_classified:
+                best_by_title[key] = d
+            elif new_classified == existing_classified and \
+                    d.get("last_scraped_at", "") > existing.get("last_scraped_at", ""):
+                best_by_title[key] = d
+
+    bills = list(best_by_title.values())
 
     SITE_DATA_PATH.parent.mkdir(parents=True, exist_ok=True)
     with open(SITE_DATA_PATH, "w") as f:

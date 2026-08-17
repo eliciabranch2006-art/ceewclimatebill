@@ -87,7 +87,11 @@ class BillDetail:
 
 
 def _slug_from_url(url: str) -> str:
-    return url.rstrip("/").split("/")[-1]
+    # Strip query string/fragment first — PRS listing pages sometimes link
+    # the same bill with pagination/tracking params attached, which used to
+    # produce two different "slugs" (and two duplicate DB rows) for one bill.
+    path = url.split("?")[0].split("#")[0]
+    return path.rstrip("/").split("/")[-1]
 
 
 def _year_from_title(title: str) -> Optional[int]:

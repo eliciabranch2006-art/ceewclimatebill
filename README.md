@@ -99,11 +99,51 @@ requires attribution wherever the data is displayed — this is already wired
 into the site footer (`site/app/layout.tsx`). Don't strip that attribution if
 you customize the design.
 
+## The trending-searches module
+
+Pulls Google Trends (via SerpApi), Reddit, and YouTube, classifies each
+item for CEEW relevance/area with Claude, and shows them on `/trends`.
+Runs daily via `.github/workflows/update-trends.yml`.
+
+New secrets needed (Settings → Secrets and variables → Actions):
+- `SERPAPI_KEY` — sign up at [serpapi.com](https://serpapi.com), free tier
+  is 100 searches/month (this job uses roughly 1 + 15 = 16 searches/day,
+  so budget accordingly or reduce the keyword list in
+  `scraper/trend_keywords.py`)
+- `REDDIT_CLIENT_ID` and `REDDIT_CLIENT_SECRET` — go to
+  [reddit.com/prefs/apps](https://www.reddit.com/prefs/apps), click
+  "create app," choose type "script." Free, no approval wait.
+- `YOUTUBE_API_KEY` — in [Google Cloud Console](https://console.cloud.google.com),
+  create a project, enable "YouTube Data API v3," then create an API key
+  under Credentials. Free tier is generous (10,000 units/day).
+
+Any of these you skip just means that source is silently omitted — the
+job doesn't fail, it just won't have Reddit/YouTube/Trends data until you
+add the key.
+
+## The parliamentary Q&A module
+
+Searches Lok Sabha and Rajya Sabha Q&A records on sansad.in, classifies
+relevant ones, and shows them on `/qa`. Runs weekly (not daily — see
+below) via `.github/workflows/update-qa.yml`.
+
+**This one needs more hands-on setup than the other two modules.**
+sansad.in's search page is a JavaScript app, not plain HTML, so
+`scraper/sansad_client.py` uses Playwright (a real headless browser)
+instead of simple HTTP requests. I could not verify its exact form
+selectors against the live site's HTML the way I could for PRS — read
+the big warning at the top of `scraper/sansad_client.py` before running
+this one. In short: **run
+`playwright codegen https://sansad.in/ls/questions/questions-and-answers`
+on your own machine first**, do one manual search, and it'll generate
+working selectors you can hand me to wire in — this will get you a
+working scraper far faster than debugging blind against CI logs.
+
+No new secrets needed beyond `ANTHROPIC_API_KEY` (already set up for the
+bills module).
+
 ## What's not built yet
 
-- The trending-searches/social module (Google Trends via SerpApi + Reddit +
-  YouTube) and the parliamentary Q&A module (sansad.in) are separate builds —
-  ask me to start on either next.
 - No admin UI for editing scores in-browser — v1 keeps this to the
   hand-edited `overrides.json` file, on the theory that a small team editing
   a JSON file occasionally is simpler to maintain than a login-gated editing
@@ -112,3 +152,6 @@ you customize the design.
   a near-identical title (e.g. GST Bill amendments appear most years) — each
   is currently tracked and scored independently, matching how PRS itself
   tracks them.
+- The Q&A scraper's selectors are unverified against the live site (see
+  above) — treat the first run as a debugging session, not a working
+  pipeline.

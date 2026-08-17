@@ -1,0 +1,31 @@
+{
+  "generated_at": "2026-08-17T00:00:00+00:00",
+  "source": "sansad.in (Lok Sabha / Rajya Sabha)",
+  "entries": [
+    {
+      "id": "seed-example",
+      "house": "Lok Sabha",
+      "question_number": "1234",
+      "question_type": "Unstarred",
+      "title": "Status of Renewable Energy Targets",
+      "member_name": "Sample MP",
+      "ministry": "New and Renewable Energy",
+      "answer_date": "2026-07-01",
+      "question_text": null,
+      "url": "https://sansad.in/ls/questions/questions-and-answers",
+      "is_relevant": true,
+      "ceew_area": "Energy Transitions",
+      "summary_bullets": [
+        "Sample seed row — will be replaced once the scraper runs for the first time.",
+        "MP asked about progress toward renewable energy capacity targets.",
+        "Ministry responded with current installed capacity figures."
+      ],
+      "rationale": "Sample seed row for demonstration.",
+      "confidence": "medium",
+      "scorer_model": "seed-example",
+      "is_manual_override": false,
+      "first_seen_at": "2026-08-17T00:00:00+00:00",
+      "last_scraped_at": "2026-08-17T00:00:00+00:00"
+    }
+  ]
+}

@@ -1,4 +1,6 @@
 import billsData from "../data/bills.json";
+import trendsData from "../data/trends.json";
+import qaData from "../data/qa.json";
 
 export type StatusTimelineEntry = {
   stage: string;
@@ -36,6 +38,8 @@ export type Bill = {
   scored_at: string | null;
   scorer_model: string | null;
   is_manual_override: boolean;
+  climate_direction: "supportive" | "harmful" | "mixed" | "neutral" | null;
+  climate_direction_rationale: string | null;
 };
 
 type BillsFile = {
@@ -45,6 +49,79 @@ type BillsFile = {
 };
 
 const data = billsData as BillsFile;
+
+export type TrendingItem = {
+  id: string;
+  source: "google_trends" | "reddit" | "youtube";
+  title: string;
+  url: string | null;
+  metric_label: string | null;
+  metric_value: number | null;
+  seed_keyword: string | null;
+  is_relevant: boolean;
+  ceew_area: string | null;
+  rationale: string | null;
+  confidence: "high" | "medium" | "low" | null;
+  scorer_model: string | null;
+  fetched_at: string;
+};
+
+type TrendsFile = {
+  generated_at: string;
+  items: TrendingItem[];
+};
+
+const trends = trendsData as TrendsFile;
+
+export function getTrendingItems(): TrendingItem[] {
+  return trends.items;
+}
+
+export function getTrendsGeneratedAt(): string {
+  return trends.generated_at;
+}
+
+export type QAEntry = {
+  id: string;
+  house: "Lok Sabha" | "Rajya Sabha";
+  question_number: string | null;
+  question_type: string | null;
+  title: string;
+  member_name: string | null;
+  ministry: string | null;
+  answer_date: string | null;
+  question_text: string | null;
+  url: string | null;
+  is_relevant: boolean;
+  ceew_area: string | null;
+  summary_bullets: string[];
+  rationale: string | null;
+  confidence: "high" | "medium" | "low" | null;
+  scorer_model: string | null;
+  is_manual_override: boolean;
+  first_seen_at: string;
+  last_scraped_at: string;
+};
+
+type QAFile = {
+  generated_at: string;
+  source: string;
+  entries: QAEntry[];
+};
+
+const qa = qaData as QAFile;
+
+export function getAllQA(): QAEntry[] {
+  return qa.entries;
+}
+
+export function getQAById(id: string): QAEntry | undefined {
+  return qa.entries.find((e) => e.id === id);
+}
+
+export function getQAGeneratedAt(): string {
+  return qa.generated_at;
+}
 
 export function getAllBills(): Bill[] {
   return data.bills;

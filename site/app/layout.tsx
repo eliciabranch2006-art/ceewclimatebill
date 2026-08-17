@@ -27,6 +27,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               </div>
             </Link>
             <div className="flex items-center gap-5">
+              <Link href="/" className="text-sm font-mono text-inkmuted hover:text-ink">
+                Bills
+              </Link>
+              <Link href="/trends" className="text-sm font-mono text-inkmuted hover:text-ink">
+                Trends
+              </Link>
+              <Link href="/qa" className="text-sm font-mono text-inkmuted hover:text-ink">
+                Q&amp;A
+              </Link>
               <Link href="/about" className="text-sm font-mono text-inkmuted hover:text-ink">
                 About
               </Link>

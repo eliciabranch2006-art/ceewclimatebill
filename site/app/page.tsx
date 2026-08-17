@@ -5,6 +5,7 @@ import Link from "next/link";
 import { getAllBills } from "../lib/data";
 import { ScoreBar } from "../components/ScoreBar";
 import { StatusPill } from "../components/StatusPill";
+import { ClimateDirectionBadge } from "../components/ClimateDirectionBadge";
 
 const CEEW_CLUSTERS: Record<string, string[]> = {
   Transformations: [
@@ -35,7 +36,7 @@ const STATUS_OPTIONS = ["All", "Passed", "Pending", "In Committee", "Draft", "Wi
 const CUTOFF_YEARS = 2; // mirrors scraper/update_bills.py's CUTOFF_YEARS — frontend
                           // safety net in case older data ever slips through the export
 
-type SortMode = "chronological" | "effective" | "non_climate";
+type SortMode = "chronological" | "effective" | "non_climate" | "needs_review";
 
 /** Latest known date for a bill — prefers its most recent status-timeline
  * entry (e.g. last action taken), falling back to its year. Used for the
@@ -60,6 +61,7 @@ export default function HomePage() {
   const filtered = useMemo(() => {
     const cutoffYear = new Date().getFullYear() - CUTOFF_YEARS;
     const isNonClimateTab = sortMode === "non_climate";
+    const isReviewTab = sortMode === "needs_review";
 
     const base = allBills
       .filter((b) => b.year === null || b.year >= cutoffYear)
@@ -76,7 +78,10 @@ export default function HomePage() {
       // the minerals -> Technology Futures / reskilling -> Sustainable
       // Livelihoods rules always have a primary area, so they're unaffected
       // and stay in the main lists as intended.
-      .filter((b) => (isNonClimateTab ? b.sectoral_primary_area === null : b.sectoral_primary_area !== null))
+      .filter((b) => {
+        if (isReviewTab) return b.needs_review; // cuts across relevant + irrelevant alike
+        return isNonClimateTab ? b.sectoral_primary_area === null : b.sectoral_primary_area !== null;
+      })
       .filter((b) =>
         isNonClimateTab || area === "All areas"
           ? true
@@ -122,6 +127,14 @@ export default function HomePage() {
         >
           Non-climate related
         </button>
+        <button
+          onClick={() => setSortMode("needs_review")}
+          className={`px-4 py-2 text-sm font-mono transition-colors border-l border-rule ${
+            sortMode === "needs_review" ? "bg-orange text-white" : "text-inkmuted hover:bg-paper"
+          }`}
+        >
+          Medium confidence
+        </button>
       </div>
 
       {sortMode === "non_climate" && (
@@ -129,6 +142,15 @@ export default function HomePage() {
           Bills the model found no real climate/sustainability relevance in. Bills about
           minerals or individual reskilling are tagged to a CEEW area by design and won&rsquo;t
           appear here &mdash; see the About page.
+        </p>
+      )}
+
+      {sortMode === "needs_review" && (
+        <p className="text-xs text-inkmuted mb-5 font-mono">
+          Bills worth a second look &mdash; low model confidence, borderline climate relevance,
+          or auto-flagged by a title keyword rather than judged from the bill&rsquo;s full text.
+          Correct any of these via scraper/overrides.json; once reviewed, a bill drops off this
+          tab automatically.
         </p>
       )}
 
@@ -182,6 +204,8 @@ export default function HomePage() {
           <div className="p-8 text-center text-inkmuted text-sm">
             {sortMode === "non_climate"
               ? "No non-climate-related bills match these filters yet."
+              : sortMode === "needs_review"
+              ? "Nothing needs review right now."
               : "No bills match these filters yet."}
           </div>
         )}
@@ -200,6 +224,7 @@ export default function HomePage() {
                       {bill.sectoral_primary_area}
                     </span>
                   )}
+                  <ClimateDirectionBadge direction={bill.climate_direction} />
                   {bill.needs_review && (
                     <span className="text-xs font-mono text-orange">&#9873; needs review</span>
                   )}

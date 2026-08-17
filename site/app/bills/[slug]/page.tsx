@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { getAllBills, getBillById } from "../../../lib/data";
 import { ScoreBar } from "../../../components/ScoreBar";
 import { StatusPill } from "../../../components/StatusPill";
+import { ClimateDirectionBadge } from "../../../components/ClimateDirectionBadge";
 
 export function generateStaticParams() {
   return getAllBills().map((b) => ({ slug: b.id }));
@@ -28,6 +29,7 @@ export default function BillDetailPage({ params }: { params: { slug: string } })
 
       <div className="mt-4 flex items-center gap-2 flex-wrap">
         <StatusPill status={bill.status} />
+        <ClimateDirectionBadge direction={bill.climate_direction} />
         {bill.is_manual_override && (
           <span className="text-xs font-mono text-ink border border-ink px-2 py-0.5 rounded-sm">
             reviewed by outreach team
@@ -86,6 +88,13 @@ export default function BillDetailPage({ params }: { params: { slug: string } })
           {bill.rationale && (
             <p className="mt-4 pt-4 border-t border-rule text-sm text-inkmuted leading-relaxed">
               {bill.rationale}
+            </p>
+          )}
+
+          {bill.climate_direction_rationale && (
+            <p className="mt-3 text-sm text-inkmuted leading-relaxed">
+              <span className="font-mono text-xs text-ink">Climate direction:</span>{" "}
+              {bill.climate_direction_rationale}
             </p>
           )}
 
@@ -164,15 +173,10 @@ export default function BillDetailPage({ params }: { params: { slug: string } })
         </section>
       )}
 
-      <div className="mt-10 pt-6 border-t border-rule flex gap-4 text-sm font-mono">
-        <a href={bill.prs_url} target="_blank" rel="noreferrer" className="underline text-inkmuted hover:text-ink">
+      <div className="mt-10 pt-6 border-t border-rule">
+        <a href={bill.prs_url} target="_blank" rel="noreferrer" className="text-sm font-mono underline text-inkmuted hover:text-ink">
           View on PRS &rarr;
         </a>
-        {bill.bill_pdf_url && (
-          <a href={bill.bill_pdf_url} target="_blank" rel="noreferrer" className="underline text-inkmuted hover:text-ink">
-            Bill PDF &rarr;
-          </a>
-        )}
       </div>
     </div>
   );

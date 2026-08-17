@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS bill_scores (
     mitigation_score        INTEGER,        -- 0-25
     enforceability_score    INTEGER,        -- 0-20
     scale_score             INTEGER,        -- 0-15
-    novelty_score            INTEGER,        -- 0-10
+    novelty_score           INTEGER,        -- 0-10
     total_score             INTEGER,        -- 0-100, sum of the above
     rationale               TEXT,           -- model's plain-language justification
     confidence              TEXT,           -- "high" / "medium" / "low", from the model
@@ -51,6 +51,8 @@ CREATE TABLE IF NOT EXISTS bill_scores (
     scorer_model            TEXT NOT NULL,  -- e.g. "claude-sonnet-5", for auditability
     prompt_version          INTEGER DEFAULT 0,  -- see scorer.PROMPT_VERSION; lets a rubric
                                                   -- change auto-trigger re-scoring
+    climate_direction          TEXT,           -- 'supportive' | 'harmful' | 'mixed' | 'neutral'
+    climate_direction_rationale TEXT,
     is_manual_override      INTEGER DEFAULT 0
 );
 
@@ -116,6 +118,14 @@ def init_db():
             conn.execute("ALTER TABLE bill_scores ADD COLUMN prompt_version INTEGER DEFAULT 0")
         except sqlite3.OperationalError:
             pass  # column already exists
+        try:
+            conn.execute("ALTER TABLE bill_scores ADD COLUMN climate_direction TEXT")
+        except sqlite3.OperationalError:
+            pass
+        try:
+            conn.execute("ALTER TABLE bill_scores ADD COLUMN climate_direction_rationale TEXT")
+        except sqlite3.OperationalError:
+            pass
 
 
 def upsert_bill(conn, bill: dict, now_iso: str):
@@ -164,8 +174,9 @@ def upsert_score(conn, bill_id: str, score: dict, now_iso: str, model_name: str,
         """INSERT INTO bill_scores (bill_id, sectoral_primary_area, sectoral_secondary_areas,
            sectoral_score, mitigation_score, enforceability_score, scale_score, novelty_score,
            total_score, rationale, confidence, needs_review, highlights_bullets, issues_bullets,
-           scored_at, scorer_model, prompt_version, is_manual_override)
-           VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,0)
+           scored_at, scorer_model, prompt_version, climate_direction, climate_direction_rationale,
+           is_manual_override)
+           VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,0)
            ON CONFLICT(bill_id) DO UPDATE SET
              sectoral_primary_area=excluded.sectoral_primary_area,
              sectoral_secondary_areas=excluded.sectoral_secondary_areas,
@@ -182,14 +193,17 @@ def upsert_score(conn, bill_id: str, score: dict, now_iso: str, model_name: str,
              issues_bullets=excluded.issues_bullets,
              scored_at=excluded.scored_at,
              scorer_model=excluded.scorer_model,
-             prompt_version=excluded.prompt_version
+             prompt_version=excluded.prompt_version,
+             climate_direction=excluded.climate_direction,
+             climate_direction_rationale=excluded.climate_direction_rationale
            WHERE bill_scores.is_manual_override = 0""",
         (bill_id, score.get("sectoral_primary_area"), score.get("sectoral_secondary_areas_json"),
          score.get("sectoral_score"), score.get("mitigation_score"), score.get("enforceability_score"),
          score.get("scale_score"), score.get("novelty_score"), score.get("total_score"),
          score.get("rationale"), score.get("confidence"), score.get("needs_review"),
          score.get("highlights_bullets_json"), score.get("issues_bullets_json"),
-         now_iso, model_name, prompt_version),
+         now_iso, model_name, prompt_version,
+         score.get("climate_direction"), score.get("climate_direction_rationale")),
     )
 
 
@@ -223,6 +237,8 @@ def upsert_qa_entry(conn, entry: dict, now_iso: str):
     existing = conn.execute("SELECT id, is_manual_override FROM qa_entries WHERE id = ?",
                              (entry["id"],)).fetchone()
     if existing and existing["is_manual_override"]:
+        # still refresh last_scraped_at so we know it was checked, but leave
+        # classification fields alone
         conn.execute("UPDATE qa_entries SET last_scraped_at=? WHERE id=?",
                       (now_iso, entry["id"]))
         return
@@ -266,7 +282,8 @@ def all_bills_with_scores(conn):
                   s.mitigation_score, s.enforceability_score, s.scale_score, s.novelty_score,
                   s.total_score, s.rationale, s.confidence, s.needs_review,
                   s.highlights_bullets, s.issues_bullets, s.scored_at,
-                  s.scorer_model, s.is_manual_override
+                  s.scorer_model, s.is_manual_override, s.climate_direction,
+                  s.climate_direction_rationale
            FROM bills b LEFT JOIN bill_scores s ON b.id = s.bill_id
            ORDER BY s.total_score DESC NULLS LAST, b.year DESC"""
     ).fetchall()
