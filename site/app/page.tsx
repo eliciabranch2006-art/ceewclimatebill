@@ -32,15 +32,35 @@ const CEEW_CLUSTERS: Record<string, string[]> = {
 
 const STATUS_OPTIONS = ["All", "Passed", "Pending", "In Committee", "Draft", "Withdrawn", "Lapsed"];
 
+const CUTOFF_YEARS = 2; // mirrors scraper/update_bills.py's CUTOFF_YEARS — frontend
+                          // safety net in case older data ever slips through the export
+
+type SortMode = "chronological" | "effective";
+
+/** Latest known date for a bill — prefers its most recent status-timeline
+ * entry (e.g. last action taken), falling back to its year. Used for the
+ * chronological sort so bills with recent activity surface first, not just
+ * bills that happen to have been introduced most recently. */
+function latestActivityTime(bill: ReturnType<typeof getAllBills>[number]): number {
+  const dates = bill.status_timeline
+    .map((e) => (e.date ? Date.parse(e.date) : NaN))
+    .filter((t) => !Number.isNaN(t));
+  if (dates.length > 0) return Math.max(...dates);
+  return bill.year ? Date.parse(`${bill.year}-01-01`) : 0;
+}
+
 export default function HomePage() {
   const allBills = getAllBills();
   const [query, setQuery] = useState("");
   const [area, setArea] = useState("All areas");
   const [status, setStatus] = useState("All");
   const [onlyScored, setOnlyScored] = useState(true);
+  const [sortMode, setSortMode] = useState<SortMode>("chronological");
 
   const filtered = useMemo(() => {
-    return allBills
+    const cutoffYear = new Date().getFullYear() - CUTOFF_YEARS;
+    const sorted = allBills
+      .filter((b) => b.year === null || b.year >= cutoffYear)
       .filter((b) => (onlyScored ? b.total_score !== null : true))
       .filter((b) =>
         query.trim() === ""
@@ -53,9 +73,13 @@ export default function HomePage() {
           ? true
           : b.sectoral_primary_area === area || b.sectoral_secondary_areas.includes(area)
       )
-      .filter((b) => (status === "All" ? true : b.status === status))
-      .sort((a, b) => (b.total_score ?? -1) - (a.total_score ?? -1));
-  }, [allBills, query, area, status, onlyScored]);
+      .filter((b) => (status === "All" ? true : b.status === status));
+
+    if (sortMode === "effective") {
+      return sorted.sort((a, b) => (b.total_score ?? -1) - (a.total_score ?? -1));
+    }
+    return sorted.sort((a, b) => latestActivityTime(b) - latestActivityTime(a));
+  }, [allBills, query, area, status, onlyScored, sortMode]);
 
   return (
     <div className="max-w-5xl mx-auto px-6 py-10">
@@ -64,6 +88,25 @@ export default function HomePage() {
         built around CEEW&rsquo;s own research areas &mdash; sectoral relevance, mitigation or
         adaptation substance, enforceability, scale, and novelty.
       </p>
+
+      <div className="flex items-center gap-1 mb-5 border border-rule rounded-sm w-fit overflow-hidden">
+        <button
+          onClick={() => setSortMode("chronological")}
+          className={`px-4 py-2 text-sm font-mono transition-colors ${
+            sortMode === "chronological" ? "bg-blue text-white" : "text-inkmuted hover:bg-paper"
+          }`}
+        >
+          Newest first
+        </button>
+        <button
+          onClick={() => setSortMode("effective")}
+          className={`px-4 py-2 text-sm font-mono transition-colors ${
+            sortMode === "effective" ? "bg-blue text-white" : "text-inkmuted hover:bg-paper"
+          }`}
+        >
+          Most effective
+        </button>
+      </div>
 
       <div className="flex flex-wrap gap-3 mb-8 items-center">
         <input
@@ -130,7 +173,7 @@ export default function HomePage() {
                     </span>
                   )}
                   {bill.needs_review && (
-                    <span className="text-xs font-mono text-amber">&#9873; needs review</span>
+                    <span className="text-xs font-mono text-orange">&#9873; needs review</span>
                   )}
                 </div>
                 <div className="font-display text-lg text-ink leading-snug">{bill.title}</div>

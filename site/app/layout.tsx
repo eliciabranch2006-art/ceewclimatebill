@@ -19,19 +19,24 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <header className="border-b border-rule bg-card">
           <div className="max-w-5xl mx-auto px-6 py-5 flex items-baseline justify-between">
             <Link href="/" className="group">
-              <div className="font-mono text-[11px] tracking-widest uppercase text-amber">
+              <div className="font-mono text-[11px] tracking-widest uppercase text-orange">
                 CEEW &middot; Outreach
               </div>
               <div className="font-display text-2xl font-semibold text-ink">
                 Bill Climate&#8209;Impact Register
               </div>
             </Link>
-            <div className="text-right font-mono text-[11px] text-inkmuted hidden sm:block">
-              data as of {new Date(generatedAt).toLocaleDateString("en-IN", {
-                year: "numeric",
-                month: "short",
-                day: "numeric",
-              })}
+            <div className="flex items-center gap-5">
+              <Link href="/about" className="text-sm font-mono text-inkmuted hover:text-ink">
+                About
+              </Link>
+              <div className="text-right font-mono text-[11px] text-inkmuted hidden sm:block">
+                data as of {new Date(generatedAt).toLocaleDateString("en-IN", {
+                  year: "numeric",
+                  month: "short",
+                  day: "numeric",
+                })}
+              </div>
             </div>
           </div>
         </header>

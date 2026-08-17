@@ -45,6 +45,8 @@ CREATE TABLE IF NOT EXISTS bill_scores (
     rationale               TEXT,           -- model's plain-language justification
     confidence              TEXT,           -- "high" / "medium" / "low", from the model
     needs_review            INTEGER,        -- 1 if confidence is low or score is borderline
+    highlights_bullets      TEXT,           -- JSON list of succinct bullet points
+    issues_bullets          TEXT,           -- JSON list of succinct bullet points
     scored_at               TEXT NOT NULL,
     scorer_model            TEXT NOT NULL,  -- e.g. "claude-sonnet-5", for auditability
     is_manual_override      INTEGER DEFAULT 0
@@ -113,8 +115,9 @@ def upsert_score(conn, bill_id: str, score: dict, now_iso: str, model_name: str)
     conn.execute(
         """INSERT INTO bill_scores (bill_id, sectoral_primary_area, sectoral_secondary_areas,
            sectoral_score, mitigation_score, enforceability_score, scale_score, novelty_score,
-           total_score, rationale, confidence, needs_review, scored_at, scorer_model, is_manual_override)
-           VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,0)
+           total_score, rationale, confidence, needs_review, highlights_bullets, issues_bullets,
+           scored_at, scorer_model, is_manual_override)
+           VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,0)
            ON CONFLICT(bill_id) DO UPDATE SET
              sectoral_primary_area=excluded.sectoral_primary_area,
              sectoral_secondary_areas=excluded.sectoral_secondary_areas,
@@ -127,6 +130,8 @@ def upsert_score(conn, bill_id: str, score: dict, now_iso: str, model_name: str)
              rationale=excluded.rationale,
              confidence=excluded.confidence,
              needs_review=excluded.needs_review,
+             highlights_bullets=excluded.highlights_bullets,
+             issues_bullets=excluded.issues_bullets,
              scored_at=excluded.scored_at,
              scorer_model=excluded.scorer_model
            WHERE bill_scores.is_manual_override = 0""",
@@ -134,6 +139,7 @@ def upsert_score(conn, bill_id: str, score: dict, now_iso: str, model_name: str)
          score.get("sectoral_score"), score.get("mitigation_score"), score.get("enforceability_score"),
          score.get("scale_score"), score.get("novelty_score"), score.get("total_score"),
          score.get("rationale"), score.get("confidence"), score.get("needs_review"),
+         score.get("highlights_bullets_json"), score.get("issues_bullets_json"),
          now_iso, model_name),
     )
 
@@ -142,7 +148,8 @@ def all_bills_with_scores(conn):
     return conn.execute(
         """SELECT b.*, s.sectoral_primary_area, s.sectoral_secondary_areas, s.sectoral_score,
                   s.mitigation_score, s.enforceability_score, s.scale_score, s.novelty_score,
-                  s.total_score, s.rationale, s.confidence, s.needs_review, s.scored_at,
+                  s.total_score, s.rationale, s.confidence, s.needs_review,
+                  s.highlights_bullets, s.issues_bullets, s.scored_at,
                   s.scorer_model, s.is_manual_override
            FROM bills b LEFT JOIN bill_scores s ON b.id = s.bill_id
            ORDER BY s.total_score DESC NULLS LAST, b.year DESC"""

@@ -1,11 +1,11 @@
 import type { Bill } from "../lib/data";
 
 const SEGMENTS: { key: keyof Bill; label: string; max: number; color: string }[] = [
-  { key: "sectoral_score", label: "Sectoral relevance", max: 30, color: "#1F3A2E" },
-  { key: "mitigation_score", label: "Mitigation/adaptation substance", max: 25, color: "#3D6B54" },
-  { key: "enforceability_score", label: "Enforceability", max: 20, color: "#B8752B" },
-  { key: "scale_score", label: "Scale of impact", max: 15, color: "#8FA396" },
-  { key: "novelty_score", label: "Novelty", max: 10, color: "#D9C7A3" },
+  { key: "sectoral_score", label: "Sectoral relevance", max: 30, color: "#000000" },
+  { key: "mitigation_score", label: "Mitigation/adaptation substance", max: 25, color: "#86BB3F" },
+  { key: "enforceability_score", label: "Enforceability", max: 20, color: "#009ED8" },
+  { key: "scale_score", label: "Scale of impact", max: 15, color: "#F16223" },
+  { key: "novelty_score", label: "Novelty", max: 10, color: "#B3B3B3" },
 ];
 
 const TOTAL_MAX = SEGMENTS.reduce((sum, s) => sum + s.max, 0); // 100

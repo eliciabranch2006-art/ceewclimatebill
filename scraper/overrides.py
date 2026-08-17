@@ -54,9 +54,9 @@ def apply_overrides(conn, now_iso: str):
         conn.execute(
             """INSERT INTO bill_scores (bill_id, sectoral_primary_area, sectoral_secondary_areas,
                sectoral_score, mitigation_score, enforceability_score, scale_score, novelty_score,
-               total_score, rationale, confidence, needs_review, scored_at, scorer_model,
-               is_manual_override)
-               VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,1)
+               total_score, rationale, confidence, needs_review, highlights_bullets, issues_bullets,
+               scored_at, scorer_model, is_manual_override)
+               VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,1)
                ON CONFLICT(bill_id) DO UPDATE SET
                  sectoral_primary_area=excluded.sectoral_primary_area,
                  sectoral_secondary_areas=excluded.sectoral_secondary_areas,
@@ -69,6 +69,8 @@ def apply_overrides(conn, now_iso: str):
                  rationale=excluded.rationale,
                  confidence=excluded.confidence,
                  needs_review=excluded.needs_review,
+                 highlights_bullets=excluded.highlights_bullets,
+                 issues_bullets=excluded.issues_bullets,
                  scored_at=excluded.scored_at,
                  scorer_model=excluded.scorer_model,
                  is_manual_override=1""",
@@ -78,6 +80,8 @@ def apply_overrides(conn, now_iso: str):
              fields.get("enforceability_score"), fields.get("scale_score"),
              fields.get("novelty_score"), fields.get("total_score"),
              fields.get("rationale"), fields.get("confidence", "high"),
-             int(fields.get("needs_review", False)), now_iso,
-             f"manual:{fields.get('reviewed_by', 'unknown')}"),
+             int(fields.get("needs_review", False)),
+             json.dumps(fields.get("highlights_bullets", [])),
+             json.dumps(fields.get("issues_bullets", [])),
+             now_iso, f"manual:{fields.get('reviewed_by', 'unknown')}"),
         )

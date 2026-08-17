@@ -36,9 +36,21 @@ logger = logging.getLogger(__name__)
 
 SITE_DATA_PATH = Path(__file__).resolve().parent.parent / "site" / "data" / "bills.json"
 
+# Per CEEW outreach team: the site should only ever show bills from the last
+# 2 years. Applied twice — once early during scraping (so we don't waste time
+# and Claude API cost fetching/scoring bills that will just be filtered out),
+# and again at export time as a safety net (e.g. if a bill's status changes
+# right as it crosses the 2-year boundary, or for bills scraped before this
+# cutoff was added).
+CUTOFF_YEARS = 2
+
 
 def now_iso() -> str:
     return datetime.now(timezone.utc).isoformat()
+
+
+def _cutoff_year() -> int:
+    return datetime.now(timezone.utc).year - CUTOFF_YEARS
 
 
 def run(year: int | None, skip_scoring: bool, limit: int | None):
@@ -49,8 +61,15 @@ def run(year: int | None, skip_scoring: bool, limit: int | None):
     logger.info("Fetched %d bill listings", len(listings))
 
     scored_count = 0
+    skipped_old_count = 0
+    cutoff_year = _cutoff_year()
     with db.get_conn() as conn:
         for summary in listings:
+            title_year = prs_client._year_from_title(summary.title)
+            if title_year is not None and title_year < cutoff_year:
+                skipped_old_count += 1
+                continue  # more than CUTOFF_YEARS old — skip fetching/scoring entirely
+
             existing = conn.execute(
                 "SELECT status FROM bills WHERE id = ?", (summary.id,)
             ).fetchone()
@@ -86,7 +105,8 @@ def run(year: int | None, skip_scoring: bool, limit: int | None):
 
         overrides_module.apply_overrides(conn, now_iso())
 
-    logger.info("Scored %d bills this run", scored_count)
+    logger.info("Scored %d bills this run (skipped %d bills older than %d)",
+                scored_count, skipped_old_count, cutoff_year)
     export_json()
 
 
@@ -94,11 +114,16 @@ def export_json():
     with db.get_conn() as conn:
         rows = db.all_bills_with_scores(conn)
 
+    cutoff_year = _cutoff_year()
     bills = []
     for row in rows:
         d = dict(row)
+        if d.get("year") is not None and d["year"] < cutoff_year:
+            continue  # safety-net filter — see CUTOFF_YEARS comment above
         d["status_timeline"] = json.loads(d.pop("status_timeline_json") or "[]")
         d["sectoral_secondary_areas"] = json.loads(d.pop("sectoral_secondary_areas") or "[]")
+        d["highlights_bullets"] = json.loads(d.pop("highlights_bullets") or "[]")
+        d["issues_bullets"] = json.loads(d.pop("issues_bullets") or "[]")
         d["needs_review"] = bool(d.get("needs_review"))
         d["is_manual_override"] = bool(d.get("is_manual_override"))
         bills.append(d)

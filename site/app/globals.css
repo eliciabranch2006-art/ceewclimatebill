@@ -5,19 +5,19 @@
 @tailwind utilities;
 
 body {
-  background-color: #eff2ed;
-  color: #1f2b25;
+  background-color: #ffffff;
+  color: #000000;
 }
 
 ::selection {
-  background-color: #b8752b;
-  color: #fbfaf6;
+  background-color: #f16223;
+  color: #ffffff;
 }
 
 /* Visible keyboard focus, kept even where components override outline */
 a:focus-visible,
 button:focus-visible {
-  outline: 2px solid #b8752b;
+  outline: 2px solid #009ed8;
   outline-offset: 2px;
 }
 

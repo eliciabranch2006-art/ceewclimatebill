@@ -34,7 +34,7 @@ export default function BillDetailPage({ params }: { params: { slug: string } })
           </span>
         )}
         {bill.needs_review && !bill.is_manual_override && (
-          <span className="text-xs font-mono text-amber">&#9873; needs review</span>
+          <span className="text-xs font-mono text-orange">&#9873; needs review</span>
         )}
       </div>
 
@@ -96,22 +96,56 @@ export default function BillDetailPage({ params }: { params: { slug: string } })
         </section>
       )}
 
-      {bill.highlights_text && (
+      {bill.highlights_bullets.length > 0 ? (
         <section className="mt-8">
           <h2 className="font-display text-lg text-ink mb-2">Highlights of the bill</h2>
-          <p className="text-sm text-inkmuted leading-relaxed whitespace-pre-line">
-            {bill.highlights_text}
-          </p>
+          <ul className="space-y-1.5">
+            {bill.highlights_bullets.map((point, i) => (
+              <li key={i} className="flex gap-2 text-sm text-inkmuted leading-relaxed">
+                <span className="text-blue shrink-0">&bull;</span>
+                <span>{point}</span>
+              </li>
+            ))}
+          </ul>
         </section>
+      ) : (
+        bill.highlights_text && (
+          <section className="mt-8">
+            <h2 className="font-display text-lg text-ink mb-2">Highlights of the bill</h2>
+            <p className="text-xs text-inkmuted italic mb-2">
+              Not yet summarized into bullets — showing raw source text.
+            </p>
+            <p className="text-sm text-inkmuted leading-relaxed whitespace-pre-line">
+              {bill.highlights_text}
+            </p>
+          </section>
+        )
       )}
 
-      {bill.key_issues_text && (
+      {bill.issues_bullets.length > 0 ? (
         <section className="mt-6">
           <h2 className="font-display text-lg text-ink mb-2">Key issues and analysis</h2>
-          <p className="text-sm text-inkmuted leading-relaxed whitespace-pre-line">
-            {bill.key_issues_text}
-          </p>
+          <ul className="space-y-1.5">
+            {bill.issues_bullets.map((point, i) => (
+              <li key={i} className="flex gap-2 text-sm text-inkmuted leading-relaxed">
+                <span className="text-orange shrink-0">&bull;</span>
+                <span>{point}</span>
+              </li>
+            ))}
+          </ul>
         </section>
+      ) : (
+        bill.key_issues_text && (
+          <section className="mt-6">
+            <h2 className="font-display text-lg text-ink mb-2">Key issues and analysis</h2>
+            <p className="text-xs text-inkmuted italic mb-2">
+              Not yet summarized into bullets — showing raw source text.
+            </p>
+            <p className="text-sm text-inkmuted leading-relaxed whitespace-pre-line">
+              {bill.key_issues_text}
+            </p>
+          </section>
+        )
       )}
 
       {bill.status_timeline.length > 0 && (

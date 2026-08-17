@@ -1,8 +1,8 @@
 const STATUS_STYLES: Record<string, string> = {
-  Passed: "bg-ink text-card",
-  Pending: "bg-amber/20 text-amber border border-amber/40",
-  "In Committee": "bg-amber/20 text-amber border border-amber/40",
-  Draft: "border border-inkmuted text-inkmuted",
+  Passed: "bg-green text-white",
+  Pending: "bg-orange/10 text-orange border border-orange/40",
+  "In Committee": "bg-orange/10 text-orange border border-orange/40",
+  Draft: "bg-blue/10 text-blue border border-blue/40",
   Withdrawn: "border border-inkmuted text-inkmuted line-through",
   Lapsed: "border border-inkmuted text-inkmuted line-through",
   Negatived: "border border-inkmuted text-inkmuted line-through",

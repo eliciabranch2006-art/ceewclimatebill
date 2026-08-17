@@ -64,7 +64,13 @@ no climate/sustainability relevance at all>",
   "rationale": "<2-4 sentences explaining the scores, plain language, for a non-technical outreach reader>",
   "confidence": "<high|medium|low>",
   "needs_review": <true if confidence is low OR if the bill is borderline/ambiguous \
-in its climate relevance>
+in its climate relevance>,
+  "highlights_bullets": ["<3-6 short bullet points capturing the substance of the \
+'Highlights of the Bill' text — each bullet a single concrete provision, one sentence, \
+no filler words>"],
+  "issues_bullets": ["<2-5 short bullet points capturing the substance of the \
+'Key Issues and Analysis' text — each bullet one concrete concern or open question, \
+one sentence each>"]
 }}
 
 CEEW's 15 research areas (use exact names): {", ".join(ALL_AREAS)}
@@ -85,6 +91,21 @@ amendments to existing acts.
 - Most bills in this dataset are NOT climate bills (PRS covers all of Parliament's business). \
 Score honestly — a bill about, say, court fee amendments should score at or near 0 across \
 the board, with sectoral_primary_area: null.
+
+Classification rules from CEEW's outreach team (apply these before falling back to your \
+own judgement):
+- A bill whose main effect is on individual reskilling, upskilling, vocational training, or \
+workforce transition — especially into green/clean-energy careers — should be classified \
+under "Sustainable Livelihoods", even if it doesn't mention climate or energy directly.
+- A bill whose main effect is on mineral extraction, critical minerals, mining, or mineral \
+processing/refining should be classified under "Technology Futures", even though it may \
+seem to fit "Low-Carbon Economy" or "Circular Economy" — CEEW's outreach team wants minerals \
+bills grouped with Technology Futures specifically.
+
+highlights_bullets / issues_bullets guidance: be genuinely succinct — a reader should be \
+able to scan all bullets in under 10 seconds. Cut qualifiers, drop citations to section \
+numbers unless essential, and prefer one clear sentence over two connected ones. If the \
+source text is too thin to produce a real bullet (e.g. "(not available)"), return an empty list.
 """
 
 
@@ -139,6 +160,13 @@ def score_bill(bill: dict, model: Optional[str] = None) -> Optional[dict]:
         a for a in parsed.get("sectoral_secondary_areas", []) if a in ALL_AREAS
     ]
     parsed["sectoral_secondary_areas_json"] = json.dumps(parsed["sectoral_secondary_areas"])
+
+    # Bullet fields are optional/best-effort — fall back to empty lists rather
+    # than failing the whole score if the model omits them
+    highlights_bullets = [str(b) for b in parsed.get("highlights_bullets", []) if b]
+    issues_bullets = [str(b) for b in parsed.get("issues_bullets", []) if b]
+    parsed["highlights_bullets_json"] = json.dumps(highlights_bullets)
+    parsed["issues_bullets_json"] = json.dumps(issues_bullets)
 
     parsed["scorer_model"] = model
     return parsed

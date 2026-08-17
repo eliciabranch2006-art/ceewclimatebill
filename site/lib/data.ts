@@ -31,6 +31,8 @@ export type Bill = {
   rationale: string | null;
   confidence: "high" | "medium" | "low" | null;
   needs_review: boolean;
+  highlights_bullets: string[];
+  issues_bullets: string[];
   scored_at: string | null;
   scorer_model: string | null;
   is_manual_override: boolean;
