@@ -35,7 +35,7 @@ const STATUS_OPTIONS = ["All", "Passed", "Pending", "In Committee", "Draft", "Wi
 const CUTOFF_YEARS = 2; // mirrors scraper/update_bills.py's CUTOFF_YEARS — frontend
                           // safety net in case older data ever slips through the export
 
-type SortMode = "chronological" | "effective";
+type SortMode = "chronological" | "effective" | "non_climate";
 
 /** Latest known date for a bill — prefers its most recent status-timeline
  * entry (e.g. last action taken), falling back to its year. Used for the
@@ -59,7 +59,9 @@ export default function HomePage() {
 
   const filtered = useMemo(() => {
     const cutoffYear = new Date().getFullYear() - CUTOFF_YEARS;
-    const sorted = allBills
+    const isNonClimateTab = sortMode === "non_climate";
+
+    const base = allBills
       .filter((b) => b.year === null || b.year >= cutoffYear)
       .filter((b) => (onlyScored ? b.total_score !== null : true))
       .filter((b) =>
@@ -68,17 +70,23 @@ export default function HomePage() {
           : b.title.toLowerCase().includes(query.toLowerCase()) ||
             (b.ministry ?? "").toLowerCase().includes(query.toLowerCase())
       )
+      .filter((b) => (status === "All" ? true : b.status === status))
+      // A bill with no CEEW area match at all is "completely irrelevant" and
+      // belongs on the Non-climate tab, not the main lists. Bills tagged via
+      // the minerals -> Technology Futures / reskilling -> Sustainable
+      // Livelihoods rules always have a primary area, so they're unaffected
+      // and stay in the main lists as intended.
+      .filter((b) => (isNonClimateTab ? b.sectoral_primary_area === null : b.sectoral_primary_area !== null))
       .filter((b) =>
-        area === "All areas"
+        isNonClimateTab || area === "All areas"
           ? true
           : b.sectoral_primary_area === area || b.sectoral_secondary_areas.includes(area)
-      )
-      .filter((b) => (status === "All" ? true : b.status === status));
+      );
 
     if (sortMode === "effective") {
-      return sorted.sort((a, b) => (b.total_score ?? -1) - (a.total_score ?? -1));
+      return base.sort((a, b) => (b.total_score ?? -1) - (a.total_score ?? -1));
     }
-    return sorted.sort((a, b) => latestActivityTime(b) - latestActivityTime(a));
+    return base.sort((a, b) => latestActivityTime(b) - latestActivityTime(a));
   }, [allBills, query, area, status, onlyScored, sortMode]);
 
   return (
@@ -106,7 +114,23 @@ export default function HomePage() {
         >
           Most effective
         </button>
+        <button
+          onClick={() => setSortMode("non_climate")}
+          className={`px-4 py-2 text-sm font-mono transition-colors border-l border-rule ${
+            sortMode === "non_climate" ? "bg-ink text-white" : "text-inkmuted hover:bg-paper"
+          }`}
+        >
+          Non-climate related
+        </button>
       </div>
+
+      {sortMode === "non_climate" && (
+        <p className="text-xs text-inkmuted mb-5 font-mono">
+          Bills the model found no real climate/sustainability relevance in. Bills about
+          minerals or individual reskilling are tagged to a CEEW area by design and won&rsquo;t
+          appear here &mdash; see the About page.
+        </p>
+      )}
 
       <div className="flex flex-wrap gap-3 mb-8 items-center">
         <input
@@ -116,22 +140,24 @@ export default function HomePage() {
           onChange={(e) => setQuery(e.target.value)}
           className="px-3 py-2 bg-card border border-rule rounded-sm text-sm flex-1 min-w-[200px] focus:outline-none focus:ring-1 focus:ring-ink"
         />
-        <select
-          value={area}
-          onChange={(e) => setArea(e.target.value)}
-          className="px-3 py-2 bg-card border border-rule rounded-sm text-sm"
-        >
-          <option>All areas</option>
-          {Object.entries(CEEW_CLUSTERS).map(([cluster, areas]) => (
-            <optgroup label={cluster} key={cluster}>
-              {areas.map((a) => (
-                <option key={a} value={a}>
-                  {a}
-                </option>
-              ))}
-            </optgroup>
-          ))}
-        </select>
+        {sortMode !== "non_climate" && (
+          <select
+            value={area}
+            onChange={(e) => setArea(e.target.value)}
+            className="px-3 py-2 bg-card border border-rule rounded-sm text-sm"
+          >
+            <option>All areas</option>
+            {Object.entries(CEEW_CLUSTERS).map(([cluster, areas]) => (
+              <optgroup label={cluster} key={cluster}>
+                {areas.map((a) => (
+                  <option key={a} value={a}>
+                    {a}
+                  </option>
+                ))}
+              </optgroup>
+            ))}
+          </select>
+        )}
         <select
           value={status}
           onChange={(e) => setStatus(e.target.value)}
@@ -154,7 +180,9 @@ export default function HomePage() {
       <div className="border border-rule rounded-sm bg-card overflow-hidden">
         {filtered.length === 0 && (
           <div className="p-8 text-center text-inkmuted text-sm">
-            No bills match these filters yet.
+            {sortMode === "non_climate"
+              ? "No non-climate-related bills match these filters yet."
+              : "No bills match these filters yet."}
           </div>
         )}
         {filtered.map((bill, i) => (
