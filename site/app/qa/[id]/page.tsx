@@ -89,7 +89,7 @@ export default function QADetailPage({ params }: { params: { id: string } }) {
 
       {entry.url && (
         <div className="mt-10 pt-6 border-t border-rule">
-          
+          <a
             href={entry.url}
             target="_blank"
             rel="noreferrer"
