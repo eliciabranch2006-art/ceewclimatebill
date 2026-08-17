@@ -45,6 +45,14 @@ logger = logging.getLogger(__name__)
 # low — a few hundred/year — so sonnet is affordable too).
 DEFAULT_MODEL = "claude-haiku-4-5-20251001"
 
+# Bump this whenever SYSTEM_PROMPT's rubric/rules change in a way that could
+# change existing scores (e.g. adding the minerals/reskilling classification
+# rules). db.bill_needs_scoring() compares this to each bill's stored
+# prompt_version and automatically re-scores anything scored under an older
+# version — so a rubric fix propagates to already-scraped bills, not just
+# newly-scraped ones.
+PROMPT_VERSION = 2
+
 SYSTEM_PROMPT = f"""You are scoring Indian parliamentary bills for their climate-policy \
 relevance, for CEEW (Council on Energy, Environment and Water)'s outreach team. \
 You will be given a bill's title, ministry, status, and PRS Legislative Research's own \
