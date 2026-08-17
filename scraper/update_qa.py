@@ -37,10 +37,10 @@ logger = logging.getLogger(__name__)
 
 SITE_DATA_PATH = Path(__file__).resolve().parent.parent / "site" / "data" / "qa.json"
 
-# Keep this small at first — each keyword triggers a real browser search,
-# which is slow (see SEARCH_DELAY_SECONDS in sansad_client.py) and each
-# new result triggers a Claude API call. Expand once you've confirmed the
-# scraper selectors actually work.
+# Keep this small at first — each keyword triggers a real browser search
+# (now reusing one browser for the whole run — see SansadSession) and
+# each new result triggers a Claude API call. Expand once you've
+# confirmed the scraper selectors actually work.
 KEYWORDS_PER_RUN = 8
 
 
@@ -53,10 +53,16 @@ def run(keyword_limit: int = KEYWORDS_PER_RUN):
     keywords = ALL_SEED_KEYWORDS[:keyword_limit]
     classified_count = 0
 
-    with db.get_conn() as conn:
+    # One browser for the entire run (see sansad_client.SansadSession) —
+    # the original version launched a fresh browser per search AND per
+    # detail fetch, which is most of why the first run took 15+ minutes.
+    with db.get_conn() as conn, sansad_client.SansadSession() as session:
+        if not session.available:
+            logger.warning("Playwright unavailable — Q&A run will find nothing this time")
+
         for house in ("ls", "rs"):
             for kw in keywords:
-                results = sansad_client.search_qa(house, kw)
+                results = session.search_qa(house, kw)
                 logger.info("house=%s keyword=%r -> %d results", house, kw, len(results))
 
                 for summary in results:
@@ -65,7 +71,7 @@ def run(keyword_limit: int = KEYWORDS_PER_RUN):
                         continue  # finished record — answered or human-reviewed, don't touch it
                     # else: brand new, OR previously seen but still unanswered — (re)fetch
 
-                    detail = sansad_client.fetch_qa_detail(summary)
+                    detail = session.fetch_qa_detail(summary)
                     entry_dict = {
                         "id": detail.id, "house": detail.house,
                         "question_number": detail.question_number,

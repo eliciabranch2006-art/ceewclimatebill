@@ -27,14 +27,28 @@ search, and generates working Python selectors you can drop in below.
 This will get you correct selectors far faster than trial-and-error
 against the CI logs. Send me the generated code and I'll wire it in.
 
-Politeness: sleeps between requests, single browser instance reused
-across searches, runs on a schedule (not continuously).
+**Performance note (fixed after the first version ran ~15+ minutes):**
+this used to launch a brand-new browser for every single search AND
+every single detail-page fetch — dozens of full browser startups per
+run. It also waited for Playwright's "networkidle" state, which many
+JS-heavy sites (background polling, analytics beacons) never actually
+reach, silently eating the full timeout on every navigation. Fixed by:
+(1) reusing ONE browser for the whole run via SansadSession below —
+    only lightweight pages are opened/closed per navigation, not whole
+    browsers;
+(2) waiting for "domcontentloaded" (fast, reliable) instead of
+    "networkidle" for the initial navigation, then an explicit fixed
+    pause to give client-side JS time to render, instead of gambling on
+    network activity ever going fully quiet.
+
+Politeness: still sleeps between requests; runs on a schedule, not
+continuously.
 """
 
 from __future__ import annotations
 
 import logging
-import time
+import re
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -45,7 +59,8 @@ HOUSES = {
     "rs": "https://sansad.in/rs/questions/questions-and-answers",
 }
 
-SEARCH_DELAY_SECONDS = 3.0  # generous — this is a JS app that needs render + API round-trip time
+RENDER_PAUSE_SECONDS = 3.0  # time given to client-side JS to render after each navigation
+NAV_TIMEOUT_MS = 20000      # domcontentloaded is fast — no need for the old 45s allowance
 
 
 @dataclass
@@ -63,8 +78,8 @@ class QAEntry:
     # has fixed weekdays for answering, so this is a real scheduled date,
     # not a rolling deadline. Once this date has passed, we treat the
     # question as due; if answer_text is still empty past that date, the
-    # frontend shows "overdue" rather than a countdown. See sansad_client.py
-    # module docstring for why we're not treating this as a fixed N-day SLA.
+    # frontend shows "overdue" rather than a countdown. See module
+    # docstring for why we're not treating this as a fixed N-day SLA.
     listed_date: Optional[str] = None
     question_text: str = ""
     answer_text: str = ""
@@ -75,31 +90,56 @@ class QAEntry:
         return bool(self.answer_text.strip())
 
 
-def search_qa(house: str, keyword: str, max_results: int = 15) -> list[QAEntry]:
-    """Search one house's Q&A for a title keyword. Returns [] and logs a
-    warning if playwright isn't installed/available, rather than crashing
-    the whole run — lets you disable this module without touching
-    update_qa.py."""
-    try:
-        from playwright.sync_api import sync_playwright
-    except ImportError:
-        logger.warning("playwright not installed — skipping Q&A scrape. Run: "
-                        "pip install playwright && playwright install --with-deps chromium")
-        return []
+class SansadSession:
+    """Wraps a single reused Playwright browser for the whole scrape run.
+    Use as a context manager:
 
-    house_label = "Lok Sabha" if house == "ls" else "Rajya Sabha"
-    entries: list[QAEntry] = []
+        with SansadSession() as session:
+            results = session.search_qa("ls", "solar energy")
+            detail = session.fetch_qa_detail(results[0])
 
-    with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)
-        page = browser.new_page()
+    Each call opens/closes a lightweight page, not a whole new browser —
+    this is the main fix for the slow first version of this scraper.
+    """
+
+    def __init__(self):
+        self._playwright = None
+        self._browser = None
+
+    def __enter__(self) -> "SansadSession":
         try:
-            page.goto(HOUSES[house], wait_until="networkidle", timeout=45000)
+            from playwright.sync_api import sync_playwright
+        except ImportError:
+            logger.warning("playwright not installed — Q&A scraping will no-op. Run: "
+                            "pip install playwright && playwright install --with-deps chromium")
+            return self
+        self._playwright = sync_playwright().start()
+        self._browser = self._playwright.chromium.launch(headless=True)
+        return self
+
+    def __exit__(self, *exc_info):
+        if self._browser:
+            self._browser.close()
+        if self._playwright:
+            self._playwright.stop()
+
+    @property
+    def available(self) -> bool:
+        return self._browser is not None
+
+    def search_qa(self, house: str, keyword: str, max_results: int = 15) -> list[QAEntry]:
+        if not self.available:
+            return []
+
+        house_label = "Lok Sabha" if house == "ls" else "Rajya Sabha"
+        entries: list[QAEntry] = []
+        page = self._browser.new_page()
+        try:
+            page.goto(HOUSES[house], wait_until="domcontentloaded", timeout=NAV_TIMEOUT_MS)
+            page.wait_for_timeout(int(RENDER_PAUSE_SECONDS * 1000))
 
             # --- Fill the search form ---
             # TODO: verify these against the real page (see module docstring).
-            # "Search On" appears to be a dropdown defaulting to a field like
-            # Title; we select "Title" explicitly if the label is findable.
             try:
                 page.get_by_label("Search On").select_option(label="Title")
             except Exception:
@@ -110,7 +150,6 @@ def search_qa(house: str, keyword: str, max_results: int = 15) -> list[QAEntry]:
             except Exception:
                 logger.debug("Could not set 'Matches On' dropdown — using page default")
 
-            # The free-text title search box — try a few plausible ways to find it
             title_box = None
             for locator_attempt in [
                 lambda: page.get_by_placeholder("Title", exact=False),
@@ -129,20 +168,19 @@ def search_qa(house: str, keyword: str, max_results: int = 15) -> list[QAEntry]:
                 return []
             title_box.fill(keyword)
 
-            # Submit — the page shows a "Filter" or "Apply" button
             for button_text in ["Apply", "Filter", "Search"]:
                 btn = page.get_by_role("button", name=button_text)
                 if btn.count() > 0:
                     btn.first.click()
                     break
 
-            page.wait_for_timeout(int(SEARCH_DELAY_SECONDS * 1000))
-            page.wait_for_load_state("networkidle", timeout=30000)
+            # Give the results API call time to resolve — a fixed pause
+            # instead of wait_for_load_state("networkidle"), which this
+            # kind of app may never satisfy.
+            page.wait_for_timeout(int(RENDER_PAUSE_SECONDS * 1000))
 
             # --- Parse results ---
-            # TODO: verify the actual result-row structure. Assuming results
-            # render as a list/table of rows, each containing the question
-            # title as a clickable link plus member/ministry/date text.
+            # TODO: verify the actual result-row structure.
             rows = page.locator("[class*='question'], [class*='result'], tr").all()
             for row in rows[:max_results]:
                 text = row.inner_text().strip()
@@ -168,41 +206,30 @@ def search_qa(house: str, keyword: str, max_results: int = 15) -> list[QAEntry]:
         except Exception:
             logger.exception("Q&A search failed for house=%s keyword=%r", house, keyword)
         finally:
-            browser.close()
+            page.close()
 
-    return entries
+        return entries
 
+    def fetch_qa_detail(self, entry: QAEntry) -> QAEntry:
+        """Fetch the full question + answer text, constituency, and
+        scheduled answer date for one entry. Best-effort — returns the
+        entry with whatever it could find, rather than failing the whole
+        run when a locator doesn't match.
 
-def fetch_qa_detail(entry: QAEntry) -> QAEntry:
-    """Fetch the full question + answer text for one entry, plus the
-    member's constituency and the scheduled/listed answer date. Best-effort
-    — returns the entry with whatever it could find, rather than failing
-    the whole run when a locator doesn't match.
+        TODO once you've inspected a real detail page: the question/answer
+        split below is a text-search heuristic, not a targeted locator,
+        because I don't know the actual DOM structure. Replace with direct
+        locators for "Question" / "Answer" sections once confirmed.
+        """
+        if not self.available or not entry.url:
+            return entry
 
-    TODO once you've inspected a real detail page: the split between
-    question_text and answer_text below is a heuristic (looks for a
-    heading-like line containing "Answer" and splits there) rather than a
-    targeted locator, because I don't know the actual DOM structure. If a
-    detail page has clearly labeled "Question" and "Answer" sections in
-    the real HTML, replace this with direct locators — it'll be far more
-    reliable than the text-split heuristic.
-    """
-    if not entry.url:
-        return entry
-    try:
-        from playwright.sync_api import sync_playwright
-    except ImportError:
-        return entry
-
-    with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)
-        page = browser.new_page()
+        page = self._browser.new_page()
         try:
-            page.goto(entry.url, wait_until="networkidle", timeout=45000)
-            page.wait_for_timeout(int(SEARCH_DELAY_SECONDS * 1000))
+            page.goto(entry.url, wait_until="domcontentloaded", timeout=NAV_TIMEOUT_MS)
+            page.wait_for_timeout(int(RENDER_PAUSE_SECONDS * 1000))
             body_text = page.locator("body").inner_text()
 
-            # Heuristic question/answer split — see TODO above
             lower = body_text.lower()
             answer_marker = None
             for marker in ("answer\n", "answer:", "\nanswer"):
@@ -214,14 +241,9 @@ def fetch_qa_detail(entry: QAEntry) -> QAEntry:
                 entry.question_text = body_text[:answer_marker].strip()[:3000]
                 entry.answer_text = body_text[answer_marker:].strip()[:3000]
             else:
-                # No clear "Answer" marker found — question is likely
-                # unanswered yet, or the split heuristic just didn't match.
                 entry.question_text = body_text[:3000]
                 entry.answer_text = ""
 
-            # Constituency — try a label-based lookup first (most robust if
-            # the real page has a "Constituency" label), fall back to a loose
-            # regex for "<Name>, <State>" patterns near the member's name.
             try:
                 constituency_label = page.get_by_text("Constituency", exact=False)
                 if constituency_label.count() > 0:
@@ -231,10 +253,6 @@ def fetch_qa_detail(entry: QAEntry) -> QAEntry:
             except Exception:
                 pass
 
-            # Scheduled/listed answer date — look for a line near "Date of
-            # Answer" or similar; this is a best-effort text search, not a
-            # verified locator.
-            import re
             date_match = re.search(
                 r"(?:date of answer|answer date|listed for)\D{0,20}"
                 r"([A-Z][a-z]{2,8}\s+\d{1,2},?\s+\d{4})",
@@ -245,6 +263,20 @@ def fetch_qa_detail(entry: QAEntry) -> QAEntry:
         except Exception:
             logger.exception("Could not fetch Q&A detail for %s", entry.url)
         finally:
-            browser.close()
+            page.close()
 
-    return entry
+        return entry
+
+
+# Backwards-compatible module-level functions, in case anything still calls
+# these directly — each opens its own short-lived session. Prefer
+# SansadSession directly (see update_qa.py) for anything that makes more
+# than one call, to get the browser-reuse benefit.
+def search_qa(house: str, keyword: str, max_results: int = 15) -> list[QAEntry]:
+    with SansadSession() as session:
+        return session.search_qa(house, keyword, max_results)
+
+
+def fetch_qa_detail(entry: QAEntry) -> QAEntry:
+    with SansadSession() as session:
+        return session.fetch_qa_detail(entry)
