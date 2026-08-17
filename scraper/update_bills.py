@@ -102,6 +102,7 @@ def run(year: int | None, skip_scoring: bool, limit: int | None):
                     "prs_category": detail.prs_category,
                     "status": detail.status,
                     "year": detail.year,
+                    "overview_text": detail.overview_text,
                     "highlights_text": detail.highlights_text,
                     "key_issues_text": detail.key_issues_text,
                     "status_timeline_json": json.dumps(detail.status_timeline),
@@ -116,7 +117,8 @@ def run(year: int | None, skip_scoring: bool, limit: int | None):
                     "id": existing["id"], "title": existing["title"],
                     "prs_url": existing["prs_url"], "ministry": existing["ministry"],
                     "prs_category": existing["prs_category"], "status": existing["status"],
-                    "year": existing["year"], "highlights_text": existing["highlights_text"],
+                    "year": existing["year"], "overview_text": existing["overview_text"],
+                    "highlights_text": existing["highlights_text"],
                     "key_issues_text": existing["key_issues_text"],
                 }
 

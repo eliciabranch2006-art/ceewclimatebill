@@ -80,6 +80,9 @@ class BillDetail:
     prs_category: Optional[str] = None
     status: Optional[str] = None
     year: Optional[int] = None
+    overview_text: str = ""    # intro/summary paragraphs before "Highlights of the Bill" —
+                                 # richer plain-English context for the scorer than the
+                                 # Highlights/Key Issues sections alone
     highlights_text: str = ""
     key_issues_text: str = ""
     status_timeline: list = field(default_factory=list)  # [{stage, chamber, date}]
@@ -190,6 +193,38 @@ def _extract_section_after_heading(soup: BeautifulSoup, heading_text: str) -> st
     return "\n".join(texts)
 
 
+def _extract_overview_text(soup: BeautifulSoup, max_paragraphs: int = 4) -> str:
+    """PRS legislative briefs typically open with a few plain-English
+    introductory paragraphs (what the bill does, in general terms) before
+    the "Highlights of the Bill" section starts. This is exactly the kind
+    of distilled, readable context that helps the scorer make a confident
+    call instead of guessing from the terser Highlights/Key Issues bullet
+    points alone — collect it as its own field. Walks the document in
+    order and stops as soon as it reaches the Highlights heading, so it
+    never doubles up with what _extract_section_after_heading already
+    captures."""
+    highlights_heading = None
+    for tag in soup.find_all(["strong", "b", "h2", "h3", "h4"]):
+        if "highlights of the bill" in tag.get_text(strip=True).lower():
+            highlights_heading = tag
+            break
+    if highlights_heading is None:
+        return ""
+
+    paragraphs = []
+    for element in soup.find_all(["p", "strong", "b", "h2", "h3", "h4"]):
+        if element is highlights_heading:
+            break
+        if element.name == "p":
+            text = element.get_text(strip=True)
+            # Skip short boilerplate/nav fragments (breadcrumbs, dates, etc.)
+            if len(text) > 40:
+                paragraphs.append(text)
+        if len(paragraphs) >= max_paragraphs:
+            break
+    return "\n".join(paragraphs)
+
+
 def fetch_bill_detail(bill: BillSummary) -> BillDetail:
     resp = requests.get(bill.prs_url, headers=HEADERS, timeout=30)
     resp.raise_for_status()
@@ -218,6 +253,7 @@ def fetch_bill_detail(bill: BillSummary) -> BillDetail:
             if c not in ("Home", "Bills & Acts", "Bills Parliament"):
                 detail.prs_category = c
 
+    detail.overview_text = _extract_overview_text(soup)
     detail.highlights_text = _extract_section_after_heading(soup, "Highlights of the Bill")
     detail.key_issues_text = _extract_section_after_heading(soup, "Key Issues and Analysis")
 

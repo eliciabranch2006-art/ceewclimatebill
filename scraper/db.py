@@ -24,6 +24,7 @@ CREATE TABLE IF NOT EXISTS bills (
     prs_category        TEXT,               -- PRS's own 7-way category (Infrastructure and Environment, etc.)
     status              TEXT,               -- Passed / Pending / In Committee / Lapsed / Withdrawn / etc.
     year                INTEGER,
+    overview_text       TEXT,               -- intro paragraphs before "Highlights of the Bill"
     highlights_text     TEXT,               -- "Highlights of the Bill" section, scraped
     key_issues_text     TEXT,               -- "Key Issues and Analysis" section, scraped
     status_timeline_json TEXT,              -- JSON list of {stage, chamber, date}
@@ -137,6 +138,10 @@ def init_db():
                 conn.execute(f"ALTER TABLE qa_entries ADD COLUMN {col} {coltype}")
             except sqlite3.OperationalError:
                 pass
+        try:
+            conn.execute("ALTER TABLE bills ADD COLUMN overview_text TEXT")
+        except sqlite3.OperationalError:
+            pass
 
 
 def upsert_bill(conn, bill: dict, now_iso: str):
@@ -144,21 +149,21 @@ def upsert_bill(conn, bill: dict, now_iso: str):
     if existing:
         conn.execute(
             """UPDATE bills SET title=?, prs_url=?, ministry=?, prs_category=?, status=?,
-               year=?, highlights_text=?, key_issues_text=?, status_timeline_json=?,
+               year=?, overview_text=?, highlights_text=?, key_issues_text=?, status_timeline_json=?,
                bill_pdf_url=?, last_scraped_at=? WHERE id=?""",
             (bill["title"], bill["prs_url"], bill.get("ministry"), bill.get("prs_category"),
-             bill.get("status"), bill.get("year"), bill.get("highlights_text"),
+             bill.get("status"), bill.get("year"), bill.get("overview_text"), bill.get("highlights_text"),
              bill.get("key_issues_text"), bill.get("status_timeline_json"),
              bill.get("bill_pdf_url"), now_iso, bill["id"]),
         )
     else:
         conn.execute(
             """INSERT INTO bills (id, title, prs_url, ministry, prs_category, status, year,
-               highlights_text, key_issues_text, status_timeline_json, bill_pdf_url,
+               overview_text, highlights_text, key_issues_text, status_timeline_json, bill_pdf_url,
                first_seen_at, last_scraped_at)
-               VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)""",
+               VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
             (bill["id"], bill["title"], bill["prs_url"], bill.get("ministry"),
-             bill.get("prs_category"), bill.get("status"), bill.get("year"),
+             bill.get("prs_category"), bill.get("status"), bill.get("year"), bill.get("overview_text"),
              bill.get("highlights_text"), bill.get("key_issues_text"),
              bill.get("status_timeline_json"), bill.get("bill_pdf_url"), now_iso, now_iso),
         )

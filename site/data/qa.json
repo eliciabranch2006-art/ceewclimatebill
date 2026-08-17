@@ -1,5 +1,61 @@
 {
-  "generated_at": "2026-08-17T18:29:51.804896+00:00",
+  "generated_at": "2026-08-17T00:00:00+00:00",
   "source": "sansad.in (Lok Sabha / Rajya Sabha)",
-  "entries": []
+  "entries": [
+    {
+      "id": "seed-example-answered",
+      "house": "Lok Sabha",
+      "question_number": "1234",
+      "question_type": "Unstarred",
+      "title": "Status of Renewable Energy Targets",
+      "member_name": "Sample MP",
+      "member_constituency": "Sample Constituency, Sample State",
+      "ministry": "New and Renewable Energy",
+      "listed_date": "2026-07-01",
+      "question_text": null,
+      "answer_text": "Sample answer text — will be replaced once the scraper runs.",
+      "is_answered": true,
+      "url": "https://sansad.in/ls/questions/questions-and-answers",
+      "is_relevant": true,
+      "ceew_area": "Energy Transitions",
+      "summary_bullets": [
+        "Sample seed row — will be replaced once the scraper runs for the first time.",
+        "MP asked about progress toward renewable energy capacity targets.",
+        "Ministry responded with current installed capacity figures."
+      ],
+      "rationale": "Sample seed row for demonstration.",
+      "confidence": "medium",
+      "scorer_model": "seed-example",
+      "is_manual_override": false,
+      "first_seen_at": "2026-08-17T00:00:00+00:00",
+      "last_scraped_at": "2026-08-17T00:00:00+00:00"
+    },
+    {
+      "id": "seed-example-unanswered",
+      "house": "Rajya Sabha",
+      "question_number": "5678",
+      "question_type": "Unstarred",
+      "title": "Coastal Shipping Emissions Reduction Plan",
+      "member_name": "Sample MP Two",
+      "member_constituency": "Sample State Two",
+      "ministry": "Ports, Shipping and Waterways",
+      "listed_date": "2026-08-25",
+      "question_text": null,
+      "answer_text": "",
+      "is_answered": false,
+      "url": "https://sansad.in/rs/questions/questions-and-answers",
+      "is_relevant": true,
+      "ceew_area": "Sustainable Mobility",
+      "summary_bullets": [
+        "Sample seed row — will be replaced once the scraper runs for the first time.",
+        "MP asked whether the ministry has an emissions reduction roadmap for coastal shipping."
+      ],
+      "rationale": "Sample seed row for demonstration.",
+      "confidence": "medium",
+      "scorer_model": "seed-example",
+      "is_manual_override": false,
+      "first_seen_at": "2026-08-17T00:00:00+00:00",
+      "last_scraped_at": "2026-08-17T00:00:00+00:00"
+    }
+  ]
 }

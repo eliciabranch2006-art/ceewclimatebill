@@ -51,7 +51,7 @@ DEFAULT_MODEL = "claude-haiku-4-5-20251001"
 # prompt_version and automatically re-scores anything scored under an older
 # version — so a rubric fix propagates to already-scraped bills, not just
 # newly-scraped ones.
-PROMPT_VERSION = 3
+PROMPT_VERSION = 4
 
 SYSTEM_PROMPT = f"""You are scoring Indian parliamentary bills for their climate-policy \
 relevance, for CEEW (Council on Energy, Environment and Water)'s outreach team. \
@@ -135,7 +135,36 @@ production works against climate goals even though it's energy-sector-relevant.
 - Mobility, ports, and vehicles: any bill about mobility, shipping, ports, coastal/maritime \
 transport, railways, aviation, or vehicles of any kind goes under "Sustainable Mobility".
 
-highlights_bullets / issues_bullets guidance: be genuinely succinct — a reader should be \
+Confidence calibration — worked examples (match this standard, don't just guess at what \
+"medium" means in the abstract):
+
+Example 1 — should be confidence: "high" (clearly relevant): A bill titled "The National \
+Green Hydrogen Mission (Amendment) Bill" whose Overview and Highlights describe binding \
+production targets, a subsidy mechanism, and a named implementing authority. This is \
+unambiguous — high confidence, sectoral_primary_area "Energy Transitions", solid scores \
+across mitigation/enforceability. needs_review: false.
+
+Example 2 — should ALSO be confidence: "high" (clearly NOT relevant): A bill titled "The \
+Code of Civil Procedure (Amendment) Bill" whose Overview describes changes to court filing \
+deadlines, with no mention of any of the 15 areas anywhere in the text. Being confident \
+that something is irrelevant is just as valid as being confident it's relevant — this is \
+high confidence, sectoral_primary_area: null, needs_review: false. Don't default to \
+"medium" just because the bill scored 0 — a clean, unambiguous 0 is a high-confidence call.
+
+Example 3 — should be confidence: "medium" or "low" (genuinely ambiguous): A bill titled \
+"The Warehousing Development and Regulation (Amendment) Bill" whose Overview mentions in \
+passing that new warehouses should follow "environmentally sustainable construction \
+practices" but the Highlights and Key Issues are otherwise entirely about licensing \
+procedure and dispute resolution, with no further climate detail. Here the sectoral \
+connection is real but thin — this is the genuinely uncertain case: medium confidence, a \
+modest sectoral_score reflecting the passing mention, needs_review: true.
+
+The point of these examples: "medium/low confidence" should track how ambiguous the BILL \
+ITSELF is, not how much text was available or how hard the task felt. A bill with thin PRS \
+text but an obviously clear-cut subject (e.g. a one-line "Electricity (Amendment) Bill" \
+about tariff structures) can still be high confidence. Reserve medium/low for bills where \
+the correct classification is genuinely a judgment call even with full information.
+
 able to scan all bullets in under 10 seconds. Cut qualifiers, drop citations to section \
 numbers unless essential, and prefer one clear sentence over two connected ones. If the \
 source text is too thin to produce a real bullet (e.g. "(not available)"), return an empty list.
@@ -167,6 +196,9 @@ def _build_user_prompt(bill: dict) -> str:
 Ministry: {bill.get('ministry') or 'unknown'}
 Status: {bill.get('status') or 'unknown'}
 PRS category: {bill.get('prs_category') or 'unknown'}
+
+Overview (introductory summary from PRS's legislative brief):
+{bill.get('overview_text') or '(not available)'}
 
 Highlights of the Bill:
 {bill.get('highlights_text') or '(not available)'}
