@@ -1,20 +1,4 @@
 {
-  "generated_at": "2026-08-17T00:00:00+00:00",
-  "items": [
-    {
-      "id": "seed-example",
-      "source": "google_trends",
-      "title": "electric vehicle India",
-      "url": null,
-      "metric_label": "search interest (0-100)",
-      "metric_value": 62,
-      "seed_keyword": "electric vehicle India",
-      "is_relevant": true,
-      "ceew_area": "Sustainable Mobility",
-      "rationale": "Sample seed row — will be replaced once the scraper runs for the first time.",
-      "confidence": "medium",
-      "scorer_model": "seed-example",
-      "fetched_at": "2026-08-17T00:00:00+00:00"
-    }
-  ]
+  "generated_at": "2026-08-17T19:54:01.751378+00:00",
+  "items": []
 }
