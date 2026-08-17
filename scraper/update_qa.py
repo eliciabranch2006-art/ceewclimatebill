@@ -7,6 +7,13 @@ Searches both houses' Q&A archives for CEEW-relevant seed keywords
 for new results, classifies with Claude, stores in SQLite, and exports
 site/data/qa.json.
 
+Unlike bills (which are stable once passed), a Q&A entry can start
+unanswered and get its answer added later — so unlike a bill, we don't
+just skip every already-seen entry. Only entries that are ALREADY
+answered (or manually corrected) are treated as finished/immutable;
+anything still awaiting an answer gets re-checked on every run so the
+countdown/overdue state and the eventual answer text actually update.
+
 Given sansad_client.py's scraping is best-effort against a JS-rendered
 site (see its docstring), this script treats scraping failures as
 non-fatal — it logs and moves to the next keyword/house rather than
@@ -53,20 +60,21 @@ def run(keyword_limit: int = KEYWORDS_PER_RUN):
                 logger.info("house=%s keyword=%r -> %d results", house, kw, len(results))
 
                 for summary in results:
-                    existing = conn.execute(
-                        "SELECT id FROM qa_entries WHERE id = ?", (summary.id,)
-                    ).fetchone()
-                    if existing:
-                        continue  # Q&A entries are historical records — once seen, don't re-fetch
+                    status = db.get_qa_entry_status(conn, summary.id)
+                    if status is not None and (status["is_answered"] or status["is_manual_override"]):
+                        continue  # finished record — answered or human-reviewed, don't touch it
+                    # else: brand new, OR previously seen but still unanswered — (re)fetch
 
                     detail = sansad_client.fetch_qa_detail(summary)
                     entry_dict = {
                         "id": detail.id, "house": detail.house,
                         "question_number": detail.question_number,
                         "question_type": detail.question_type, "title": detail.title,
-                        "member_name": detail.member_name, "ministry": detail.ministry,
-                        "answer_date": detail.answer_date, "question_text": detail.question_text,
-                        "url": detail.url,
+                        "member_name": detail.member_name,
+                        "member_constituency": detail.member_constituency,
+                        "ministry": detail.ministry, "listed_date": detail.listed_date,
+                        "question_text": detail.question_text, "answer_text": detail.answer_text,
+                        "is_answered": detail.is_answered, "url": detail.url,
                     }
 
                     classification = classify_qa(entry_dict) or {}
@@ -81,7 +89,7 @@ def run(keyword_limit: int = KEYWORDS_PER_RUN):
                     db.upsert_qa_entry(conn, entry_dict, now_iso())
                     classified_count += 1
 
-    logger.info("Classified %d new Q&A entries this run", classified_count)
+    logger.info("Classified/updated %d Q&A entries this run", classified_count)
     export_json()
 
 
@@ -95,6 +103,7 @@ def export_json():
         d["summary_bullets"] = json.loads(d.pop("summary_bullets") or "[]")
         d["is_relevant"] = bool(d.get("is_relevant"))
         d["is_manual_override"] = bool(d.get("is_manual_override"))
+        d["is_answered"] = bool(d.get("is_answered"))
         entries.append(d)
 
     SITE_DATA_PATH.parent.mkdir(parents=True, exist_ok=True)

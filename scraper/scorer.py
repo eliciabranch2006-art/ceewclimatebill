@@ -141,47 +141,24 @@ numbers unless essential, and prefer one clear sentence over two connected ones.
 source text is too thin to produce a real bullet (e.g. "(not available)"), return an empty list.
 """
 
-# Deterministic safety net, applied in Python after the model responds —
-# NOT a replacement for the prompt rules above, but a backstop for when the
-# model doesn't reliably apply them (this is exactly what happened with the
-# MSME/cooperative bills: the prompt said to tag them, but a probabilistic
-# model won't apply every rule with 100% consistency every time). If a
-# bill's title contains one of these phrases and the model left
-# sectoral_primary_area null, we force the area rather than trust the
-# model's negative. We deliberately do NOT override an area the model DID
-# assign — only fill in when it found nothing, so we're not fighting a
-# considered judgement, just catching missed ones.
-FORCE_AREA_KEYWORDS: list[tuple[list[str], str]] = [
-    (["cooperative", "co-operative", "livelihood",
-      "micro, small and medium enterprises", "msme"], "Sustainable Livelihoods"),
-    (["mineral", "mining"], "Technology Futures"),
-    (["nuclear"], "Energy Transitions"),
-    (["oilfield", "oil field", "petroleum"], "Energy Transitions"),
-    (["disaster management"], "Climate Resilience"),
-    (["water (prevention", "prevention and control of pollution"], "Sustainable Water"),
-    (["boiler"], "Industrial Sustainability"),
-    (["shipping", "carriage of goods by sea", "coastal shipping", "merchant shipping",
-      "port ", "ports)", "railway", "motor vehicle", "aviation", "airport"], "Sustainable Mobility"),
-]
+from keyword_rules import match_forced_area
 
 
 def _apply_keyword_safety_net(title: str, parsed: dict) -> dict:
     if parsed.get("sectoral_primary_area") is not None:
         return parsed  # model already found something — don't override a real judgement
 
-    title_lower = title.lower()
-    for keywords, area in FORCE_AREA_KEYWORDS:
-        if any(kw in title_lower for kw in keywords):
-            parsed["sectoral_primary_area"] = area
-            parsed["sectoral_score"] = max(int(parsed.get("sectoral_score") or 0), 20)
-            parsed["needs_review"] = True  # always flag forced tags for a human sanity-check
-            note = f"(Auto-flagged under {area} based on the bill's title; please verify.)"
-            parsed["rationale"] = f"{parsed.get('rationale', '').strip()} {note}".strip()
-            parsed["total_score"] = sum(int(parsed.get(k) or 0) for k in (
-                "sectoral_score", "mitigation_score", "enforceability_score",
-                "scale_score", "novelty_score",
-            ))
-            break
+    area = match_forced_area(title)
+    if area is not None:
+        parsed["sectoral_primary_area"] = area
+        parsed["sectoral_score"] = max(int(parsed.get("sectoral_score") or 0), 20)
+        parsed["needs_review"] = True  # always flag forced tags for a human sanity-check
+        note = f"(Auto-flagged under {area} based on the bill's title; please verify.)"
+        parsed["rationale"] = f"{parsed.get('rationale', '').strip()} {note}".strip()
+        parsed["total_score"] = sum(int(parsed.get(k) or 0) for k in (
+            "sectoral_score", "mitigation_score", "enforceability_score",
+            "scale_score", "novelty_score",
+        ))
     return parsed
 
 

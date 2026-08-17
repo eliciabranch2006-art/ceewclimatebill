@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllQA, getQAById } from "../../../lib/data";
+import { AnswerCountdown } from "../../../components/AnswerCountdown";
 
 export function generateStaticParams() {
   return getAllQA().map((e) => ({ id: e.id }));
@@ -33,13 +34,23 @@ export default function QADetailPage({ params }: { params: { id: string } }) {
       <p className="text-sm text-inkmuted mt-2 font-mono">
         {entry.ministry ?? "Ministry unknown"}
         {entry.member_name ? ` \u00b7 asked by ${entry.member_name}` : ""}
-        {entry.answer_date ? ` \u00b7 answered ${entry.answer_date}` : ""}
       </p>
+      {entry.member_constituency && (
+        <p className="text-sm text-inkmuted font-mono">
+          Representing: {entry.member_constituency}
+        </p>
+      )}
 
       {entry.ceew_area && (
         <span className="inline-block mt-4 text-xs font-mono px-2 py-0.5 bg-ink text-card rounded-sm">
           {entry.ceew_area}
         </span>
+      )}
+
+      {!entry.is_answered && (
+        <div className="mt-5">
+          <AnswerCountdown listedDate={entry.listed_date} />
+        </div>
       )}
 
       {entry.summary_bullets.length > 0 && (
@@ -53,6 +64,15 @@ export default function QADetailPage({ params }: { params: { id: string } }) {
               </li>
             ))}
           </ul>
+        </section>
+      )}
+
+      {entry.is_answered && entry.answer_text && (
+        <section className="mt-6">
+          <h2 className="font-display text-lg text-ink mb-2">Government&rsquo;s response</h2>
+          <p className="text-sm text-inkmuted leading-relaxed whitespace-pre-line">
+            {entry.answer_text}
+          </p>
         </section>
       )}
 

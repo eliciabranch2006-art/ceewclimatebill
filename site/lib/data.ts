@@ -88,9 +88,12 @@ export type QAEntry = {
   question_type: string | null;
   title: string;
   member_name: string | null;
+  member_constituency: string | null;
   ministry: string | null;
-  answer_date: string | null;
+  listed_date: string | null;
   question_text: string | null;
+  answer_text: string | null;
+  is_answered: boolean;
   url: string | null;
   is_relevant: boolean;
   ceew_area: string | null;

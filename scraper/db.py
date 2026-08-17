@@ -79,9 +79,12 @@ CREATE TABLE IF NOT EXISTS qa_entries (
     question_type       TEXT,            -- Starred / Unstarred
     title               TEXT NOT NULL,
     member_name         TEXT,
+    member_constituency TEXT,            -- e.g. "Kota-Bundi, Rajasthan" — best-effort
     ministry            TEXT,
-    answer_date         TEXT,
+    listed_date         TEXT,            -- scheduled/actual answer date (see sansad_client.py)
     question_text       TEXT,
+    answer_text         TEXT,
+    is_answered         INTEGER DEFAULT 0,
     url                 TEXT,
     is_relevant         INTEGER,
     ceew_area           TEXT,
@@ -126,6 +129,14 @@ def init_db():
             conn.execute("ALTER TABLE bill_scores ADD COLUMN climate_direction_rationale TEXT")
         except sqlite3.OperationalError:
             pass
+        for col, coltype in [
+            ("member_constituency", "TEXT"), ("listed_date", "TEXT"),
+            ("answer_text", "TEXT"), ("is_answered", "INTEGER DEFAULT 0"),
+        ]:
+            try:
+                conn.execute(f"ALTER TABLE qa_entries ADD COLUMN {col} {coltype}")
+            except sqlite3.OperationalError:
+                pass
 
 
 def upsert_bill(conn, bill: dict, now_iso: str):
@@ -245,12 +256,13 @@ def upsert_qa_entry(conn, entry: dict, now_iso: str):
     if existing:
         conn.execute(
             """UPDATE qa_entries SET house=?, question_number=?, question_type=?, title=?,
-               member_name=?, ministry=?, answer_date=?, question_text=?, url=?, is_relevant=?,
-               ceew_area=?, summary_bullets=?, rationale=?, confidence=?, scorer_model=?,
-               last_scraped_at=? WHERE id=?""",
+               member_name=?, member_constituency=?, ministry=?, listed_date=?, question_text=?,
+               answer_text=?, is_answered=?, url=?, is_relevant=?, ceew_area=?, summary_bullets=?,
+               rationale=?, confidence=?, scorer_model=?, last_scraped_at=? WHERE id=?""",
             (entry["house"], entry.get("question_number"), entry.get("question_type"),
-             entry["title"], entry.get("member_name"), entry.get("ministry"),
-             entry.get("answer_date"), entry.get("question_text"), entry.get("url"),
+             entry["title"], entry.get("member_name"), entry.get("member_constituency"),
+             entry.get("ministry"), entry.get("listed_date"), entry.get("question_text"),
+             entry.get("answer_text"), int(entry.get("is_answered") or 0), entry.get("url"),
              int(entry.get("is_relevant") or 0), entry.get("ceew_area"),
              entry.get("summary_bullets_json"), entry.get("rationale"), entry.get("confidence"),
              entry.get("scorer_model"), now_iso, entry["id"]),
@@ -258,12 +270,14 @@ def upsert_qa_entry(conn, entry: dict, now_iso: str):
     else:
         conn.execute(
             """INSERT INTO qa_entries (id, house, question_number, question_type, title,
-               member_name, ministry, answer_date, question_text, url, is_relevant, ceew_area,
+               member_name, member_constituency, ministry, listed_date, question_text,
+               answer_text, is_answered, url, is_relevant, ceew_area,
                summary_bullets, rationale, confidence, scorer_model, first_seen_at, last_scraped_at)
-               VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
+               VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
             (entry["id"], entry["house"], entry.get("question_number"), entry.get("question_type"),
-             entry["title"], entry.get("member_name"), entry.get("ministry"),
-             entry.get("answer_date"), entry.get("question_text"), entry.get("url"),
+             entry["title"], entry.get("member_name"), entry.get("member_constituency"),
+             entry.get("ministry"), entry.get("listed_date"), entry.get("question_text"),
+             entry.get("answer_text"), int(entry.get("is_answered") or 0), entry.get("url"),
              int(entry.get("is_relevant") or 0), entry.get("ceew_area"),
              entry.get("summary_bullets_json"), entry.get("rationale"), entry.get("confidence"),
              entry.get("scorer_model"), now_iso, now_iso),
@@ -272,8 +286,17 @@ def upsert_qa_entry(conn, entry: dict, now_iso: str):
 
 def all_qa_entries(conn):
     return conn.execute(
-        "SELECT * FROM qa_entries ORDER BY answer_date DESC"
+        "SELECT * FROM qa_entries ORDER BY listed_date DESC"
     ).fetchall()
+
+
+def get_qa_entry_status(conn, entry_id: str):
+    """Returns a row with is_answered/is_manual_override for one entry, or
+    None if it hasn't been scraped yet. Used to decide whether an already-
+    seen-but-unanswered question should be re-checked for a new answer."""
+    return conn.execute(
+        "SELECT is_answered, is_manual_override FROM qa_entries WHERE id = ?", (entry_id,)
+    ).fetchone()
 
 
 def all_bills_with_scores(conn):

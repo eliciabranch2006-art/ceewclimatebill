@@ -56,11 +56,23 @@ class QAEntry:
     question_type: Optional[str] = None  # Starred / Unstarred
     title: str = ""
     member_name: Optional[str] = None
+    member_constituency: Optional[str] = None  # e.g. "Kota-Bundi, Rajasthan" — best-effort,
+                                                 # see fetch_qa_detail's TODO on where this lives
     ministry: Optional[str] = None
-    answer_date: Optional[str] = None
+    # The date the question is/was scheduled to be answered — each ministry
+    # has fixed weekdays for answering, so this is a real scheduled date,
+    # not a rolling deadline. Once this date has passed, we treat the
+    # question as due; if answer_text is still empty past that date, the
+    # frontend shows "overdue" rather than a countdown. See sansad_client.py
+    # module docstring for why we're not treating this as a fixed N-day SLA.
+    listed_date: Optional[str] = None
     question_text: str = ""
     answer_text: str = ""
     url: Optional[str] = None
+
+    @property
+    def is_answered(self) -> bool:
+        return bool(self.answer_text.strip())
 
 
 def search_qa(house: str, keyword: str, max_results: int = 15) -> list[QAEntry]:
@@ -162,9 +174,19 @@ def search_qa(house: str, keyword: str, max_results: int = 15) -> list[QAEntry]:
 
 
 def fetch_qa_detail(entry: QAEntry) -> QAEntry:
-    """Fetch the full question + answer text for one entry. Best-effort —
-    returns the entry unchanged (with empty question/answer text) if the
-    detail page can't be parsed, rather than failing the whole run."""
+    """Fetch the full question + answer text for one entry, plus the
+    member's constituency and the scheduled/listed answer date. Best-effort
+    — returns the entry with whatever it could find, rather than failing
+    the whole run when a locator doesn't match.
+
+    TODO once you've inspected a real detail page: the split between
+    question_text and answer_text below is a heuristic (looks for a
+    heading-like line containing "Answer" and splits there) rather than a
+    targeted locator, because I don't know the actual DOM structure. If a
+    detail page has clearly labeled "Question" and "Answer" sections in
+    the real HTML, replace this with direct locators — it'll be far more
+    reliable than the text-split heuristic.
+    """
     if not entry.url:
         return entry
     try:
@@ -179,10 +201,47 @@ def fetch_qa_detail(entry: QAEntry) -> QAEntry:
             page.goto(entry.url, wait_until="networkidle", timeout=45000)
             page.wait_for_timeout(int(SEARCH_DELAY_SECONDS * 1000))
             body_text = page.locator("body").inner_text()
-            # TODO: this grabs the whole page body as a rough fallback. Once
-            # you've confirmed the real detail-page structure, replace with
-            # targeted locators for the question text vs. answer text blocks.
-            entry.question_text = body_text[:3000]
+
+            # Heuristic question/answer split — see TODO above
+            lower = body_text.lower()
+            answer_marker = None
+            for marker in ("answer\n", "answer:", "\nanswer"):
+                idx = lower.find(marker)
+                if idx != -1:
+                    answer_marker = idx
+                    break
+            if answer_marker is not None:
+                entry.question_text = body_text[:answer_marker].strip()[:3000]
+                entry.answer_text = body_text[answer_marker:].strip()[:3000]
+            else:
+                # No clear "Answer" marker found — question is likely
+                # unanswered yet, or the split heuristic just didn't match.
+                entry.question_text = body_text[:3000]
+                entry.answer_text = ""
+
+            # Constituency — try a label-based lookup first (most robust if
+            # the real page has a "Constituency" label), fall back to a loose
+            # regex for "<Name>, <State>" patterns near the member's name.
+            try:
+                constituency_label = page.get_by_text("Constituency", exact=False)
+                if constituency_label.count() > 0:
+                    entry.member_constituency = constituency_label.first.locator(
+                        "xpath=following::text()[1]"
+                    ).inner_text().strip()
+            except Exception:
+                pass
+
+            # Scheduled/listed answer date — look for a line near "Date of
+            # Answer" or similar; this is a best-effort text search, not a
+            # verified locator.
+            import re
+            date_match = re.search(
+                r"(?:date of answer|answer date|listed for)\D{0,20}"
+                r"([A-Z][a-z]{2,8}\s+\d{1,2},?\s+\d{4})",
+                body_text, re.IGNORECASE,
+            )
+            if date_match:
+                entry.listed_date = date_match.group(1)
         except Exception:
             logger.exception("Could not fetch Q&A detail for %s", entry.url)
         finally:
