@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS bill_scores (
     mitigation_score        INTEGER,        -- 0-25
     enforceability_score    INTEGER,        -- 0-20
     scale_score             INTEGER,        -- 0-15
-    novelty_score           INTEGER,        -- 0-10
+    novelty_score            INTEGER,        -- 0-10
     total_score             INTEGER,        -- 0-100, sum of the above
     rationale               TEXT,           -- model's plain-language justification
     confidence              TEXT,           -- "high" / "medium" / "low", from the model
@@ -49,7 +49,47 @@ CREATE TABLE IF NOT EXISTS bill_scores (
     issues_bullets          TEXT,           -- JSON list of succinct bullet points
     scored_at               TEXT NOT NULL,
     scorer_model            TEXT NOT NULL,  -- e.g. "claude-sonnet-5", for auditability
+    prompt_version          INTEGER DEFAULT 0,  -- see scorer.PROMPT_VERSION; lets a rubric
+                                                  -- change auto-trigger re-scoring
     is_manual_override      INTEGER DEFAULT 0
+);
+
+CREATE TABLE IF NOT EXISTS trending_items (
+    id              TEXT PRIMARY KEY,   -- source-prefixed id, e.g. "gtrends:solar power india"
+    source          TEXT NOT NULL,      -- 'google_trends' | 'reddit' | 'youtube'
+    title           TEXT NOT NULL,      -- the query / post title / video title
+    url             TEXT,
+    metric_label    TEXT,               -- e.g. "search interest", "upvotes", "views context"
+    metric_value    REAL,
+    seed_keyword    TEXT,               -- which keyword search surfaced this item
+    is_relevant     INTEGER,
+    ceew_area       TEXT,
+    rationale       TEXT,
+    confidence      TEXT,
+    scorer_model    TEXT,
+    fetched_at      TEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS qa_entries (
+    id                  TEXT PRIMARY KEY,
+    house               TEXT NOT NULL,   -- "Lok Sabha" | "Rajya Sabha"
+    question_number     TEXT,
+    question_type       TEXT,            -- Starred / Unstarred
+    title               TEXT NOT NULL,
+    member_name         TEXT,
+    ministry            TEXT,
+    answer_date         TEXT,
+    question_text       TEXT,
+    url                 TEXT,
+    is_relevant         INTEGER,
+    ceew_area           TEXT,
+    summary_bullets     TEXT,            -- JSON list of strings
+    rationale           TEXT,
+    confidence          TEXT,
+    scorer_model        TEXT,
+    is_manual_override  INTEGER DEFAULT 0,
+    first_seen_at       TEXT NOT NULL,
+    last_scraped_at     TEXT NOT NULL
 );
 """
 
@@ -69,6 +109,13 @@ def get_conn():
 def init_db():
     with get_conn() as conn:
         conn.executescript(SCHEMA)
+        # Migration for DBs created before prompt_version existed — CREATE
+        # TABLE IF NOT EXISTS above only applies to brand-new DBs, so an
+        # already-committed data/bills.db needs this column added by hand.
+        try:
+            conn.execute("ALTER TABLE bill_scores ADD COLUMN prompt_version INTEGER DEFAULT 0")
+        except sqlite3.OperationalError:
+            pass  # column already exists
 
 
 def upsert_bill(conn, bill: dict, now_iso: str):
@@ -97,27 +144,28 @@ def upsert_bill(conn, bill: dict, now_iso: str):
     return existing is not None  # True if this was an update to a bill we'd already scraped
 
 
-def bill_needs_scoring(conn, bill_id: str) -> bool:
-    """Score a bill if it has no score yet, or if it hasn't been manually overridden
-    and its status has changed since it was last scored (status changes, e.g.
-    Introduced -> Passed, can change enforceability/scale substance)."""
+def bill_needs_scoring(conn, bill_id: str, current_prompt_version: int) -> bool:
+    """Score a bill if: it has no score yet, OR it hasn't been manually
+    overridden and was scored under an older rubric version than the one
+    currently in scorer.py (so rubric/prompt changes automatically catch
+    up on already-scraped bills, not just newly-scraped ones)."""
     row = conn.execute(
-        "SELECT is_manual_override FROM bill_scores WHERE bill_id = ?", (bill_id,)
+        "SELECT is_manual_override, prompt_version FROM bill_scores WHERE bill_id = ?", (bill_id,)
     ).fetchone()
     if row is None:
         return True
     if row["is_manual_override"]:
         return False
-    return False  # re-scoring on every status change is handled by update_bills.py explicitly
+    return (row["prompt_version"] or 0) < current_prompt_version
 
 
-def upsert_score(conn, bill_id: str, score: dict, now_iso: str, model_name: str):
+def upsert_score(conn, bill_id: str, score: dict, now_iso: str, model_name: str, prompt_version: int):
     conn.execute(
         """INSERT INTO bill_scores (bill_id, sectoral_primary_area, sectoral_secondary_areas,
            sectoral_score, mitigation_score, enforceability_score, scale_score, novelty_score,
            total_score, rationale, confidence, needs_review, highlights_bullets, issues_bullets,
-           scored_at, scorer_model, is_manual_override)
-           VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,0)
+           scored_at, scorer_model, prompt_version, is_manual_override)
+           VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,0)
            ON CONFLICT(bill_id) DO UPDATE SET
              sectoral_primary_area=excluded.sectoral_primary_area,
              sectoral_secondary_areas=excluded.sectoral_secondary_areas,
@@ -133,15 +181,83 @@ def upsert_score(conn, bill_id: str, score: dict, now_iso: str, model_name: str)
              highlights_bullets=excluded.highlights_bullets,
              issues_bullets=excluded.issues_bullets,
              scored_at=excluded.scored_at,
-             scorer_model=excluded.scorer_model
+             scorer_model=excluded.scorer_model,
+             prompt_version=excluded.prompt_version
            WHERE bill_scores.is_manual_override = 0""",
         (bill_id, score.get("sectoral_primary_area"), score.get("sectoral_secondary_areas_json"),
          score.get("sectoral_score"), score.get("mitigation_score"), score.get("enforceability_score"),
          score.get("scale_score"), score.get("novelty_score"), score.get("total_score"),
          score.get("rationale"), score.get("confidence"), score.get("needs_review"),
          score.get("highlights_bullets_json"), score.get("issues_bullets_json"),
-         now_iso, model_name),
+         now_iso, model_name, prompt_version),
     )
+
+
+def upsert_trending_item(conn, item: dict, now_iso: str):
+    conn.execute(
+        """INSERT INTO trending_items (id, source, title, url, metric_label, metric_value,
+           seed_keyword, is_relevant, ceew_area, rationale, confidence, scorer_model, fetched_at)
+           VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)
+           ON CONFLICT(id) DO UPDATE SET
+             metric_value=excluded.metric_value, metric_label=excluded.metric_label,
+             is_relevant=excluded.is_relevant, ceew_area=excluded.ceew_area,
+             rationale=excluded.rationale, confidence=excluded.confidence,
+             scorer_model=excluded.scorer_model, fetched_at=excluded.fetched_at""",
+        (item["id"], item["source"], item["title"], item.get("url"), item.get("metric_label"),
+         item.get("metric_value"), item.get("seed_keyword"), int(item.get("is_relevant") or 0),
+         item.get("ceew_area"), item.get("rationale"), item.get("confidence"),
+         item.get("scorer_model"), now_iso),
+    )
+
+
+def recent_trending_items(conn, max_age_days: int = 14):
+    return conn.execute(
+        """SELECT * FROM trending_items
+           WHERE datetime(fetched_at) >= datetime('now', ?)
+           ORDER BY is_relevant DESC, metric_value DESC""",
+        (f"-{max_age_days} days",),
+    ).fetchall()
+
+
+def upsert_qa_entry(conn, entry: dict, now_iso: str):
+    existing = conn.execute("SELECT id, is_manual_override FROM qa_entries WHERE id = ?",
+                             (entry["id"],)).fetchone()
+    if existing and existing["is_manual_override"]:
+        conn.execute("UPDATE qa_entries SET last_scraped_at=? WHERE id=?",
+                      (now_iso, entry["id"]))
+        return
+    if existing:
+        conn.execute(
+            """UPDATE qa_entries SET house=?, question_number=?, question_type=?, title=?,
+               member_name=?, ministry=?, answer_date=?, question_text=?, url=?, is_relevant=?,
+               ceew_area=?, summary_bullets=?, rationale=?, confidence=?, scorer_model=?,
+               last_scraped_at=? WHERE id=?""",
+            (entry["house"], entry.get("question_number"), entry.get("question_type"),
+             entry["title"], entry.get("member_name"), entry.get("ministry"),
+             entry.get("answer_date"), entry.get("question_text"), entry.get("url"),
+             int(entry.get("is_relevant") or 0), entry.get("ceew_area"),
+             entry.get("summary_bullets_json"), entry.get("rationale"), entry.get("confidence"),
+             entry.get("scorer_model"), now_iso, entry["id"]),
+        )
+    else:
+        conn.execute(
+            """INSERT INTO qa_entries (id, house, question_number, question_type, title,
+               member_name, ministry, answer_date, question_text, url, is_relevant, ceew_area,
+               summary_bullets, rationale, confidence, scorer_model, first_seen_at, last_scraped_at)
+               VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
+            (entry["id"], entry["house"], entry.get("question_number"), entry.get("question_type"),
+             entry["title"], entry.get("member_name"), entry.get("ministry"),
+             entry.get("answer_date"), entry.get("question_text"), entry.get("url"),
+             int(entry.get("is_relevant") or 0), entry.get("ceew_area"),
+             entry.get("summary_bullets_json"), entry.get("rationale"), entry.get("confidence"),
+             entry.get("scorer_model"), now_iso, now_iso),
+        )
+
+
+def all_qa_entries(conn):
+    return conn.execute(
+        "SELECT * FROM qa_entries ORDER BY answer_date DESC"
+    ).fetchall()
 
 
 def all_bills_with_scores(conn):
