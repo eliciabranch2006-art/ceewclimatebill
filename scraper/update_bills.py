@@ -4,10 +4,10 @@ Entry point for the scheduled update job (run by
 
 Flow:
   1. Fetch the current bill listing from PRS (title, url, status)
-  2. For any bill not yet in the DB, or whose status has changed since
-     last scrape, fetch the full detail page
-  3. Score newly-added or status-changed bills (skipping any with a
-     manual override)
+  2. For any bill not yet in the DB, whose status has changed, or whose
+     existing score is older than the current rubric version, (re)score it
+  3. Score newly-added, status-changed, or rubric-stale bills (skipping
+     any with a manual override)
   4. Apply overrides.json (always re-applied, so an edit takes effect
      on the next run without needing a re-scrape)
   5. Export everything to site/data/bills.json for the Next.js frontend
@@ -29,7 +29,7 @@ from pathlib import Path
 import db
 import overrides as overrides_module
 import prs_client
-from scorer import score_bill
+from scorer import score_bill, PROMPT_VERSION
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 logger = logging.getLogger(__name__)
@@ -71,36 +71,51 @@ def run(year: int | None, skip_scoring: bool, limit: int | None):
                 continue  # more than CUTOFF_YEARS old — skip fetching/scoring entirely
 
             existing = conn.execute(
-                "SELECT status FROM bills WHERE id = ?", (summary.id,)
+                "SELECT * FROM bills WHERE id = ?", (summary.id,)
             ).fetchone()
-            status_changed = existing is not None and existing["status"] != summary.status
             is_new = existing is None
+            status_changed = (not is_new) and existing["status"] != summary.status
+            needs_rescore = (not skip_scoring) and db.bill_needs_scoring(
+                conn, summary.id, PROMPT_VERSION
+            )
 
-            if not (is_new or status_changed):
-                continue  # nothing to do — already scraped and status is unchanged
+            if not (is_new or status_changed or needs_rescore):
+                continue  # nothing to do — already scraped, unchanged, and current on the rubric
 
-            detail = prs_client.fetch_bill_detail(summary)
-            bill_dict = {
-                "id": detail.id,
-                "title": detail.title,
-                "prs_url": detail.prs_url,
-                "ministry": detail.ministry,
-                "prs_category": detail.prs_category,
-                "status": detail.status,
-                "year": detail.year,
-                "highlights_text": detail.highlights_text,
-                "key_issues_text": detail.key_issues_text,
-                "status_timeline_json": json.dumps(detail.status_timeline),
-                "bill_pdf_url": detail.bill_pdf_url,
-            }
-            db.upsert_bill(conn, bill_dict, now_iso())
+            if is_new or status_changed:
+                # Content may have changed (or doesn't exist yet) — worth
+                # re-hitting PRS for the current text.
+                detail = prs_client.fetch_bill_detail(summary)
+                bill_dict = {
+                    "id": detail.id,
+                    "title": detail.title,
+                    "prs_url": detail.prs_url,
+                    "ministry": detail.ministry,
+                    "prs_category": detail.prs_category,
+                    "status": detail.status,
+                    "year": detail.year,
+                    "highlights_text": detail.highlights_text,
+                    "key_issues_text": detail.key_issues_text,
+                    "status_timeline_json": json.dumps(detail.status_timeline),
+                    "bill_pdf_url": detail.bill_pdf_url,
+                }
+                db.upsert_bill(conn, bill_dict, now_iso())
+            else:
+                # Rescore-only path (rubric changed, bill content hasn't) —
+                # reuse what's already in the DB instead of re-scraping PRS,
+                # so a prompt tweak doesn't turn into another slow full run.
+                bill_dict = {
+                    "id": existing["id"], "title": existing["title"],
+                    "prs_url": existing["prs_url"], "ministry": existing["ministry"],
+                    "prs_category": existing["prs_category"], "status": existing["status"],
+                    "year": existing["year"], "highlights_text": existing["highlights_text"],
+                    "key_issues_text": existing["key_issues_text"],
+                }
 
-            if not skip_scoring and db.bill_needs_scoring(conn, detail.id) or (
-                not skip_scoring and status_changed
-            ):
+            if not skip_scoring and (is_new or status_changed or needs_rescore):
                 score = score_bill(bill_dict)
                 if score:
-                    db.upsert_score(conn, detail.id, score, now_iso(), score["scorer_model"])
+                    db.upsert_score(conn, summary.id, score, now_iso(), score["scorer_model"], PROMPT_VERSION)
                     scored_count += 1
 
         overrides_module.apply_overrides(conn, now_iso())
