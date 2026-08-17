@@ -1,0 +1,40 @@
+name: Update Q&A data
+
+on:
+  schedule:
+    - cron: "0 5 * * 0"  # weekly, Sunday 05:00 UTC — Q&A is less time-sensitive than
+                          # bills, and Playwright runs are slower/costlier than requests
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r scraper/requirements.txt
+
+      - name: Install Playwright browser
+        run: playwright install --with-deps chromium
+
+      - name: Run Q&A update
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        working-directory: scraper
+        run: python update_qa.py
+
+      - name: Commit updated data
+        run: |
+          git config user.name "ceew-bills-bot"
+          git config user.email "actions@github.com"
+          git add data/bills.db site/data/qa.json
+          git diff --cached --quiet || git commit -m "Update Q&A data [automated]"
+          git push
