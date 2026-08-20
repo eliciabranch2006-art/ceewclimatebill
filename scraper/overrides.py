@@ -55,8 +55,8 @@ def apply_overrides(conn, now_iso: str):
             """INSERT INTO bill_scores (bill_id, sectoral_primary_area, sectoral_secondary_areas,
                sectoral_score, mitigation_score, enforceability_score, scale_score, novelty_score,
                total_score, rationale, confidence, needs_review, highlights_bullets, issues_bullets,
-               scored_at, scorer_model, is_manual_override)
-               VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,1)
+               scored_at, scorer_model, auto_flagged, is_manual_override)
+               VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,0,1)
                ON CONFLICT(bill_id) DO UPDATE SET
                  sectoral_primary_area=excluded.sectoral_primary_area,
                  sectoral_secondary_areas=excluded.sectoral_secondary_areas,
@@ -73,6 +73,7 @@ def apply_overrides(conn, now_iso: str):
                  issues_bullets=excluded.issues_bullets,
                  scored_at=excluded.scored_at,
                  scorer_model=excluded.scorer_model,
+                 auto_flagged=0,
                  is_manual_override=1""",
             (bill_id, fields.get("sectoral_primary_area"),
              json.dumps(fields.get("sectoral_secondary_areas", [])),

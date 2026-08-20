@@ -54,6 +54,8 @@ CREATE TABLE IF NOT EXISTS bill_scores (
                                                   -- change auto-trigger re-scoring
     climate_direction          TEXT,           -- 'supportive' | 'harmful' | 'mixed' | 'neutral'
     climate_direction_rationale TEXT,
+    auto_flagged            INTEGER DEFAULT 0,  -- true when needs_review came from the Python
+                                                  -- keyword safety net, not the model's own judgement
     is_manual_override      INTEGER DEFAULT 0
 );
 
@@ -130,6 +132,10 @@ def init_db():
             conn.execute("ALTER TABLE bill_scores ADD COLUMN climate_direction_rationale TEXT")
         except sqlite3.OperationalError:
             pass
+        try:
+            conn.execute("ALTER TABLE bill_scores ADD COLUMN auto_flagged INTEGER DEFAULT 0")
+        except sqlite3.OperationalError:
+            pass
         for col, coltype in [
             ("member_constituency", "TEXT"), ("listed_date", "TEXT"),
             ("answer_text", "TEXT"), ("is_answered", "INTEGER DEFAULT 0"),
@@ -191,8 +197,8 @@ def upsert_score(conn, bill_id: str, score: dict, now_iso: str, model_name: str,
            sectoral_score, mitigation_score, enforceability_score, scale_score, novelty_score,
            total_score, rationale, confidence, needs_review, highlights_bullets, issues_bullets,
            scored_at, scorer_model, prompt_version, climate_direction, climate_direction_rationale,
-           is_manual_override)
-           VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,0)
+           auto_flagged, is_manual_override)
+           VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,0)
            ON CONFLICT(bill_id) DO UPDATE SET
              sectoral_primary_area=excluded.sectoral_primary_area,
              sectoral_secondary_areas=excluded.sectoral_secondary_areas,
@@ -211,7 +217,8 @@ def upsert_score(conn, bill_id: str, score: dict, now_iso: str, model_name: str,
              scorer_model=excluded.scorer_model,
              prompt_version=excluded.prompt_version,
              climate_direction=excluded.climate_direction,
-             climate_direction_rationale=excluded.climate_direction_rationale
+             climate_direction_rationale=excluded.climate_direction_rationale,
+             auto_flagged=excluded.auto_flagged
            WHERE bill_scores.is_manual_override = 0""",
         (bill_id, score.get("sectoral_primary_area"), score.get("sectoral_secondary_areas_json"),
          score.get("sectoral_score"), score.get("mitigation_score"), score.get("enforceability_score"),
@@ -219,7 +226,8 @@ def upsert_score(conn, bill_id: str, score: dict, now_iso: str, model_name: str,
          score.get("rationale"), score.get("confidence"), score.get("needs_review"),
          score.get("highlights_bullets_json"), score.get("issues_bullets_json"),
          now_iso, model_name, prompt_version,
-         score.get("climate_direction"), score.get("climate_direction_rationale")),
+         score.get("climate_direction"), score.get("climate_direction_rationale"),
+         int(score.get("auto_flagged") or 0)),
     )
 
 
@@ -311,7 +319,7 @@ def all_bills_with_scores(conn):
                   s.total_score, s.rationale, s.confidence, s.needs_review,
                   s.highlights_bullets, s.issues_bullets, s.scored_at,
                   s.scorer_model, s.is_manual_override, s.climate_direction,
-                  s.climate_direction_rationale
+                  s.climate_direction_rationale, s.auto_flagged
            FROM bills b LEFT JOIN bill_scores s ON b.id = s.bill_id
            ORDER BY s.total_score DESC NULLS LAST, b.year DESC"""
     ).fetchall()

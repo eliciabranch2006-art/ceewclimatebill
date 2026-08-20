@@ -147,10 +147,11 @@ export default function HomePage() {
 
       {sortMode === "needs_review" && (
         <p className="text-xs text-inkmuted mb-5 font-mono">
-          Bills worth a second look &mdash; low model confidence, borderline climate relevance,
-          or auto-flagged by a title keyword rather than judged from the bill&rsquo;s full text.
-          Correct any of these via scraper/overrides.json; once reviewed, a bill drops off this
-          tab automatically.
+          Two kinds of bills land here: those marked <span className="text-orange">&#9873; auto-tagged</span> were
+          pattern-matched by a title keyword rather than judged from the bill&rsquo;s full text (fast to verify
+          &mdash; usually just confirming the obvious); those marked <span className="text-orange">&#9873; needs review</span> reflect
+          genuine model uncertainty or borderline relevance. Correct any of these via
+          scraper/overrides.json; once reviewed, a bill drops off this tab automatically.
         </p>
       )}
 
@@ -226,7 +227,9 @@ export default function HomePage() {
                   )}
                   <ClimateDirectionBadge direction={bill.climate_direction} />
                   {bill.needs_review && (
-                    <span className="text-xs font-mono text-orange">&#9873; needs review</span>
+                    <span className="text-xs font-mono text-orange">
+                      &#9873; {bill.auto_flagged ? "auto-tagged" : "needs review"}
+                    </span>
                   )}
                 </div>
                 <div className="font-display text-lg text-ink leading-snug">{bill.title}</div>

@@ -40,6 +40,7 @@ export type Bill = {
   is_manual_override: boolean;
   climate_direction: "supportive" | "harmful" | "mixed" | "neutral" | null;
   climate_direction_rationale: string | null;
+  auto_flagged: boolean;
 };
 
 type BillsFile = {

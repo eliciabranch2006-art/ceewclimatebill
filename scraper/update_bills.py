@@ -151,6 +151,7 @@ def export_json():
         d["issues_bullets"] = json.loads(d.pop("issues_bullets") or "[]")
         d["needs_review"] = bool(d.get("needs_review"))
         d["is_manual_override"] = bool(d.get("is_manual_override"))
+        d["auto_flagged"] = bool(d.get("auto_flagged"))
 
         # Dedup safety net: if the same bill ended up under two different
         # slugs (see prs_client._slug_from_url), keep whichever copy is

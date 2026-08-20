@@ -51,13 +51,33 @@ DEFAULT_MODEL = "claude-haiku-4-5-20251001"
 # prompt_version and automatically re-scores anything scored under an older
 # version — so a rubric fix propagates to already-scraped bills, not just
 # newly-scraped ones.
-PROMPT_VERSION = 4
+PROMPT_VERSION = 5
 
 SYSTEM_PROMPT = f"""You are scoring Indian parliamentary bills for their climate-policy \
 relevance, for CEEW (Council on Energy, Environment and Water)'s outreach team. \
 You will be given a bill's title, ministry, status, and PRS Legislative Research's own \
-"Highlights" and "Key Issues and Analysis" summaries. Score the bill against this rubric \
-and respond with ONLY a JSON object, no other text:
+"Highlights" and "Key Issues and Analysis" summaries.
+
+MANDATORY FIRST STEP — before forming any overall judgement, check the bill's title and \
+content against this exact checklist, in order. If ANY line matches, that determines \
+sectoral_primary_area — do this check BEFORE reading the detailed scoring guidance below, \
+not after you've already formed an impression:
+  1. Livelihoods / cooperatives / MSME (cooperative, livelihood(s), Micro Small and Medium \
+Enterprises) → "Sustainable Livelihoods"
+  2. Minerals / mining / critical minerals → "Technology Futures"
+  3. Nuclear power/energy, OR oilfields/petroleum/fossil fuel production → "Energy Transitions"
+  4. Disaster management → "Climate Resilience"
+  5. Water pollution prevention/control → "Sustainable Water"
+  6. Boilers / industrial safety or emissions equipment → "Industrial Sustainability"
+  7. Mobility, shipping, ports, coastal/maritime transport, railways, aviation, or any \
+vehicles → "Sustainable Mobility"
+  8. None of the above match → fall through to your own judgement using the full rubric below.
+This checklist exists because these specific categories have been under-applied by \
+probabilistic judgement in the past — treat it as a hard rule, not a suggestion, for these \
+8 categories specifically. Getting this checklist right on your own means CEEW's outreach \
+team doesn't have to manually flag these bills after the fact.
+
+Score the bill against this rubric and respond with ONLY a JSON object, no other text:
 
 {{
   "sectoral_primary_area": "<one of CEEW's 15 areas listed below, or null if the bill has \
@@ -174,6 +194,7 @@ from keyword_rules import match_forced_area
 
 
 def _apply_keyword_safety_net(title: str, parsed: dict) -> dict:
+    parsed.setdefault("auto_flagged", False)
     if parsed.get("sectoral_primary_area") is not None:
         return parsed  # model already found something — don't override a real judgement
 
@@ -182,6 +203,11 @@ def _apply_keyword_safety_net(title: str, parsed: dict) -> dict:
         parsed["sectoral_primary_area"] = area
         parsed["sectoral_score"] = max(int(parsed.get("sectoral_score") or 0), 20)
         parsed["needs_review"] = True  # always flag forced tags for a human sanity-check
+        parsed["auto_flagged"] = True  # distinct from genuine low-confidence — this bill was
+                                         # never actually judged, it was pattern-matched. Lets
+                                         # the team eventually bulk-trust a category (e.g. "yes,
+                                         # coop bills are always right") without losing track of
+                                         # which flags came from real model uncertainty.
         note = f"(Auto-flagged under {area} based on the bill's title; please verify.)"
         parsed["rationale"] = f"{parsed.get('rationale', '').strip()} {note}".strip()
         parsed["total_score"] = sum(int(parsed.get(k) or 0) for k in (
