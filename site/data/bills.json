@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-19T03:44:01.047701+00:00",
+  "generated_at": "2026-08-20T03:44:36.825099+00:00",
   "source": "PRS Legislative Research (CC BY 4.0)",
   "bills": [
     {
@@ -1933,6 +1933,42 @@
       "sectoral_secondary_areas": [],
       "highlights_bullets": [],
       "issues_bullets": []
+    },
+    {
+      "id": "foreign-contribution-regulation-amendment-rules-2026",
+      "title": "Foreign Contribution (Regulation) Amendment Rules, 2026",
+      "prs_url": "https://prsindia.org/billtrack/foreign-contribution-regulation-amendment-rules-2026",
+      "ministry": "",
+      "prs_category": "",
+      "status": null,
+      "year": 2026,
+      "highlights_text": "",
+      "key_issues_text": "Rules may be going beyond the scope of the Act",
+      "bill_pdf_url": "https://fcraonline.nic.in/home/PDF_Doc/fc_gaz_23062026.pdf",
+      "first_seen_at": "2026-08-20T03:44:34.591267+00:00",
+      "last_scraped_at": "2026-08-20T03:44:34.591267+00:00",
+      "overview_text": "",
+      "sectoral_primary_area": null,
+      "sectoral_score": 0,
+      "mitigation_score": 0,
+      "enforceability_score": 0,
+      "scale_score": 0,
+      "novelty_score": 0,
+      "total_score": 0,
+      "rationale": "This is an amendment to the Foreign Contribution (Regulation) Act's rules, concerning foreign funding oversight and regulatory compliance. It has no plausible connection to climate, energy, environment, sustainability, or any of CEEW's 15 research areas.",
+      "confidence": "high",
+      "needs_review": false,
+      "scored_at": "2026-08-20T03:44:36.812740+00:00",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "is_manual_override": false,
+      "climate_direction": null,
+      "climate_direction_rationale": null,
+      "status_timeline": [],
+      "sectoral_secondary_areas": [],
+      "highlights_bullets": [],
+      "issues_bullets": [
+        "Rules may be going beyond the scope of the Act"
+      ]
     },
     {
       "id": "the-securities-markets-code-2025",
