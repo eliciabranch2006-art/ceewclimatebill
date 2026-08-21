@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-20T03:44:36.825099+00:00",
+  "generated_at": "2026-08-21T03:53:02.158619+00:00",
   "source": "PRS Legislative Research (CC BY 4.0)",
   "bills": [
     {
@@ -31,6 +31,7 @@
       "is_manual_override": false,
       "climate_direction": "supportive",
       "climate_direction_rationale": "The bill's expansion of RPO to all non-fossil sources and enforcement via financial penalties clearly promotes renewable energy uptake and decarbonization of India's electricity supply, despite its primary focus on market structure and competition.",
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Passed",
@@ -70,20 +71,21 @@
       "last_scraped_at": "2026-08-17T16:11:39.051373+00:00",
       "overview_text": null,
       "sectoral_primary_area": "Sustainable Mobility",
-      "sectoral_score": 25,
+      "sectoral_score": 23,
       "mitigation_score": 12,
       "enforceability_score": 16,
       "scale_score": 14,
       "novelty_score": 7,
-      "total_score": 74,
-      "rationale": "This bill modernizes India's port regulatory framework with explicit environmental provisions. It mandates compliance with global maritime pollution conventions (MARPOL, Ballast Water Management), requires pollution control and disaster management plans with central audits, and includes water-pollution safeguards—making it substantively relevant to both maritime transport and environmental protection. However, the climate-mitigation impact is indirect (ports enable trade and shipping but don't directly reduce emissions), and the bill lacks binding decarbonization targets or modal-shift incentives. The enforceability framework is solid but has gaps (no appeal mechanism against penalties, limited safeguards on inspection powers).",
+      "total_score": 72,
+      "rationale": "This bill modernizes India's 117-year-old ports framework and includes explicit environmental safeguards: compliance with international maritime pollution conventions (MARPOL, Ballast Water), mandatory pollution control plans, and periodic audits. Ports are critical coastal infrastructure and maritime transport nodes, placing this squarely in Sustainable Mobility. The pollution-control and disaster-management provisions touch Sustainable Water and Climate Resilience. However, mitigation impact is moderate because the bill is primarily regulatory/procedural rather than prescriptive of emissions reductions or decarbonization targets; enforceability is solid (audit mechanisms, named authorities) but weakened by gaps in appeal procedures and safeguards against inspector overreach.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:35:14.403789+00:00",
+      "scored_at": "2026-08-21T03:51:25.151918+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": "supportive",
-      "climate_direction_rationale": "The bill strengthens environmental and pollution controls at ports through mandatory compliance with global maritime conventions and audited disaster/pollution plans, supporting sustainable maritime operations and water protection.",
+      "climate_direction_rationale": "The bill establishes binding compliance with international maritime environmental conventions and mandates pollution control and disaster management planning with central audit oversight, strengthening environmental governance of a critical transport sector.",
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -106,15 +108,15 @@
         "Climate Resilience"
       ],
       "highlights_bullets": [
-        "Replaces 1908 Ports Act with modern regulatory framework for port operations, management, tariffs, and environmental safeguards.",
-        "Mandates compliance with MARPOL and Ballast Water Management conventions; ports must prepare audited pollution control and disaster management plans.",
-        "Establishes Maritime State Development Council to issue guidelines on tariff transparency, port data collection, and State Maritime Boards for non-major port administration.",
-        "Requires State Governments to establish Dispute Resolution Committees to adjudicate disputes between ports, concessionaires, users, and service providers."
+        "Replaces the Indian Ports Act, 1908 with modern regulatory framework for port operations, management, and tariff setting.",
+        "Requires ports to comply with global maritime pollution conventions (MARPOL and Ballast Water Management Convention).",
+        "Mandates all ports to prepare pollution control and disaster management plans, subject to periodic central government audits.",
+        "Establishes Maritime State Development Council to issue tariff transparency and port data collection guidelines.",
+        "Creates Dispute Resolution Committees at state level to adjudicate disputes between port operators, concessionaires, and users."
       ],
       "issues_bullets": [
-        "Bill lacks an appeal mechanism against penalties levied by the conservator.",
-        "Port officers (conservator, health officer) granted broad powers of entry and inspection without sufficient safeguards against abuse.",
-        "Environmental provisions focus on compliance and audit but do not include emissions targets or incentives for cleaner shipping/port operations."
+        "Bill lacks an appeal mechanism against penalties imposed by the port conservator, limiting due-process protections.",
+        "Powers of entry and inspection granted to port officers (conservator, health officer) lack adequate safeguards against misuse or arbitrary exercise."
       ]
     },
     {
@@ -146,6 +148,7 @@
       "is_manual_override": false,
       "climate_direction": "supportive",
       "climate_direction_rationale": "Water pollution prevention and control supports environmental and climate outcomes by protecting aquatic ecosystems and water resources essential to climate resilience.",
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -185,17 +188,18 @@
       "sectoral_score": 20,
       "mitigation_score": 12,
       "enforceability_score": 8,
-      "scale_score": 14,
+      "scale_score": 15,
       "novelty_score": 6,
-      "total_score": 60,
-      "rationale": "This bill concerns nuclear energy expansion, which falls squarely under Energy Transitions. However, without access to PRS's Highlights or Key Issues, we cannot assess whether the bill contains binding emissions standards, compliance mechanisms, or other substantive climate-mitigation provisions — or whether it is primarily a framework act with limited enforceability. The score reflects the sector's relevance and national scale, but is cautiously weighted pending detailed review of the actual bill text.",
+      "total_score": 61,
+      "rationale": "The bill's title explicitly references nuclear energy advancement, which falls under Energy Transitions per the mandatory checklist. However, without access to the Highlights or Key Issues text, scores reflect only the sectoral match and title inference. The bill likely has significant climate relevance (nuclear is low-carbon) but enforceability and mitigation scores are conservative given the absence of detailed policy content.",
       "confidence": "low",
       "needs_review": true,
-      "scored_at": "2026-08-17T18:34:01.565442+00:00",
+      "scored_at": "2026-08-21T03:50:18.457316+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": "supportive",
-      "climate_direction_rationale": "Nuclear energy is a low-carbon electricity source and aligns with India's decarbonization goals, so expansion of nuclear capacity supports climate objectives — though the strength of that support depends on the bill's actual binding provisions, which cannot be assessed from the title alone.",
+      "climate_direction_rationale": "Nuclear energy is a low-carbon power source relevant to decarbonisation, though the actual climate impact depends on policy details not available in this brief.",
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -238,14 +242,15 @@
       "scale_score": 12,
       "novelty_score": 3,
       "total_score": 59,
-      "rationale": "This bill modernizes boiler safety and emissions regulation, a direct fit under Industrial Sustainability. The bill establishes mandatory design certification, inspection, registration, and accident reporting for boilers — substantive enforcement mechanisms that support industrial environmental compliance. However, the mitigation score is modest because the bill focuses on safety and operational oversight rather than explicit emissions reduction or pollution control targets; it inherits most provisions from a 1923 act, limiting novelty. The scale is national (central board established) but narrow to the boiler sector.",
+      "rationale": "The Boilers Bill, 2024 is a safety and regulatory framework for industrial boilers that falls under Industrial Sustainability. The bill establishes mandatory design certification, manufacturing inspection, registration, and accident reporting requirements, with a clear implementing authority (state inspectors and a Central Boilers Board). However, the mitigation score is modest because the bill focuses on safety compliance rather than explicit emissions reduction or energy efficiency standards, and it is largely a modernization of a 1923 Act rather than introducing novel climate-relevant provisions.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:36:04.575059+00:00",
+      "scored_at": "2026-08-21T03:52:12.266328+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
-      "climate_direction": "supportive",
-      "climate_direction_rationale": "Mandatory inspection, certification, and reporting regimes for boilers support accident prevention and operational compliance with safety and emissions standards, indirectly reducing uncontrolled industrial emissions and pollution.",
+      "climate_direction": "neutral",
+      "climate_direction_rationale": "The bill establishes industrial safety standards for boilers but does not explicitly mandate energy efficiency, emissions control, or climate-friendly technologies—it is primarily a procedural and safety framework.",
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -270,68 +275,18 @@
       ],
       "sectoral_secondary_areas": [],
       "highlights_bullets": [
-        "Boiler manufacturers must obtain design certification for boilers and components before production.",
-        "Manufacturing and erection of boilers subject to inspection and certification by state inspectors or authorized third parties.",
-        "Boilers must be registered before operation; registration renewed periodically; all alterations/repairs require prior approval.",
-        "All boiler accidents must be reported to authorities within 24 hours.",
-        "Central Boilers Board to be constituted to frame regulations; state governments to appoint Inspectors."
+        "Boiler designs and components must be certified before manufacturing.",
+        "Manufacturing and erection subject to inspection and certification.",
+        "Boilers must be registered before operation; registration renewed periodically.",
+        "Alterations and repairs require prior approval; all accidents reported within 24 hours.",
+        "State governments appoint Inspectors and authorize third parties for inspection; Central Boilers Board frames regulations."
       ],
       "issues_bullets": [
-        "Separate boiler-specific law questioned; UK and South Africa regulate boilers under broader occupational health and safety frameworks.",
-        "State governments empowered to grant blanket exemptions from the Bill, potentially undermining uniform safety coverage.",
-        "Limited judicial recourse; aggrieved persons can only file High Court writ petitions against central government and inspector decisions.",
-        "Inspector powers to enter premises lack specified safeguards against misuse."
+        "Regulatory necessity unclear—some jurisdictions (UK, South Africa) integrate boiler regulation into broader occupational health and safety law.",
+        "State governments can exempt areas blanket-style, potentially undermining safety coverage.",
+        "No judicial recourse against central government or inspector decisions except via High Court writ petition.",
+        "Inspector powers to enter premises lack explicit safeguards against abuse."
       ]
-    },
-    {
-      "id": "the-coastal-shipping-bill-2024",
-      "title": "The Coastal Shipping Bill, 2024",
-      "prs_url": "https://prsindia.org/billtrack/the-coastal-shipping-bill-2024",
-      "ministry": "",
-      "prs_category": "",
-      "status": null,
-      "year": 2024,
-      "highlights_text": "",
-      "key_issues_text": "",
-      "bill_pdf_url": "../files/bills_acts/bills_parliament/2024/Bill_Text_Coastal_Shipping_Bill_2024.pdf",
-      "first_seen_at": "2026-08-17T16:12:08.655690+00:00",
-      "last_scraped_at": "2026-08-17T16:12:08.655690+00:00",
-      "overview_text": null,
-      "sectoral_primary_area": "Sustainable Mobility",
-      "sectoral_score": 20,
-      "mitigation_score": 8,
-      "enforceability_score": 10,
-      "scale_score": 12,
-      "novelty_score": 5,
-      "total_score": 55,
-      "rationale": "The bill concerns coastal shipping, which falls squarely under Sustainable Mobility per CEEW's classification rules. However, with no available Highlights or Key Issues text, the climate substantiveness and enforceability cannot be assessed in detail. Coastal shipping can support lower-carbon transport by shifting cargo from road to maritime routes, but without concrete provisions on emissions standards, fuel efficiency, or modal-shift incentives visible in the brief, scores remain moderate. This bill likely updates licensing and operational frameworks rather than introducing novel climate commitments.",
-      "confidence": "medium",
-      "needs_review": true,
-      "scored_at": "2026-08-17T18:35:40.361055+00:00",
-      "scorer_model": "claude-haiku-4-5-20251001",
-      "is_manual_override": false,
-      "climate_direction": "supportive",
-      "climate_direction_rationale": "Coastal shipping is typically a lower-emissions transport mode relative to road freight; the bill's sectoral focus supports decarbonisation of transport, though specific climate provisions cannot be confirmed from the limited brief.",
-      "status_timeline": [
-        {
-          "stage": "Introduced",
-          "chamber": "Lok Sabha",
-          "date": "Dec 02, 2024"
-        },
-        {
-          "stage": "Passed",
-          "chamber": "Lok Sabha",
-          "date": "Apr 03, 2025"
-        },
-        {
-          "stage": "Passed",
-          "chamber": "Rajya Sabha",
-          "date": "Aug 07, 2025"
-        }
-      ],
-      "sectoral_secondary_areas": [],
-      "highlights_bullets": [],
-      "issues_bullets": []
     },
     {
       "id": "the-disaster-management-amendment-bill-2024",
@@ -350,18 +305,19 @@
       "sectoral_primary_area": "Climate Resilience",
       "sectoral_score": 20,
       "mitigation_score": 0,
-      "enforceability_score": 10,
+      "enforceability_score": 12,
       "scale_score": 15,
       "novelty_score": 5,
-      "total_score": 50,
-      "rationale": "The bill is classified under Climate Resilience per CEEW's explicit rule that any disaster management bill falls under that area. However, with no available details on the specific amendments, substantive scoring is constrained: we assume baseline enforceability (disaster management acts typically have compliance mechanisms) and national scale, but cannot assess whether amendments strengthen or weaken climate adaptation/resilience provisions without the text.",
-      "confidence": "low",
+      "total_score": 52,
+      "rationale": "This bill falls squarely under the Disaster Management category per the checklist, which maps to Climate Resilience. Disaster management legislation is inherently relevant to climate adaptation and resilience-building, even though specific mitigation provisions are unlikely. Without detailed Highlights or Key Issues available, scores reflect a baseline assessment: solid enforceability and national scale (disaster management is a Union/State coordinated function), but modest novelty (amendments to an existing framework) and no direct emissions mitigation.",
+      "confidence": "medium",
       "needs_review": true,
-      "scored_at": "2026-08-17T18:36:21.038974+00:00",
+      "scored_at": "2026-08-21T03:52:28.485991+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
-      "climate_direction": "neutral",
-      "climate_direction_rationale": "Disaster management legislation is climate-relevant but neutral in direction unless the amendments specifically strengthen (or weaken) resilience/adaptation provisions; the absence of detail prevents a directional call.",
+      "climate_direction": "supportive",
+      "climate_direction_rationale": "Disaster management frameworks support climate resilience and adaptation, even if they do not directly reduce emissions, by building institutional capacity to respond to climate-related hazards.",
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -404,19 +360,20 @@
       "overview_text": null,
       "sectoral_primary_area": "Sustainable Mobility",
       "sectoral_score": 20,
-      "mitigation_score": 2,
-      "enforceability_score": 8,
-      "scale_score": 12,
-      "novelty_score": 3,
-      "total_score": 45,
-      "rationale": "This bill modernizes India's aviation regulatory framework by replacing a 1934 Act and sits squarely in the Sustainable Mobility area. However, it is primarily a procedural and institutional bill focused on safety, security, and aircraft regulation rather than climate or emissions-mitigation policies. The bill has no binding emissions standards, carbon targets, or fuel-efficiency requirements — the core levers for climate impact in aviation. It does retain regulatory authority over aircraft design and operations, which could theoretically support future green-aviation standards, but the current text is climate-neutral.",
+      "mitigation_score": 3,
+      "enforceability_score": 12,
+      "scale_score": 13,
+      "novelty_score": 2,
+      "total_score": 50,
+      "rationale": "This bill replaces the 1934 Aircraft Act and is primarily about aviation regulation, safety, and security — clearly falling under Sustainable Mobility per the mandatory checklist. However, the bill itself is not substantively climate-focused; it retains most existing provisions and does not set emissions standards, fuel efficiency requirements, or decarbonization targets. The climate relevance is sectoral (aviation is a transport sector) rather than substantive. Enforceability is moderate because the bill establishes regulatory bodies (DGCA, BCAS, AAIB) and penalties, but mitigation value is low because the bill does not introduce climate-specific measures.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:36:28.097130+00:00",
+      "scored_at": "2026-08-21T03:52:34.029818+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": "neutral",
-      "climate_direction_rationale": "The bill is a procedural modernization of aviation regulation with no substantive provisions for emissions reduction, fuel efficiency, sustainable aviation fuels, or climate-aligned design standards — it neither advances nor harms climate outcomes.",
+      "climate_direction_rationale": "The bill is a technical update to aviation safety and security law without addressing emissions, fuel efficiency, or climate mitigation in the aviation sector.",
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -436,16 +393,169 @@
       ],
       "sectoral_secondary_areas": [],
       "highlights_bullets": [
-        "Replaces the Aircraft Act 1934 with modernized provisions for aircraft manufacturing, possession, use, design, and trade regulation.",
-        "Retains institutional setup: DGCA oversees safety and regulatory functions, BCAS handles security, AAIB investigates accidents; central government retains superintendence and power to review/modify their orders.",
-        "Penalizes dangerous flying, carrying arms or explosives on aircraft, and depositing rubbish or slaughtering animals near airports, with imprisonment up to 3 years and fines up to ₹1 crore.",
-        "Adds provision for second appeal against penalty decisions related to violations of Rules under the Act."
+        "Replaces the Aircraft Act, 1934, retaining most existing provisions on safety, security, and regulatory oversight.",
+        "Establishes DGCA for safety and regulatory functions, BCAS for security, and AAIB for accident investigation, with central government superintendence.",
+        "Regulates aircraft manufacturing, possession, use, trade, and design; prohibits dangerous flying, carrying arms/explosives, and littering near airports with penalties up to 3 years imprisonment and ₹1 crore fine.",
+        "Introduces provision for second appeal against penalty decisions under Rules."
       ],
       "issues_bullets": [
-        "DGCA lacks independence from government control, unlike regulators in telecom, electricity, and insurance sectors despite private airline operators being present since 1994.",
-        "Government retains power to unilaterally appoint arbitrators for compensation disputes, which Supreme Court has found violates Article 14 equality guarantees.",
-        "Central government given discretion to specify criminal penalties via Rules rather than statute, potentially breaching separation of powers."
+        "DGCA remains under government control, unlike independent regulators in telecom, electricity, and insurance sectors, despite private airline operators since 1994.",
+        "Bill empowers government to unilaterally appoint arbitrators for compensation, which Supreme Court has held violates Article 14 equality rights.",
+        "Bill grants discretion to central government to specify criminal penalties for Rule violations, potentially conflicting with separation of powers principle."
       ]
+    },
+    {
+      "id": "the-coastal-shipping-bill-2024",
+      "title": "The Coastal Shipping Bill, 2024",
+      "prs_url": "https://prsindia.org/billtrack/the-coastal-shipping-bill-2024",
+      "ministry": "",
+      "prs_category": "",
+      "status": null,
+      "year": 2024,
+      "highlights_text": "",
+      "key_issues_text": "",
+      "bill_pdf_url": "../files/bills_acts/bills_parliament/2024/Bill_Text_Coastal_Shipping_Bill_2024.pdf",
+      "first_seen_at": "2026-08-17T16:12:08.655690+00:00",
+      "last_scraped_at": "2026-08-17T16:12:08.655690+00:00",
+      "overview_text": null,
+      "sectoral_primary_area": "Sustainable Mobility",
+      "sectoral_score": 20,
+      "mitigation_score": 8,
+      "enforceability_score": 6,
+      "scale_score": 10,
+      "novelty_score": 5,
+      "total_score": 49,
+      "rationale": "Coastal shipping is a maritime transport sector directly covered by the checklist rule for 'Sustainable Mobility'. However, the absence of detailed PRS Highlights and Key Issues limits confidence in assessing the bill's specific climate provisions, implementation mechanisms, and substantive impact. Coastal shipping can support low-carbon transport if it displaces road/aviation freight, but the bill's actual content on emissions standards, modal shift incentives, or environmental regulation is unknown.",
+      "confidence": "low",
+      "needs_review": true,
+      "scored_at": "2026-08-21T03:51:52.296398+00:00",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "is_manual_override": false,
+      "climate_direction": "mixed",
+      "climate_direction_rationale": "Coastal shipping as a mode has lower emissions intensity than road or air freight, but without visibility of the bill's provisions on emissions standards, port infrastructure, or incentives for modal shift, the net climate direction cannot be determined with confidence.",
+      "auto_flagged": false,
+      "status_timeline": [
+        {
+          "stage": "Introduced",
+          "chamber": "Lok Sabha",
+          "date": "Dec 02, 2024"
+        },
+        {
+          "stage": "Passed",
+          "chamber": "Lok Sabha",
+          "date": "Apr 03, 2025"
+        },
+        {
+          "stage": "Passed",
+          "chamber": "Rajya Sabha",
+          "date": "Aug 07, 2025"
+        }
+      ],
+      "sectoral_secondary_areas": [],
+      "highlights_bullets": [],
+      "issues_bullets": []
+    },
+    {
+      "id": "the-merchant-shipping-bill-2024",
+      "title": "The Merchant Shipping Bill, 2024",
+      "prs_url": "https://prsindia.org/billtrack/the-merchant-shipping-bill-2024",
+      "ministry": "",
+      "prs_category": "",
+      "status": null,
+      "year": 2024,
+      "highlights_text": "",
+      "key_issues_text": "",
+      "bill_pdf_url": "../files/bills_acts/bills_parliament/2024/Merchant_Shipping_Bill,_2024.pdf",
+      "first_seen_at": "2026-08-17T16:12:05.285572+00:00",
+      "last_scraped_at": "2026-08-17T16:12:05.285572+00:00",
+      "overview_text": null,
+      "sectoral_primary_area": "Sustainable Mobility",
+      "sectoral_score": 20,
+      "mitigation_score": 5,
+      "enforceability_score": 8,
+      "scale_score": 12,
+      "novelty_score": 3,
+      "total_score": 48,
+      "rationale": "The Merchant Shipping Bill 2024 is classified under Sustainable Mobility because it governs maritime transport and shipping — a sector with climate relevance through vessel efficiency, fuel standards, and operational practices. However, without access to PRS Highlights or Key Issues, the scoring is necessarily conservative: the bill receives baseline sectoral credit for being shipping-sector legislation, but mitigation and novelty scores are modest because shipping bills often address safety, registration, and liability rather than emissions or climate outcomes. Enforceability and scale reflect typical national-level shipping regulation, but lack of substantive detail prevents higher scoring.",
+      "confidence": "low",
+      "needs_review": true,
+      "scored_at": "2026-08-21T03:51:48.823356+00:00",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "is_manual_override": false,
+      "climate_direction": "neutral",
+      "climate_direction_rationale": "Maritime transport is a climate-relevant sector, but without visible provisions on emissions standards, fuel efficiency, or decarbonization, the bill's climate direction cannot be determined from title alone.",
+      "auto_flagged": false,
+      "status_timeline": [
+        {
+          "stage": "Introduced",
+          "chamber": "Lok Sabha",
+          "date": "Dec 10, 2024"
+        },
+        {
+          "stage": "Passed",
+          "chamber": "Lok Sabha",
+          "date": "Aug 06, 2025"
+        },
+        {
+          "stage": "Passed",
+          "chamber": "Rajya Sabha",
+          "date": "Aug 11, 2025"
+        }
+      ],
+      "sectoral_secondary_areas": [],
+      "highlights_bullets": [],
+      "issues_bullets": []
+    },
+    {
+      "id": "the-carriage-of-goods-by-sea-bill-2024",
+      "title": "The Carriage of Goods by Sea Bill, 2024",
+      "prs_url": "https://prsindia.org/billtrack/the-carriage-of-goods-by-sea-bill-2024",
+      "ministry": "",
+      "prs_category": "",
+      "status": null,
+      "year": 2024,
+      "highlights_text": "",
+      "key_issues_text": "",
+      "bill_pdf_url": "../files/bills_acts/bills_parliament/2024/Carriage_of_Goods_by_Sea_Bill_2024_Bill_Text.pdf",
+      "first_seen_at": "2026-08-17T16:12:21.221350+00:00",
+      "last_scraped_at": "2026-08-17T16:12:21.221350+00:00",
+      "overview_text": null,
+      "sectoral_primary_area": "Sustainable Mobility",
+      "sectoral_score": 20,
+      "mitigation_score": 3,
+      "enforceability_score": 8,
+      "scale_score": 12,
+      "novelty_score": 4,
+      "total_score": 47,
+      "rationale": "The bill concerns maritime transport (carriage of goods by sea), which falls under Sustainable Mobility per the mandatory checklist. However, with no available Highlights or Key Issues text, the bill's specific climate and environmental provisions cannot be assessed. The score reflects the sectoral match but assumes a baseline commercial/regulatory character typical of shipping legislation; actual mitigation content, enforceability mechanisms, and novelty remain uncertain pending full text review.",
+      "confidence": "low",
+      "needs_review": true,
+      "scored_at": "2026-08-21T03:52:03.176522+00:00",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "is_manual_override": false,
+      "climate_direction": null,
+      "climate_direction_rationale": null,
+      "auto_flagged": false,
+      "status_timeline": [
+        {
+          "stage": "Introduced",
+          "chamber": "Lok Sabha",
+          "date": "Aug 09, 2024"
+        },
+        {
+          "stage": "Passed",
+          "chamber": "Lok Sabha",
+          "date": "Mar 28, 2025"
+        },
+        {
+          "stage": "Passed",
+          "chamber": "Rajya Sabha",
+          "date": "Aug 06, 2025"
+        }
+      ],
+      "sectoral_secondary_areas": [],
+      "highlights_bullets": [],
+      "issues_bullets": []
     },
     {
       "id": "the-oilfields-regulation-and-development-amendment-bill-2024",
@@ -468,14 +578,15 @@
       "scale_score": 12,
       "novelty_score": 3,
       "total_score": 40,
-      "rationale": "This bill concerns oilfields and petroleum extraction, placing it squarely under Energy Transitions per CEEW's classification rules. However, the bill's climate direction is harmful: expanding or facilitating fossil fuel production actively works against climate mitigation goals. With no PRS text available, detailed scoring is limited, but the sectoral relevance is clear and the climate impact is unambiguously negative.",
+      "rationale": "This bill concerns oilfields and petroleum extraction, which falls under Energy Transitions per the mandatory checklist. However, expansion or deregulation of fossil fuel production works against climate goals. With no PRS text available, scoring is conservative: the bill receives credit for sectoral relevance and national scale (oilfields), but minimal mitigation credit (fossil fuels cannot support emissions reduction), weak enforceability information, and low novelty (likely an incremental amendment to existing regulation). The climate direction is harmful.",
       "confidence": "medium",
       "needs_review": true,
-      "scored_at": "2026-08-17T18:36:15.518402+00:00",
+      "scored_at": "2026-08-21T03:52:22.975239+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": "harmful",
-      "climate_direction_rationale": "Any bill regulating and developing oilfields expands fossil fuel extraction capacity, which contradicts climate mitigation objectives even if the regulation itself includes safety or environmental compliance provisions.",
+      "climate_direction_rationale": "Bills that expand, deregulate, or facilitate petroleum/oilfield production work against climate mitigation targets, even though they are energy-sector-relevant.",
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -531,6 +642,7 @@
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -553,56 +665,6 @@
       "issues_bullets": []
     },
     {
-      "id": "the-national-co-operative-development-corporation-amendment-bill-2026",
-      "title": "The National Co-operative Development Corporation (Amendment) Bill, 2026",
-      "prs_url": "https://prsindia.org/billtrack/the-national-co-operative-development-corporation-amendment-bill-2026",
-      "ministry": "",
-      "prs_category": "",
-      "status": null,
-      "year": 2026,
-      "highlights_text": "",
-      "key_issues_text": "",
-      "bill_pdf_url": "../files/bills_acts/bills_parliament/2026/National_Co-operative_Development_Corporation(A)_Bill_2026.pdf",
-      "first_seen_at": "2026-08-17T16:08:25.288027+00:00",
-      "last_scraped_at": "2026-08-17T16:08:25.288027+00:00",
-      "overview_text": null,
-      "sectoral_primary_area": "Sustainable Livelihoods",
-      "sectoral_score": 20,
-      "mitigation_score": 0,
-      "enforceability_score": 0,
-      "scale_score": 8,
-      "novelty_score": 3,
-      "total_score": 31,
-      "rationale": "This bill amends legislation governing the National Co-operative Development Corporation, which falls squarely under CEEW's Sustainable Livelihoods research area per the classification rules (bills about cooperatives are included regardless of whether they explicitly address green jobs or environmental outcomes). Without detailed highlights or analysis, we cannot assess whether the amendment includes climate-relevant provisions, mitigation targets, or enforcement mechanisms. The score reflects the sectoral match (cooperative development is livelihood-relevant) but cannot credit mitigation, enforceability, or novelty without substantive content.",
-      "confidence": "low",
-      "needs_review": true,
-      "scored_at": "2026-08-17T19:54:36.008254+00:00",
-      "scorer_model": "claude-haiku-4-5-20251001",
-      "is_manual_override": false,
-      "climate_direction": null,
-      "climate_direction_rationale": null,
-      "status_timeline": [
-        {
-          "stage": "Introduced",
-          "chamber": "Lok Sabha",
-          "date": "Aug 10, 2026"
-        },
-        {
-          "stage": "Passed",
-          "chamber": "Lok Sabha",
-          "date": "Aug 11, 2026"
-        },
-        {
-          "stage": "Passed",
-          "chamber": "Rajya Sabha",
-          "date": "Aug 12, 2026"
-        }
-      ],
-      "sectoral_secondary_areas": [],
-      "highlights_bullets": [],
-      "issues_bullets": []
-    },
-    {
       "id": "the-railways-amendment-bill-2024",
       "title": "The Railways (Amendment) Bill, 2024",
       "prs_url": "https://prsindia.org/billtrack/the-railways-amendment-bill-2024",
@@ -617,20 +679,21 @@
       "last_scraped_at": "2026-08-17T16:12:24.784555+00:00",
       "overview_text": null,
       "sectoral_primary_area": "Sustainable Mobility",
-      "sectoral_score": 8,
+      "sectoral_score": 10,
       "mitigation_score": 3,
       "enforceability_score": 2,
-      "scale_score": 12,
+      "scale_score": 8,
       "novelty_score": 2,
-      "total_score": 27,
-      "rationale": "This is a procedural consolidation bill that repeals the 1905 Act and moves railway governance into the 1989 Act—substantively minimal on climate grounds. However, railways are a core Sustainable Mobility asset with genuine mitigation potential (rail freight and passenger services are lower-carbon than road/air), so a bill governing railway administration warrants inclusion under CEEW's inclusion-bias rule. The bill itself contains no binding climate or environmental standards, mitigation targets, or sustainability mandates; it is purely administrative reorganization. Scores reflect the sector's inherent climate relevance offset against the bill's lack of substantive climate content.",
-      "confidence": "medium",
-      "needs_review": true,
-      "scored_at": "2026-08-17T18:35:57.757972+00:00",
+      "total_score": 25,
+      "rationale": "This is a procedural amendment consolidating railway governance legislation, with no direct climate or sustainability provisions. Railways are a key sustainable-mobility sector, which triggers the mandatory checklist; however, the bill itself addresses only administrative structure and board powers, not emissions, modal shift, electrification, or service expansion. It is sectoral-relevant but climate-neutral in substance.",
+      "confidence": "high",
+      "needs_review": false,
+      "scored_at": "2026-08-21T03:52:07.386229+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": "neutral",
-      "climate_direction_rationale": "The bill is procedural consolidation with no substantive climate provisions, though railways themselves are a climate-positive transport mode; the bill neither advances nor impedes climate outcomes.",
+      "climate_direction_rationale": "The bill is a procedural consolidation of governance law with no substantive climate or sustainability impact, despite falling within the sustainable-mobility sector.",
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -655,14 +718,64 @@
       ],
       "sectoral_secondary_areas": [],
       "highlights_bullets": [
-        "Repeals the Indian Railway Board Act, 1905 and consolidates railway governance provisions into the Railways Act, 1989.",
-        "Transfers central government powers and functions over railways to the Railway Board within a unified legislative framework."
+        "Repeals the Indian Railway Board Act, 1905 and consolidates its governance provisions into the Railways Act, 1989",
+        "Retains current organisational structure of Indian Railways under the consolidated framework"
       ],
       "issues_bullets": [
-        "Bill retains existing organizational structure of Indian Railways without addressing expert proposals for corporatization, independent regulation, or zone autonomy.",
-        "Does not include measures to improve railway finances, rationalize fares, improve freight mix, or expand private partnerships—all flagged as needed reforms.",
-        "No environmental or climate-focused amendments despite railways' role in low-carbon mobility."
+        "Bill does not implement proposed structural reforms (corporatisation, independent regulator, zone autonomy) that experts suggest could improve railway efficiency",
+        "No provisions addressing railway finances, passenger fares, freight services, or private partnerships despite these being identified as improvement avenues"
       ]
+    },
+    {
+      "id": "the-national-co-operative-development-corporation-amendment-bill-2026",
+      "title": "The National Co-operative Development Corporation (Amendment) Bill, 2026",
+      "prs_url": "https://prsindia.org/billtrack/the-national-co-operative-development-corporation-amendment-bill-2026",
+      "ministry": "",
+      "prs_category": "",
+      "status": null,
+      "year": 2026,
+      "highlights_text": "",
+      "key_issues_text": "",
+      "bill_pdf_url": "../files/bills_acts/bills_parliament/2026/National_Co-operative_Development_Corporation(A)_Bill_2026.pdf",
+      "first_seen_at": "2026-08-17T16:08:25.288027+00:00",
+      "last_scraped_at": "2026-08-17T16:08:25.288027+00:00",
+      "overview_text": null,
+      "sectoral_primary_area": "Sustainable Livelihoods",
+      "sectoral_score": 20,
+      "mitigation_score": 0,
+      "enforceability_score": 0,
+      "scale_score": 0,
+      "novelty_score": 0,
+      "total_score": 20,
+      "rationale": "The bill's title explicitly mentions the National Co-operative Development Corporation, which falls squarely under the mandatory checklist rule for cooperatives and livelihoods (rule 1). This triggers primary classification as 'Sustainable Livelihoods' regardless of substantive detail. Without PRS summaries of the actual amendments, no further scoring is possible, but the sectoral match is certain.",
+      "confidence": "medium",
+      "needs_review": true,
+      "scored_at": "2026-08-21T03:48:51.830314+00:00",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "is_manual_override": false,
+      "climate_direction": null,
+      "climate_direction_rationale": null,
+      "auto_flagged": false,
+      "status_timeline": [
+        {
+          "stage": "Introduced",
+          "chamber": "Lok Sabha",
+          "date": "Aug 10, 2026"
+        },
+        {
+          "stage": "Passed",
+          "chamber": "Lok Sabha",
+          "date": "Aug 11, 2026"
+        },
+        {
+          "stage": "Passed",
+          "chamber": "Rajya Sabha",
+          "date": "Aug 12, 2026"
+        }
+      ],
+      "sectoral_secondary_areas": [],
+      "highlights_bullets": [],
+      "issues_bullets": []
     },
     {
       "id": "the-mines-and-minerals-development-and-regulation-amendment-bill-2026",
@@ -685,14 +798,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 20,
-      "rationale": "This bill concerns mineral extraction and mining regulation, which falls under CEEW's Technology Futures research area per the classification rules. However, the PRS brief provides no substantive details (all sections marked 'not available'), making it impossible to assess the bill's specific provisions, climate relevance, enforceability, or scale. The score reflects only the sectoral categorization; all other dimensions default to zero due to lack of source material.",
-      "confidence": "low",
+      "rationale": "The bill's title explicitly references 'Mines and Minerals', which triggers the mandatory checklist rule for minerals/mining bills → 'Technology Futures'. However, with no available Highlights, Key Issues, or Overview text, we cannot assess the substantive provisions, their mitigation or enforceability implications, or their scale. The score reflects sectoral relevance alone; further detail is needed to evaluate climate impact.",
+      "confidence": "medium",
       "needs_review": true,
-      "scored_at": "2026-08-17T18:32:33.882744+00:00",
+      "scored_at": "2026-08-21T03:48:54.500799+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -735,14 +849,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 20,
-      "rationale": "This bill concerns mineral extraction and mining regulation, which falls under CEEW's Technology Futures area per classification rules. However, with no available Highlights or Key Issues text, we cannot assess the substantive provisions, their enforceability, or their mitigation/climate impact. The assignment of sectoral_primary_area reflects CEEW's inclusion bias (bills about mining/minerals go to Technology Futures); the low other scores reflect absence of evidence about what the amendment actually does.",
+      "rationale": "The bill's title explicitly references minerals and mining, triggering the mandatory checklist rule that directs all bills about mineral extraction, critical minerals, or mining regulation to 'Technology Futures'. However, without access to the Highlights, Key Issues, or Overview text, no substantive scoring on mitigation, enforceability, scale, or novelty is possible. The bill's climate relevance cannot be assessed without that detail.",
       "confidence": "low",
       "needs_review": true,
-      "scored_at": "2026-08-17T18:34:59.563235+00:00",
+      "scored_at": "2026-08-21T03:51:11.403956+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -765,99 +880,50 @@
       "issues_bullets": []
     },
     {
-      "id": "the-merchant-shipping-bill-2024",
-      "title": "The Merchant Shipping Bill, 2024",
-      "prs_url": "https://prsindia.org/billtrack/the-merchant-shipping-bill-2024",
+      "id": "the-tribhuvan-sahkari-university-bill-2025",
+      "title": "The \"Tribhuvan\" Sahkari University Bill, 2025",
+      "prs_url": "https://prsindia.org/billtrack/the-tribhuvan-sahkari-university-bill-2025",
       "ministry": "",
       "prs_category": "",
       "status": null,
-      "year": 2024,
+      "year": 2025,
       "highlights_text": "",
       "key_issues_text": "",
-      "bill_pdf_url": "../files/bills_acts/bills_parliament/2024/Merchant_Shipping_Bill,_2024.pdf",
-      "first_seen_at": "2026-08-17T16:12:05.285572+00:00",
-      "last_scraped_at": "2026-08-17T16:12:05.285572+00:00",
+      "bill_pdf_url": "../files/bills_acts/bills_parliament/2025/Tribhuvan_Sahkari_University_Bill,_2025.pdf",
+      "first_seen_at": "2026-08-17T16:11:55.272299+00:00",
+      "last_scraped_at": "2026-08-17T16:11:55.272299+00:00",
       "overview_text": null,
-      "sectoral_primary_area": "Sustainable Mobility",
-      "sectoral_score": 20,
+      "sectoral_primary_area": "Sustainable Livelihoods",
+      "sectoral_score": 8,
       "mitigation_score": 0,
-      "enforceability_score": 0,
-      "scale_score": 0,
-      "novelty_score": 0,
-      "total_score": 20,
-      "rationale": "Without access to the bill's Overview, Highlights, or Key Issues and Analysis, a substantive assessment cannot be made. While merchant shipping regulation could plausibly touch on Sustainable Mobility or international maritime transport, the absence of any PRS summary text prevents determining whether this bill contains climate/environmental provisions or is purely procedural/administrative. Review requires the full legislative brief. (Auto-flagged under Sustainable Mobility based on the bill's title; please verify.)",
+      "enforceability_score": 3,
+      "scale_score": 4,
+      "novelty_score": 2,
+      "total_score": 17,
+      "rationale": "The bill establishes a cooperative university (inferred from the word 'Sahkari', meaning cooperative in Hindi), which falls under the mandatory 'Sustainable Livelihoods' category per the checklist. However, with no available Highlights or Key Issues text, the specific climate/sustainability provisions cannot be assessed. The score reflects inclusion bias — cooperative institutions often support livelihood diversification and community resilience — but remains modest due to extreme information sparsity.",
       "confidence": "low",
       "needs_review": true,
-      "scored_at": "2026-08-17T18:35:36.652666+00:00",
+      "scored_at": "2026-08-21T03:51:36.644585+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
-      "climate_direction": null,
-      "climate_direction_rationale": null,
+      "climate_direction": "neutral",
+      "climate_direction_rationale": "The bill's climate relevance cannot be determined from the available information; no substantive provisions regarding mitigation, adaptation, or environmental standards are evident in the title or overview alone.",
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
           "chamber": "Lok Sabha",
-          "date": "Dec 10, 2024"
+          "date": "Feb 03, 2025"
         },
         {
           "stage": "Passed",
           "chamber": "Lok Sabha",
-          "date": "Aug 06, 2025"
+          "date": "Mar 26, 2025"
         },
         {
           "stage": "Passed",
           "chamber": "Rajya Sabha",
-          "date": "Aug 11, 2025"
-        }
-      ],
-      "sectoral_secondary_areas": [],
-      "highlights_bullets": [],
-      "issues_bullets": []
-    },
-    {
-      "id": "the-carriage-of-goods-by-sea-bill-2024",
-      "title": "The Carriage of Goods by Sea Bill, 2024",
-      "prs_url": "https://prsindia.org/billtrack/the-carriage-of-goods-by-sea-bill-2024",
-      "ministry": "",
-      "prs_category": "",
-      "status": null,
-      "year": 2024,
-      "highlights_text": "",
-      "key_issues_text": "",
-      "bill_pdf_url": "../files/bills_acts/bills_parliament/2024/Carriage_of_Goods_by_Sea_Bill_2024_Bill_Text.pdf",
-      "first_seen_at": "2026-08-17T16:12:21.221350+00:00",
-      "last_scraped_at": "2026-08-17T16:12:21.221350+00:00",
-      "overview_text": null,
-      "sectoral_primary_area": "Sustainable Mobility",
-      "sectoral_score": 20,
-      "mitigation_score": 0,
-      "enforceability_score": 0,
-      "scale_score": 0,
-      "novelty_score": 0,
-      "total_score": 20,
-      "rationale": "This bill concerns maritime transport and shipping, which falls under Sustainable Mobility per CEEW's classification rules. However, with no available Highlights or Key Issues text, we cannot assess whether the bill contains any substantive climate, environmental, or sustainability provisions — it may be purely regulatory/commercial in nature. The score reflects the sectoral classification alone; scoring other dimensions at zero reflects absence of evidence for substantive mitigation, enforcement, scale, or novelty in a climate/sustainability direction.",
-      "confidence": "low",
-      "needs_review": true,
-      "scored_at": "2026-08-17T18:35:51.580316+00:00",
-      "scorer_model": "claude-haiku-4-5-20251001",
-      "is_manual_override": false,
-      "climate_direction": null,
-      "climate_direction_rationale": null,
-      "status_timeline": [
-        {
-          "stage": "Introduced",
-          "chamber": "Lok Sabha",
-          "date": "Aug 09, 2024"
-        },
-        {
-          "stage": "Passed",
-          "chamber": "Lok Sabha",
-          "date": "Mar 28, 2025"
-        },
-        {
-          "stage": "Passed",
-          "chamber": "Rajya Sabha",
-          "date": "Aug 06, 2025"
+          "date": "Apr 01, 2025"
         }
       ],
       "sectoral_secondary_areas": [],
@@ -885,14 +951,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "The Tribunals Reforms Bill, 2026 concerns the procedural structure and administration of tribunals — a matter of judicial/administrative reform with no plausible connection to climate, environment, energy, sustainability, or any of CEEW's 15 research areas. No legislative content was available to identify even indirect sectoral relevance.",
+      "rationale": "The bill concerns procedural and institutional reform of tribunal systems. No PRS summary text is available to assess, and the title itself contains no keywords matching any of CEEW's 15 research areas or the mandatory checklist. Tribunal procedure and structure have no plausible climate or sustainability nexus.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:32:36.870669+00:00",
+      "scored_at": "2026-08-21T03:48:57.119794+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -935,14 +1002,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "This bill concerns the alteration of Kerala's name — a constitutional/administrative matter with no plausible connection to climate, energy, environment, or any of CEEW's 15 research areas. Without any substantive PRS text, there is no evidence of climate or sustainability relevance.",
+      "rationale": "This bill concerns the renaming of the State of Kerala and has no plausible connection to climate, environment, energy, or any of CEEW's 15 research areas. It is a constitutional/administrative matter unrelated to climate policy or sustainability.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:32:39.210307+00:00",
+      "scored_at": "2026-08-21T03:48:59.206639+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -985,14 +1053,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "No substantive information is available about this bill's content. The title references taxation and general amendments, with no indicators of climate, energy, environmental, or sustainability relevance. Without access to the Overview, Highlights, or Key Issues, no plausible connection to any of CEEW's 15 research areas can be established.",
+      "rationale": "No PRS Highlights or Key Issues text is available for this bill. The title alone — a generic taxation and procedural amendment — gives no indication of climate, energy, environmental, or sustainability relevance. Without substantive content to assess, no credible sectoral classification is possible.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:32:42.321111+00:00",
+      "scored_at": "2026-08-21T03:49:02.093263+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -1035,14 +1104,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "The Indian Statistical Institute Bill, 2026 concerns the governance and legal framework of a research/academic institution. With no available Overview, Highlights, or Key Issues text, and no indication that the bill addresses energy, environment, climate, sustainability, or any of CEEW's 15 research areas, this bill is outside the scope of climate and environmental policy.",
+      "rationale": "The Indian Statistical Institute Bill, 2026 is an institutional/governance bill concerning the incorporation and regulation of an academic research institute. The PRS brief contains no available details on Highlights or Key Issues, but the bill's title and subject matter indicate no connection to climate, energy, environment, water, livelihoods, mobility, or any of CEEW's 15 research areas. This is a high-confidence null classification.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:32:45.360260+00:00",
+      "scored_at": "2026-08-21T03:49:04.574978+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -1075,14 +1145,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "The Bankers' Books Evidence Bill concerns evidentiary and procedural rules for banking records in legal proceedings. No content is available to assess, but the title and subject matter indicate no plausible connection to climate, energy, environment, or any of CEEW's 15 research areas.",
+      "rationale": "The Bankers' Books Evidence Bill concerns evidentiary procedure and banking documentation in legal proceedings. It has no plausible connection to climate, energy, environment, or any of CEEW's 15 research areas.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:32:47.791580+00:00",
+      "scored_at": "2026-08-21T03:49:07.262986+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -1125,14 +1196,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "The Registration of Births and Deaths (Amendment) Bill concerns vital registration and civil administration procedures. No climate, energy, environmental, or sustainability content is evident from the title, and PRS summaries are unavailable. The bill falls entirely outside CEEW's 15 research areas.",
+      "rationale": "The Registration of Births and Deaths (Amendment) Bill, 2026 concerns vital registration administration and record-keeping procedures. It has no plausible connection to any of CEEW's 15 research areas (energy, environment, climate, livelihoods, water, mobility, etc.). Without available legislative text, no climate or sustainability relevance can be identified.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:32:50.614386+00:00",
+      "scored_at": "2026-08-21T03:49:09.527741+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -1175,14 +1247,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "This bill concerns examination integrity and prevention of cheating in public exams. It has no plausible connection to climate, energy, environment, sustainability, or any of CEEW's 15 research areas.",
+      "rationale": "This bill concerns public examination procedures and academic integrity (prevention of cheating/unfair means in exams). It has no connection to climate, energy, environment, sustainability, or any of CEEW's 15 research areas. The bill is entirely outside the scope of climate and environmental policy.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:32:56.077784+00:00",
+      "scored_at": "2026-08-21T03:49:16.697172+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -1225,14 +1298,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "This bill concerns national honour and insults to the state—a constitutional/criminal law matter with no connection to climate, energy, environment, or any of CEEW's 15 research areas. The absence of legislative detail does not change this classification; the title itself is sufficiently clear that the bill falls outside the scope of climate and sustainability policy.",
+      "rationale": "This bill concerns insults to national honour and has no connection to climate, energy, environment, or any of CEEW's 15 research areas. The title and subject matter are entirely unrelated to sustainability, mitigation, adaptation, or sectoral climate policy.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:32:58.658942+00:00",
+      "scored_at": "2026-08-21T03:49:18.708328+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -1275,14 +1349,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "This bill concerns the number of judges in the Supreme Court—a judicial administration matter with no plausible connection to climate, energy, environment, sustainability, or any of CEEW's 15 research areas.",
+      "rationale": "This bill concerns the internal composition and administration of the Supreme Court — specifically the number of judicial positions — and has no connection to climate, energy, environment, or any of CEEW's 15 research areas. Court structure and personnel are outside the scope of climate and sustainability policy.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:33:01.145995+00:00",
+      "scored_at": "2026-08-21T03:49:21.534218+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -1325,14 +1400,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "The Income-tax (Amendment) Ordinance, 2026 is a tax/fiscal instrument with no available detail on its substantive provisions. Income tax amendments are not inherently climate-relevant unless they contain specific green tax incentives, carbon pricing mechanisms, or sectoral sustainability provisions — none of which are indicated in the available metadata.",
+      "rationale": "This is a tax law amendment with no available details. Income tax procedure and administration do not inherently connect to any of CEEW's 15 climate and sustainability research areas unless the amendment specifically targets green investments, carbon pricing, or environmental incentives — none of which are indicated here.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:33:04.470124+00:00",
+      "scored_at": "2026-08-21T03:49:24.540058+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [],
       "sectoral_secondary_areas": [],
       "highlights_bullets": [],
@@ -1359,19 +1435,21 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "This is a procedural and administrative rules document governing industrial relations, trade unions, and employer-employee dispute resolution under the Industrial Relations Code 2020. While it regulates labour practices and working conditions, it has no substantive connection to climate, environment, energy, or any of CEEW's 15 research areas. The bill is purely about labour law administration and does not touch sustainability, emissions, environmental protection, or sectoral decarbonization.",
+      "rationale": "This bill establishes procedural rules for industrial relations, trade unions, grievance redressal, and employer-employee dispute resolution under the Industrial Relations Code 2020. While it governs labour practices across establishments, it contains no substantive provisions related to climate, environmental protection, energy, sustainability, or any of CEEW's 15 research areas. It is purely a labour/industrial relations procedural instrument.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:33:07.499367+00:00",
+      "scored_at": "2026-08-21T03:49:27.859318+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [],
       "sectoral_secondary_areas": [],
       "highlights_bullets": [],
       "issues_bullets": [
-        "Rules do not fully specify all required procedures for grievance redressal committees and trade unions as mandated by the Industrial Relations Code 2020."
+        "Rules do not fully specify all required procedures for grievance redressal committees and trade unions as mandated by the Industrial Relations Code 2020.",
+        "Rules cover dispute resolution, works committees, trade union recognition, and layoff/retrenchment procedures but lack procedural detail in certain areas."
       ]
     },
     {
@@ -1395,14 +1473,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "The Code on Wages (Central) Rules, 2026 is a labour/employment regulation with no available substantive detail in PRS's summary. Without text describing the rules' content, no connection to climate, energy, environment, or any of CEEW's 15 research areas can be identified. Wage codes are not inherently climate-relevant unless they address green jobs, just-transition reskilling, or sectoral transitions — none of which are evident from the title or empty highlights.",
+      "rationale": "This is a wages/labor regulation instrument with no substantive content available for review. Wages rules do not touch climate, energy, environment, or any of CEEW's 15 research areas unless the rules themselves specifically mandate green/climate-related wage structures or incentives — which cannot be determined from the materials provided.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:33:10.301311+00:00",
+      "scored_at": "2026-08-21T03:49:30.364037+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Passed",
@@ -1435,14 +1514,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "This ordinance concerns the constitutional structure and staffing of the Supreme Court of India. It has no connection to climate, energy, environment, sustainability, or any of CEEW's 15 research areas.",
+      "rationale": "This ordinance concerns the composition and administration of the Supreme Court judiciary. It has no plausible connection to climate, energy, environment, sustainability, or any of CEEW's 15 research areas.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:33:12.832940+00:00",
+      "scored_at": "2026-08-21T03:49:32.834243+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Passed",
@@ -1475,14 +1555,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "The Delimitation Bill concerns electoral boundary demarcation and has no substantive connection to climate, energy, environment, or any of CEEW's 15 research areas. Without Highlights or Key Issues text, no climate-relevant provisions are evident, and delimitation bills are categorically unrelated to climate policy or sustainability.",
+      "rationale": "The Delimitation Bill concerns electoral constituency boundaries and representation, a core governance and constitutional matter with no plausible connection to climate, energy, environment, or any of CEEW's 15 research areas. Delimitation bills adjust electoral district lines and have no sectoral or climate relevance.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:33:15.112250+00:00",
+      "scored_at": "2026-08-21T03:49:35.035883+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -1515,14 +1596,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "No substantive information is available about this bill beyond its title. The bill's subject matter, ministry, status, and legislative content are all missing. Without details on what laws are being amended and for what purpose, no climate or sustainability relevance can be assessed.",
+      "rationale": "The bill's title indicates it is a procedural amendment to Union Territories legislation, but without any available Overview, Highlights, or Key Issues text, no substantive content can be assessed. The title alone contains no indicators of climate, energy, environment, or any of CEEW's 15 research areas. Without detail on what specific laws are being amended or what changes are proposed, a climate or sustainability relevance cannot be established.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:33:18.160962+00:00",
+      "scored_at": "2026-08-21T03:49:38.206483+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -1555,14 +1637,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "This is a constitutional amendment concerning delimitation (electoral constituency boundary redrawing), a core parliamentary procedure with no connection to climate, energy, environment, or any of CEEW's 15 research areas. The absence of substantive content does not change the fundamental classification: delimitation bills are governance/procedural in nature.",
+      "rationale": "This is a constitutional amendment bill concerning electoral delimitation (boundary redistricting of parliamentary constituencies). It has no connection to climate, environment, energy, sustainability, or any of CEEW's 15 research areas. Constitutional procedure and electoral boundaries are outside the scope of climate and environmental policy.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:33:20.986599+00:00",
+      "scored_at": "2026-08-21T03:49:40.330129+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -1600,14 +1683,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "No substantive information is available about this bill's content. The title suggests it concerns state reorganisation/administrative boundaries, which has no plausible connection to climate, energy, environment, or any of CEEW's 15 research areas. Without Highlights or Key Issues text, no climate-policy relevance can be identified.",
+      "rationale": "The Andhra Pradesh Reorganisation (Amendment) Bill, 2026 concerns the administrative and territorial structure of a state — a constitutional and governance matter with no plausible connection to climate, energy, environment, or any of CEEW's 15 research areas. No highlights, overview, or key issues text is available, but the title itself indicates this is administrative reorganisation, not environmental or sustainability policy.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:33:23.361160+00:00",
+      "scored_at": "2026-08-21T03:49:42.770290+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -1650,14 +1734,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "The bill title 'Jan Vishwas (Amendment of Provisions) Bill, 2026' and the absence of any PRS summary text (Overview, Highlights, or Key Issues and Analysis) make it impossible to assess climate or sustainability relevance. 'Jan Vishwas' (public trust) is a legislative framework aimed at reducing regulatory compliance burden, but without substantive details, no sectoral connection to CEEW's 15 research areas can be established. This bill should be reviewed once full PRS documentation is available.",
-      "confidence": "low",
-      "needs_review": true,
-      "scored_at": "2026-08-17T18:33:26.230576+00:00",
+      "rationale": "The Jan Vishwas (Amendment of Provisions) Bill, 2026 appears to be a general legislative compliance/simplification measure (the 'Jan Vishwas' scheme is India's broad decriminalization and simplification program). With no Overview, Highlights, or Key Issues text available, and no indication of sectoral focus in the title, there is no evidence that this bill concerns any of CEEW's 15 research areas — energy, environment, sustainability, livelihoods, water, food systems, mobility, cooling, or climate resilience. It is likely an administrative or governance bill with no climate or environmental relevance.",
+      "confidence": "high",
+      "needs_review": false,
+      "scored_at": "2026-08-21T03:49:45.821038+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -1700,14 +1785,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "This bill concerns the general administration of central armed police forces. No overview, highlights, or key issues text is available to assess, but the title and subject matter (police force administration) have no plausible connection to climate, energy, environment, or any of CEEW's 15 research areas.",
+      "rationale": "The Central Armed Police Forces (General Administration) Bill concerns internal administration and personnel management of armed police forces. With no available PRS summary text and no connection to any of CEEW's 15 research areas—energy, climate, environment, sustainability, or natural resources—this bill falls outside the scope of climate and environmental policy review.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:33:28.390975+00:00",
+      "scored_at": "2026-08-21T03:49:48.010199+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -1750,14 +1836,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "This bill amends the Foreign Contribution (Regulation) Act to establish procedures for managing assets of organisations that lose their FCRA certificate. While it concerns regulatory governance and asset management, it has no connection to climate, energy, environment, sustainability, or any of CEEW's 15 research areas.",
+      "rationale": "This bill amends the Foreign Contribution (Regulation) Act to establish procedures for managing assets of organisations that lose FCRA certification. It is primarily concerned with foreign funding regulation, asset vesting, and administrative procedure — not with climate, energy, environment, sustainable development, or any of CEEW's 15 research areas. No plausible connection to climate or environmental outcomes exists.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:33:33.437804+00:00",
+      "scored_at": "2026-08-21T03:49:52.377687+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -1773,15 +1860,14 @@
       "sectoral_secondary_areas": [],
       "highlights_bullets": [
         "Creates a Designated Authority to supervise, manage, and dispose of foreign contributions and assets when an organisation loses its FCRA certificate.",
-        "FCRA certificate loss can occur via government cancellation, organisational surrender, or failure to renew.",
-        "Designated Authority must preserve the religious character of assets that are places of worship.",
-        "Reduces maximum imprisonment penalty for FCRA Act violation from five years to one year."
+        "FCRA certificate may be cancelled by government, surrendered by organisation, or lost through non-renewal or denial of renewal application.",
+        "Religious character of assets that are places of worship must be maintained by the Designated Authority.",
+        "Reduces maximum penalty for FCRA Act violations from five years imprisonment to one year."
       ],
       "issues_bullets": [
-        "Loss of FCRA certificate results in vesting of all foreign-funded assets in the Designated Authority, creating a barrier to exit the FCRA framework.",
-        "Organisations must continue renewing FCRA certificates to retain assets created through foreign funds, potentially locking them into ongoing spending obligations.",
-        "No appeal mechanism or opportunity to be heard before denial of FCRA certificate renewal.",
-        "Differential treatment between assets created under FCRA certificates versus those created through prior-permission route remains unclear."
+        "Loss of FCRA certificate results in vesting of all foreign-funded assets to the Designated Authority, effectively preventing organisations from exiting the FCRA framework without forfeiture.",
+        "No appeal mechanism or right to hearing exists before central government denies FCRA certificate renewal.",
+        "Different treatment of assets created by FCRA-certified organisations versus those created through prior permission route is unclear."
       ]
     },
     {
@@ -1805,14 +1891,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "No PRS legislative brief content is available for this bill. Corporate law amendments are typically procedural or governance-focused and do not inherently relate to climate, energy, environment, or any of CEEW's 15 research areas unless they specifically address sustainability-related corporate duties, disclosure standards, or sectoral regulation. Without the Overview, Highlights, or Key Issues, no climate or environmental relevance can be assessed.",
+      "rationale": "The bill concerns corporate law amendments with no available detail on its substance. Without Highlights, Key Issues, or an Overview, there is no basis to identify any connection to climate, energy, environment, or any of CEEW's 15 research areas. Corporate law amendments are typically procedural or governance-focused and would need explicit environmental or sustainability content to be classified as relevant.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:33:36.576027+00:00",
+      "scored_at": "2026-08-21T03:49:55.405247+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -1855,14 +1942,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "This bill concerns transgender persons' rights and legal protections. While social inclusion and non-discrimination are important policy goals, the bill has no plausible connection to climate, energy, environment, or any of CEEW's 15 research areas. No climate or sustainability relevance detected.",
+      "rationale": "This bill concerns legal rights and protections for transgender persons. While social inclusion is important, the bill has no plausible connection to climate, energy, environment, or any of CEEW's 15 research areas. No substantive details are available to suggest otherwise.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:33:39.165866+00:00",
+      "scored_at": "2026-08-21T03:49:58.072902+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -1905,14 +1993,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "The Industrial Relations Code (Amendment) Bill, 2026 concerns labour law and workplace relations. Without access to the bill's substance (Highlights and Key Issues are unavailable), and given that industrial relations legislation is typically focused on employment rights, dispute resolution, and worker protections rather than climate, energy, or environmental outcomes, there is no plausible connection to CEEW's 15 research areas.",
+      "rationale": "The Industrial Relations Code (Amendment) Bill, 2026 concerns labour law and workplace relations governance. No PRS Highlights or Key Issues text is available to assess. Even with full information, an industrial relations bill would have no direct climate, energy, environment, or sustainability relevance unless it specifically addressed green jobs, just-transition reskilling, or occupational safety in high-emissions sectors — none of which the title suggests. With no substantive detail provided, this bill cannot be confidently linked to any of CEEW's 15 research areas.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:33:42.857145+00:00",
+      "scored_at": "2026-08-21T03:50:00.999225+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -1955,19 +2044,20 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "This is an amendment to the Foreign Contribution (Regulation) Act's rules, concerning foreign funding oversight and regulatory compliance. It has no plausible connection to climate, energy, environment, sustainability, or any of CEEW's 15 research areas.",
+      "rationale": "This is an amendment to foreign contribution regulation rules with no climate, energy, environmental, or sustainability content. The single available issue note concerns procedural scope, not any of CEEW's 15 research areas.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-20T03:44:36.812740+00:00",
+      "scored_at": "2026-08-21T03:48:47.448652+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [],
       "sectoral_secondary_areas": [],
       "highlights_bullets": [],
       "issues_bullets": [
-        "Rules may be going beyond the scope of the Act"
+        "Rules may exceed the statutory scope of the parent Act."
       ]
     },
     {
@@ -1991,14 +2081,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "This bill consolidates three existing securities-market regulatory laws (SCRA 1956, SEBI Act 1992, Depositories Act 1996) into a single code, focusing on market infrastructure, regulator governance, and appeal procedures. While it touches financial markets broadly, it has no material connection to climate change, environmental sustainability, energy, or any of CEEW's 15 research areas. The bill is primarily about procedural and structural reforms to India's securities regulator and does not engage with green finance, sustainable investment criteria, ESG disclosure mandates, or climate-linked financial risk.",
+      "rationale": "This bill consolidates India's securities market regulation into a single code, addressing governance of SEBI, market infrastructure institutions, and appeals procedures. While the securities sector can indirectly support sustainable finance through ESG disclosure and green bond regulation, this bill's substance is purely about market structure, regulatory procedure, and institutional design with no mention of climate, environmental, social, or energy outcomes. No climate or sustainability-relevant provisions are evident in the available text.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:33:49.147729+00:00",
+      "scored_at": "2026-08-21T03:50:06.453525+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -2018,17 +2109,17 @@
       ],
       "sectoral_secondary_areas": [],
       "highlights_bullets": [
-        "Consolidates three existing securities laws into a single Securities Markets Code",
-        "Retains SEBI as regulator and expands SEBI membership from 5 to 11 non-ex-officio members",
-        "Designates exchanges, clearing corporations, and depositories as market infrastructure institutions (MIIs) with bye-law-making powers subject to SEBI approval",
-        "Empowers SEBI to designate investigating and adjudicating officers from among chairperson, whole-time members, and officers",
-        "Limits grounds for appeal before Securities Appellate Tribunal, excluding refusal of registration and certain cease-and-desist orders"
+        "Consolidates three existing securities laws (1956 SCRA, 1992 SEBI Act, 1996 Depositories Act) into a single Securities Markets Code",
+        "Increases SEBI membership from five to 11 appointed members (excluding ex-officio members and Chairperson)",
+        "Designates exchanges, clearing corporations, and depositories as Market Infrastructure Institutions (MIIs) with authority to make bye-laws subject to SEBI approval",
+        "Empowers MIIs to enforce bye-laws through penalties, trade cancellation, and compensation awards",
+        "Permits central government to exempt public sector undertakings from SEBI governance and disclosure regulations"
       ],
       "issues_bullets": [
-        "Central government retains discretionary power to terminate SEBI members and Chairperson without independent inquiry despite conflict-of-interest removal grounds",
-        "Separation of adjudication and investigation functions occurs only at case level, not via distinct cadres, potentially conflicting with separation-of-powers principle",
-        "Powers to suspend or cancel transactions by adjudicating officers and MIIs may create market uncertainty and erode investor confidence",
-        "Central government exemption for public sector undertakings from SEBI governance and disclosure regulations raises questions about investor protection parity"
+        "Central government retains discretionary power to terminate SEBI leadership, potentially compromising regulator independence",
+        "Code restricts appealable orders to SAT, removing appeal rights against refusal of registration and certain cease-and-desist orders that existed under the 1992 Act",
+        "Adjudication and investigation functions separated only at case level rather than through distinct cadres, falling short of separation-of-powers principles",
+        "Powers to suspend or cancel transactions by adjudicating officers and MIIs risk market instability and investor confidence loss"
       ]
     },
     {
@@ -2060,6 +2151,7 @@
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -2102,14 +2194,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "The bill's title indicates it concerns insurance law amendments, with no indication of climate, energy, environment, or sustainability content. Without available Highlights or Key Issues text, and no obvious sectoral connection to CEEW's 15 research areas, this bill appears to fall outside the scope of climate and environmental policy.",
+      "rationale": "This bill concerns amendments to insurance law, specifically related to insurance coverage ('Sabka Bima Sabki Raksha' translates to 'insurance for all, protection for all'). The title and available metadata contain no reference to climate, energy, environment, or any of CEEW's 15 research areas. Without PRS Highlights or Key Issues text, and with no environmental or sectoral connection evident from the title alone, this bill falls outside CEEW's scope.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:33:54.487455+00:00",
+      "scored_at": "2026-08-21T03:50:13.034557+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -2152,14 +2245,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "No substantive information is available about this bill's content, ministry, or legislative intent. 'Repealing and Amending Bill, 2025' is a generic title that could apply to any area of law. Without PRS Highlights or Key Issues, no plausible connection to CEEW's 15 climate and sustainability research areas can be established.",
+      "rationale": "No substantive information is available about this bill's content, ministry, or legislative intent. The title 'The Repealing and Amending Bill, 2025' is generic and does not indicate any sectoral focus. Without access to the Overview, Highlights, or Key Issues, it is impossible to assess whether the bill touches on any of CEEW's 15 research areas or has any climate and sustainability relevance.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:33:57.575136+00:00",
+      "scored_at": "2026-08-21T03:50:15.442352+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -2202,14 +2296,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "This bill is a higher education regulatory reform that consolidates three existing education regulators into a single commission. While education may support long-term sustainable development, the bill contains no substantive provisions related to climate, environment, energy, sustainability, or any of CEEW's 15 research areas. It addresses institutional governance, accreditation, and degree-granting authority only.",
+      "rationale": "This bill consolidates higher education regulators into a single commission and does not address climate, energy, environment, sustainability, or any of CEEW's 15 research areas. While education is foundational to human development, this bill's subject matter—regulatory architecture for HEI oversight, degree-granting authority, and professional course accreditation—has no direct or substantive climate/environmental relevance.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:34:06.944926+00:00",
+      "scored_at": "2026-08-21T03:50:24.548245+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -2224,17 +2319,17 @@
       ],
       "sectoral_secondary_areas": [],
       "highlights_bullets": [
-        "Consolidates UGC, AICTE, and NCTE into single Viksit Bharat Shiksha Adhishthan Commission with three subordinate Councils (Regulatory, Standards, and Accreditation).",
+        "Merges UGC, AICTE, and NCTE into a single Viksit Bharat Shiksha Adhishthan Commission with three subordinate councils (Regulatory, Standards, Accreditation).",
         "Commission regulates technical education, teacher training, and architecture; medical, legal, and other professional courses excluded.",
-        "Regulatory Council may authorize non-traditional HEIs to award degrees with central government approval.",
-        "Penalties up to Rs 75 lakh for repeated contraventions; minimum Rs 2 crore for unauthorized university establishment.",
-        "Brings institutes of national importance under Commission purview, potentially reducing their existing academic autonomy."
+        "Regulatory Council may authorize additional HEIs to award degrees with central government approval.",
+        "Penalties up to ₹75 lakh for repeated contraventions; minimum ₹2 crore for establishing an unapproved university."
       ],
       "issues_bullets": [
-        "Bill may reduce institutional autonomy despite stated intent; accredited universities' authority to set up constituent units may be rolled back.",
-        "Excludes funding allocation as a Commission function, contrary to National Education Policy 2020 recommendation for four-vertical regulator.",
-        "Inconsistent treatment of professional courses: architecture regulated by Commission but Council of Architecture continues separately; medicine and law excluded.",
-        "Appeals against Council decisions go to central government rather than an independent appellate body, unlike SEBI and TRAI models."
+        "Bill may not expand HEI autonomy and could roll back autonomy already granted to accredited universities.",
+        "Institutes of national importance lose existing academic and research autonomy by coming under the Commission.",
+        "Funding allocation function excluded, contrary to NEP 2020 recommendation for a four-vertical regulator.",
+        "Inconsistent treatment of professional education: architecture comes under Commission while medical and legal remain separate.",
+        "Appeals process routes to central government rather than independent appellate authority, unlike SEBI/TRAI models."
       ]
     },
     {
@@ -2258,14 +2353,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "This bill concerns GST (Goods and Services Tax) administration in Manipur state and has no discernible connection to climate, energy, environment, or any of CEEW's 15 research areas. Without substantive details available, and given that tax procedure amendments are generally not climate-relevant, this bill falls outside the scope of CEEW's outreach.",
+      "rationale": "This bill is a technical amendment to Manipur's GST legislation. GST is a tax procedure and revenue mechanism with no direct connection to climate, energy, environment, or any of CEEW's 15 research areas. No climate or sustainability content is evident.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:34:09.573512+00:00",
+      "scored_at": "2026-08-21T03:50:27.373335+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -2308,14 +2404,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "No PRS legislative brief content is available for this bill. Central Excise amendments are tax/fiscal procedural measures; without details on the specific excise provisions being amended, no plausible climate or environmental relevance can be identified. This appears to be a revenue/tariff bill rather than a sectoral energy, environment, or sustainability measure.",
+      "rationale": "The Central Excise (Amendment) Bill, 2025 is a tax/fiscal procedure bill with no available detail on its content. Without information on what excise duties are being amended, modified, or introduced—and no indication that the amendments relate to environmental goods, carbon pricing, pollution control, or any other climate/sustainability sector—it cannot be classified as climate-relevant. A straightforward excise-duty procedural amendment has no plausible connection to CEEW's 15 research areas.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:34:12.569548+00:00",
+      "scored_at": "2026-08-21T03:50:30.742050+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -2358,14 +2455,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "The bill title suggests a fiscal/taxation measure related to health security and national security, but no substantive details (overview, highlights, or key issues) are available. Without PRS legislative text, no connection to any of CEEW's 15 climate and sustainability research areas can be established.",
+      "rationale": "The bill title refers to health security and a national security cess (tax), with no PRS content available for review. Neither the title nor the available metadata indicate connection to any of CEEW's 15 research areas (climate, energy, environment, or related sectors). Without substantive bill text, no climate or sustainability relevance can be identified.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:34:15.496122+00:00",
+      "scored_at": "2026-08-21T03:50:33.621586+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -2408,14 +2506,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "This bill concerns the removal of ministers upon detention in Union Territories — a matter of constitutional governance and administrative procedure. The PRS summary text is entirely unavailable, but the title and subject matter have no plausible connection to climate, energy, environment, or any of CEEW's 15 research areas.",
+      "rationale": "This bill concerns governance procedures for Union Territory ministers and their removal upon detention. It has no connection to climate, environment, energy, sustainability, or any of CEEW's 15 research areas. The subject matter is purely administrative/constitutional and does not touch any sectoral area relevant to climate or environmental policy.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:34:25.463739+00:00",
+      "scored_at": "2026-08-21T03:50:42.464762+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -2453,14 +2552,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "This bill concerns the constitutional and administrative structure of Jammu and Kashmir governance—specifically rules for ministerial removal upon detention. It has no plausible connection to climate, energy, environment, or any of CEEW's 15 research areas.",
+      "rationale": "This bill concerns the constitutional/administrative framework for removal of ministers upon detention in Jammu and Kashmir, and addresses governance and legal procedure specific to that union territory. It has no plausible connection to any of CEEW's 15 research areas (energy, climate, environment, water, livelihoods, mobility, finance, food systems, cooling, air quality, resilience, or related sectors). The bill's subject matter falls entirely outside climate and environmental policy.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:34:28.500442+00:00",
+      "scored_at": "2026-08-21T03:50:45.164901+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -2498,14 +2598,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "This bill concerns constitutional procedure for ministerial removal upon criminal detention. It has no connection to climate, energy, environment, sustainability, or any of CEEW's 15 research areas. The bill addresses governance and rule-of-law questions entirely outside the scope of climate and environmental policy.",
+      "rationale": "This bill concerns constitutional procedures for ministerial removal based on criminal detention. It has no connection to climate, energy, environment, sustainability, or any of CEEW's 15 research areas. The bill is purely about governance and constitutional law.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:34:33.609371+00:00",
+      "scored_at": "2026-08-21T03:50:49.269685+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -2520,17 +2621,16 @@
       ],
       "sectoral_secondary_areas": [],
       "highlights_bullets": [
-        "Ministers are automatically removed if accused of an offence carrying 5+ years imprisonment and detained for 30 consecutive days.",
-        "Removal can be initiated by President/Governor on PM/CM advice or triggered automatically on day 31 of detention.",
-        "Prime Minister or Chief Minister must resign after 30 days detention; automatic removal occurs on day 31 if resignation is not tendered.",
-        "Similar bills introduced for Union Territories of Puducherry and Jammu and Kashmir."
+        "A minister is automatically removed if accused of a crime punishable by 5+ years imprisonment and detained for 30 consecutive days.",
+        "The Prime Minister or Chief Minister must resign after 30 consecutive days of detention, or automatically cease to hold office on day 31.",
+        "Removal can be triggered by the President/Governor on advice of the PM/Chief Minister, or occur automatically.",
+        "Similar bills introduced for Union Territories of Puducherry and Jammu & Kashmir."
       ],
       "issues_bullets": [
-        "Automatic removal of PM/CM on day 31 may violate the basic structure of the Constitution, which Parliament cannot amend.",
-        "Infringes on parliamentary sovereignty—only legislatures have authority to elect and remove PM/CM, not law-enforcement agencies.",
-        "Violates separation of powers by allowing investigative agencies to unseat governments through arrest and detention.",
-        "Breaches federalism by permitting one government's law-enforcement to remove the PM or CM of another government.",
-        "Removes ministers based solely on arrest and detention without judicial assessment of guilt, potentially violating rule of law."
+        "Automatic removal on day 31 may violate the basic structure of the Constitution, which Parliament cannot amend.",
+        "The bills infringe on the sole authority of legislatures to elect and remove heads of government.",
+        "Investigative agencies gain power to unseat governments by arrest, violating separation of powers.",
+        "Removal based solely on arrest and detention (without judicial assessment of guilt) may be arbitrary under rule of law."
       ]
     },
     {
@@ -2554,14 +2654,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "The bill concerns online gaming regulation and promotion. Without access to the full bill text, Highlights, or Key Issues analysis, there is no evidence that this bill addresses climate, energy, environment, or any of CEEW's 15 research areas. Online gaming regulation is not inherently related to climate or sustainability outcomes.",
+      "rationale": "The bill concerns online gaming regulation and promotion, which has no direct connection to climate, energy, environment, or any of CEEW's 15 research areas. Without substantive bill content available, no plausible climate or sustainability angle can be identified.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:34:36.405401+00:00",
+      "scored_at": "2026-08-21T03:50:51.254154+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -2604,14 +2705,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "This is a decriminalization and regulatory-reform bill that amends 17 laws across municipal governance, motor vehicles, commodity boards, apprenticeships, and exports. While it touches motor vehicles and commodity sectors, the bill is fundamentally about criminal-law procedure, penalty structures, and administrative process — not about climate, energy, environment, or any of CEEW's 15 research areas. Motor-vehicle amendments here concern offence classification and fine amounts, not vehicle emissions, fuel standards, or sustainable mobility policy.",
+      "rationale": "This is a decriminalisation and penalty-reform bill covering 17 laws across municipal governance, motor vehicles, commodity boards, apprenticeships, and export activities. While it touches motor vehicles (a sustainable mobility sector), the bill's substance is purely about criminal-to-civil conversion, penalty amounts, and procedural enforcement mechanisms—not about emissions, fuel standards, vehicle regulation for climate purposes, or any environmental outcome. It has no connection to climate, energy, water, air quality, livelihoods, resilience, or any of CEEW's 15 research areas.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:34:42.792052+00:00",
+      "scored_at": "2026-08-21T03:50:56.783997+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -2636,18 +2738,18 @@
       ],
       "sectoral_secondary_areas": [],
       "highlights_bullets": [
-        "Decriminalizes offences across 17 laws spanning municipal governance, motor vehicles, commodity boards, apprenticeships, and export activities.",
-        "Converts criminal fines to civil penalties and assigns Adjudicating Officers to levy them.",
-        "Mandates automatic 10% increase in fines and penalties every three years across the 17 Acts.",
-        "Amends New Delhi Municipal Council property tax to separate building tax and vacant land tax.",
-        "Introduces improvement notices under Legal Metrology Act requiring non-compliance rectification within specified timeframes."
+        "Decriminalises offences across 17 laws covering municipal governance, motor vehicle regulation, commodity boards, apprenticeships, and export activities.",
+        "Converts criminal fines to civil penalties and designates Adjudicating Officers to levy them.",
+        "Provides automatic 10% increase in fines and penalties every three years across all 17 Acts.",
+        "Amends property tax levying under New Delhi Municipal Council Act into building tax and vacant land tax components.",
+        "Introduces improvement notices for Legal Metrology Act offences, requiring rectification within specified timeframes."
       ],
       "issues_bullets": [
-        "Punishments and penalty amounts remain inconsistent across similar offences in different laws despite reforms.",
-        "Some offences are decriminalized but retain identical monetary penalties without revision for inflation or proportionality.",
-        "Bill does not specify adjudication or appeal mechanisms for some Acts (e.g., Road Transport Corporations Act).",
-        "Apprentices Act amendments delegate penalty-setting to subordinate Rules without legislative guidance, risking excessive delegation.",
-        "Coir Industry Act offence of unlicensed export removed from penalties while remaining listed as an offence."
+        "Similar offences continue to attract inconsistent punishments across different Acts despite reforms.",
+        "Some decriminalised offences retain unchanged monetary penalties without revision for inflation or equivalence.",
+        "Apprentices Act amendment delegates penalty-setting to subordinate Rules without legislative guidance, risking excessive delegation.",
+        "Road Transport Corporations Act penalty replacement lacks specified adjudication or appeal mechanisms.",
+        "Coir Industry Act removes penalty for unlicensed export but retains the offence itself, creating enforcement ambiguity."
       ]
     },
     {
@@ -2671,14 +2773,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "This bill concerns the governance and regulatory framework of Indian Institutes of Management (business education institutions). With no substantive summary text available and no plausible connection to CEEW's 15 research areas (energy, emissions, climate, water, air, food, mobility, finance, resilience, etc.), the bill appears to have no climate or environmental relevance.",
+      "rationale": "The bill concerns governance and institutional amendments to the Indian Institutes of Management, which is an educational/administrative matter. No PRS text (Highlights or Key Issues) is available to assess, but the title and subject matter indicate no connection to climate, energy, environment, or any of CEEW's 15 research areas.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:34:45.196927+00:00",
+      "scored_at": "2026-08-21T03:50:58.985731+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -2721,14 +2824,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "This bill amends the Insolvency and Bankruptcy Code to clarify procedural rules around creditor rights, liquidation, and insolvency resolution processes. While commercial insolvency resolution can touch on resource efficiency and circular economy themes indirectly, the bill's substance is entirely about financial and legal procedure — claim adjudication, creditor committee powers, and creditor-initiated resolution mechanisms — with no connection to energy, climate, environmental outcomes, sustainable sectors, or any of CEEW's 15 research areas.",
+      "rationale": "This bill amends India's insolvency and bankruptcy framework to address procedural delays and creditor powers. While insolvency reform is economically important, it has no connection to climate change, environmental protection, energy, natural resources, or any of CEEW's 15 research areas. The bill is purely a financial/legal procedure matter.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:34:50.967421+00:00",
+      "scored_at": "2026-08-21T03:51:03.483673+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -2763,16 +2867,18 @@
       ],
       "sectoral_secondary_areas": [],
       "highlights_bullets": [
-        "Clarifies that statutory dues do not have secured creditor status and reinforces statutory timelines in insolvency proceedings.",
-        "Removes liquidator powers to admit/reject claims; vests those powers with the committee of creditors (CoC).",
-        "Introduces Creditor-Initiated Insolvency Resolution Process (CIIRP) allowing select financial institutions to initiate out-of-court proceedings while debtor retains operational control.",
+        "Clarifies that statutory dues do not have secured creditor status.",
+        "Removes liquidator's powers to admit/reject claims; transfers power to committee of creditors.",
+        "Introduces Creditor-Initiated Insolvency Resolution Process (CIIRP) for select financial institutions with debtor retaining control.",
+        "Reinforces statutory timelines for insolvency resolution.",
         "Empowers central government to frame rules for group and cross-border insolvency proceedings."
       ],
       "issues_bullets": [
-        "Removing liquidator quasi-judicial powers over claims may undermine finality and predictability in liquidation proceedings.",
-        "Limiting CIIRP initiation to select financial institutions may create arbitrary priority without clear justification.",
-        "CIIRP trigger remains default event when asset value erosion has already occurred, potentially reducing recovery.",
-        "Central government delegation to frame cross-border insolvency rules lacks clear guiding principles, risking excessive discretion."
+        "Removal of liquidator's quasi-judicial claim powers may delay finality and complicate asset distribution.",
+        "CIIRP priority for select financial institutions lacks clear justification and creates potential inequity.",
+        "CIIRP trigger remains at default stage when value erosion has already occurred, reducing asset recovery potential.",
+        "Restrictions on insolvency application withdrawal before CoC constitution may discourage early out-of-court settlements.",
+        "Cross-border insolvency rules delegated to central government without clear guiding principles."
       ]
     },
     {
@@ -2796,14 +2902,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "This is an income tax bill with no available details on its content. Tax bills are generally not climate- or sustainability-relevant unless they specifically target green investments, carbon pricing, renewable energy incentives, or environmental penalties. With no Highlights or Key Issues text, and given that tax administration is the bill's evident subject matter, there is no plausible connection to any of CEEW's 15 research areas.",
+      "rationale": "This is a tax bill with no available detail beyond its title. Income-tax legislation is a core fiscal/revenue matter with no inherent connection to climate, energy, environment, or any of CEEW's 15 research areas unless the bill itself creates tax incentives, exemptions, or penalties linked to climate/environmental behaviour — which cannot be determined from the title alone.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:34:54.423318+00:00",
+      "scored_at": "2026-08-21T03:51:05.987334+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -2846,14 +2953,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "The bill concerns taxation law amendments with no available details on substance. Taxation bills are climate-relevant only when they explicitly address environmental/energy/climate topics (e.g. carbon tax, renewable energy incentives, or fossil fuel subsidy removal). Without the full text, no such connection can be identified.",
+      "rationale": "The bill is titled as a general taxation amendment with no available detail on its substantive provisions. Taxation bills may occasionally touch climate-relevant sectors (e.g. carbon tax, green bonds incentives, EV subsidies), but without Highlights or Key Issues text, there is no basis to infer any connection to the 15 climate/sustainability areas. The title alone does not trigger the mandatory checklist.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:34:56.771370+00:00",
+      "scored_at": "2026-08-21T03:51:08.773666+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -2896,14 +3004,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "This bill concerns Goods and Services Tax (GST) procedure and administration in Manipur state. GST is a general tax policy mechanism with no inherent connection to climate, energy, environment, or any of CEEW's 15 research areas. Without Highlights or Key Issues text, and given the bill's title and subject matter, there is no plausible climate or sustainability angle.",
+      "rationale": "This bill is a state-level amendment to the Goods and Services Tax (GST) regime in Manipur. GST amendments are fiscal/procedural legislation with no inherent connection to climate, energy, environment, or any of CEEW's 15 research areas unless the amendment specifically targets a green/climate-related tax treatment (e.g. carbon pricing, renewable energy exemptions). The absence of any available summary text prevents identification of such a connection, and the title itself gives no indication of climate or environmental intent.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:35:01.988789+00:00",
+      "scored_at": "2026-08-21T03:51:14.206762+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -2946,14 +3055,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "This bill concerns anti-doping regulation in sports and has no plausible connection to any of CEEW's 15 research areas (energy, environment, climate, livelihoods, water, air, food, cooling, mobility, finance, circular economy, resilience, or international cooperation). The absence of PRS summary text prevents definitive confirmation, but the title itself makes the scope clear.",
+      "rationale": "The National Anti-Doping (Amendment) Bill concerns sports regulation and athlete governance. It has no plausible connection to climate, energy, environment, water, livelihoods, mobility, industrial processes, or any of CEEW's 15 research areas.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:35:04.524889+00:00",
+      "scored_at": "2026-08-21T03:51:16.231016+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -2996,14 +3106,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "The National Sports Governance Bill, 2025 has no available PRS legislative brief text. Based on the title alone, this bill concerns sports governance and administration, with no apparent connection to climate, energy, environment, or any of CEEW's 15 research areas. Without substantive detail, a bill titled about sports governance cannot be classified as relevant to climate or sustainability.",
+      "rationale": "The National Sports Governance Bill, 2025 concerns the institutional structure and regulation of sports administration in India. With no available PRS highlights, key issues, or detailed content, and no apparent connection to climate, energy, environment, or any of CEEW's 15 research areas, this bill falls outside the scope of climate and sustainability policy.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:35:07.648382+00:00",
+      "scored_at": "2026-08-21T03:51:19.264579+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -3046,14 +3157,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "The bill concerns immigration and foreigner registration/management, which has no plausible connection to climate, energy, environmental protection, or any of CEEW's 15 research areas. Without Highlights or Key Issues text, and given the bill's subject matter, there is no basis for a sectoral classification.",
+      "rationale": "The bill concerns immigration and foreign nationals policy. With no available PRS summary text, and no indicators in the title or subject matter of energy, emissions, water, waste, disaster management, sustainable livelihoods, mobility, or any of CEEW's 15 core research areas, this bill does not appear to have climate or sustainability relevance.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:35:16.638441+00:00",
+      "scored_at": "2026-08-21T03:51:27.708120+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -3096,14 +3208,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "The Income-tax Bill, 2025 is a tax/fiscal law with no available details provided. Without substantive text about its provisions, no plausible connection to CEEW's 15 climate and sustainability research areas can be established. While tax policy can indirectly influence climate outcomes (e.g. through green incentives or carbon levies), this bill's title and subject matter suggest it is a general income-tax amendment, not a climate or environment-focused measure.",
+      "rationale": "The Income-tax Bill, 2025 is a tax administration and revenue measure with no available details in the PRS text. Absent information on substantive provisions, no climate, energy, environment, or sustainability nexus can be established. Income tax law is generically relevant only if it contains specific climate-incentive provisions (e.g. green bonds, renewable energy deductions) — none are indicated here.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:35:20.128499+00:00",
+      "scored_at": "2026-08-21T03:51:30.214296+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -3151,14 +3264,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "The bill's title indicates a focus on legal interests in aircraft objects, which is a matter of commercial/property law and aviation regulation. Without access to the bill's substantive content, highlights, or analysis, and given that aircraft-related bills typically concern airworthiness standards, registration, or secured lending rather than climate or environmental outcomes, there is no plausible connection to any of CEEW's 15 research areas.",
+      "rationale": "The bill concerns legal interests in aircraft objects—a matter of secured transactions and asset law. While aviation is listed in the checklist as relevant to 'Sustainable Mobility', this bill's substance (protection of security interests in aircraft collateral) has no climate, energy, or environmental component. It is a commercial/property law measure, not a mobility, emissions, efficiency, or sustainability bill.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:35:22.890027+00:00",
+      "scored_at": "2026-08-21T03:51:32.802483+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -3174,56 +3288,6 @@
           "stage": "Passed",
           "chamber": "Lok Sabha",
           "date": "Apr 03, 2025"
-        }
-      ],
-      "sectoral_secondary_areas": [],
-      "highlights_bullets": [],
-      "issues_bullets": []
-    },
-    {
-      "id": "the-tribhuvan-sahkari-university-bill-2025",
-      "title": "The \"Tribhuvan\" Sahkari University Bill, 2025",
-      "prs_url": "https://prsindia.org/billtrack/the-tribhuvan-sahkari-university-bill-2025",
-      "ministry": "",
-      "prs_category": "",
-      "status": null,
-      "year": 2025,
-      "highlights_text": "",
-      "key_issues_text": "",
-      "bill_pdf_url": "../files/bills_acts/bills_parliament/2025/Tribhuvan_Sahkari_University_Bill,_2025.pdf",
-      "first_seen_at": "2026-08-17T16:11:55.272299+00:00",
-      "last_scraped_at": "2026-08-17T16:11:55.272299+00:00",
-      "overview_text": null,
-      "sectoral_primary_area": null,
-      "sectoral_score": 0,
-      "mitigation_score": 0,
-      "enforceability_score": 0,
-      "scale_score": 0,
-      "novelty_score": 0,
-      "total_score": 0,
-      "rationale": "The bill is titled as a cooperative university establishment bill. Without access to the Overview, Highlights, or Key Issues and Analysis, no substantive content about the bill's provisions can be assessed. The title alone does not indicate a clear climate, energy, environment, or sustainability connection — it appears to be primarily about higher education institution governance.",
-      "confidence": "high",
-      "needs_review": false,
-      "scored_at": "2026-08-17T19:54:38.158737+00:00",
-      "scorer_model": "claude-haiku-4-5-20251001",
-      "is_manual_override": false,
-      "climate_direction": null,
-      "climate_direction_rationale": null,
-      "status_timeline": [
-        {
-          "stage": "Introduced",
-          "chamber": "Lok Sabha",
-          "date": "Feb 03, 2025"
-        },
-        {
-          "stage": "Passed",
-          "chamber": "Lok Sabha",
-          "date": "Mar 26, 2025"
-        },
-        {
-          "stage": "Passed",
-          "chamber": "Rajya Sabha",
-          "date": "Apr 01, 2025"
         }
       ],
       "sectoral_secondary_areas": [],
@@ -3251,14 +3315,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "This bill is a constitutional amendment concerning the timing and conduct of elections in India. While it touches on governance and administrative process, it has no plausible connection to climate, energy, environment, sustainability, or any of CEEW's 15 research areas. The bill's content—simultaneous elections, Model Code of Conduct, assembly terms, and election postponement thresholds—is purely electoral/constitutional in nature.",
+      "rationale": "This bill concerns constitutional amendments to India's electoral system and the timing of simultaneous elections. It has no connection to climate, energy, environment, or any of CEEW's 15 research areas. While electoral reform can indirectly affect governance capacity, this bill is fundamentally about electoral procedure and constitutional structure, not sustainability or climate-relevant sectors.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:35:29.923035+00:00",
+      "scored_at": "2026-08-21T03:51:40.895944+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -3273,7 +3338,12 @@
       ],
       "sectoral_secondary_areas": [],
       "highlights_bullets": [],
-      "issues_bullets": []
+      "issues_bullets": [
+        "Frequent elections impose repeated Model Code of Conduct, disrupting developmental activities, but this alone may not justify constitutional amendment.",
+        "Simultaneous elections could leave some legislatures with terms under one year, potentially impairing effective governance.",
+        "Bill grants ECI power to recommend postponing state assembly elections without Parliament's approval or specified conditions, lowering the threshold for postponement.",
+        "No time limit specified for postponing assembly elections, risking states being left without an Assembly indefinitely."
+      ]
     },
     {
       "id": "the-union-territories-laws-amendment-bill-2024",
@@ -3296,14 +3366,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "This bill concerns electoral procedure and the timing of elections across Indian states and Union Territories. While it touches governance and constitutional matters, it has no plausible connection to climate, energy, environment, sustainable livelihoods, water, food systems, air quality, cooling, mobility, finance, technology, circular economy, climate resilience, or international cooperation. The bill is about electoral mechanics, not about sectoral or environmental outcomes.",
+      "rationale": "This bill concerns electoral procedure, constitutional amendments to election timing, and governance structure — not climate, energy, environment, or any of CEEW's 15 research areas. While elections may indirectly affect climate policy outcomes over time, the bill itself has no substantive connection to emissions, energy transitions, sustainable sectors, resilience, or environmental protection.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:35:33.504083+00:00",
+      "scored_at": "2026-08-21T03:51:45.052394+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -3319,10 +3390,10 @@
       "sectoral_secondary_areas": [],
       "highlights_bullets": [],
       "issues_bullets": [
-        "Frequent elections are expensive and time-consuming, and the Model Code of Conduct disrupts developmental activities.",
-        "Short legislative terms (in some cases under one year) may impair effective governance and ministerial capacity.",
-        "The bill empowers the ECI to recommend postponing state assembly elections without the conditions, parliamentary approval, or time limits currently required under Article 356.",
-        "Lack of specified time limits on postponement could leave a state without an Assembly indefinitely."
+        "Frequent elections impose repeated Model Code of Conduct periods that disrupt developmental activities.",
+        "Short legislative terms resulting from simultaneous elections may prevent effective governance and ministerial familiarization with administration.",
+        "Bill empowers ECI to recommend postponement of Assembly elections without the safeguards (specified conditions and Parliamentary approval) currently required under Article 356.",
+        "No time limit specified for postponement of Assembly elections, risking prolonged periods without a functioning state legislature."
       ]
     },
     {
@@ -3346,14 +3417,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "These draft rules concern telecommunications interception, service suspension, and cybersecurity from a law-enforcement and network-security perspective. While cybersecurity is mentioned, the document's focus is on surveillance, suspension procedures, and telecom-sector governance rather than climate, energy, environmental, or sustainability outcomes. No plausible connection to any of CEEW's 15 research areas.",
+      "rationale": "This bill concerns telecommunications regulation, law enforcement interception, service suspension, and cybersecurity governance. While cybersecurity and telecom infrastructure are important policy domains, they do not map to any of CEEW's 15 climate and sustainability research areas. The bill has no stated connection to emissions, energy transitions, sustainable systems, climate resilience, or environmental protection.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:35:42.821959+00:00",
+      "scored_at": "2026-08-21T03:51:54.809730+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Passed",
@@ -3391,14 +3463,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "The bill concerns banking law amendments. Without access to the specific provisions in the PRS brief (Highlights and Key Issues are not available), there is no evidence of climate, energy, environmental, or sustainability relevance. Banking regulation is generally outside CEEW's 15 research areas unless it directly concerns sustainable finance mechanisms, green lending criteria, or fossil-fuel divestment — none of which are indicated here.",
+      "rationale": "The bill concerns banking law amendments. While sustainable finance is a CEEW research area, banking legislation is only relevant if it substantively addresses environmental/climate standards, green finance mandates, or climate-risk disclosure requirements. With no PRS content available—no highlights, overview, or analysis—there is no evidence that this bill touches any of CEEW's 15 areas. Banking procedure or technical amendments alone do not warrant inclusion.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:35:45.333027+00:00",
+      "scored_at": "2026-08-21T03:51:57.555895+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -3446,14 +3519,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "The Bills of Lading Bill, 2024 concerns maritime/shipping documentation and commercial law. While bills of lading relate to maritime transport (which falls under Sustainable Mobility), the bill's subject matter is exclusively procedural and contractual—no PRS text is available to indicate any climate, environmental, energy, or sustainability content. Without substantive detail, no climate relevance can be inferred.",
+      "rationale": "The Bills of Lading Bill, 2024 is a maritime/commercial law bill governing cargo documentation and shipping contracts. No PRS Highlights, Key Issues, or Overview text is available to assess; the title alone does not indicate relevance to climate, environment, energy, or any of CEEW's 15 research areas. While bills of lading relate to maritime transport (which can be relevant to Sustainable Mobility in principle), the substantive content is absent, and the bill title suggests a technical commercial law update with no stated climate or environmental dimension.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:35:47.998025+00:00",
+      "scored_at": "2026-08-21T03:52:00.395832+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -3496,14 +3570,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "The Mussalman Wakf (Repeal) Bill, 2024 concerns religious endowment law and has no plausible connection to climate, energy, environment, or any of CEEW's 15 research areas. Without substantive detail available, the title alone indicates this is legislation on religious/charitable trusts under Islamic law, outside the scope of climate and sustainability policy.",
+      "rationale": "The Mussalman Wakf (Repeal) Bill concerns religious endowment law and has no plausible connection to climate, energy, environment, or any of CEEW's 15 research areas. Without substantive bill text, no environmental or sustainability angle is discernible.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:36:06.934689+00:00",
+      "scored_at": "2026-08-21T03:52:15.069976+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -3546,14 +3621,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "This bill concerns the governance, composition, and dispute-resolution procedures of Waqf institutions under Muslim personal law. While waqf properties may include land and water resources, the bill's substantive focus is exclusively on institutional management, legal standing, and administrative procedure — not on environmental outcomes, energy, emissions, resource sustainability, or any of CEEW's 15 research areas.",
+      "rationale": "This bill concerns the governance, composition, and administration of Waqf institutions under Islamic religious law. It addresses religious endowment management, tribunal procedures, property ownership disputes, and board membership criteria. While Waqfs manage significant real estate portfolios, the bill contains no provisions relating to climate, energy, environment, sustainability, or any of CEEW's 15 research areas.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:36:11.818315+00:00",
+      "scored_at": "2026-08-21T03:52:19.369242+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -3583,15 +3659,16 @@
       ],
       "sectoral_secondary_areas": [],
       "highlights_bullets": [
-        "Non-Muslim members mandated in Central Waqf Council and State Waqf Boards.",
-        "Survey Commissioner replaced by Collector with authority to survey waqf properties.",
-        "Government property identified as waqf ceases to be waqf; Collector determines ownership.",
-        "Tribunal finality removed; direct appeal to High Court now available."
+        "Central Waqf Council and State Waqf Boards now required to include non-Muslim members.",
+        "Survey Commissioner role replaced by Collector to conduct waqf property surveys.",
+        "Government properties identified as waqf cease to be waqf; Collector determines ownership.",
+        "Direct appeal to High Court now permitted; Tribunal decisions no longer final.",
+        "Waqf creation restricted to persons professing Islam for at least five years."
       ],
       "issues_bullets": [
-        "Non-Muslim majority membership may conflict with waqf governance under Muslim law.",
-        "Removal of Muslim law expert from Tribunals may weaken legal expertise in dispute resolution.",
-        "Five-year Muslim profession requirement for waqf creation rationale unclear and creates inequitable distinction."
+        "Non-Muslim members may comprise the majority of Waqf Boards, departing from religious-body governance norms.",
+        "Removal of Muslim law expert from Waqf Tribunals may impair dispute resolution quality.",
+        "Five-year Islam-profession requirement for waqf creation lacks clear rationale and creates citizenship distinctions."
       ]
     },
     {
@@ -3615,14 +3692,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "This bill concerns the redistribution of assembly constituencies by scheduled-tribe representation in Goa — a matter of electoral law and constitutional representation. It has no connection to climate, energy, environment, sustainability, or any of CEEW's 15 research areas.",
+      "rationale": "This bill concerns electoral representation and constituency delimitation for Scheduled Tribes in Goa. It has no connection to climate, energy, environment, sustainability, or any of CEEW's 15 research areas. The subject matter is purely constitutional and electoral in nature.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:36:17.640757+00:00",
+      "scored_at": "2026-08-21T03:52:25.062246+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -3665,14 +3743,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "This bill concerns the constitutional classification and recognition of Scheduled Tribes — a matter of administrative law and constitutional identity, not climate, energy, environment, or sustainability. No plausible connection to any of CEEW's 15 research areas exists.",
+      "rationale": "This bill concerns constitutional amendments related to Scheduled Tribes classification and administrative procedures. It has no plausible connection to climate, energy, environment, or any of CEEW's 15 research areas. The subject matter (constitutional tribal designation) falls entirely outside the sustainability and climate policy domain.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:36:30.959853+00:00",
+      "scored_at": "2026-08-21T03:52:36.351935+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -3715,14 +3794,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "This bill concerns constitutional orders relating to Scheduled Castes and Scheduled Tribes — a social and administrative matter with no plausible connection to climate, energy, environment, or any of CEEW's 15 research areas. No substantive PRS text is available, but the title alone rules out relevance to climate policy or sustainability.",
+      "rationale": "This bill concerns constitutional orders relating to Scheduled Castes and Scheduled Tribes classifications. It has no plausible connection to climate, energy, environment, or any of CEEW's 15 research areas. The bill is about constitutional governance and social classification, not sectoral sustainability or climate policy.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:36:38.784718+00:00",
+      "scored_at": "2026-08-21T03:52:43.456866+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -3765,14 +3845,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "No substantive information is available about this bill's content, scope, or provisions. The title indicates it concerns amendments to local government laws in Jammu and Kashmir, but without access to the Overview, Highlights, or Key Issues text, there is no basis for identifying any climate, energy, environmental, or sustainability relevance. The bill cannot be classified under any of CEEW's 15 areas on the basis of title alone.",
+      "rationale": "The bill concerns amendments to local government laws in Jammu and Kashmir. Without access to the Overview, Highlights, or Key Issues and Analysis, no substantive assessment of climate or environmental relevance is possible. The title alone — amending local bodies laws — does not trigger any of the eight mandatory checklist categories or suggest connection to CEEW's 15 research areas.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:36:41.944193+00:00",
+      "scored_at": "2026-08-21T03:52:46.525646+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -3815,14 +3896,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "This bill concerns examination fraud and cheating prevention in public examinations—an education and governance matter with no plausible connection to climate, energy, environment, sustainability, or any of CEEW's 15 research areas.",
+      "rationale": "This bill concerns examination conduct and anti-cheating measures in public examinations. It has no plausible connection to climate, energy, environment, sustainable development, or any of CEEW's 15 research areas. The subject matter is administrative/educational regulation entirely outside the climate and sustainability scope.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:36:44.112166+00:00",
+      "scored_at": "2026-08-21T03:52:49.150476+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Introduced",
@@ -3865,14 +3947,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "No substantive information is available about this overview of criminal law reforms. Without details on the bill's content, scope, or specific provisions, no plausible connection to climate, energy, environment, or any of CEEW's 15 research areas can be identified. Criminal law reforms are typically unrelated to climate and sustainability unless they specifically address environmental crime or related sectors.",
+      "rationale": "No substantive legislative text, highlights, or analysis available. The title refers to criminal law reforms, which has no plausible connection to climate, energy, environment, or any of CEEW's 15 research areas unless the content (not provided) explicitly addresses environmental crime, disaster management, or similar. Without access to actual bill content, this cannot be classified as climate/sustainability-relevant.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:36:47.267540+00:00",
+      "scored_at": "2026-08-21T03:52:52.361610+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Passed",
@@ -3905,14 +3988,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "No PRS legislative brief text (Overview, Highlights, or Key Issues) was provided, making it impossible to assess whether this item relates to any of CEEW's 15 research areas. Labour law reforms are generally outside climate and environment scope unless they specifically address green jobs, just-transition reskilling, or sectoral decarbonization—none of which can be confirmed from the metadata alone.",
+      "rationale": "No PRS legislative brief text is available for this entry. Without details on the bill's title, ministry, status, or substantive provisions, it is impossible to assess climate or sustainability relevance. The generic label 'Overview of Labour Law Reforms' does not by itself indicate connection to any of CEEW's 15 research areas.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:36:49.888896+00:00",
+      "scored_at": "2026-08-21T03:52:54.526928+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [
         {
           "stage": "Passed",
@@ -3945,14 +4029,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "This entry is a higher-education policy overview with no substantive bill text, highlights, or analysis provided. Without details on the specific proposals, no climate, energy, environmental, or sustainability connection can be identified or evaluated.",
+      "rationale": "No substantive bill text, highlights, or key issues are available for assessment. The title references 'Legislative Proposals in Higher Education' which does not map to any of CEEW's 15 climate/sustainability research areas. Without detailed content, no climate or environmental relevance can be identified.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:36:52.081670+00:00",
+      "scored_at": "2026-08-21T03:52:57.124975+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [],
       "sectoral_secondary_areas": [],
       "highlights_bullets": [],
@@ -3979,14 +4064,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "This is a Model Act on land titling and property registration, a core governance/legal matter with no plausible connection to climate, energy, environment, or any of CEEW's 15 research areas. Land titling itself can have indirect sustainability implications (e.g. via tenure security for land use or agriculture), but this bill's substance — establishing conclusive land titles and registration rules — addresses property law, not climate or environmental policy.",
+      "rationale": "This is a bill on land titling and property law, with no connection to climate, energy, environment, or any of CEEW's 15 research areas. No Highlights or Key Issues text was available to review, but the title itself—focused on conclusive land titling procedures—indicates a civil/property law subject with no plausible climate or sustainability nexus.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:36:54.866005+00:00",
+      "scored_at": "2026-08-21T03:52:59.547524+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [],
       "sectoral_secondary_areas": [],
       "highlights_bullets": [],
@@ -4013,14 +4099,15 @@
       "scale_score": 0,
       "novelty_score": 0,
       "total_score": 0,
-      "rationale": "This entry refers to historical Lok Pal Bills without any substantive legislative text, highlights, or analysis available. Lok Pal legislation concerns anti-corruption and institutional oversight, with no plausible connection to climate, energy, environment, or any of CEEW's 15 research areas. Cannot score without material to assess.",
+      "rationale": "This entry refers to historical Lok Pal Bills (ombudsman legislation), which concern institutional governance and anti-corruption frameworks, not climate, environment, energy, or any of CEEW's 15 research areas. No substantive PRS content is available, but the subject matter itself has no plausible climate or sustainability relevance.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:36:57.947824+00:00",
+      "scored_at": "2026-08-21T03:53:02.146947+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
       "climate_direction_rationale": null,
+      "auto_flagged": false,
       "status_timeline": [],
       "sectoral_secondary_areas": [],
       "highlights_bullets": [],
