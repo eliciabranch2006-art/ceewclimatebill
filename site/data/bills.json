@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-21T03:53:02.158619+00:00",
+  "generated_at": "2026-08-22T03:40:39.438579+00:00",
   "source": "PRS Legislative Research (CC BY 4.0)",
   "bills": [
     {
@@ -138,16 +138,16 @@
       "mitigation_score": 12,
       "enforceability_score": 14,
       "scale_score": 13,
-      "novelty_score": 5,
-      "total_score": 64,
-      "rationale": "The bill's title explicitly addresses water pollution prevention and control, placing it squarely within CEEW's Sustainable Water research area. However, without access to the actual Highlights and Key Issues text, scoring is necessarily conservative and based on the title alone. Water pollution control is inherently relevant to environmental sustainability and climate resilience (water quality affects ecosystem health and adaptation capacity), but the lack of substantive details prevents higher scoring on mitigation and enforceability dimensions.",
-      "confidence": "low",
+      "novelty_score": 6,
+      "total_score": 65,
+      "rationale": "This bill amends India's foundational water pollution control statute, a core environmental law with direct relevance to sustainable water management. Without detailed PRS summaries available, scoring reflects the bill's sector (water pollution prevention/control, triggering the 'Sustainable Water' classification per CEEW's hard rules) and the reasonable assumption that amendments to this Act typically address compliance mechanisms, standards, or enforcement — though the specific policy direction and stringency cannot be confirmed from the title alone.",
+      "confidence": "medium",
       "needs_review": true,
-      "scored_at": "2026-08-17T19:54:41.192520+00:00",
+      "scored_at": "2026-08-22T03:40:39.427298+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": "supportive",
-      "climate_direction_rationale": "Water pollution prevention and control supports environmental and climate outcomes by protecting aquatic ecosystems and water resources essential to climate resilience.",
+      "climate_direction_rationale": "Water pollution prevention and control legislation supports environmental and climate goals by reducing contaminant loads, protecting freshwater resources, and enabling adaptive management of water systems under climate stress.",
       "auto_flagged": false,
       "status_timeline": [
         {
@@ -558,6 +558,57 @@
       "issues_bullets": []
     },
     {
+      "id": "the-viksit-bharat-–-guarantee-for-rozgar-and-ajeevika-mission-gramin-vb-–-g-ram-g-bill-2025",
+      "title": "The Viksit Bharat – Guarantee for Rozgar and Ajeevika Mission (Gramin) VB – G RAM G Bill, 2025",
+      "prs_url": "https://prsindia.org/billtrack/the-viksit-bharat-–-guarantee-for-rozgar-and-ajeevika-mission-gramin-vb-–-g-ram-g-bill-2025",
+      "ministry": "",
+      "prs_category": "",
+      "status": null,
+      "year": 2025,
+      "highlights_text": "",
+      "key_issues_text": "",
+      "bill_pdf_url": "../files/bills_acts/bills_parliament/2025/Viksit_Bharat–Guarantee_for_Rozgar_and_Ajeevika_Mission_(Gramin)_VB–G_RAM_G_Bill,2025.pdf",
+      "first_seen_at": "2026-08-17T16:09:52.090219+00:00",
+      "last_scraped_at": "2026-08-17T16:09:52.090219+00:00",
+      "overview_text": null,
+      "sectoral_primary_area": "Sustainable Livelihoods",
+      "sectoral_score": 20,
+      "mitigation_score": 0,
+      "enforceability_score": 8,
+      "scale_score": 12,
+      "novelty_score": 6,
+      "total_score": 46,
+      "rationale": "The bill's title explicitly references 'Rozgar' (employment) and 'Ajeevika' (livelihoods), and targets rural/gram areas, placing it squarely under Sustainable Livelihoods per CEEW's mandatory checklist. Without PRS detail available, scoring is conservative: the bill appears to be a mission-based employment/livelihood guarantee scheme (likely modeled on MGNREGA), which has scale and some institutional enforceability but no explicit climate or mitigation content. The rural livelihood focus offers indirect co-benefits (e.g. reducing urban migration pressure, local resilience), but these cannot be scored higher without more substantive text.",
+      "confidence": "medium",
+      "needs_review": true,
+      "scored_at": "2026-08-22T03:40:26.469805+00:00",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "is_manual_override": false,
+      "climate_direction": "neutral",
+      "climate_direction_rationale": "The bill is livelihood/employment-focused with no explicit climate or environmental provisions visible in the available text; livelihood resilience can support adaptive capacity indirectly, but this is not a climate-primary bill.",
+      "auto_flagged": false,
+      "status_timeline": [
+        {
+          "stage": "Introduced",
+          "chamber": "Lok Sabha",
+          "date": "Dec 16, 2025"
+        },
+        {
+          "stage": "Passed",
+          "chamber": "Lok Sabha",
+          "date": "Dec 18, 2025"
+        },
+        {
+          "stage": "Passed",
+          "chamber": "Rajya Sabha",
+          "date": "Dec 18, 2025"
+        }
+      ],
+      "sectoral_secondary_areas": [],
+      "highlights_bullets": [],
+      "issues_bullets": []
+    },
+    {
       "id": "the-oilfields-regulation-and-development-amendment-bill-2024",
       "title": "The Oilfields (Regulation and Development) Amendment Bill, 2024",
       "prs_url": "https://prsindia.org/billtrack/the-oilfields-regulation-and-development-amendment-bill-2024",
@@ -631,13 +682,13 @@
       "sectoral_score": 20,
       "mitigation_score": 0,
       "enforceability_score": 0,
-      "scale_score": 12,
+      "scale_score": 10,
       "novelty_score": 3,
-      "total_score": 35,
-      "rationale": "This bill concerns Micro, Small and Medium Enterprises (MSME), which falls under Sustainable Livelihoods per CEEW's classification rules — any bill with MSME in its substance is tagged under that area. However, with no substantive details available (Highlights and Key Issues are empty), we cannot assess whether this amendment actually touches climate, environment, or sustainability dimensions of MSME development. The sectoral score reflects the automatic inclusion; the other scores are minimal pending review of the full text.",
+      "total_score": 33,
+      "rationale": "The bill's title explicitly references Micro, Small and Medium Enterprises (MSME), which triggers the mandatory checklist rule for 'Sustainable Livelihoods' classification. MSMEs are a core CEEW research area because they represent a large employment base and livelihood pathway in India, and their development practices can influence broader sustainability outcomes. However, without access to the bill's substantive details (Overview, Highlights, or Key Issues are all marked unavailable), we cannot assess whether it contains specific climate/environmental provisions, making the mitigation and enforceability scores necessarily low. The score reflects inclusion bias — the bill is classified under a relevant sector even though its actual climate/sustainability content cannot be verified from the provided text.",
       "confidence": "low",
       "needs_review": true,
-      "scored_at": "2026-08-17T18:32:54.169725+00:00",
+      "scored_at": "2026-08-22T03:40:22.365925+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": null,
@@ -2121,57 +2172,6 @@
         "Adjudication and investigation functions separated only at case level rather than through distinct cadres, falling short of separation-of-powers principles",
         "Powers to suspend or cancel transactions by adjudicating officers and MIIs risk market instability and investor confidence loss"
       ]
-    },
-    {
-      "id": "the-viksit-bharat-–-guarantee-for-rozgar-and-ajeevika-mission-gramin-vb-–-g-ram-g-bill-2025",
-      "title": "The Viksit Bharat – Guarantee for Rozgar and Ajeevika Mission (Gramin) VB – G RAM G Bill, 2025",
-      "prs_url": "https://prsindia.org/billtrack/the-viksit-bharat-–-guarantee-for-rozgar-and-ajeevika-mission-gramin-vb-–-g-ram-g-bill-2025",
-      "ministry": "",
-      "prs_category": "",
-      "status": null,
-      "year": 2025,
-      "highlights_text": "",
-      "key_issues_text": "",
-      "bill_pdf_url": "../files/bills_acts/bills_parliament/2025/Viksit_Bharat–Guarantee_for_Rozgar_and_Ajeevika_Mission_(Gramin)_VB–G_RAM_G_Bill,2025.pdf",
-      "first_seen_at": "2026-08-17T16:09:52.090219+00:00",
-      "last_scraped_at": "2026-08-17T16:09:52.090219+00:00",
-      "overview_text": null,
-      "sectoral_primary_area": null,
-      "sectoral_score": 0,
-      "mitigation_score": 0,
-      "enforceability_score": 0,
-      "scale_score": 0,
-      "novelty_score": 0,
-      "total_score": 0,
-      "rationale": "No substantive information (Overview, Highlights, or Key Issues) was provided for this bill, making it impossible to assess its climate or sustainability relevance. The title mentions 'Rozgar' (employment) and 'Ajeevika' (livelihoods) in a rural context, which could plausibly relate to Sustainable Livelihoods, but without any actual bill text or PRS analysis, no classification can be made responsibly.",
-      "confidence": "low",
-      "needs_review": true,
-      "scored_at": "2026-08-17T18:33:51.654170+00:00",
-      "scorer_model": "claude-haiku-4-5-20251001",
-      "is_manual_override": false,
-      "climate_direction": null,
-      "climate_direction_rationale": null,
-      "auto_flagged": false,
-      "status_timeline": [
-        {
-          "stage": "Introduced",
-          "chamber": "Lok Sabha",
-          "date": "Dec 16, 2025"
-        },
-        {
-          "stage": "Passed",
-          "chamber": "Lok Sabha",
-          "date": "Dec 18, 2025"
-        },
-        {
-          "stage": "Passed",
-          "chamber": "Rajya Sabha",
-          "date": "Dec 18, 2025"
-        }
-      ],
-      "sectoral_secondary_areas": [],
-      "highlights_bullets": [],
-      "issues_bullets": []
     },
     {
       "id": "the-sabka-bima-sabki-raksha-amendment-of-insurance-laws-bill-2025",
