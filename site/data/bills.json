@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-22T03:40:39.438579+00:00",
+  "generated_at": "2026-08-23T03:48:53.063483+00:00",
   "source": "PRS Legislative Research (CC BY 4.0)",
   "bills": [
     {
@@ -17,20 +17,20 @@
       "last_scraped_at": "2026-08-17T16:10:21.833868+00:00",
       "overview_text": null,
       "sectoral_primary_area": "Energy Transitions",
-      "sectoral_score": 28,
+      "sectoral_score": 27,
       "mitigation_score": 18,
       "enforceability_score": 16,
-      "scale_score": 15,
+      "scale_score": 14,
       "novelty_score": 7,
-      "total_score": 84,
-      "rationale": "This bill amends India's core electricity framework with provisions directly relevant to energy transition and power market reform. The broadened Renewable Purchase Obligation (RPO) to include all non-fossil sources and its new compliance penalty are the strongest climate-relevant elements, mandating increased renewable energy procurement. However, the bill's primary focus is structural market reform (network sharing, cross-subsidy elimination, regulatory coordination) rather than emission reductions or new renewable capacity targets, which limits its mitigation impact. Enforceability is moderate given named regulators (SERCs/CERC) and penalty mechanisms, though implementation details on RPO enforcement remain unspecified.",
+      "total_score": 82,
+      "rationale": "This bill makes substantive reforms to India's electricity distribution and renewable energy procurement framework. The expansion of Renewable Purchase Obligation (RPO) to non-fossil sources and introduction of compliance penalties directly support renewable energy deployment at scale. However, the bill's primary focus is electricity market restructuring rather than emissions reduction per se, and several key implementation questions remain unresolved. The measures are national-level and binding, but enforceability is moderate because tariff-setting remains regulatory rather than competitive.",
       "confidence": "high",
       "needs_review": false,
-      "scored_at": "2026-08-17T18:34:23.117550+00:00",
+      "scored_at": "2026-08-23T03:48:53.053612+00:00",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "climate_direction": "supportive",
-      "climate_direction_rationale": "The bill's expansion of RPO to all non-fossil sources and enforcement via financial penalties clearly promotes renewable energy uptake and decarbonization of India's electricity supply, despite its primary focus on market structure and competition.",
+      "climate_direction_rationale": "The bill strengthens renewable energy procurement through expanded RPO and compliance penalties, directly advancing India's renewable energy and decarbonization goals, despite primary focus on market structure rather than explicit emissions cuts.",
       "auto_flagged": false,
       "status_timeline": [
         {
@@ -40,20 +40,21 @@
         }
       ],
       "sectoral_secondary_areas": [
-        "Power Markets"
+        "Power Markets",
+        "Sustainable Mobility"
       ],
       "highlights_bullets": [
-        "Discoms permitted to supply electricity using other discoms' networks, subject to SERC oversight.",
-        "Cross-subsidies for manufacturing, railways, and metro railways must be fully eliminated within five years.",
-        "Renewable Purchase Obligation (RPO) broadened from renewable to all non-fossil sources with compliance penalties of 35–45 paise per unit.",
-        "New Electricity Council established with union and state power ministers to coordinate electricity sector reforms.",
-        "SERCs may exempt large industrial consumers (>1 MW) from mandatory power supply obligations."
+        "Multiple distribution companies may now supply electricity using other discoms' networks, subject to State Electricity Regulatory Commission oversight.",
+        "Cross-subsidies paid by manufacturing enterprises, railways, and metro railways must be eliminated fully within five years.",
+        "Renewable Purchase Obligation expanded to include all non-fossil sources (not just renewables), with fixed penalty of 35–45 paise per unit for non-compliance.",
+        "An Electricity Council of union and state power ministers established to coordinate electricity sector reforms and advise on policy.",
+        "SERCs may exempt discoms from supplying consumers with maximum demand exceeding one megawatt."
       ],
       "issues_bullets": [
-        "Network-sharing provisions leave unresolved questions on PPA treatment, network maintenance responsibility, asset-sharing, consumer switching framework, and AT&C loss allocation.",
-        "RPO penalty fixed close to market price of renewable energy certificates (30–40 paise/unit), risking price ceiling effect and market distortion.",
-        "Tariff remains regulatory-determined rather than subject to discom autonomy, limiting competitive market entry.",
-        "Government cross-reference powers for regulatory removal may constitute undue interference between centre and state jurisdictions."
+        "Shared network model leaves unresolved questions: treatment of existing PPAs, network expansion/maintenance responsibility, asset sharing, consumer switching framework, and AT&C loss allocation.",
+        "Tariff remains regulator-determined, limiting competition in supply despite multi-supplier framework.",
+        "RPO penalty (35–45 paise/unit) is set near renewable energy certificate market price, risking price ceiling effects and market distortion.",
+        "Cross-government power to refer for removal of each other's appointed regulatory commissioners may constitute inter-governmental interference."
       ]
     },
     {
