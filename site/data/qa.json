@@ -1,1 +1,30 @@
-{ "generated_at": "2026-08-25T00:00:00+00:00", "source": "sansad.in (Lok Sabha / Rajya Sabha)", "entries": [] }
+{
+  "generated_at": "2026-08-25T00:00:00+00:00",
+  "source": "sansad.in (Lok Sabha / Rajya Sabha)",
+  "entries": [
+    {
+      "id": "placeholder-1",
+      "house": "Lok Sabha",
+      "question_number": null,
+      "question_type": null,
+      "title": "Placeholder entry — real Q&A data will replace this once the scraper runs",
+      "member_name": null,
+      "member_constituency": null,
+      "ministry": null,
+      "listed_date": null,
+      "question_text": null,
+      "answer_text": null,
+      "is_answered": false,
+      "url": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "summary_bullets": [],
+      "rationale": null,
+      "confidence": null,
+      "scorer_model": null,
+      "is_manual_override": false,
+      "first_seen_at": "2026-08-25T00:00:00+00:00",
+      "last_scraped_at": "2026-08-25T00:00:00+00:00"
+    }
+  ]
+}
