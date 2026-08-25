@@ -1,6 +1,25 @@
-import billsData from "../data/bills.json";
-import trendsData from "../data/trends.json";
-import qaData from "../data/qa.json";
+import fs from "fs";
+import path from "path";
+
+/**
+ * Loads JSON at BUILD TIME as plain data (JSON.parse returns `any`),
+ * instead of a static `import x from "./y.json"`, which forces
+ * TypeScript to infer the exact literal type of the entire file's
+ * contents. That's fine for a small seed file, but once real scraped
+ * data grows to hundreds of entries with long text fields, that
+ * inference step can become extremely memory-hungry and has been known
+ * to silently kill Vercel's build during the "checking validity of
+ * types" phase — no reported error, just a dead build. Reading the file
+ * and casting explicitly sidesteps that inference entirely; we get the
+ * exact same runtime data either way.
+ */
+function readJson<T>(relativePath: string): T {
+  const filePath = path.join(process.cwd(), relativePath);
+  const raw = fs.readFileSync(filePath, "utf-8");
+  return JSON.parse(raw) as T;
+}
+
+// ---------- Bills ----------
 
 export type StatusTimelineEntry = {
   stage: string;
@@ -16,6 +35,7 @@ export type Bill = {
   prs_category: string | null;
   status: string | null;
   year: number | null;
+  overview_text: string | null;
   highlights_text: string | null;
   key_issues_text: string | null;
   status_timeline: StatusTimelineEntry[];
@@ -49,7 +69,29 @@ type BillsFile = {
   bills: Bill[];
 };
 
-const data = billsData as BillsFile;
+const bills = readJson<BillsFile>("data/bills.json");
+
+export function getAllBills(): Bill[] {
+  return bills.bills;
+}
+
+export function getScoredBills(): Bill[] {
+  return bills.bills.filter((b) => b.total_score !== null);
+}
+
+export function getBillById(id: string): Bill | undefined {
+  return bills.bills.find((b) => b.id === id);
+}
+
+export function getGeneratedAt(): string {
+  return bills.generated_at;
+}
+
+export function getDataSource(): string {
+  return bills.source;
+}
+
+// ---------- Trends ----------
 
 export type TrendingItem = {
   id: string;
@@ -72,7 +114,7 @@ type TrendsFile = {
   items: TrendingItem[];
 };
 
-const trends = trendsData as TrendsFile;
+const trends = readJson<TrendsFile>("data/trends.json");
 
 export function getTrendingItems(): TrendingItem[] {
   return trends.items;
@@ -81,6 +123,8 @@ export function getTrendingItems(): TrendingItem[] {
 export function getTrendsGeneratedAt(): string {
   return trends.generated_at;
 }
+
+// ---------- Q&A ----------
 
 export type QAEntry = {
   id: string;
@@ -113,7 +157,7 @@ type QAFile = {
   entries: QAEntry[];
 };
 
-const qa = qaData as QAFile;
+const qa = readJson<QAFile>("data/qa.json");
 
 export function getAllQA(): QAEntry[] {
   return qa.entries;
@@ -125,24 +169,4 @@ export function getQAById(id: string): QAEntry | undefined {
 
 export function getQAGeneratedAt(): string {
   return qa.generated_at;
-}
-
-export function getAllBills(): Bill[] {
-  return data.bills;
-}
-
-export function getScoredBills(): Bill[] {
-  return data.bills.filter((b) => b.total_score !== null);
-}
-
-export function getBillById(id: string): Bill | undefined {
-  return data.bills.find((b) => b.id === id);
-}
-
-export function getGeneratedAt(): string {
-  return data.generated_at;
-}
-
-export function getDataSource(): string {
-  return data.source;
 }
