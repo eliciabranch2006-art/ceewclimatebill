@@ -1,48 +1,29 @@
 """
 Scraper for Lok Sabha & Rajya Sabha parliamentary Q&A via sansad.in.
 
-**Read this before running.** Unlike PRS's bill tracker (plain server-
-rendered HTML), sansad.in's Q&A search
-(https://sansad.in/ls/questions/questions-and-answers and the /rs/
-equivalent) is a JavaScript single-page app — the search form and
-results only exist after JS runs and an API call resolves ("Please wait
-a few seconds for the result to load"). A `requests`-based scraper
-cannot see this content at all; it needs a real (headless) browser,
-which is what Playwright gives us.
+**Verified against the real site** (2026-08) via two rounds of playwright
+codegen:
+  - Search: click #input-with-icon-textfield, fill with the query, press
+    Enter.
+  - Results render as a table (role="row" per result, role="cell" for
+    content). Critically, there is NO separate detail page per question —
+    clicking a row's "expand row" control (get_by_label("expand row"))
+    reveals the full question/answer INLINE, on the same page. This means
+    the whole search+detail flow for a keyword happens in ONE page load,
+    not one load per result — a big win given this site's confirmed
+    2-3+ minute load times.
+  - A row's accessible name looks like "356 Roadmap to Accelerate..." —
+    a leading question number followed by the title.
 
-This also means I could not verify exact form field selectors the way I
-did for PRS — I only know the field *labels* from the page's visible
-text (Search On, Matches On, Session, Answer Date, Member Name, Ministry
-Name, Question Type, Question Number), not their underlying HTML
-structure. The locators below use Playwright's label/role/placeholder-
-based matching (get_by_label, get_by_role) specifically because it's
-more resilient to unknown internal markup than CSS selectors — but you
-should expect this file to need real debugging on first run.
+**Still unverified**: the exact DOM boundary of what text appears once a
+row is expanded (member name, ministry, constituency, answer text) — the
+extraction below captures the row's expanded text as a whole and applies
+best-effort parsing on top. If that parsing misbehaves, the fix is the
+same as before: run `playwright codegen`, expand one row, and note
+exactly what appears so the specific fields (not just the raw text) can
+be targeted directly.
 
-**Strongly recommended before running this in CI:** run
-`playwright codegen https://sansad.in/ls/questions/questions-and-answers`
-locally (after `pip install playwright && playwright install chromium`).
-It opens a real browser, records your clicks as you manually do one
-search, and generates working Python selectors you can drop in below.
-This will get you correct selectors far faster than trial-and-error
-against the CI logs. Send me the generated code and I'll wire it in.
-
-**Performance note (fixed after the first version ran ~15+ minutes):**
-this used to launch a brand-new browser for every single search AND
-every single detail-page fetch — dozens of full browser startups per
-run. It also waited for Playwright's "networkidle" state, which many
-JS-heavy sites (background polling, analytics beacons) never actually
-reach, silently eating the full timeout on every navigation. Fixed by:
-(1) reusing ONE browser for the whole run via SansadSession below —
-    only lightweight pages are opened/closed per navigation, not whole
-    browsers;
-(2) waiting for "domcontentloaded" (fast, reliable) instead of
-    "networkidle" for the initial navigation, then an explicit fixed
-    pause to give client-side JS time to render, instead of gambling on
-    network activity ever going fully quiet.
-
-Politeness: still sleeps between requests; runs on a schedule, not
-continuously.
+Performance: one browser is reused for the whole run via SansadSession.
 """
 
 from __future__ import annotations
@@ -59,27 +40,22 @@ HOUSES = {
     "rs": "https://sansad.in/rs/questions/questions-and-answers",
 }
 
-RENDER_PAUSE_SECONDS = 3.0  # time given to client-side JS to render after each navigation
-NAV_TIMEOUT_MS = 20000      # domcontentloaded is fast — no need for the old 45s allowance
+# Confirmed by hand: 2-3+ minutes to load, nothing to do with Playwright.
+NAV_TIMEOUT_MS = 240000
+RENDER_PAUSE_SECONDS = 5.0
+EXPAND_PAUSE_SECONDS = 2.0  # shorter — this is an in-page interaction, not a full reload
 
 
 @dataclass
 class QAEntry:
-    id: str  # e.g. "ls-2026-session1-1234"
+    id: str
     house: str  # "Lok Sabha" | "Rajya Sabha"
     question_number: Optional[str] = None
-    question_type: Optional[str] = None  # Starred / Unstarred
+    question_type: Optional[str] = None
     title: str = ""
     member_name: Optional[str] = None
-    member_constituency: Optional[str] = None  # e.g. "Kota-Bundi, Rajasthan" — best-effort,
-                                                 # see fetch_qa_detail's TODO on where this lives
+    member_constituency: Optional[str] = None
     ministry: Optional[str] = None
-    # The date the question is/was scheduled to be answered — each ministry
-    # has fixed weekdays for answering, so this is a real scheduled date,
-    # not a rolling deadline. Once this date has passed, we treat the
-    # question as due; if answer_text is still empty past that date, the
-    # frontend shows "overdue" rather than a countdown. See module
-    # docstring for why we're not treating this as a fixed N-day SLA.
     listed_date: Optional[str] = None
     question_text: str = ""
     answer_text: str = ""
@@ -92,14 +68,9 @@ class QAEntry:
 
 class SansadSession:
     """Wraps a single reused Playwright browser for the whole scrape run.
-    Use as a context manager:
 
         with SansadSession() as session:
-            results = session.search_qa("ls", "solar energy")
-            detail = session.fetch_qa_detail(results[0])
-
-    Each call opens/closes a lightweight page, not a whole new browser —
-    this is the main fix for the slow first version of this scraper.
+            entries = session.search_and_expand("ls", "renewable energy")
     """
 
     def __init__(self):
@@ -127,7 +98,12 @@ class SansadSession:
     def available(self) -> bool:
         return self._browser is not None
 
-    def search_qa(self, house: str, keyword: str, max_results: int = 15) -> list[QAEntry]:
+    def search_and_expand(self, house: str, keyword: str, max_results: int = 10) -> list[QAEntry]:
+        """Searches for `keyword`, then expands each result row in place to
+        pull its full detail — all in one page load. Replaces the older
+        two-phase search-then-navigate-to-detail-page approach, which
+        doesn't match how this site actually works (see module docstring).
+        """
         if not self.available:
             return []
 
@@ -138,71 +114,63 @@ class SansadSession:
             page.goto(HOUSES[house], wait_until="domcontentloaded", timeout=NAV_TIMEOUT_MS)
             page.wait_for_timeout(int(RENDER_PAUSE_SECONDS * 1000))
 
-            # --- Fill the search form ---
-            # TODO: verify these against the real page (see module docstring).
-            try:
-                page.get_by_label("Search On").select_option(label="Title")
-            except Exception:
-                logger.debug("Could not set 'Search On' dropdown — using page default")
-
-            try:
-                page.get_by_label("Matches On").select_option(label="Any Words")
-            except Exception:
-                logger.debug("Could not set 'Matches On' dropdown — using page default")
-
-            title_box = None
-            for locator_attempt in [
-                lambda: page.get_by_placeholder("Title", exact=False),
-                lambda: page.get_by_role("textbox", name="Title"),
-            ]:
-                try:
-                    candidate = locator_attempt()
-                    if candidate.count() > 0:
-                        title_box = candidate.first
-                        break
-                except Exception:
-                    continue
-            if title_box is None:
-                logger.warning("Could not find the title search box for %s — skipping keyword %r",
-                                house, keyword)
-                return []
-            title_box.fill(keyword)
-
-            for button_text in ["Apply", "Filter", "Search"]:
-                btn = page.get_by_role("button", name=button_text)
-                if btn.count() > 0:
-                    btn.first.click()
-                    break
-
-            # Give the results API call time to resolve — a fixed pause
-            # instead of wait_for_load_state("networkidle"), which this
-            # kind of app may never satisfy.
+            search_box = page.locator("#input-with-icon-textfield")
+            search_box.click()
+            search_box.fill(keyword)
+            search_box.press("Enter")
             page.wait_for_timeout(int(RENDER_PAUSE_SECONDS * 1000))
 
-            # --- Parse results ---
-            # TODO: verify the actual result-row structure.
-            rows = page.locator("[class*='question'], [class*='result'], tr").all()
-            for row in rows[:max_results]:
-                text = row.inner_text().strip()
-                if not text or len(text) < 10:
-                    continue
-                link = row.locator("a").first
-                href = None
+            rows = page.get_by_role("row").all()
+            processed = 0
+            for row in rows:
+                if processed >= max_results:
+                    break
                 try:
-                    href = link.get_attribute("href")
+                    row_text_before = row.inner_text().strip()
                 except Exception:
-                    pass
-                lines = [l.strip() for l in text.split("\n") if l.strip()]
-                if not lines:
                     continue
-                entry_id = f"{house}:{href or lines[0][:60]}"
-                entries.append(QAEntry(
+                if not row_text_before or len(row_text_before) < 5:
+                    continue  # skip empty/header rows
+
+                # Leading question number, e.g. "356 Roadmap to Accelerate..."
+                number_match = re.match(r"^\s*(\d+)\s+(.*)", row_text_before, re.DOTALL)
+                question_number = number_match.group(1) if number_match else None
+                title = (number_match.group(2) if number_match else row_text_before).strip()
+                title = title.split("\n")[0][:300]  # first line only, capped
+
+                entry_id = f"{house}:{question_number or title[:60]}"
+
+                expand_control = row.get_by_label("expand row")
+                if expand_control.count() == 0:
+                    # No expand control on this row — likely a header or
+                    # non-question row. Skip rather than guess.
+                    continue
+
+                try:
+                    expand_control.first.click()
+                    page.wait_for_timeout(int(EXPAND_PAUSE_SECONDS * 1000))
+                    expanded_text = row.inner_text().strip()
+                except Exception:
+                    logger.exception("Could not expand row for %r", title)
+                    expanded_text = row_text_before
+
+                # The newly revealed content is whatever wasn't in the row
+                # before expansion — a heuristic, but grounded in a
+                # confirmed real interaction rather than pure guesswork.
+                new_content = expanded_text
+                if expanded_text.startswith(row_text_before):
+                    new_content = expanded_text[len(row_text_before):].strip()
+
+                entry = QAEntry(
                     id=entry_id,
                     house=house_label,
-                    title=lines[0],
-                    url=href if (href and href.startswith("http")) else
-                        (f"https://sansad.in{href}" if href else None),
-                ))
+                    question_number=question_number,
+                    title=title,
+                )
+                self._apply_expanded_text(entry, new_content or expanded_text)
+                entries.append(entry)
+                processed += 1
+
         except Exception:
             logger.exception("Q&A search failed for house=%s keyword=%r", house, keyword)
         finally:
@@ -210,73 +178,37 @@ class SansadSession:
 
         return entries
 
-    def fetch_qa_detail(self, entry: QAEntry) -> QAEntry:
-        """Fetch the full question + answer text, constituency, and
-        scheduled answer date for one entry. Best-effort — returns the
-        entry with whatever it could find, rather than failing the whole
-        run when a locator doesn't match.
+    @staticmethod
+    def _apply_expanded_text(entry: QAEntry, text: str) -> None:
+        """Best-effort field extraction from the expanded row's text.
+        TODO: replace with targeted locators once you've confirmed the
+        exact structure of expanded content (see module docstring)."""
+        entry.question_text = text[:3000]
 
-        TODO once you've inspected a real detail page: the question/answer
-        split below is a text-search heuristic, not a targeted locator,
-        because I don't know the actual DOM structure. Replace with direct
-        locators for "Question" / "Answer" sections once confirmed.
-        """
-        if not self.available or not entry.url:
-            return entry
+        lower = text.lower()
+        answer_idx = lower.find("answer")
+        if answer_idx != -1:
+            entry.question_text = text[:answer_idx].strip()[:3000]
+            entry.answer_text = text[answer_idx:].strip()[:3000]
 
-        page = self._browser.new_page()
-        try:
-            page.goto(entry.url, wait_until="domcontentloaded", timeout=NAV_TIMEOUT_MS)
-            page.wait_for_timeout(int(RENDER_PAUSE_SECONDS * 1000))
-            body_text = page.locator("body").inner_text()
+        ministry_match = re.search(r"ministry\s*:?\s*([^\n]+)", text, re.IGNORECASE)
+        if ministry_match:
+            entry.ministry = ministry_match.group(1).strip()[:200]
 
-            lower = body_text.lower()
-            answer_marker = None
-            for marker in ("answer\n", "answer:", "\nanswer"):
-                idx = lower.find(marker)
-                if idx != -1:
-                    answer_marker = idx
-                    break
-            if answer_marker is not None:
-                entry.question_text = body_text[:answer_marker].strip()[:3000]
-                entry.answer_text = body_text[answer_marker:].strip()[:3000]
-            else:
-                entry.question_text = body_text[:3000]
-                entry.answer_text = ""
+        member_match = re.search(r"(?:member|asked by|shri|smt\.?)\s*:?\s*([^\n]+)", text, re.IGNORECASE)
+        if member_match:
+            entry.member_name = member_match.group(1).strip()[:200]
 
-            try:
-                constituency_label = page.get_by_text("Constituency", exact=False)
-                if constituency_label.count() > 0:
-                    entry.member_constituency = constituency_label.first.locator(
-                        "xpath=following::text()[1]"
-                    ).inner_text().strip()
-            except Exception:
-                pass
-
-            date_match = re.search(
-                r"(?:date of answer|answer date|listed for)\D{0,20}"
-                r"([A-Z][a-z]{2,8}\s+\d{1,2},?\s+\d{4})",
-                body_text, re.IGNORECASE,
-            )
-            if date_match:
-                entry.listed_date = date_match.group(1)
-        except Exception:
-            logger.exception("Could not fetch Q&A detail for %s", entry.url)
-        finally:
-            page.close()
-
-        return entry
+        date_match = re.search(
+            r"(?:date of answer|answer date|listed for)\D{0,20}"
+            r"([A-Z][a-z]{2,8}\s+\d{1,2},?\s+\d{4})",
+            text, re.IGNORECASE,
+        )
+        if date_match:
+            entry.listed_date = date_match.group(1)
 
 
-# Backwards-compatible module-level functions, in case anything still calls
-# these directly — each opens its own short-lived session. Prefer
-# SansadSession directly (see update_qa.py) for anything that makes more
-# than one call, to get the browser-reuse benefit.
-def search_qa(house: str, keyword: str, max_results: int = 15) -> list[QAEntry]:
+# Backwards-compatible single-call helper.
+def search_and_expand(house: str, keyword: str, max_results: int = 10) -> list[QAEntry]:
     with SansadSession() as session:
-        return session.search_qa(house, keyword, max_results)
-
-
-def fetch_qa_detail(entry: QAEntry) -> QAEntry:
-    with SansadSession() as session:
-        return session.fetch_qa_detail(entry)
+        return session.search_and_expand(house, keyword, max_results)
