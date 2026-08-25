@@ -34,7 +34,16 @@ from trend_keywords import ALL_SEED_KEYWORDS
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 logger = logging.getLogger(__name__)
-
+    if not entries:
+        entries = [{
+            "id": "placeholder-empty-export", "house": "Lok Sabha", "question_number": None,
+            "question_type": None, "title": "No Q&A entries currently match the tracker's criteria",
+            "member_name": None, "member_constituency": None, "ministry": None, "listed_date": None,
+            "question_text": None, "answer_text": None, "is_answered": False, "url": None,
+            "is_relevant": False, "ceew_area": None, "summary_bullets": [], "rationale": None,
+            "confidence": None, "scorer_model": None, "is_manual_override": False,
+            "first_seen_at": now_iso(), "last_scraped_at": now_iso(),
+        }]
 SITE_DATA_PATH = Path(__file__).resolve().parent.parent / "site" / "data" / "qa.json"
 
 # Keep this small at first — each keyword triggers a real browser search
