@@ -34,7 +34,26 @@ from scorer import score_bill, PROMPT_VERSION
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 logger = logging.getLogger(__name__)
-
+    # Next.js's static export build has a quirk where a dynamic route's
+    # generateStaticParams() returning a genuinely empty array gets
+    # misreported as a build error ("missing generateStaticParams") rather
+    # than being treated as "zero pages, that's valid". Guard against ever
+    # exporting a truly empty array, so an automated run that legitimately
+    # finds zero bills can never silently break the live site.
+    if not bills:
+        bills = [{
+            "id": "placeholder-empty-export", "title": "No bills currently match the tracker's criteria",
+            "prs_url": "https://prsindia.org/billtrack", "ministry": None, "prs_category": None,
+            "status": None, "year": None, "overview_text": None, "highlights_text": None,
+            "key_issues_text": None, "status_timeline": [], "bill_pdf_url": None,
+            "first_seen_at": now_iso(), "last_scraped_at": now_iso(),
+            "sectoral_primary_area": None, "sectoral_secondary_areas": [], "sectoral_score": None,
+            "mitigation_score": None, "enforceability_score": None, "scale_score": None,
+            "novelty_score": None, "total_score": None, "rationale": None, "confidence": None,
+            "needs_review": False, "highlights_bullets": [], "issues_bullets": [],
+            "scored_at": None, "scorer_model": None, "is_manual_override": False,
+            "climate_direction": None, "climate_direction_rationale": None, "auto_flagged": False,
+        }]
 SITE_DATA_PATH = Path(__file__).resolve().parent.parent / "site" / "data" / "bills.json"
 
 # Per CEEW outreach team: the site should only ever show bills from the last
