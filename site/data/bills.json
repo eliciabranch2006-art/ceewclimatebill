@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-29T22:38:56.140409+00:00",
+  "generated_at": "2026-08-30T08:55:46.084022+00:00",
   "source": "PRS Legislative Research (CC BY 4.0)",
   "bills": [
     {
@@ -408,6 +408,57 @@
       "issues_bullets": []
     },
     {
+      "id": "the-national-co-operative-development-corporation-amendment-bill-2026",
+      "title": "The National Co-operative Development Corporation (Amendment) Bill, 2026",
+      "prs_url": "https://prsindia.org/billtrack/the-national-co-operative-development-corporation-amendment-bill-2026",
+      "ministry": "",
+      "prs_category": "",
+      "status": null,
+      "year": 2026,
+      "overview_text": "",
+      "highlights_text": "",
+      "key_issues_text": "",
+      "bill_pdf_url": "../files/bills_acts/bills_parliament/2026/National_Co-operative_Development_Corporation(A)_Bill_2026.pdf",
+      "first_seen_at": "2026-08-29T22:33:21.020848+00:00",
+      "last_scraped_at": "2026-08-29T22:33:21.020848+00:00",
+      "sectoral_primary_area": "Sustainable Livelihoods",
+      "sectoral_score": 20,
+      "mitigation_score": 0,
+      "enforceability_score": 5,
+      "scale_score": 8,
+      "novelty_score": 3,
+      "total_score": 36,
+      "rationale": "This bill amends the National Co-operative Development Corporation Act, triggering the mandatory 'cooperative' classification rule under the CEEW checklist. Cooperatives are a key vehicle for sustainable livelihoods and inclusive rural development in India. Without access to the bill's substantive details (Highlights and Key Issues are unavailable), the score reflects the sector's climate relevance (rural economic resilience, small-producer organisation) but penalises mitigation and novelty heavily — cooperatives are longstanding, and this appears to be a routine amendment rather than a climate-forward reform. The enforceability score is modest because we cannot verify what specific mechanisms or compliance provisions this amendment introduces.",
+      "confidence": "medium",
+      "needs_review": true,
+      "scored_at": "2026-08-30T08:55:22.952444+00:00",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "is_manual_override": false,
+      "climate_direction": "neutral",
+      "climate_direction_rationale": "Cooperatives support sustainable livelihoods and rural resilience (neutral-to-positive for climate goals), but without details of the amendment's content, no clear climate direction can be assigned.",
+      "auto_flagged": false,
+      "status_timeline": [
+        {
+          "stage": "Introduced",
+          "chamber": "Lok Sabha",
+          "date": "Aug 10, 2026"
+        },
+        {
+          "stage": "Passed",
+          "chamber": "Lok Sabha",
+          "date": "Aug 11, 2026"
+        },
+        {
+          "stage": "Passed",
+          "chamber": "Rajya Sabha",
+          "date": "Aug 12, 2026"
+        }
+      ],
+      "sectoral_secondary_areas": [],
+      "highlights_bullets": [],
+      "issues_bullets": []
+    },
+    {
       "id": "the-railways-amendment-bill-2024",
       "title": "The Railways (Amendment) Bill, 2024",
       "prs_url": "https://prsindia.org/billtrack/the-railways-amendment-bill-2024",
@@ -572,6 +623,57 @@
       "issues_bullets": []
     },
     {
+      "id": "the-mines-and-minerals-development-and-regulation-amendment-bill-2025",
+      "title": "The Mines and Minerals (Development and Regulation) Amendment Bill, 2025",
+      "prs_url": "https://prsindia.org/billtrack/the-mines-and-minerals-development-and-regulation-amendment-bill-2025",
+      "ministry": "",
+      "prs_category": "",
+      "status": null,
+      "year": 2025,
+      "overview_text": "",
+      "highlights_text": "",
+      "key_issues_text": "",
+      "bill_pdf_url": "../files/bills_acts/bills_parliament/2025/Bill_Text-Mines_Bill_2025.pdf",
+      "first_seen_at": "2026-08-29T22:36:28.600539+00:00",
+      "last_scraped_at": "2026-08-29T22:36:28.600539+00:00",
+      "sectoral_primary_area": "Technology Futures",
+      "sectoral_score": 20,
+      "mitigation_score": 0,
+      "enforceability_score": 0,
+      "scale_score": 0,
+      "novelty_score": 0,
+      "total_score": 20,
+      "rationale": "The bill title explicitly references 'Mines and Minerals', which triggers the hard classification rule for minerals/mining bills → Technology Futures. However, without access to the Highlights, Key Issues, or Overview, no substantive assessment of the bill's actual provisions, enforcement mechanisms, scale, or novelty is possible. The scoring reflects only the sectoral match; all other dimensions are zeroed pending content review.",
+      "confidence": "low",
+      "needs_review": true,
+      "scored_at": "2026-08-30T08:55:42.717290+00:00",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "is_manual_override": false,
+      "climate_direction": null,
+      "climate_direction_rationale": null,
+      "auto_flagged": false,
+      "status_timeline": [
+        {
+          "stage": "Introduced",
+          "chamber": "Lok Sabha",
+          "date": "Aug 11, 2025"
+        },
+        {
+          "stage": "Passed",
+          "chamber": "Lok Sabha",
+          "date": "Aug 12, 2025"
+        },
+        {
+          "stage": "Passed",
+          "chamber": "Rajya Sabha",
+          "date": "Aug 19, 2025"
+        }
+      ],
+      "sectoral_secondary_areas": [],
+      "highlights_bullets": [],
+      "issues_bullets": []
+    },
+    {
       "id": "the-merchant-shipping-bill-2024",
       "title": "The Merchant Shipping Bill, 2024",
       "prs_url": "https://prsindia.org/billtrack/the-merchant-shipping-bill-2024",
@@ -616,6 +718,57 @@
           "stage": "Passed",
           "chamber": "Rajya Sabha",
           "date": "Aug 11, 2025"
+        }
+      ],
+      "sectoral_secondary_areas": [],
+      "highlights_bullets": [],
+      "issues_bullets": []
+    },
+    {
+      "id": "the-carriage-of-goods-by-sea-bill-2024",
+      "title": "The Carriage of Goods by Sea Bill, 2024",
+      "prs_url": "https://prsindia.org/billtrack/the-carriage-of-goods-by-sea-bill-2024",
+      "ministry": "",
+      "prs_category": "",
+      "status": null,
+      "year": 2024,
+      "overview_text": "",
+      "highlights_text": "",
+      "key_issues_text": "",
+      "bill_pdf_url": "../files/bills_acts/bills_parliament/2024/Carriage_of_Goods_by_Sea_Bill_2024_Bill_Text.pdf",
+      "first_seen_at": "2026-08-29T22:37:35.024694+00:00",
+      "last_scraped_at": "2026-08-29T22:37:35.024694+00:00",
+      "sectoral_primary_area": "Sustainable Mobility",
+      "sectoral_score": 20,
+      "mitigation_score": 0,
+      "enforceability_score": 0,
+      "scale_score": 0,
+      "novelty_score": 0,
+      "total_score": 20,
+      "rationale": "The bill's title explicitly concerns carriage of goods by sea, which falls under maritime/shipping transport — triggering the hard classification rule for 'Sustainable Mobility'. However, with no available Highlights or Key Issues text, we cannot assess whether the bill contains any substantive climate, environmental, or sustainability provisions. The score reflects the sectoral match only; without detail, mitigation, enforceability, and scale scores remain at zero.",
+      "confidence": "low",
+      "needs_review": true,
+      "scored_at": "2026-08-30T08:55:46.076375+00:00",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "is_manual_override": false,
+      "climate_direction": null,
+      "climate_direction_rationale": "Insufficient information to determine whether the bill supports, harms, or is neutral to climate outcomes.",
+      "auto_flagged": false,
+      "status_timeline": [
+        {
+          "stage": "Introduced",
+          "chamber": "Lok Sabha",
+          "date": "Aug 09, 2024"
+        },
+        {
+          "stage": "Passed",
+          "chamber": "Lok Sabha",
+          "date": "Mar 28, 2025"
+        },
+        {
+          "stage": "Passed",
+          "chamber": "Rajya Sabha",
+          "date": "Aug 06, 2025"
         }
       ],
       "sectoral_secondary_areas": [],
@@ -3803,57 +3956,6 @@
       "issues_bullets": []
     },
     {
-      "id": "the-national-co-operative-development-corporation-amendment-bill-2026",
-      "title": "The National Co-operative Development Corporation (Amendment) Bill, 2026",
-      "prs_url": "https://prsindia.org/billtrack/the-national-co-operative-development-corporation-amendment-bill-2026",
-      "ministry": "",
-      "prs_category": "",
-      "status": null,
-      "year": 2026,
-      "overview_text": "",
-      "highlights_text": "",
-      "key_issues_text": "",
-      "bill_pdf_url": "../files/bills_acts/bills_parliament/2026/National_Co-operative_Development_Corporation(A)_Bill_2026.pdf",
-      "first_seen_at": "2026-08-29T22:33:21.020848+00:00",
-      "last_scraped_at": "2026-08-29T22:33:21.020848+00:00",
-      "sectoral_primary_area": null,
-      "sectoral_score": null,
-      "mitigation_score": null,
-      "enforceability_score": null,
-      "scale_score": null,
-      "novelty_score": null,
-      "total_score": null,
-      "rationale": null,
-      "confidence": null,
-      "needs_review": false,
-      "scored_at": null,
-      "scorer_model": null,
-      "is_manual_override": false,
-      "climate_direction": null,
-      "climate_direction_rationale": null,
-      "auto_flagged": false,
-      "status_timeline": [
-        {
-          "stage": "Introduced",
-          "chamber": "Lok Sabha",
-          "date": "Aug 10, 2026"
-        },
-        {
-          "stage": "Passed",
-          "chamber": "Lok Sabha",
-          "date": "Aug 11, 2026"
-        },
-        {
-          "stage": "Passed",
-          "chamber": "Rajya Sabha",
-          "date": "Aug 12, 2026"
-        }
-      ],
-      "sectoral_secondary_areas": [],
-      "highlights_bullets": [],
-      "issues_bullets": []
-    },
-    {
       "id": "the-viksit-bharat-–-guarantee-for-rozgar-and-ajeevika-mission-gramin-vb-–-g-ram-g-bill-2025",
       "title": "The Viksit Bharat – Guarantee for Rozgar and Ajeevika Mission (Gramin) VB – G RAM G Bill, 2025",
       "prs_url": "https://prsindia.org/billtrack/the-viksit-bharat-–-guarantee-for-rozgar-and-ajeevika-mission-gramin-vb-–-g-ram-g-bill-2025",
@@ -3990,108 +4092,6 @@
           "stage": "Passed",
           "chamber": "Lok Sabha.",
           "date": null
-        }
-      ],
-      "sectoral_secondary_areas": [],
-      "highlights_bullets": [],
-      "issues_bullets": []
-    },
-    {
-      "id": "the-mines-and-minerals-development-and-regulation-amendment-bill-2025",
-      "title": "The Mines and Minerals (Development and Regulation) Amendment Bill, 2025",
-      "prs_url": "https://prsindia.org/billtrack/the-mines-and-minerals-development-and-regulation-amendment-bill-2025",
-      "ministry": "",
-      "prs_category": "",
-      "status": null,
-      "year": 2025,
-      "overview_text": "",
-      "highlights_text": "",
-      "key_issues_text": "",
-      "bill_pdf_url": "../files/bills_acts/bills_parliament/2025/Bill_Text-Mines_Bill_2025.pdf",
-      "first_seen_at": "2026-08-29T22:36:28.600539+00:00",
-      "last_scraped_at": "2026-08-29T22:36:28.600539+00:00",
-      "sectoral_primary_area": null,
-      "sectoral_score": null,
-      "mitigation_score": null,
-      "enforceability_score": null,
-      "scale_score": null,
-      "novelty_score": null,
-      "total_score": null,
-      "rationale": null,
-      "confidence": null,
-      "needs_review": false,
-      "scored_at": null,
-      "scorer_model": null,
-      "is_manual_override": false,
-      "climate_direction": null,
-      "climate_direction_rationale": null,
-      "auto_flagged": false,
-      "status_timeline": [
-        {
-          "stage": "Introduced",
-          "chamber": "Lok Sabha",
-          "date": "Aug 11, 2025"
-        },
-        {
-          "stage": "Passed",
-          "chamber": "Lok Sabha",
-          "date": "Aug 12, 2025"
-        },
-        {
-          "stage": "Passed",
-          "chamber": "Rajya Sabha",
-          "date": "Aug 19, 2025"
-        }
-      ],
-      "sectoral_secondary_areas": [],
-      "highlights_bullets": [],
-      "issues_bullets": []
-    },
-    {
-      "id": "the-carriage-of-goods-by-sea-bill-2024",
-      "title": "The Carriage of Goods by Sea Bill, 2024",
-      "prs_url": "https://prsindia.org/billtrack/the-carriage-of-goods-by-sea-bill-2024",
-      "ministry": "",
-      "prs_category": "",
-      "status": null,
-      "year": 2024,
-      "overview_text": "",
-      "highlights_text": "",
-      "key_issues_text": "",
-      "bill_pdf_url": "../files/bills_acts/bills_parliament/2024/Carriage_of_Goods_by_Sea_Bill_2024_Bill_Text.pdf",
-      "first_seen_at": "2026-08-29T22:37:35.024694+00:00",
-      "last_scraped_at": "2026-08-29T22:37:35.024694+00:00",
-      "sectoral_primary_area": null,
-      "sectoral_score": null,
-      "mitigation_score": null,
-      "enforceability_score": null,
-      "scale_score": null,
-      "novelty_score": null,
-      "total_score": null,
-      "rationale": null,
-      "confidence": null,
-      "needs_review": false,
-      "scored_at": null,
-      "scorer_model": null,
-      "is_manual_override": false,
-      "climate_direction": null,
-      "climate_direction_rationale": null,
-      "auto_flagged": false,
-      "status_timeline": [
-        {
-          "stage": "Introduced",
-          "chamber": "Lok Sabha",
-          "date": "Aug 09, 2024"
-        },
-        {
-          "stage": "Passed",
-          "chamber": "Lok Sabha",
-          "date": "Mar 28, 2025"
-        },
-        {
-          "stage": "Passed",
-          "chamber": "Rajya Sabha",
-          "date": "Aug 06, 2025"
         }
       ],
       "sectoral_secondary_areas": [],
