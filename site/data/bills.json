@@ -1,7 +1,63 @@
 {
-  "generated_at": "2026-08-30T08:55:46.084022+00:00",
+  "generated_at": "2026-08-31T09:20:28.533069+00:00",
   "source": "PRS Legislative Research (CC BY 4.0)",
   "bills": [
+    {
+      "id": "the-draft-electricity-amendment-bill-2025",
+      "title": "The Draft Electricity (Amendment) Bill, 2025",
+      "prs_url": "https://prsindia.org/billtrack/the-draft-electricity-amendment-bill-2025",
+      "ministry": "",
+      "prs_category": "",
+      "status": null,
+      "year": 2025,
+      "overview_text": "",
+      "highlights_text": "The Electricity Act, 2003 permits multiple distribution companies to operate in the same area and supply electricity through their own network.  Under the Draft Bill, discoms will be allowed to supply electricity using network of others discoms, subject to oversight by State Electricity Regulatory Commissions (SERCs).\nThe Electricity Act, 2003 permits multiple distribution companies to operate in the same area and supply electricity through their own network.  Under the Draft Bill, discoms will be allowed to supply electricity using network of others discoms, subject to oversight by State Electricity Regulatory Commissions (SERCs).\nCross-subsidies paid by manufacturing enterprises, railways, and metro railways must be fully eliminated within five years.\nCross-subsidies paid by manufacturing enterprises, railways, and metro railways must be fully eliminated within five years.\nSERCs may, in consultation with the state government, exempt discoms from their obligation to supply power to consumers whose maximum power demand exceed one megawatt.\nSERCs may, in consultation with the state government, exempt discoms from their obligation to supply power to consumers whose maximum power demand exceed one megawatt.\nThe Draft Bill establishes an Electricity Council comprising union and state power ministers.  The Council will advise central and state governments on policy measures and coordinate the implementation of electricity sector reforms.\nThe Draft Bill establishes an Electricity Council comprising union and state power ministers.  The Council will advise central and state governments on policy measures and coordinate the implementation of electricity sector reforms.\nRenewable Purchase Obligation (RPO) under the Act requires certain entities to purchase a minimum share of electricity from renewable sources.  The Draft Bill broadens this to include non-fossil sources.  Additionally, it proposes a penalty for non-compliance with RPO.  The penalty will range between 35 paise and 45 paise per unit of electricity purchased in non-compliance.\nRenewable Purchase Obligation (RPO) under the Act requires certain entities to purchase a minimum share of electricity from renewable sources.  The Draft Bill broadens this to include non-fossil sources.  Additionally, it proposes a penalty for non-compliance with RPO.  The penalty will range between 35 paise and 45 paise per unit of electricity purchased in non-compliance.\nThe central and state governments will be able to give references to initiate removal proceedings for SERCs and Central Electricity Regulatory Commission (CERC) members, respectively.  Presently, each government may do so only for its own appointees.\nThe central and state governments will be able to give references to initiate removal proceedings for SERCs and Central Electricity Regulatory Commission (CERC) members, respectively.  Presently, each government may do so only for its own appointees.\nKey Issues and Analysis",
+      "key_issues_text": "While the Draft Bill enables multiple suppliers to use a shared distribution network, it leaves several questions unaddressed.  These relate to the treatment of existing PPAs, allocation of responsibility for expanding and maintaining the network, sharing of regulatory assets and cross subsidy, framework for consumers to switch between discoms, and distribution of AT&C losses.\nWhile the Draft Bill enables multiple suppliers to use a shared distribution network, it leaves several questions unaddressed.  These relate to the treatment of existing PPAs, allocation of responsibility for expanding and maintaining the network, sharing of regulatory assets and cross subsidy, framework for consumers to switch between discoms, and distribution of AT&C losses.\nFor enabling competition in supply, earlier Bills sought to provide autonomy to discoms in setting tariff.  As per the Draft Bill, tariff will continue to be determined by the Regulatory Commission.\nFor enabling competition in supply, earlier Bills sought to provide autonomy to discoms in setting tariff.  As per the Draft Bill, tariff will continue to be determined by the Regulatory Commission.\nThe penalty for non-compliance with RPO is fixed close to the market price of renewable energy certificates (30 paise-40 paise per unit).  It may act as a price ceiling and distort market mechanism.\nThe penalty for non-compliance with RPO is fixed close to the market price of renewable energy certificates (30 paise-40 paise per unit).  It may act as a price ceiling and distort market mechanism.\nThe power of central and state governments to give reference for removal of members of each other’s appointed Regulatory Commissions may amount to interference by one government in the domain of the other.\nThe power of central and state governments to give reference for removal of members of each other’s appointed Regulatory Commissions may amount to interference by one government in the domain of the other.\nPART A: HIGHLIGHTS OF THE BILL",
+      "bill_pdf_url": "https://cdnbbsr.s3waas.gov.in/s380537a945c7aaa788ccfcdf1b99b5d8f/uploads/2024/07/20240716890312078.pdf",
+      "first_seen_at": "2026-08-29T22:35:41.737562+00:00",
+      "last_scraped_at": "2026-08-29T22:35:41.737562+00:00",
+      "sectoral_primary_area": "Energy Transitions",
+      "sectoral_score": 28,
+      "mitigation_score": 18,
+      "enforceability_score": 16,
+      "scale_score": 14,
+      "novelty_score": 7,
+      "total_score": 83,
+      "rationale": "This bill materially restructures India's electricity distribution sector to enable competition and accelerate renewable energy uptake. The expansion of Renewable Purchase Obligation to all non-fossil sources, coupled with enforced penalties for non-compliance, creates binding mechanisms for decarbonization. However, several implementation gaps and regulatory ambiguities limit immediate enforceability and impact on emissions reduction.",
+      "confidence": "high",
+      "needs_review": false,
+      "scored_at": "2026-08-31T09:20:28.516795+00:00",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "is_manual_override": false,
+      "climate_direction": "supportive",
+      "climate_direction_rationale": "The bill strengthens renewable energy procurement through expanded RPO, introduces enforceable penalties for non-compliance, and eliminates cross-subsidies that disincentivize efficient, low-carbon supply—all supportive of decarbonization, though implementation design risks (pricing, regulatory clarity) could reduce actual impact.",
+      "auto_flagged": false,
+      "status_timeline": [
+        {
+          "stage": "Passed",
+          "chamber": "Lok Sabha.",
+          "date": null
+        }
+      ],
+      "sectoral_secondary_areas": [
+        "Power Markets",
+        "Sustainable Mobility"
+      ],
+      "highlights_bullets": [
+        "Discoms may supply electricity using other discoms' networks, subject to SERC oversight, enabling competitive supply in shared distribution areas.",
+        "Cross-subsidies from manufacturing, railways, and metro railways must be fully eliminated within five years.",
+        "Renewable Purchase Obligation expanded to include all non-fossil sources (not just renewables), with penalties of 35–45 paise per unit for non-compliance.",
+        "Electricity Council established comprising union and state power ministers to coordinate electricity sector policy and reforms.",
+        "SERCs may exempt discoms from supply obligations to consumers with demand exceeding 1 megawatt.",
+        "Central and state governments granted expanded powers to initiate removal proceedings for each other's regulatory commission appointees."
+      ],
+      "issues_bullets": [
+        "Bill does not address treatment of existing power purchase agreements, network maintenance responsibility, or consumer switching framework under shared distribution model.",
+        "RPO penalty (35–45 paise/unit) set near market price of renewable energy certificates, risking price-ceiling effect and market distortion.",
+        "Tariff-setting authority retained by Regulatory Commissions rather than discoms, potentially limiting competitive benefits.",
+        "Cross-government removal powers over regulatory appointees may create inter-governmental interference and undermine regulatory independence."
+      ]
+    },
     {
       "id": "the-indian-ports-bill-2025",
       "title": "The Indian Ports Bill, 2025",
@@ -2024,6 +2080,57 @@
       ]
     },
     {
+      "id": "the-viksit-bharat-–-guarantee-for-rozgar-and-ajeevika-mission-gramin-vb-–-g-ram-g-bill-2025",
+      "title": "The Viksit Bharat – Guarantee for Rozgar and Ajeevika Mission (Gramin) VB – G RAM G Bill, 2025",
+      "prs_url": "https://prsindia.org/billtrack/the-viksit-bharat-–-guarantee-for-rozgar-and-ajeevika-mission-gramin-vb-–-g-ram-g-bill-2025",
+      "ministry": "",
+      "prs_category": "",
+      "status": null,
+      "year": 2025,
+      "overview_text": "",
+      "highlights_text": "",
+      "key_issues_text": "",
+      "bill_pdf_url": "../files/bills_acts/bills_parliament/2025/Viksit_Bharat–Guarantee_for_Rozgar_and_Ajeevika_Mission_(Gramin)_VB–G_RAM_G_Bill,2025.pdf",
+      "first_seen_at": "2026-08-29T22:35:04.051444+00:00",
+      "last_scraped_at": "2026-08-29T22:35:04.051444+00:00",
+      "sectoral_primary_area": null,
+      "sectoral_score": 0,
+      "mitigation_score": 0,
+      "enforceability_score": 0,
+      "scale_score": 0,
+      "novelty_score": 0,
+      "total_score": 0,
+      "rationale": "No PRS legislative brief content (Overview, Highlights, or Key Issues and Analysis) is available for this bill. Without substantive detail on the bill's provisions, scope, or implementation mechanism, a meaningful climate-relevance assessment cannot be conducted. The title alone—focused on employment and livelihoods in rural areas—is insufficient to determine whether the bill contains climate or sustainability content.",
+      "confidence": "low",
+      "needs_review": true,
+      "scored_at": "2026-08-31T09:20:16.689225+00:00",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "is_manual_override": false,
+      "climate_direction": null,
+      "climate_direction_rationale": null,
+      "auto_flagged": false,
+      "status_timeline": [
+        {
+          "stage": "Introduced",
+          "chamber": "Lok Sabha",
+          "date": "Dec 16, 2025"
+        },
+        {
+          "stage": "Passed",
+          "chamber": "Lok Sabha",
+          "date": "Dec 18, 2025"
+        },
+        {
+          "stage": "Passed",
+          "chamber": "Rajya Sabha",
+          "date": "Dec 18, 2025"
+        }
+      ],
+      "sectoral_secondary_areas": [],
+      "highlights_bullets": [],
+      "issues_bullets": []
+    },
+    {
       "id": "the-sabka-bima-sabki-raksha-amendment-of-insurance-laws-bill-2025",
       "title": "The Sabka Bima Sabki Raksha (Amendment of Insurance Laws) Bill, 2025",
       "prs_url": "https://prsindia.org/billtrack/the-sabka-bima-sabki-raksha-amendment-of-insurance-laws-bill-2025",
@@ -3956,57 +4063,6 @@
       "issues_bullets": []
     },
     {
-      "id": "the-viksit-bharat-–-guarantee-for-rozgar-and-ajeevika-mission-gramin-vb-–-g-ram-g-bill-2025",
-      "title": "The Viksit Bharat – Guarantee for Rozgar and Ajeevika Mission (Gramin) VB – G RAM G Bill, 2025",
-      "prs_url": "https://prsindia.org/billtrack/the-viksit-bharat-–-guarantee-for-rozgar-and-ajeevika-mission-gramin-vb-–-g-ram-g-bill-2025",
-      "ministry": "",
-      "prs_category": "",
-      "status": null,
-      "year": 2025,
-      "overview_text": "",
-      "highlights_text": "",
-      "key_issues_text": "",
-      "bill_pdf_url": "../files/bills_acts/bills_parliament/2025/Viksit_Bharat–Guarantee_for_Rozgar_and_Ajeevika_Mission_(Gramin)_VB–G_RAM_G_Bill,2025.pdf",
-      "first_seen_at": "2026-08-29T22:35:04.051444+00:00",
-      "last_scraped_at": "2026-08-29T22:35:04.051444+00:00",
-      "sectoral_primary_area": null,
-      "sectoral_score": null,
-      "mitigation_score": null,
-      "enforceability_score": null,
-      "scale_score": null,
-      "novelty_score": null,
-      "total_score": null,
-      "rationale": null,
-      "confidence": null,
-      "needs_review": false,
-      "scored_at": null,
-      "scorer_model": null,
-      "is_manual_override": false,
-      "climate_direction": null,
-      "climate_direction_rationale": null,
-      "auto_flagged": false,
-      "status_timeline": [
-        {
-          "stage": "Introduced",
-          "chamber": "Lok Sabha",
-          "date": "Dec 16, 2025"
-        },
-        {
-          "stage": "Passed",
-          "chamber": "Lok Sabha",
-          "date": "Dec 18, 2025"
-        },
-        {
-          "stage": "Passed",
-          "chamber": "Rajya Sabha",
-          "date": "Dec 18, 2025"
-        }
-      ],
-      "sectoral_secondary_areas": [],
-      "highlights_bullets": [],
-      "issues_bullets": []
-    },
-    {
       "id": "the-sustainable-harnessing-and-advancementof-nuclear-energy-for-transforming-india-bill-2025",
       "title": "The Sustainable Harnessing and Advancement of Nuclear Energy for Transforming India Bill, 2025",
       "prs_url": "https://prsindia.org/billtrack/the-sustainable-harnessing-and-advancementof-nuclear-energy-for-transforming-india-bill-2025",
@@ -4051,47 +4107,6 @@
           "stage": "Passed",
           "chamber": "Rajya Sabha",
           "date": "Dec 18, 2025"
-        }
-      ],
-      "sectoral_secondary_areas": [],
-      "highlights_bullets": [],
-      "issues_bullets": []
-    },
-    {
-      "id": "the-draft-electricity-amendment-bill-2025",
-      "title": "The Draft Electricity (Amendment) Bill, 2025",
-      "prs_url": "https://prsindia.org/billtrack/the-draft-electricity-amendment-bill-2025",
-      "ministry": "",
-      "prs_category": "",
-      "status": null,
-      "year": 2025,
-      "overview_text": "",
-      "highlights_text": "The Electricity Act, 2003 permits multiple distribution companies to operate in the same area and supply electricity through their own network.  Under the Draft Bill, discoms will be allowed to supply electricity using network of others discoms, subject to oversight by State Electricity Regulatory Commissions (SERCs).\nThe Electricity Act, 2003 permits multiple distribution companies to operate in the same area and supply electricity through their own network.  Under the Draft Bill, discoms will be allowed to supply electricity using network of others discoms, subject to oversight by State Electricity Regulatory Commissions (SERCs).\nCross-subsidies paid by manufacturing enterprises, railways, and metro railways must be fully eliminated within five years.\nCross-subsidies paid by manufacturing enterprises, railways, and metro railways must be fully eliminated within five years.\nSERCs may, in consultation with the state government, exempt discoms from their obligation to supply power to consumers whose maximum power demand exceed one megawatt.\nSERCs may, in consultation with the state government, exempt discoms from their obligation to supply power to consumers whose maximum power demand exceed one megawatt.\nThe Draft Bill establishes an Electricity Council comprising union and state power ministers.  The Council will advise central and state governments on policy measures and coordinate the implementation of electricity sector reforms.\nThe Draft Bill establishes an Electricity Council comprising union and state power ministers.  The Council will advise central and state governments on policy measures and coordinate the implementation of electricity sector reforms.\nRenewable Purchase Obligation (RPO) under the Act requires certain entities to purchase a minimum share of electricity from renewable sources.  The Draft Bill broadens this to include non-fossil sources.  Additionally, it proposes a penalty for non-compliance with RPO.  The penalty will range between 35 paise and 45 paise per unit of electricity purchased in non-compliance.\nRenewable Purchase Obligation (RPO) under the Act requires certain entities to purchase a minimum share of electricity from renewable sources.  The Draft Bill broadens this to include non-fossil sources.  Additionally, it proposes a penalty for non-compliance with RPO.  The penalty will range between 35 paise and 45 paise per unit of electricity purchased in non-compliance.\nThe central and state governments will be able to give references to initiate removal proceedings for SERCs and Central Electricity Regulatory Commission (CERC) members, respectively.  Presently, each government may do so only for its own appointees.\nThe central and state governments will be able to give references to initiate removal proceedings for SERCs and Central Electricity Regulatory Commission (CERC) members, respectively.  Presently, each government may do so only for its own appointees.\nKey Issues and Analysis",
-      "key_issues_text": "While the Draft Bill enables multiple suppliers to use a shared distribution network, it leaves several questions unaddressed.  These relate to the treatment of existing PPAs, allocation of responsibility for expanding and maintaining the network, sharing of regulatory assets and cross subsidy, framework for consumers to switch between discoms, and distribution of AT&C losses.\nWhile the Draft Bill enables multiple suppliers to use a shared distribution network, it leaves several questions unaddressed.  These relate to the treatment of existing PPAs, allocation of responsibility for expanding and maintaining the network, sharing of regulatory assets and cross subsidy, framework for consumers to switch between discoms, and distribution of AT&C losses.\nFor enabling competition in supply, earlier Bills sought to provide autonomy to discoms in setting tariff.  As per the Draft Bill, tariff will continue to be determined by the Regulatory Commission.\nFor enabling competition in supply, earlier Bills sought to provide autonomy to discoms in setting tariff.  As per the Draft Bill, tariff will continue to be determined by the Regulatory Commission.\nThe penalty for non-compliance with RPO is fixed close to the market price of renewable energy certificates (30 paise-40 paise per unit).  It may act as a price ceiling and distort market mechanism.\nThe penalty for non-compliance with RPO is fixed close to the market price of renewable energy certificates (30 paise-40 paise per unit).  It may act as a price ceiling and distort market mechanism.\nThe power of central and state governments to give reference for removal of members of each other’s appointed Regulatory Commissions may amount to interference by one government in the domain of the other.\nThe power of central and state governments to give reference for removal of members of each other’s appointed Regulatory Commissions may amount to interference by one government in the domain of the other.\nPART A: HIGHLIGHTS OF THE BILL",
-      "bill_pdf_url": "https://cdnbbsr.s3waas.gov.in/s380537a945c7aaa788ccfcdf1b99b5d8f/uploads/2024/07/20240716890312078.pdf",
-      "first_seen_at": "2026-08-29T22:35:41.737562+00:00",
-      "last_scraped_at": "2026-08-29T22:35:41.737562+00:00",
-      "sectoral_primary_area": null,
-      "sectoral_score": null,
-      "mitigation_score": null,
-      "enforceability_score": null,
-      "scale_score": null,
-      "novelty_score": null,
-      "total_score": null,
-      "rationale": null,
-      "confidence": null,
-      "needs_review": false,
-      "scored_at": null,
-      "scorer_model": null,
-      "is_manual_override": false,
-      "climate_direction": null,
-      "climate_direction_rationale": null,
-      "auto_flagged": false,
-      "status_timeline": [
-        {
-          "stage": "Passed",
-          "chamber": "Lok Sabha.",
-          "date": null
         }
       ],
       "sectoral_secondary_areas": [],
