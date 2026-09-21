@@ -1,20 +1,110 @@
 {
-  "generated_at": "2026-09-20T09:03:53.357258+00:00",
+  "generated_at": "2026-09-21T09:35:31.851627+00:00",
   "items": [
+    {
+      "id": "gtrends-interest:groundwater India",
+      "source": "google_trends",
+      "title": "groundwater India",
+      "url": null,
+      "metric_label": "search interest (0-100)",
+      "metric_value": 62.0,
+      "seed_keyword": "groundwater India",
+      "is_relevant": true,
+      "ceew_area": "Sustainable Water",
+      "rationale": "Groundwater is a critical water resource in India facing depletion and sustainability challenges, directly relevant to water security and environmental management.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:32:55.790381+00:00"
+    },
+    {
+      "id": "gtrends-interest:recycling India",
+      "source": "google_trends",
+      "title": "recycling India",
+      "url": null,
+      "metric_label": "search interest (0-100)",
+      "metric_value": 52.0,
+      "seed_keyword": "recycling India",
+      "is_relevant": true,
+      "ceew_area": "Circular Economy",
+      "rationale": "Recycling is a core circular economy practice that reduces waste and resource consumption, directly relevant to India's sustainability efforts.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:33:50.335487+00:00"
+    },
     {
       "id": "gtrends-interest:renewable energy India",
       "source": "google_trends",
       "title": "renewable energy India",
       "url": null,
       "metric_label": "search interest (0-100)",
-      "metric_value": 46.0,
+      "metric_value": 51.0,
       "seed_keyword": "renewable energy India",
       "is_relevant": true,
       "ceew_area": "Energy Transitions",
-      "rationale": "Direct query about renewable energy deployment and policy in India, a core topic in India's energy transition strategy.",
+      "rationale": "Direct search interest in renewable energy in India, core to CEEW's work on transitioning away from fossil fuels, though declining trend suggests lower current public attention.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:00:22.621921+00:00"
+      "fetched_at": "2026-09-21T09:31:52.818945+00:00"
+    },
+    {
+      "id": "gtrends-interest:Jal Jeevan Mission",
+      "source": "google_trends",
+      "title": "Jal Jeevan Mission",
+      "url": null,
+      "metric_label": "search interest (0-100)",
+      "metric_value": 49.0,
+      "seed_keyword": "Jal Jeevan Mission",
+      "is_relevant": true,
+      "ceew_area": "Sustainable Water",
+      "rationale": "Jal Jeevan Mission is India's flagship program to provide piped water supply to all rural households, directly addressing sustainable water access and management.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:32:58.371266+00:00"
+    },
+    {
+      "id": "gtrends-interest:waste management India",
+      "source": "google_trends",
+      "title": "waste management India",
+      "url": null,
+      "metric_label": "search interest (0-100)",
+      "metric_value": 44.0,
+      "seed_keyword": "waste management India",
+      "is_relevant": true,
+      "ceew_area": "Circular Economy",
+      "rationale": "Waste management is a core component of circular economy practices in India, addressing resource efficiency and environmental protection.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:33:44.103408+00:00"
+    },
+    {
+      "id": "gtrends-interest:power grid India",
+      "source": "google_trends",
+      "title": "power grid India",
+      "url": null,
+      "metric_label": "search interest (0-100)",
+      "metric_value": 42.0,
+      "seed_keyword": "power grid India",
+      "is_relevant": true,
+      "ceew_area": "Power Markets",
+      "rationale": "Public interest in India's power grid infrastructure directly relates to electricity market structure, grid stability, and energy distribution—core Power Markets concerns.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:32:07.799735+00:00"
+    },
+    {
+      "id": "gtrends-interest:solar power India",
+      "source": "google_trends",
+      "title": "solar power India",
+      "url": null,
+      "metric_label": "search interest (0-100)",
+      "metric_value": 29.0,
+      "seed_keyword": "solar power India",
+      "is_relevant": true,
+      "ceew_area": "Energy Transitions",
+      "rationale": "Solar power is a core renewable energy technology central to India's energy transition away from fossil fuels.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:31:55.450463+00:00"
     },
     {
       "id": "gtrends-interest:AQI Delhi",
@@ -22,29 +112,14 @@
       "title": "AQI Delhi",
       "url": null,
       "metric_label": "search interest (0-100)",
-      "metric_value": 23.0,
+      "metric_value": 21.0,
       "seed_keyword": "AQI Delhi",
       "is_relevant": true,
       "ceew_area": "Clean Air",
-      "rationale": "AQI (Air Quality Index) tracking is directly relevant to air pollution monitoring and management, a core focus area for CEEW's clean air research.",
+      "rationale": "Air Quality Index (AQI) in Delhi is a direct measure of air pollution and public health, a core focus area for India's clean air agenda.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:00:55.767147+00:00"
-    },
-    {
-      "id": "gtrends-interest:hydrogen India",
-      "source": "google_trends",
-      "title": "hydrogen India",
-      "url": null,
-      "metric_label": "search interest (0-100)",
-      "metric_value": 8.0,
-      "seed_keyword": "hydrogen India",
-      "is_relevant": true,
-      "ceew_area": "Energy Transitions",
-      "rationale": "Hydrogen is a key decarbonization pathway for India's energy future, central to its net-zero ambitions and industrial transition away from fossil fuels.",
-      "confidence": "high",
-      "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:02:00.272918+00:00"
+      "fetched_at": "2026-09-21T09:32:47.375034+00:00"
     },
     {
       "id": "gtrends-interest:monsoon India",
@@ -52,14 +127,29 @@
       "title": "monsoon India",
       "url": null,
       "metric_label": "search interest (0-100)",
-      "metric_value": 8.0,
+      "metric_value": 10.0,
       "seed_keyword": "monsoon India",
       "is_relevant": true,
       "ceew_area": "Climate Resilience",
-      "rationale": "Monsoon patterns are a critical climate variable for India's water security, agriculture, and disaster preparedness, directly relevant to climate resilience assessment.",
+      "rationale": "Monsoon patterns are a critical climate variable affecting India's water security, agriculture, and disaster preparedness, making this a core climate resilience concern.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:02:14.382087+00:00"
+      "fetched_at": "2026-09-21T09:33:57.326322+00:00"
+    },
+    {
+      "id": "gtrends-interest:hydrogen India",
+      "source": "google_trends",
+      "title": "hydrogen India",
+      "url": null,
+      "metric_label": "search interest (0-100)",
+      "metric_value": 6.0,
+      "seed_keyword": "hydrogen India",
+      "is_relevant": true,
+      "ceew_area": "Energy Transitions",
+      "rationale": "Hydrogen is a key focus area for India's clean energy transition and decarbonization strategy, directly relevant to how India is shifting its energy systems away from fossil fuels.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:33:41.816305+00:00"
     },
     {
       "id": "gtrends-interest:flood India",
@@ -71,10 +161,10 @@
       "seed_keyword": "flood India",
       "is_relevant": true,
       "ceew_area": "Climate Resilience",
-      "rationale": "Flooding in India is a climate-related disaster that directly relates to climate impacts, adaptation, and resilience strategies.",
+      "rationale": "Floods are a direct climate hazard affecting India; this trending search reflects public concern about extreme weather events and climate-related disasters.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:02:17.161560+00:00"
+      "fetched_at": "2026-09-21T09:33:59.124175+00:00"
     },
     {
       "id": "gtrends-interest:carbon tax India",
@@ -86,10 +176,10 @@
       "seed_keyword": "carbon tax India",
       "is_relevant": true,
       "ceew_area": "Sustainable Finance",
-      "rationale": "Carbon taxation is a key policy instrument for pricing emissions and driving India's transition to a low-carbon economy, directly relevant to climate and sustainability policy.",
+      "rationale": "Carbon tax is a direct policy instrument for pricing emissions and incentivizing low-carbon transitions, core to climate finance mechanisms in India.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:00:08.572413+00:00"
+      "fetched_at": "2026-09-21T09:31:43.438221+00:00"
     },
     {
       "id": "gtrends-interest:net zero India",
@@ -101,10 +191,10 @@
       "seed_keyword": "net zero India",
       "is_relevant": true,
       "ceew_area": "Low-Carbon Economy",
-      "rationale": "Direct search interest in India's net zero commitments and pathways, a core climate policy topic relevant to India's decarbonization strategy.",
+      "rationale": "Direct search interest in India's net zero commitments and pathways, a core climate policy topic relevant to CEEW's work on decarbonization strategy.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:00:15.837662+00:00"
+      "fetched_at": "2026-09-21T09:31:45.792918+00:00"
     },
     {
       "id": "gtrends-interest:carbon credits India",
@@ -116,25 +206,10 @@
       "seed_keyword": "carbon credits India",
       "is_relevant": true,
       "ceew_area": "Sustainable Finance",
-      "rationale": "Carbon credits are a financial mechanism central to India's climate mitigation strategy, carbon markets, and climate finance—core to CEEW's sustainable finance research.",
+      "rationale": "Carbon credits are a financial mechanism central to India's climate policy and emissions trading frameworks, directly relevant to sustainable finance and carbon markets.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:00:19.996316+00:00"
-    },
-    {
-      "id": "gtrends-interest:solar power India",
-      "source": "google_trends",
-      "title": "solar power India",
-      "url": null,
-      "metric_label": "search interest (0-100)",
-      "metric_value": 0.0,
-      "seed_keyword": "solar power India",
-      "is_relevant": true,
-      "ceew_area": "Energy Transitions",
-      "rationale": "Solar power is a core renewable energy technology central to India's energy transition and decarbonization strategy.",
-      "confidence": "high",
-      "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:00:24.848680+00:00"
+      "fetched_at": "2026-09-21T09:31:48.322141+00:00"
     },
     {
       "id": "gtrends-interest:electricity tariff India",
@@ -146,25 +221,10 @@
       "seed_keyword": "electricity tariff India",
       "is_relevant": true,
       "ceew_area": "Power Markets",
-      "rationale": "Electricity tariff discussions directly relate to how energy prices are set and regulated in India's power sector, a core component of power market dynamics.",
+      "rationale": "Electricity tariff pricing in India is a core component of power market structure, regulation, and affordability—directly relevant to energy transitions and market policy.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:00:28.457866+00:00"
-    },
-    {
-      "id": "gtrends-interest:power grid India",
-      "source": "google_trends",
-      "title": "power grid India",
-      "url": null,
-      "metric_label": "search interest (0-100)",
-      "metric_value": 0.0,
-      "seed_keyword": "power grid India",
-      "is_relevant": true,
-      "ceew_area": "Power Markets",
-      "rationale": "Queries about India's power grid directly relate to energy infrastructure, grid management, and electricity distribution systems that are central to India's energy transition.",
-      "confidence": "high",
-      "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:00:32.571911+00:00"
+      "fetched_at": "2026-09-21T09:32:05.542007+00:00"
     },
     {
       "id": "gtrends-interest:discom India",
@@ -176,10 +236,10 @@
       "seed_keyword": "discom India",
       "is_relevant": true,
       "ceew_area": "Power Markets",
-      "rationale": "Distribution companies (discoms) are central to India's electricity supply chain and are a key focus for India's energy transition, financial sustainability, and power sector reforms.",
+      "rationale": "DISCOMs (Distribution Companies) are central to India's electricity distribution system and power market structure, directly relevant to energy transitions and power sector governance.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:00:35.006879+00:00"
+      "fetched_at": "2026-09-21T09:32:11.263792+00:00"
     },
     {
       "id": "gtrends-interest:green steel India",
@@ -191,10 +251,10 @@
       "seed_keyword": "green steel India",
       "is_relevant": true,
       "ceew_area": "Industrial Sustainability",
-      "rationale": "Green steel production is a direct sustainability concern for India's industrial sector, addressing emissions reduction in one of the country's most carbon-intensive industries.",
+      "rationale": "Green steel production is a substantive industrial decarbonization topic directly relevant to India's low-carbon manufacturing transition.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:00:38.043171+00:00"
+      "fetched_at": "2026-09-21T09:32:14.594890+00:00"
     },
     {
       "id": "gtrends-interest:industrial emissions India",
@@ -206,10 +266,10 @@
       "seed_keyword": "industrial emissions India",
       "is_relevant": true,
       "ceew_area": "Industrial Sustainability",
-      "rationale": "Direct search interest in industrial emissions in India indicates public concern about manufacturing sector's environmental impact, a core focus area for CEEW's industrial sustainability research.",
+      "rationale": "Direct search interest in industrial emissions in India indicates public attention to a core component of industrial sustainability and climate impact.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:00:40.827965+00:00"
+      "fetched_at": "2026-09-21T09:32:18.792939+00:00"
     },
     {
       "id": "gtrends-interest:green jobs India",
@@ -221,10 +281,10 @@
       "seed_keyword": "green jobs India",
       "is_relevant": true,
       "ceew_area": "Sustainable Livelihoods",
-      "rationale": "This search query directly addresses employment and skills development in green sectors, which falls under CEEW's Sustainable Livelihoods research area focused on reskilling and green-career pathways in India.",
+      "rationale": "Query about green jobs in India directly relates to employment and skills development in the clean energy and sustainability sectors.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:00:45.727022+00:00"
+      "fetched_at": "2026-09-21T09:32:25.636650+00:00"
     },
     {
       "id": "gtrends-interest:coal workers India",
@@ -235,11 +295,11 @@
       "metric_value": 0.0,
       "seed_keyword": "coal workers India",
       "is_relevant": true,
-      "ceew_area": "Sustainable Livelihoods",
-      "rationale": "Interest in coal workers in India likely reflects public concern about employment transitions as the energy sector shifts away from coal, a core sustainability and livelihoods issue.",
-      "confidence": "medium",
+      "ceew_area": "Energy Transitions",
+      "rationale": "Coal workforce trends in India directly relate to the energy transition challenge of managing employment and social impact as the country shifts away from coal dependency.",
+      "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:00:51.014890+00:00"
+      "fetched_at": "2026-09-21T09:32:32.709800+00:00"
     },
     {
       "id": "gtrends-interest:air pollution India",
@@ -251,10 +311,10 @@
       "seed_keyword": "air pollution India",
       "is_relevant": true,
       "ceew_area": "Clean Air",
-      "rationale": "Air pollution in India is a core environmental and public health issue that directly falls under CEEW's Clean Air research area.",
+      "rationale": "Air pollution in India is a direct and substantive environmental health concern that falls squarely within Clean Air research.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:00:53.268497+00:00"
+      "fetched_at": "2026-09-21T09:32:44.059900+00:00"
     },
     {
       "id": "gtrends-interest:stubble burning",
@@ -266,10 +326,10 @@
       "seed_keyword": "stubble burning",
       "is_relevant": true,
       "ceew_area": "Clean Air",
-      "rationale": "Stubble burning is a major agricultural practice in India that directly causes severe air pollution, particularly in northern regions during harvest season, making it a core environmental and public health concern.",
+      "rationale": "Stubble burning in India is a major source of air pollution, particularly affecting northern regions during harvest seasons, and directly relates to air quality and environmental sustainability.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:00:58.720496+00:00"
+      "fetched_at": "2026-09-21T09:32:51.572552+00:00"
     },
     {
       "id": "gtrends-interest:water crisis India",
@@ -281,40 +341,10 @@
       "seed_keyword": "water crisis India",
       "is_relevant": true,
       "ceew_area": "Sustainable Water",
-      "rationale": "Water crisis in India is a direct sustainability concern related to freshwater availability, management, and environmental stress—core to CEEW's Sustainable Water research.",
+      "rationale": "Water crisis is a direct sustainability issue in India affecting water security, availability, and management — core to CEEW's Sustainable Water research.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:01:01.992204+00:00"
-    },
-    {
-      "id": "gtrends-interest:groundwater India",
-      "source": "google_trends",
-      "title": "groundwater India",
-      "url": null,
-      "metric_label": "search interest (0-100)",
-      "metric_value": 0.0,
-      "seed_keyword": "groundwater India",
-      "is_relevant": true,
-      "ceew_area": "Sustainable Water",
-      "rationale": "Groundwater is a critical water resource in India facing depletion and sustainability challenges, directly relevant to water management and environmental policy.",
-      "confidence": "high",
-      "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:01:04.488254+00:00"
-    },
-    {
-      "id": "gtrends-interest:Jal Jeevan Mission",
-      "source": "google_trends",
-      "title": "Jal Jeevan Mission",
-      "url": null,
-      "metric_label": "search interest (0-100)",
-      "metric_value": 0.0,
-      "seed_keyword": "Jal Jeevan Mission",
-      "is_relevant": true,
-      "ceew_area": "Sustainable Water",
-      "rationale": "Jal Jeevan Mission is India's flagship program to provide safe drinking water to rural households, directly addressing water security and sustainable water management at scale.",
-      "confidence": "high",
-      "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:01:07.540812+00:00"
+      "fetched_at": "2026-09-21T09:32:54.003411+00:00"
     },
     {
       "id": "gtrends-interest:food security India",
@@ -326,10 +356,10 @@
       "seed_keyword": "food security India",
       "is_relevant": true,
       "ceew_area": "Sustainable Food Systems",
-      "rationale": "Food security in India is a core sustainability challenge involving agricultural resilience, resource management, and climate adaptation—directly aligned with CEEW's Sustainable Food Systems research.",
+      "rationale": "Food security in India is directly relevant to CEEW's work on sustainable food systems, which addresses agricultural productivity, resource management, and equitable food access.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:01:14.591222+00:00"
+      "fetched_at": "2026-09-21T09:33:03.061193+00:00"
     },
     {
       "id": "gtrends-interest:climate agriculture India",
@@ -341,10 +371,10 @@
       "seed_keyword": "climate agriculture India",
       "is_relevant": true,
       "ceew_area": "Sustainable Food Systems",
-      "rationale": "Direct search interest in the intersection of climate change and agricultural practices in India, a core sustainability concern for the country's food security and rural economy.",
+      "rationale": "This query directly addresses the intersection of climate change and agricultural practices in India, a core sustainability concern affecting food security and farmer livelihoods.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:01:17.331440+00:00"
+      "fetched_at": "2026-09-21T09:33:05.149523+00:00"
     },
     {
       "id": "gtrends-interest:heatwave India",
@@ -356,10 +386,10 @@
       "seed_keyword": "heatwave India",
       "is_relevant": true,
       "ceew_area": "Climate Resilience",
-      "rationale": "Heatwaves are a direct climate impact affecting India's population and economy, central to understanding climate adaptation and resilience strategies.",
+      "rationale": "Heatwaves are a direct climate impact affecting India's public health and infrastructure, central to understanding climate adaptation and resilience.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:01:19.778019+00:00"
+      "fetched_at": "2026-09-21T09:33:08.806097+00:00"
     },
     {
       "id": "gtrends-interest:cooling action plan India",
@@ -371,10 +401,10 @@
       "seed_keyword": "cooling action plan India",
       "is_relevant": true,
       "ceew_area": "Sustainable Cooling",
-      "rationale": "India's cooling action plan directly addresses sustainable cooling infrastructure and policy, a core climate and energy mitigation topic.",
+      "rationale": "This query directly addresses India's cooling policy and action plan, a core component of sustainable cooling infrastructure and climate adaptation.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:01:22.726043+00:00"
+      "fetched_at": "2026-09-21T09:33:12.425656+00:00"
     },
     {
       "id": "gtrends-interest:air conditioner India",
@@ -386,10 +416,10 @@
       "seed_keyword": "air conditioner India",
       "is_relevant": true,
       "ceew_area": "Sustainable Cooling",
-      "rationale": "Air conditioner demand trending in India directly relates to cooling energy consumption and thermal comfort, a core sustainability challenge in the Indian context.",
+      "rationale": "Air conditioner searches in India directly relate to cooling demand, energy consumption, and climate adaptation—core concerns of CEEW's Sustainable Cooling research area.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:01:26.484275+00:00"
+      "fetched_at": "2026-09-21T09:33:19.526332+00:00"
     },
     {
       "id": "gtrends-interest:electric vehicle India",
@@ -401,10 +431,10 @@
       "seed_keyword": "electric vehicle India",
       "is_relevant": true,
       "ceew_area": "Sustainable Mobility",
-      "rationale": "Electric vehicles are a core component of India's transition to low-emission transport and directly align with sustainable mobility policy and adoption trends.",
+      "rationale": "Electric vehicles are a core component of India's sustainable mobility transition and decarbonization of the transport sector.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:01:30.242049+00:00"
+      "fetched_at": "2026-09-21T09:33:21.659623+00:00"
     },
     {
       "id": "gtrends-interest:EV subsidy India",
@@ -415,11 +445,11 @@
       "metric_value": 0.0,
       "seed_keyword": "EV subsidy India",
       "is_relevant": true,
-      "ceew_area": "Energy Transitions",
-      "rationale": "Electric vehicle subsidies are a direct policy lever for accelerating EV adoption and reducing transport emissions in India's energy transition.",
+      "ceew_area": "Sustainable Mobility",
+      "rationale": "Electric vehicle subsidies are a core policy mechanism in India's transition to cleaner transportation and reduction of transport-sector emissions.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:01:32.200948+00:00"
+      "fetched_at": "2026-09-21T09:33:23.966277+00:00"
     },
     {
       "id": "gtrends-interest:public transport India",
@@ -431,10 +461,10 @@
       "seed_keyword": "public transport India",
       "is_relevant": true,
       "ceew_area": "Sustainable Mobility",
-      "rationale": "Public transport is a core component of sustainable urban mobility and reduces carbon emissions from private vehicles.",
+      "rationale": "Public transport is a core sustainability topic directly addressing low-emission urban mobility and reducing carbon footprint from passenger travel in India.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:01:37.050475+00:00"
+      "fetched_at": "2026-09-21T09:33:26.540481+00:00"
     },
     {
       "id": "gtrends-interest:green bonds India",
@@ -446,10 +476,10 @@
       "seed_keyword": "green bonds India",
       "is_relevant": true,
       "ceew_area": "Sustainable Finance",
-      "rationale": "Green bonds are a key financial instrument for mobilizing capital toward climate and environmental projects in India, directly relevant to sustainable finance mechanisms.",
+      "rationale": "Green bonds are a direct financial instrument for channeling capital toward climate and environmental projects in India, a core sustainability finance topic.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:01:49.553986+00:00"
+      "fetched_at": "2026-09-21T09:33:29.427028+00:00"
     },
     {
       "id": "gtrends-interest:climate finance India",
@@ -461,10 +491,10 @@
       "seed_keyword": "climate finance India",
       "is_relevant": true,
       "ceew_area": "Sustainable Finance",
-      "rationale": "This search query directly addresses climate finance mechanisms and India's role in accessing or deploying climate funds, a core sustainability finance topic.",
+      "rationale": "Direct search interest in climate finance mechanisms and funding for India's climate action, a core component of sustainable finance policy.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:01:51.944001+00:00"
+      "fetched_at": "2026-09-21T09:33:31.915109+00:00"
     },
     {
       "id": "gtrends-interest:critical minerals India",
@@ -476,10 +506,10 @@
       "seed_keyword": "critical minerals India",
       "is_relevant": true,
       "ceew_area": "Technology Futures",
-      "rationale": "Critical minerals extraction and supply chains are central to India's energy transition and clean technology manufacturing, falling under Technology Futures as per CEEW's classification framework.",
+      "rationale": "Critical minerals extraction and supply chains are central to India's clean energy transition and technology development, directly relevant to CEEW's Technology Futures research area.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:01:55.897576+00:00"
+      "fetched_at": "2026-09-21T09:33:34.591280+00:00"
     },
     {
       "id": "gtrends-interest:battery storage India",
@@ -491,25 +521,10 @@
       "seed_keyword": "battery storage India",
       "is_relevant": true,
       "ceew_area": "Energy Transitions",
-      "rationale": "Battery storage is a critical component of India's renewable energy infrastructure and grid modernization, directly relevant to the country's energy transition away from fossil fuels.",
+      "rationale": "Battery storage is a core technology enabling renewable energy integration and grid stability, central to India's energy transition away from fossil fuels.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:01:58.473178+00:00"
-    },
-    {
-      "id": "gtrends-interest:waste management India",
-      "source": "google_trends",
-      "title": "waste management India",
-      "url": null,
-      "metric_label": "search interest (0-100)",
-      "metric_value": 0.0,
-      "seed_keyword": "waste management India",
-      "is_relevant": true,
-      "ceew_area": "Circular Economy",
-      "rationale": "Waste management is a core sustainability topic directly addressing resource recovery, circular systems, and environmental protection in India.",
-      "confidence": "high",
-      "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:02:02.870116+00:00"
+      "fetched_at": "2026-09-21T09:33:37.540920+00:00"
     },
     {
       "id": "gtrends-interest:e-waste India",
@@ -521,25 +536,25 @@
       "seed_keyword": "e-waste India",
       "is_relevant": true,
       "ceew_area": "Circular Economy",
-      "rationale": "E-waste management in India is a core circular economy issue, involving recovery, recycling, and responsible disposal of electronic waste.",
+      "rationale": "E-waste management is a core circular economy issue in India, involving responsible disposal, recycling, and resource recovery from electronic waste.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:02:05.627202+00:00"
+      "fetched_at": "2026-09-21T09:33:46.605537+00:00"
     },
     {
-      "id": "gtrends-interest:recycling India",
+      "id": "gtrends-interest:climate change India",
       "source": "google_trends",
-      "title": "recycling India",
+      "title": "climate change India",
       "url": null,
       "metric_label": "search interest (0-100)",
       "metric_value": 0.0,
-      "seed_keyword": "recycling India",
+      "seed_keyword": "climate change India",
       "is_relevant": true,
-      "ceew_area": "Circular Economy",
-      "rationale": "A search query specifically about recycling in India directly relates to circular economy practices and waste management, which is core to India's sustainability agenda.",
+      "ceew_area": "Climate Resilience",
+      "rationale": "A direct search query on climate change in India indicates public interest in understanding climate impacts and adaptation strategies relevant to the country.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:02:09.744025+00:00"
+      "fetched_at": "2026-09-21T09:33:53.651100+00:00"
     },
     {
       "id": "gtrends-interest:COP India",
@@ -551,10 +566,25 @@
       "seed_keyword": "COP India",
       "is_relevant": true,
       "ceew_area": "International Cooperation",
-      "rationale": "COP India likely refers to India's hosting or participation in the UN Climate Change Conference (COP), a major international climate negotiation forum directly relevant to India's climate commitments and global environmental policy.",
+      "rationale": "COP India likely refers to India's role in or hosting of UN climate conferences (COP meetings), which directly relates to international climate negotiations and cooperation.",
+      "confidence": "medium",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:34:01.571160+00:00"
+    },
+    {
+      "id": "gtrends-interest:coal phase out India",
+      "source": "google_trends",
+      "title": "coal phase out India",
+      "url": null,
+      "metric_label": "search interest (0-100)",
+      "metric_value": 0.0,
+      "seed_keyword": "coal phase out India",
+      "is_relevant": true,
+      "ceew_area": "Energy Transitions",
+      "rationale": "This query directly addresses India's transition away from coal energy, a core energy and climate policy question.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:02:18.886544+00:00"
+      "fetched_at": "2026-09-21T09:31:57.442760+00:00"
     },
     {
       "id": "youtube:bi_wVuI-M5s",
@@ -566,10 +596,10 @@
       "seed_keyword": "AQI Delhi",
       "is_relevant": true,
       "ceew_area": "Clean Air",
-      "rationale": "The content directly addresses air quality monitoring and pollution spikes in Delhi, examining the meteorological mechanisms (humidity, post-rain conditions) that affect AQI levels—a core clean air concern.",
+      "rationale": "The video directly examines Delhi's air quality index fluctuations and the meteorological factors (monsoon, humidity) that drive pollution spikes, a core air quality and public health concern.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:02:22.732265+00:00"
+      "fetched_at": "2026-09-21T09:34:06.063898+00:00"
     },
     {
       "id": "youtube:btqZ0igoV-I",
@@ -581,10 +611,10 @@
       "seed_keyword": "AQI Delhi",
       "is_relevant": true,
       "ceew_area": "Clean Air",
-      "rationale": "Delhi's air quality crisis with severe AQI levels is a direct environmental health issue central to India's clean air agenda.",
+      "rationale": "Delhi's severe air quality crisis with AQI in the 'severe' category is a direct public health and environmental concern central to India's clean air agenda.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:02:23.727289+00:00"
+      "fetched_at": "2026-09-21T09:34:04.724125+00:00"
     },
     {
       "id": "youtube:vtZVMGj-IIo",
@@ -596,10 +626,10 @@
       "seed_keyword": "AQI Delhi",
       "is_relevant": true,
       "ceew_area": "Clean Air",
-      "rationale": "This is a direct air quality forecast for India covering AQI trends across the country, directly addressing public health and environmental air pollution—a core Clean Air topic.",
+      "rationale": "This is a direct air quality forecast covering India's AQI outlook, which is substantively relevant to monitoring and understanding air pollution trends across the country.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:02:24.934549+00:00"
+      "fetched_at": "2026-09-21T09:34:07.120070+00:00"
     },
     {
       "id": "youtube:aYTZzEaeaII",
@@ -611,10 +641,10 @@
       "seed_keyword": "AQI Delhi",
       "is_relevant": true,
       "ceew_area": "Clean Air",
-      "rationale": "This video documents Delhi's air quality crisis following Diwali, a recurring seasonal sustainability challenge directly related to air pollution monitoring and mitigation.",
+      "rationale": "Post-Diwali air pollution in Delhi is a direct environmental health issue and a recurring public concern in India tied to seasonal pollution spikes.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:02:25.875856+00:00"
+      "fetched_at": "2026-09-21T09:34:08.025713+00:00"
     },
     {
       "id": "youtube:IawKa17h8p8",
@@ -626,10 +656,10 @@
       "seed_keyword": "AQI Delhi",
       "is_relevant": true,
       "ceew_area": "Clean Air",
-      "rationale": "This covers Delhi's air quality crisis with specific AQI measurements, directly addressing India's critical air pollution challenge.",
+      "rationale": "This directly reports on Delhi's air quality crisis with specific AQI measurements, a core air pollution monitoring and impact story relevant to India's clean air agenda.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:02:27.006746+00:00"
+      "fetched_at": "2026-09-21T09:34:09.205657+00:00"
     },
     {
       "id": "youtube:V4oFGxxeDOM",
@@ -641,10 +671,10 @@
       "seed_keyword": "AQI Delhi",
       "is_relevant": true,
       "ceew_area": "Clean Air",
-      "rationale": "This directly addresses Delhi's air quality crisis and AQI levels, a core public health and environmental issue in India that falls squarely within air pollution monitoring and policy response.",
+      "rationale": "Delhi's air quality crisis and AQI levels are a direct sustainability concern within India's clean air agenda, tracking real-time pollution trends and policy responses.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:02:28.161119+00:00"
+      "fetched_at": "2026-09-21T09:34:10.320009+00:00"
     },
     {
       "id": "youtube:TaDXgdGOCGU",
@@ -656,10 +686,10 @@
       "seed_keyword": "AQI Delhi",
       "is_relevant": true,
       "ceew_area": "Clean Air",
-      "rationale": "This report documents Delhi's severe air pollution crisis with AQI at 399, directly addressing air quality degradation—a core sustainability and public health challenge in India.",
+      "rationale": "This report directly addresses severe air pollution and AQI levels in Delhi, a core environmental and public health issue central to India's clean air agenda.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:02:29.329184+00:00"
+      "fetched_at": "2026-09-21T09:34:11.460325+00:00"
     },
     {
       "id": "youtube:-D9gTFktK9s",
@@ -671,10 +701,10 @@
       "seed_keyword": "AQI Delhi",
       "is_relevant": true,
       "ceew_area": "Clean Air",
-      "rationale": "This directly addresses Delhi's air quality crisis and hazardous pollution levels, a core public health and environmental issue central to India's clean air agenda.",
+      "rationale": "This is substantive reporting on Delhi's hazardous air quality and pollution crisis, directly aligned with air quality monitoring and public health impacts.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:02:30.575287+00:00"
+      "fetched_at": "2026-09-21T09:34:12.507431+00:00"
     },
     {
       "id": "youtube:saf_sppt7xk",
@@ -686,10 +716,10 @@
       "seed_keyword": "COP India",
       "is_relevant": true,
       "ceew_area": "International Cooperation",
-      "rationale": "This video covers India's climate strategy and participation in COP 30, the UN's annual climate conference, which directly relates to international climate negotiations and India's global climate commitments.",
+      "rationale": "This content directly addresses India's climate strategy and participation in COP 30, a major international climate negotiation forum, which falls squarely within CEEW's International Cooperation research area.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:02:32.174192+00:00"
+      "fetched_at": "2026-09-21T09:34:18.053319+00:00"
     },
     {
       "id": "youtube:LuqXeveBD7o",
@@ -701,10 +731,10 @@
       "seed_keyword": "EV subsidy India",
       "is_relevant": true,
       "ceew_area": "Sustainable Mobility",
-      "rationale": "This content directly addresses India's PM e-DRIVE scheme and EV subsidies for electric scooters, which are core policy mechanisms driving India's electric vehicle transition.",
+      "rationale": "Content directly addresses India's PM e-DRIVE scheme and EV subsidies, which are core policy mechanisms for promoting electric vehicles and low-emission transport.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:02:40.264889+00:00"
+      "fetched_at": "2026-09-21T09:34:25.430121+00:00"
     },
     {
       "id": "youtube:Mg5aRiVT14Q",
@@ -716,10 +746,10 @@
       "seed_keyword": "EV subsidy India",
       "is_relevant": true,
       "ceew_area": "Sustainable Mobility",
-      "rationale": "This discusses government subsidy policy for electric two-wheelers in India, directly addressing policy-driven adoption of clean transportation.",
+      "rationale": "This video discusses the PM E-DRIVE Scheme and electric two-wheeler subsidies in India, which directly addresses government policy on electric vehicle adoption and sustainable transportation.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:02:41.259365+00:00"
+      "fetched_at": "2026-09-21T09:34:24.301996+00:00"
     },
     {
       "id": "youtube:uvS9RDhKfzY",
@@ -731,10 +761,10 @@
       "seed_keyword": "EV subsidy India",
       "is_relevant": true,
       "ceew_area": "Sustainable Mobility",
-      "rationale": "Content directly addresses government subsidy extension for electric two-wheelers, a core policy intervention in India's sustainable mobility transition.",
+      "rationale": "This content discusses government subsidies for electric two-wheelers, directly addressing policy incentives for EV adoption in India's transport sector.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:02:42.357127+00:00"
+      "fetched_at": "2026-09-21T09:34:22.171996+00:00"
     },
     {
       "id": "youtube:hadQYjr6ZTg",
@@ -746,10 +776,10 @@
       "seed_keyword": "EV subsidy India",
       "is_relevant": true,
       "ceew_area": "Sustainable Mobility",
-      "rationale": "This content directly examines government subsidies and incentives for EV charging infrastructure in India, a core component of sustainable mobility policy and deployment.",
+      "rationale": "This video critically examines a government subsidy scheme for EV charging infrastructure, directly addressing India's electric vehicle adoption policy and charging ecosystem development.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:02:43.510537+00:00"
+      "fetched_at": "2026-09-21T09:34:26.554116+00:00"
     },
     {
       "id": "youtube:b6QuEhuoLhc",
@@ -761,10 +791,10 @@
       "seed_keyword": "EV subsidy India",
       "is_relevant": true,
       "ceew_area": "Sustainable Mobility",
-      "rationale": "Content directly addresses EV subsidies and electric scooters in India, a core component of sustainable mobility policy and consumer adoption.",
+      "rationale": "Content directly addresses electric vehicle subsidies and EV adoption in India, a core component of sustainable mobility policy and transition.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:02:44.745224+00:00"
+      "fetched_at": "2026-09-21T09:34:31.187969+00:00"
     },
     {
       "id": "youtube:S3JpeaY-Baw",
@@ -776,10 +806,10 @@
       "seed_keyword": "EV subsidy India",
       "is_relevant": true,
       "ceew_area": "Sustainable Mobility",
-      "rationale": "This video addresses PM e-Drive (FAME 3) EV subsidy eligibility and timing, directly concerning government incentives for electric vehicle adoption in India.",
+      "rationale": "This video discusses the PM e-Drive (FAME 3) EV subsidy scheme, which is directly relevant to India's electric vehicle adoption and sustainable mobility policy.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:02:45.906979+00:00"
+      "fetched_at": "2026-09-21T09:34:28.792775+00:00"
     },
     {
       "id": "youtube:pZQ0KUuM97s",
@@ -791,10 +821,10 @@
       "seed_keyword": "EV subsidy India",
       "is_relevant": true,
       "ceew_area": "Sustainable Mobility",
-      "rationale": "Content directly addresses government EV subsidies and eligibility criteria, which are key policy mechanisms driving electric vehicle adoption in India.",
+      "rationale": "This content directly addresses electric vehicle subsidies and eligibility in Indian states, which is substantively about policy mechanisms for promoting clean mobility transitions.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:02:46.896226+00:00"
+      "fetched_at": "2026-09-21T09:34:27.559136+00:00"
     },
     {
       "id": "youtube:bVyszEsiGhU",
@@ -821,10 +851,10 @@
       "seed_keyword": "Jal Jeevan Mission",
       "is_relevant": true,
       "ceew_area": "Sustainable Water",
-      "rationale": "Jal Jeevan Mission is India's flagship rural water supply program directly addressing access to clean drinking water, a core sustainability issue.",
+      "rationale": "Jal Jeevan Mission is India's flagship rural water supply program directly addressing universal household water access and management.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:02:49.370180+00:00"
+      "fetched_at": "2026-09-21T09:34:33.499262+00:00"
     },
     {
       "id": "youtube:412frY98g-Y",
@@ -836,10 +866,10 @@
       "seed_keyword": "Jal Jeevan Mission",
       "is_relevant": true,
       "ceew_area": "Sustainable Water",
-      "rationale": "Jal Jeevan Mission is India's flagship programme to provide piped water supply to rural households, directly addressing sustainable water access and management across the country.",
+      "rationale": "Jal Jeevan Mission is India's flagship program for universal household water supply, directly addressing water access and sustainability.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:02:50.465949+00:00"
+      "fetched_at": "2026-09-21T09:34:32.526201+00:00"
     },
     {
       "id": "youtube:YF8zotrUYpw",
@@ -851,10 +881,10 @@
       "seed_keyword": "Jal Jeevan Mission",
       "is_relevant": true,
       "ceew_area": "Sustainable Water",
-      "rationale": "Jal Jeevan Mission is India's flagship program to provide safe drinking water to all households; this video guides people on checking their enrollment status in the scheme.",
+      "rationale": "This video discusses the Jal Jeevan Mission, India's flagship program to provide safe drinking water to rural households, which directly addresses sustainable water access and management.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:02:51.650462+00:00"
+      "fetched_at": "2026-09-21T09:34:35.838386+00:00"
     },
     {
       "id": "youtube:gPzXPWlGDgA",
@@ -896,10 +926,10 @@
       "seed_keyword": "Jal Jeevan Mission",
       "is_relevant": true,
       "ceew_area": "Sustainable Water",
-      "rationale": "The video discusses Jal Jeevan Mission, India's flagship water supply program, which directly relates to sustainable water access and management.",
+      "rationale": "The video discusses Jal Jeevan Mission, Modi's flagship water supply scheme, which directly relates to India's sustainable water access and management.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:02:57.258137+00:00"
+      "fetched_at": "2026-09-21T09:34:37.954054+00:00"
     },
     {
       "id": "youtube:DAIqictGwBM",
@@ -911,10 +941,10 @@
       "seed_keyword": "air conditioner India",
       "is_relevant": true,
       "ceew_area": "Sustainable Cooling",
-      "rationale": "This is a product review of a portable air conditioner, which directly relates to cooling technology and energy efficiency—a core CEEW research area on sustainable cooling solutions in India.",
+      "rationale": "A product review of portable air conditioning units directly relates to cooling technology and energy consumption patterns, which is substantive to CEEW's Sustainable Cooling research area.",
       "confidence": "medium",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:03:00.289165+00:00"
+      "fetched_at": "2026-09-21T09:34:41.816031+00:00"
     },
     {
       "id": "youtube:CHzcl36BBXs",
@@ -926,10 +956,10 @@
       "seed_keyword": "air conditioner India",
       "is_relevant": true,
       "ceew_area": "Sustainable Cooling",
-      "rationale": "Content about portable air conditioners directly addresses cooling technology and efficiency, which is within CEEW's Sustainable Cooling research area focused on energy-efficient cooling solutions for Indian households.",
+      "rationale": "Portable AC products represent an emerging cooling technology trend in India's residential sector, relevant to CEEW's work on sustainable cooling solutions and energy-efficient alternatives to traditional air conditioning.",
       "confidence": "medium",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:03:01.385098+00:00"
+      "fetched_at": "2026-09-21T09:34:43.242396+00:00"
     },
     {
       "id": "youtube:05y9JnykkcU",
@@ -941,10 +971,10 @@
       "seed_keyword": "air conditioner India",
       "is_relevant": true,
       "ceew_area": "Sustainable Cooling",
-      "rationale": "This video discusses an innovative cooling technology from India that operates without conventional electricity, directly addressing sustainable and energy-efficient cooling solutions.",
+      "rationale": "This video addresses cooling technology innovation in India, directly relevant to CEEW's work on sustainable cooling solutions that reduce energy consumption.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:03:02.398162+00:00"
+      "fetched_at": "2026-09-21T09:34:45.432176+00:00"
     },
     {
       "id": "youtube:67TDRplv2Dw",
@@ -956,10 +986,10 @@
       "seed_keyword": "air conditioner India",
       "is_relevant": true,
       "ceew_area": "Sustainable Cooling",
-      "rationale": "Content about AC selection and energy efficiency ratings (5-star) directly relates to cooling consumption patterns and technology choices that impact India's energy demand and cooling sector sustainability.",
-      "confidence": "medium",
+      "rationale": "This video guides consumers on selecting energy-efficient ACs (5-star ratings indicate efficiency standards), which directly relates to cooling technology and energy consumption in Indian households.",
+      "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:03:05.048801+00:00"
+      "fetched_at": "2026-09-21T09:34:46.546464+00:00"
     },
     {
       "id": "youtube:FNtMajV7TVE",
@@ -971,10 +1001,10 @@
       "seed_keyword": "air conditioner India",
       "is_relevant": true,
       "ceew_area": "Sustainable Cooling",
-      "rationale": "This appears to be about government regulation of air conditioning temperature settings in India, directly addressing cooling efficiency and energy consumption standards.",
+      "rationale": "This covers India's new AC temperature regulation, which directly addresses energy efficiency and cooling standards—a core sustainability concern.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:03:06.233856+00:00"
+      "fetched_at": "2026-09-21T09:34:44.417557+00:00"
     },
     {
       "id": "youtube:4G5zl-pq7mo",
@@ -1001,10 +1031,10 @@
       "seed_keyword": "air pollution India",
       "is_relevant": true,
       "ceew_area": "Clean Air",
-      "rationale": "Directly addresses air pollution in India, covering agricultural burning, industrial emissions, and vehicular pollution—core components of India's air quality crisis.",
+      "rationale": "Video directly addresses air pollution in India, examining multiple sources including agricultural burning, industrial pollution, and vehicular emissions.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:03:09.048022+00:00"
+      "fetched_at": "2026-09-21T09:34:50.254796+00:00"
     },
     {
       "id": "youtube:6vEdEdmlnj4",
@@ -1016,10 +1046,10 @@
       "seed_keyword": "air pollution India",
       "is_relevant": true,
       "ceew_area": "Clean Air",
-      "rationale": "This video directly addresses air pollution in Delhi and India, a core environmental health issue that CEEW actively researches under its Clean Air mandate.",
+      "rationale": "This video directly addresses air pollution in Delhi and India, examining public health impacts and exposure levels—a core Clean Air concern.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:03:10.242570+00:00"
+      "fetched_at": "2026-09-21T09:34:52.248931+00:00"
     },
     {
       "id": "youtube:klaYLVEuY2w",
@@ -1031,10 +1061,10 @@
       "seed_keyword": "air pollution India",
       "is_relevant": true,
       "ceew_area": "Clean Air",
-      "rationale": "This content directly addresses air pollution in Delhi and India, which is a core environmental and public health issue that CEEW actively researches under its Clean Air portfolio.",
+      "rationale": "This video directly addresses air pollution in Delhi and India's severe pollution crisis, which is a core environmental and public health issue central to CEEW's Clean Air research area.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:03:11.323625+00:00"
+      "fetched_at": "2026-09-21T09:34:51.200525+00:00"
     },
     {
       "id": "youtube:M56oVLQZ5OM",
@@ -1046,10 +1076,10 @@
       "seed_keyword": "air pollution India",
       "is_relevant": true,
       "ceew_area": "Clean Air",
-      "rationale": "Directly addresses India's air pollution crisis and public response to toxic air quality in New Delhi, a core environmental health concern.",
+      "rationale": "Direct coverage of India's air pollution crisis and public response, a core environmental health issue central to CEEW's Clean Air research.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:03:12.529741+00:00"
+      "fetched_at": "2026-09-21T09:34:53.248151+00:00"
     },
     {
       "id": "youtube:k56ZpXu8fig",
@@ -1061,10 +1091,10 @@
       "seed_keyword": "air pollution India",
       "is_relevant": true,
       "ceew_area": "Clean Air",
-      "rationale": "This covers air pollution in India's capital reaching dangerous levels, a core environmental and public health issue directly relevant to CEEW's Clean Air research.",
+      "rationale": "Video documents air pollution crisis in New Delhi with pollution levels far exceeding safe WHO limits, directly addressing India's urgent air quality challenge.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:03:13.627842+00:00"
+      "fetched_at": "2026-09-21T09:34:56.609635+00:00"
     },
     {
       "id": "youtube:-WOS9CBfn5I",
@@ -1121,10 +1151,10 @@
       "seed_keyword": "battery storage India",
       "is_relevant": true,
       "ceew_area": "Energy Transitions",
-      "rationale": "This video explains battery energy storage systems in the context of renewable energy integration, a core component of India's transition to clean energy and grid stability.",
+      "rationale": "This video explains battery energy storage systems, a critical enabling technology for renewable energy integration and grid stability as India transitions to clean energy.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:03:18.261813+00:00"
+      "fetched_at": "2026-09-21T09:34:58.792743+00:00"
     },
     {
       "id": "youtube:yJuOInFyqe4",
@@ -1136,10 +1166,10 @@
       "seed_keyword": "battery storage India",
       "is_relevant": true,
       "ceew_area": "Energy Transitions",
-      "rationale": "Content about residential solar power generation, battery storage, and inverters for home use directly relates to distributed renewable energy adoption and household-level energy transitions in India.",
+      "rationale": "This content demonstrates residential solar + battery storage systems, a key component of India's distributed renewable energy transition and home electrification.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:03:19.304396+00:00"
+      "fetched_at": "2026-09-21T09:35:00.763716+00:00"
     },
     {
       "id": "youtube:E_N1RSQNnEc",
@@ -1211,10 +1241,10 @@
       "seed_keyword": "battery storage India",
       "is_relevant": true,
       "ceew_area": "Energy Transitions",
-      "rationale": "BESS deployment is central to India's renewable energy integration and grid stability as the country transitions away from fossil fuels.",
+      "rationale": "This directly addresses India's deployment of battery energy storage systems as critical infrastructure for integrating renewable energy and transitioning away from fossil fuels.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:03:25.841663+00:00"
+      "fetched_at": "2026-09-21T09:35:02.659878+00:00"
     },
     {
       "id": "youtube:YSaEu2rnGgg",
@@ -1226,10 +1256,10 @@
       "seed_keyword": "carbon credits India",
       "is_relevant": true,
       "ceew_area": "Sustainable Finance",
-      "rationale": "This video directly addresses the carbon credits market mechanism in India, a financial instrument for carbon emissions reduction that falls under sustainable finance policy and implementation.",
+      "rationale": "This video discusses carbon credits markets and mechanisms for organizations to meet climate targets, which directly relates to financial instruments and market-based approaches for climate action.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:03:27.208352+00:00"
+      "fetched_at": "2026-09-21T09:35:07.170477+00:00"
     },
     {
       "id": "youtube:zvS5e9kEGGU",
@@ -1241,10 +1271,10 @@
       "seed_keyword": "carbon credits India",
       "is_relevant": true,
       "ceew_area": "Sustainable Finance",
-      "rationale": "The content explains how farmers can earn through carbon credits in agriculture, directly addressing market mechanisms for GHG emission reduction and financial incentives for climate-positive practices.",
+      "rationale": "The video explains carbon credits as a market mechanism for farmers to generate income, which is directly relevant to climate finance and carbon market mechanisms in Indian agriculture.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:03:28.350472+00:00"
+      "fetched_at": "2026-09-21T09:35:11.507585+00:00"
     },
     {
       "id": "youtube:zzvsJvi1FXU",
@@ -1256,10 +1286,10 @@
       "seed_keyword": "carbon credits India",
       "is_relevant": true,
       "ceew_area": "Sustainable Finance",
-      "rationale": "This video directly addresses carbon credit trading as a business model in India, which falls under financial mechanisms for climate action and market-based environmental solutions.",
+      "rationale": "This video explains carbon credit trading as a business model in India, which directly relates to carbon markets and climate finance mechanisms.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:03:29.379021+00:00"
+      "fetched_at": "2026-09-21T09:35:08.139918+00:00"
     },
     {
       "id": "youtube:iLlNQCp6shw",
@@ -1271,10 +1301,10 @@
       "seed_keyword": "carbon credits India",
       "is_relevant": true,
       "ceew_area": "Sustainable Livelihoods",
-      "rationale": "This content explains how Indian farmers can generate income through participation in carbon credit trading schemes, directly addressing economic opportunities and livelihood diversification for agricultural communities in climate mitigation.",
+      "rationale": "This content explores how Indian farmers can generate income through carbon credit trading, directly connecting climate mitigation mechanisms to rural economic opportunity and livelihood diversification.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:03:30.568072+00:00"
+      "fetched_at": "2026-09-21T09:35:09.224555+00:00"
     },
     {
       "id": "youtube:VgvHzd-anmQ",
@@ -1300,11 +1330,11 @@
       "metric_value": null,
       "seed_keyword": "carbon credits India",
       "is_relevant": true,
-      "ceew_area": "Sustainable Livelihoods",
-      "rationale": "This video examines carbon credits schemes and their impact on Indian farmers, directly addressing how climate finance mechanisms affect rural livelihoods and potential exploitation in implementation.",
+      "ceew_area": "Sustainable Finance",
+      "rationale": "The video directly addresses carbon credits in India, examining whether farmers are being defrauded through carbon credit schemes—a substantive policy and market integrity issue within India's carbon finance ecosystem.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:03:32.923486+00:00"
+      "fetched_at": "2026-09-21T09:35:10.429151+00:00"
     },
     {
       "id": "youtube:FZ613ulA_NY",
@@ -1346,10 +1376,10 @@
       "seed_keyword": "carbon tax India",
       "is_relevant": true,
       "ceew_area": "Low-Carbon Economy",
-      "rationale": "This video directly explains carbon taxation mechanisms in India, a key policy instrument for reducing emissions and transitioning to a low-carbon economy.",
+      "rationale": "This video directly explains carbon taxation mechanisms in India, a key policy instrument for transitioning to a low-carbon economy.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:03:36.437429+00:00"
+      "fetched_at": "2026-09-21T09:35:15.743606+00:00"
     },
     {
       "id": "youtube:WWM9gIVvm78",
@@ -1361,10 +1391,10 @@
       "seed_keyword": "carbon tax India",
       "is_relevant": true,
       "ceew_area": "Low-Carbon Economy",
-      "rationale": "This explains carbon taxation mechanisms as a policy tool to drive emissions reductions and behavioral change, directly relevant to India's low-carbon transition strategy.",
+      "rationale": "This video explains carbon taxation mechanisms as a policy tool for emissions reduction, directly relevant to India's climate and economic transition strategies.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:03:37.501053+00:00"
+      "fetched_at": "2026-09-21T09:35:17.213414+00:00"
     },
     {
       "id": "youtube:rfWJ7uPQb9w",
@@ -1391,10 +1421,10 @@
       "seed_keyword": "carbon tax India",
       "is_relevant": true,
       "ceew_area": "Low-Carbon Economy",
-      "rationale": "This content directly explains carbon tax, a key policy instrument for transitioning to a low-carbon economy, though framed as UPSC exam preparation material.",
+      "rationale": "This video directly explains carbon tax, a key climate mitigation policy tool and economic instrument for reducing emissions.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:03:39.605327+00:00"
+      "fetched_at": "2026-09-21T09:35:18.210023+00:00"
     },
     {
       "id": "youtube:nHyfLWSA_bg",
@@ -1421,10 +1451,10 @@
       "seed_keyword": "carbon tax India",
       "is_relevant": true,
       "ceew_area": "Low-Carbon Economy",
-      "rationale": "This content directly addresses carbon taxation policy as a climate mitigation tool in India, which is core to transitioning toward a low-carbon economy.",
+      "rationale": "This directly addresses carbon tax policy as a climate mitigation tool in India, which is central to low-carbon economic transition.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:03:41.520418+00:00"
+      "fetched_at": "2026-09-21T09:35:21.023423+00:00"
     },
     {
       "id": "youtube:jZQ9Pt5j_cU",
@@ -1436,10 +1466,10 @@
       "seed_keyword": "carbon tax India",
       "is_relevant": true,
       "ceew_area": "International Cooperation",
-      "rationale": "This video discusses the EU's carbon border adjustment mechanism and its direct impact on Indian steel and aluminium exports, which is fundamentally about international climate policy and trade implications for Indian industries.",
+      "rationale": "This content discusses the EU's carbon border adjustment mechanism (CBAM) and its direct impact on Indian steel and aluminium exports, which is substantively about climate policy and international trade implications for India's industrial sectors.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:03:42.881567+00:00"
+      "fetched_at": "2026-09-21T09:35:23.133721+00:00"
     },
     {
       "id": "youtube:BvD9L6az2ak",
@@ -1466,10 +1496,10 @@
       "seed_keyword": "climate agriculture India",
       "is_relevant": true,
       "ceew_area": "Sustainable Food Systems",
-      "rationale": "The content documents adoption of robotic automation technology in Indian rice farming, which directly relates to modernizing agricultural practices and sustainable food production methods.",
+      "rationale": "The video showcases automation and modern technology adoption in rice farming, which relates to sustainable intensification and efficiency improvements in Indian agriculture.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:03:45.354857+00:00"
+      "fetched_at": "2026-09-21T09:35:25.532365+00:00"
     },
     {
       "id": "youtube:ETUvhs17Gso",
@@ -1481,10 +1511,10 @@
       "seed_keyword": "climate agriculture India",
       "is_relevant": true,
       "ceew_area": "Climate Resilience",
-      "rationale": "The video directly addresses Indian government initiatives for making agriculture resilient to climate change impacts, which is a core climate adaptation topic.",
+      "rationale": "Video directly addresses Indian government initiatives to build climate resilience in agriculture, a core adaptation challenge for the country.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:03:46.460228+00:00"
+      "fetched_at": "2026-09-21T09:35:26.439699+00:00"
     },
     {
       "id": "youtube:14stPa3nVOA",
@@ -1496,10 +1526,10 @@
       "seed_keyword": "climate agriculture India",
       "is_relevant": true,
       "ceew_area": "Sustainable Food Systems",
-      "rationale": "This budget analysis covers agriculture policy including climate change adaptation, digital farming, and bio-energy—all core components of sustainable food systems in India.",
+      "rationale": "This budget analysis covers agriculture policy including climate change impacts, digital farming adoption, and bio-energy—all core sustainability dimensions of India's food systems.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:03:47.825508+00:00"
+      "fetched_at": "2026-09-21T09:35:24.443867+00:00"
     },
     {
       "id": "youtube:QfG00UbfRSM",
@@ -1526,10 +1556,10 @@
       "seed_keyword": "climate agriculture India",
       "is_relevant": true,
       "ceew_area": "Climate Resilience",
-      "rationale": "Content explains climate-resilient agriculture practices, directly addressing how farming systems can adapt to and withstand climate impacts.",
+      "rationale": "This is an educational video about climate-resilient agriculture, directly addressing how farming systems can adapt to and withstand climate impacts, a core climate resilience topic.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:03:50.944093+00:00"
+      "fetched_at": "2026-09-21T09:35:31.842093+00:00"
     },
     {
       "id": "youtube:4-bOQ38PFNw",
@@ -1541,10 +1571,10 @@
       "seed_keyword": "climate agriculture India",
       "is_relevant": true,
       "ceew_area": "Sustainable Food Systems",
-      "rationale": "This is an educational video about climate-smart agriculture, which directly addresses sustainable practices in food production and agricultural resilience to climate impacts.",
+      "rationale": "This is educational content on climate-smart agriculture, a key approach to making agriculture more resilient and sustainable in response to climate change.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:03:52.056250+00:00"
+      "fetched_at": "2026-09-21T09:35:28.430977+00:00"
     },
     {
       "id": "youtube:YFBmX7pzh6c",
@@ -1556,25 +1586,310 @@
       "seed_keyword": "climate agriculture India",
       "is_relevant": true,
       "ceew_area": "Sustainable Food Systems",
-      "rationale": "Women's role and empowerment in agriculture directly relates to sustainable and equitable food production systems in India.",
+      "rationale": "Women's empowerment in agriculture directly addresses equity and productivity challenges in food systems, a core sustainability concern in India.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:03:53.349447+00:00"
+      "fetched_at": "2026-09-21T09:35:29.652321+00:00"
     },
     {
-      "id": "gtrends-interest:climate change India",
-      "source": "google_trends",
-      "title": "climate change India",
-      "url": null,
-      "metric_label": "search interest (0-100)",
-      "metric_value": 0.0,
-      "seed_keyword": "climate change India",
-      "is_relevant": false,
-      "ceew_area": null,
-      "rationale": "A generic search query showing 100% decline in interest; no specific content to evaluate for substantive climate/energy/sustainability relevance.",
+      "id": "youtube:2O3GxLnNuL4",
+      "source": "youtube",
+      "title": "EV Subsidy Guide 2026 🔥 ₹35,000-₹40,000 तक का फायदा? | State Subsidy on Ev two wheeler 2026 ",
+      "url": "https://www.youtube.com/watch?v=2O3GxLnNuL4",
+      "metric_label": "channel",
+      "metric_value": null,
+      "seed_keyword": "EV subsidy India",
+      "is_relevant": true,
+      "ceew_area": "Sustainable Mobility",
+      "rationale": "This video discusses government subsidies and incentives for electric two-wheelers in India for 2026, which directly relates to the adoption and affordability of electric vehicles as a sustainable transportation solution.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:02:11.855697+00:00"
+      "fetched_at": "2026-09-21T09:34:30.109943+00:00"
+    },
+    {
+      "id": "youtube:GNlUMinaViQ",
+      "source": "youtube",
+      "title": "jal jeevan mission yojana me apna naam kaise dekhe | jjm village list kaise dekhye | jjm reports",
+      "url": "https://www.youtube.com/watch?v=GNlUMinaViQ",
+      "metric_label": "channel",
+      "metric_value": null,
+      "seed_keyword": "Jal Jeevan Mission",
+      "is_relevant": true,
+      "ceew_area": "Sustainable Water",
+      "rationale": "Jal Jeevan Mission is India's flagship program to provide safe drinking water to rural households; this video explains how to check village eligibility and access JJM reports, directly addressing water access and sustainability.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:34:34.821112+00:00"
+    },
+    {
+      "id": "youtube:pPeS7j-j9i8",
+      "source": "youtube",
+      "title": "Jal jeevan mission yojana online apply | Jal jeevan mission yojna | ND Sarkari yojana",
+      "url": "https://www.youtube.com/watch?v=pPeS7j-j9i8",
+      "metric_label": "channel",
+      "metric_value": null,
+      "seed_keyword": "Jal Jeevan Mission",
+      "is_relevant": true,
+      "ceew_area": "Sustainable Water",
+      "rationale": "Jal Jeevan Mission is India's flagship scheme to provide safe drinking water to all rural households; content about application processes directly relates to water access and sustainability infrastructure.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:34:36.895901+00:00"
+    },
+    {
+      "id": "youtube:vWYd9j1BeBw",
+      "source": "youtube",
+      "title": "How to apply jal jeevan mission | Jal jeevan mission bharti 2025 |Jjm apply online @NDsarkariyojana",
+      "url": "https://www.youtube.com/watch?v=vWYd9j1BeBw",
+      "metric_label": "channel",
+      "metric_value": null,
+      "seed_keyword": "Jal Jeevan Mission",
+      "is_relevant": true,
+      "ceew_area": "Sustainable Water",
+      "rationale": "Jal Jeevan Mission is India's flagship universal household water supply program directly addressing sustainable water access and management.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:34:39.029342+00:00"
+    },
+    {
+      "id": "youtube:owsfPzsEywE",
+      "source": "youtube",
+      "title": "Air conditioner l Best air conditioner l AC l Air conditioner buying guide By #houmeindia",
+      "url": "https://www.youtube.com/watch?v=owsfPzsEywE",
+      "metric_label": "channel",
+      "metric_value": null,
+      "seed_keyword": "air conditioner India",
+      "is_relevant": true,
+      "ceew_area": "Sustainable Cooling",
+      "rationale": "This is a consumer guide to air conditioner selection, directly addressing cooling technology choices that impact energy efficiency and sustainability in Indian households.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:34:47.798359+00:00"
+    },
+    {
+      "id": "youtube:hyxl1bzu3ik",
+      "source": "youtube",
+      "title": "Air pollution in Indian capital Delhi hits dangerous levels | DW News",
+      "url": "https://www.youtube.com/watch?v=hyxl1bzu3ik",
+      "metric_label": "channel",
+      "metric_value": null,
+      "seed_keyword": "air pollution India",
+      "is_relevant": true,
+      "ceew_area": "Clean Air",
+      "rationale": "Delhi's air pollution crisis directly relates to air quality degradation in India, a core environmental sustainability issue involving crop burning and urban air quality management.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:34:54.546817+00:00"
+    },
+    {
+      "id": "youtube:FzWo0IwV278",
+      "source": "youtube",
+      "title": "Air Pollution in India - Explained | Delhi Air Quality Index(AQI) | Beyond Classroom Live | UPSC",
+      "url": "https://www.youtube.com/watch?v=FzWo0IwV278",
+      "metric_label": "channel",
+      "metric_value": null,
+      "seed_keyword": "air pollution India",
+      "is_relevant": true,
+      "ceew_area": "Clean Air",
+      "rationale": "This content directly addresses air pollution and air quality index in India, specifically Delhi, which is a core sustainability and environmental health issue.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:34:55.612708+00:00"
+    },
+    {
+      "id": "youtube:n9N7EAGFldg",
+      "source": "youtube",
+      "title": "India Has 8 Out Of 10 Most Polluted Cities In The World. Why? Can It Beat Air Pollution? | Insight",
+      "url": "https://www.youtube.com/watch?v=n9N7EAGFldg",
+      "metric_label": "channel",
+      "metric_value": null,
+      "seed_keyword": "air pollution India",
+      "is_relevant": true,
+      "ceew_area": "Clean Air",
+      "rationale": "This video directly addresses India's severe air pollution crisis, examining why Indian cities rank among the world's most polluted and exploring solutions to combat air pollution.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:34:57.496363+00:00"
+    },
+    {
+      "id": "youtube:ysy9-zxtMCU",
+      "source": "youtube",
+      "title": "BESS: Why is battery storage key to India&#39;s renewable energy ambitions? | Business Matters",
+      "url": "https://www.youtube.com/watch?v=ysy9-zxtMCU",
+      "metric_label": "channel",
+      "metric_value": null,
+      "seed_keyword": "battery storage India",
+      "is_relevant": true,
+      "ceew_area": "Energy Transitions",
+      "rationale": "Directly addresses battery energy storage systems and pumped hydro as critical infrastructure for scaling India's renewable energy capacity.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:34:59.811151+00:00"
+    },
+    {
+      "id": "youtube:I2iTnzU3ptM",
+      "source": "youtube",
+      "title": "What Are Battery energy storage systems (BESS)",
+      "url": "https://www.youtube.com/watch?v=I2iTnzU3ptM",
+      "metric_label": "channel",
+      "metric_value": null,
+      "seed_keyword": "battery storage India",
+      "is_relevant": true,
+      "ceew_area": "Energy Transitions",
+      "rationale": "Battery energy storage systems are a critical technology for renewable energy integration and grid modernization, directly relevant to India's energy transition away from fossil fuels.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:35:03.719902+00:00"
+    },
+    {
+      "id": "youtube:5jHTAb3x8WU",
+      "source": "youtube",
+      "title": "Adani to Build India’s Largest Battery Storage System | What India’s Energy Future | By Ankit Sir",
+      "url": "https://www.youtube.com/watch?v=5jHTAb3x8WU",
+      "metric_label": "channel",
+      "metric_value": null,
+      "seed_keyword": "battery storage India",
+      "is_relevant": true,
+      "ceew_area": "Energy Transitions",
+      "rationale": "This content directly addresses India's renewable energy infrastructure development through large-scale battery storage, a critical component of the energy transition away from fossil fuels.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:35:04.821084+00:00"
+    },
+    {
+      "id": "youtube:ZfDm5JB6lso",
+      "source": "youtube",
+      "title": "The future of battery storage in India | The Daily Brief Hindi",
+      "url": "https://www.youtube.com/watch?v=ZfDm5JB6lso",
+      "metric_label": "channel",
+      "metric_value": null,
+      "seed_keyword": "battery storage India",
+      "is_relevant": true,
+      "ceew_area": "Energy Transitions",
+      "rationale": "Battery storage is a critical infrastructure component for India's renewable energy transition and grid stability, directly relevant to how the country shifts away from fossil fuels.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:35:05.786764+00:00"
+    },
+    {
+      "id": "youtube:UKo944C6VJw",
+      "source": "youtube",
+      "title": "Why the world wants carbon credits? Carbon Trading explained",
+      "url": "https://www.youtube.com/watch?v=UKo944C6VJw",
+      "metric_label": "channel",
+      "metric_value": null,
+      "seed_keyword": "carbon credits India",
+      "is_relevant": true,
+      "ceew_area": "Sustainable Finance",
+      "rationale": "Video explains carbon credits and carbon trading mechanisms, which are core financial instruments for climate mitigation and emissions reduction.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:35:12.450422+00:00"
+    },
+    {
+      "id": "youtube:j2QFj42SyVw",
+      "source": "youtube",
+      "title": "India&#39;s First Carbon Trading Scheme Explained (CCTS)",
+      "url": "https://www.youtube.com/watch?v=j2QFj42SyVw",
+      "metric_label": "channel",
+      "metric_value": null,
+      "seed_keyword": "carbon credits India",
+      "is_relevant": true,
+      "ceew_area": "Low-Carbon Economy",
+      "rationale": "Directly explains India's Coastal Carbon Trading Scheme, a key carbon market mechanism for emissions reduction aligned with India's climate commitments.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:35:13.604301+00:00"
+    },
+    {
+      "id": "youtube:K4VQKTg6rWg",
+      "source": "youtube",
+      "title": "Carbon Credit Trading Business 2026 | Pollution Se Crores Kaise Kamaye?",
+      "url": "https://www.youtube.com/watch?v=K4VQKTg6rWg",
+      "metric_label": "channel",
+      "metric_value": null,
+      "seed_keyword": "carbon credits India",
+      "is_relevant": true,
+      "ceew_area": "Sustainable Finance",
+      "rationale": "Content addresses carbon credit trading as a business opportunity in India, directly relevant to carbon markets and climate finance mechanisms.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:35:14.578382+00:00"
+    },
+    {
+      "id": "youtube:j-MNB0W2ASE",
+      "source": "youtube",
+      "title": "How India can counter the EU’s carbon tax | Mint Primer | Mint",
+      "url": "https://www.youtube.com/watch?v=j-MNB0W2ASE",
+      "metric_label": "channel",
+      "metric_value": null,
+      "seed_keyword": "carbon tax India",
+      "is_relevant": true,
+      "ceew_area": "International Cooperation",
+      "rationale": "This discusses India's policy response to EU carbon border measures, directly engaging with international climate and trade cooperation frameworks.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:35:19.289419+00:00"
+    },
+    {
+      "id": "youtube:Q8OmyXFiJBw",
+      "source": "youtube",
+      "title": "What is Carbon Tax? Know Carbon Tax &amp; Carbon Credit | CA Raj K Agrawal",
+      "url": "https://www.youtube.com/watch?v=Q8OmyXFiJBw",
+      "metric_label": "channel",
+      "metric_value": null,
+      "seed_keyword": "carbon tax India",
+      "is_relevant": true,
+      "ceew_area": "Low-Carbon Economy",
+      "rationale": "Educational content explaining carbon tax and carbon credit mechanisms, which are core policy instruments for reducing emissions and transitioning to a low-carbon economy.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:35:20.190449+00:00"
+    },
+    {
+      "id": "youtube:gklpkCafDlg",
+      "source": "youtube",
+      "title": "India supported the world’s first global carbon tax on shipping!#CarbonTax #India #climatechange",
+      "url": "https://www.youtube.com/watch?v=gklpkCafDlg",
+      "metric_label": "channel",
+      "metric_value": null,
+      "seed_keyword": "carbon tax India",
+      "is_relevant": true,
+      "ceew_area": "International Cooperation",
+      "rationale": "India's support for a global carbon tax on shipping is a substantive development in international climate policy and cross-border emissions regulation.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:35:21.913284+00:00"
+    },
+    {
+      "id": "youtube:SkV_UPSU0fc",
+      "source": "youtube",
+      "title": "SUPER EL NINO: भारत में आने वाला है &#39;सुपर अल-नीनो&#39;! 180 वैज्ञानिकों की चेतावनी! |ABPLIVE",
+      "url": "https://www.youtube.com/watch?v=SkV_UPSU0fc",
+      "metric_label": "channel",
+      "metric_value": null,
+      "seed_keyword": "climate agriculture India",
+      "is_relevant": true,
+      "ceew_area": "Climate Resilience",
+      "rationale": "The video discusses a predicted Super El Niño phenomenon expected to impact India in 2026-27, which is directly relevant to climate variability, extreme weather preparedness, and India's climate resilience.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:35:27.453714+00:00"
+    },
+    {
+      "id": "youtube:zBt31xJo-Jk",
+      "source": "youtube",
+      "title": "Mind-Blowing Drought Resistant, No Water Agriculture For The Desert! #facts #hack #satisfying",
+      "url": "https://www.youtube.com/watch?v=zBt31xJo-Jk",
+      "metric_label": "channel",
+      "metric_value": null,
+      "seed_keyword": "climate agriculture India",
+      "is_relevant": true,
+      "ceew_area": "Sustainable Food Systems",
+      "rationale": "Content about drought-resistant agriculture and water-efficient farming techniques directly relates to sustainable food production under water scarcity conditions, a key challenge in India's agricultural sector.",
+      "confidence": "medium",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:35:30.745973+00:00"
     },
     {
       "id": "gtrends-now:salman khan",
@@ -2786,10 +3101,10 @@
       "seed_keyword": "COP India",
       "is_relevant": false,
       "ceew_area": null,
-      "rationale": "This content is about state police forces and law enforcement rankings in India, with no connection to climate, energy, environment, or sustainability.",
+      "rationale": "This is a ranking of state police forces in India, unrelated to climate, energy, environment, or sustainability.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:02:33.870103+00:00"
+      "fetched_at": "2026-09-21T09:34:16.893160+00:00"
     },
     {
       "id": "youtube:sCqfc0CAPqw",
@@ -2801,10 +3116,10 @@
       "seed_keyword": "COP India",
       "is_relevant": false,
       "ceew_area": null,
-      "rationale": "This is entertainment content about a fictional heist and parkour stunt, with no connection to climate, energy, environment, or sustainability.",
+      "rationale": "This is entertainment content about a fictional money heist scenario with parkour and police chase elements; it has no substantive connection to climate, energy, environment, or sustainability.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:02:34.832872+00:00"
+      "fetched_at": "2026-09-21T09:34:13.896480+00:00"
     },
     {
       "id": "youtube:cPMHFPDDBUw",
@@ -2816,10 +3131,10 @@
       "seed_keyword": "COP India",
       "is_relevant": false,
       "ceew_area": null,
-      "rationale": "This is a local law enforcement misconduct incident with no connection to climate, energy, environment, or sustainability.",
+      "rationale": "This is a law enforcement/public conduct incident unrelated to climate, energy, environment, or sustainability topics.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:02:35.761093+00:00"
+      "fetched_at": "2026-09-21T09:34:20.898568+00:00"
     },
     {
       "id": "youtube:mPqdmiKBvEg",
@@ -2831,10 +3146,10 @@
       "seed_keyword": "COP India",
       "is_relevant": false,
       "ceew_area": null,
-      "rationale": "This is a video about UP Police leadership and governance, with no substantive connection to climate, energy, environment, or sustainability topics.",
+      "rationale": "This is a political/entertainment video about UP Police and government figures with no substantive connection to climate, energy, environment, or sustainability topics.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:02:36.778841+00:00"
+      "fetched_at": "2026-09-21T09:34:19.124370+00:00"
     },
     {
       "id": "youtube:1U5h8lZ7onM",
@@ -2891,10 +3206,10 @@
       "seed_keyword": "air conditioner India",
       "is_relevant": false,
       "ceew_area": null,
-      "rationale": "This is a product review/shopping guide for air conditioners with no substantive discussion of energy efficiency, cooling sustainability, climate impact, or related policy—it focuses on comfort and purchase recommendations.",
+      "rationale": "This is a product review/buying guide for air conditioners with no substantive discussion of energy efficiency, cooling sustainability, or environmental impact.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:02:58.912188+00:00"
+      "fetched_at": "2026-09-21T09:34:40.498580+00:00"
     },
     {
       "id": "youtube:mAGeW_NJ5VI",
@@ -2906,10 +3221,10 @@
       "seed_keyword": "air conditioner India",
       "is_relevant": false,
       "ceew_area": null,
-      "rationale": "This is a product launch video for a new air conditioner model; while AC efficiency could relate to sustainable cooling, the content is primarily a commercial product announcement without substantive discussion of cooling sustainability, energy efficiency standards, or climate impact.",
+      "rationale": "This is a product launch video for a new AC model; while cooling appliances exist, the content is promotional marketing for a specific consumer product without substantive discussion of sustainability, energy efficiency standards, or cooling-sector policy.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
-      "fetched_at": "2026-09-20T09:03:03.829820+00:00"
+      "fetched_at": "2026-09-21T09:34:49.135846+00:00"
     },
     {
       "id": "youtube:c2Iwq_CCGjU",
@@ -2940,6 +3255,996 @@
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
       "fetched_at": "2026-09-20T09:03:48.737954+00:00"
+    },
+    {
+      "id": "gtrends-now:india asian games",
+      "source": "google_trends",
+      "title": "india asian games",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "The Asian Games is a sports event with no substantive connection to climate, energy, environment, or sustainability unless the query context specifically discussed green infrastructure or emissions from the games.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:30:30.278797+00:00"
+    },
+    {
+      "id": "gtrends-now:nbems neet pg result",
+      "source": "google_trends",
+      "title": "nbems neet pg result",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "NBEMS NEET PG result is about postgraduate medical entrance examination outcomes and has no connection to climate, energy, environment, or sustainability.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:30:31.303019+00:00"
+    },
+    {
+      "id": "gtrends-now:sensex",
+      "source": "google_trends",
+      "title": "sensex",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "The Sensex (BSE stock index) is a general financial market indicator with no substantive connection to climate, energy, environment, or sustainability unless the query context explicitly filtered for green/ESG stocks, which it does not.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:30:32.605770+00:00"
+    },
+    {
+      "id": "gtrends-now:samsung one ui 9",
+      "source": "google_trends",
+      "title": "samsung one ui 9",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "Samsung One UI 9 is a smartphone operating system update with no substantive connection to climate, energy, environment, or sustainability topics.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:30:33.758974+00:00"
+    },
+    {
+      "id": "gtrends-now:nse ipo gmp",
+      "source": "google_trends",
+      "title": "nse ipo gmp",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "NSE IPO GMP (Grey Market Premium) is a stock market term unrelated to climate, energy, environment, or sustainability topics.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:30:34.651110+00:00"
+    },
+    {
+      "id": "gtrends-now:tata aeris",
+      "source": "google_trends",
+      "title": "tata aeris",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "Tata Aeris appears to be a product or brand name with no substantive connection to climate, energy, environment, or sustainability topics.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:30:35.444634+00:00"
+    },
+    {
+      "id": "gtrends-now:epfo",
+      "source": "google_trends",
+      "title": "epfo",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "EPFO (Employees' Provident Fund Organisation) is a social security and labour welfare scheme in India with no substantive connection to climate, energy, environment, or sustainability topics.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:30:36.444054+00:00"
+    },
+    {
+      "id": "gtrends-now:xiaomi 18 pro max",
+      "source": "google_trends",
+      "title": "xiaomi 18 pro max",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "This is a smartphone product launch query with no substantive connection to climate, energy, environment, or sustainability topics.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:30:37.360437+00:00"
+    },
+    {
+      "id": "gtrends-now:तुला राशि",
+      "source": "google_trends",
+      "title": "तुला राशि",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "This is a query about Libra zodiac sign (तुला राशि) in Hindi, which has no connection to climate, energy, environment, or sustainability topics.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:30:38.347223+00:00"
+    },
+    {
+      "id": "gtrends-now:coastal road mumbai",
+      "source": "google_trends",
+      "title": "coastal road mumbai",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "A coastal road project in Mumbai is primarily infrastructure development and urban planning; without specific focus on climate resilience, emissions reduction, or environmental sustainability measures, it does not substantively engage with CEEW's research areas.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:30:39.515583+00:00"
+    },
+    {
+      "id": "gtrends-now:teams",
+      "source": "google_trends",
+      "title": "teams",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "The search query 'teams' is a generic productivity/software tool term with no climate, energy, environment, or sustainability connection.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:30:40.574535+00:00"
+    },
+    {
+      "id": "gtrends-now:map",
+      "source": "google_trends",
+      "title": "map",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "The search term 'map' is generic and not specifically related to climate, energy, environment, or sustainability topics.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:30:41.437100+00:00"
+    },
+    {
+      "id": "gtrends-now:gemini",
+      "source": "google_trends",
+      "title": "gemini",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "A search for 'gemini' (likely referring to Google's AI model or the zodiac sign) has no substantive connection to climate, energy, environment, or sustainability in India.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:30:42.561199+00:00"
+    },
+    {
+      "id": "gtrends-now:gpt",
+      "source": "google_trends",
+      "title": "gpt",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "GPT is a general artificial intelligence tool with no inherent connection to climate, energy, environment, or sustainability unless the specific query or context involves its application in those domains.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:30:43.635145+00:00"
+    },
+    {
+      "id": "gtrends-now:caribbean premier league",
+      "source": "google_trends",
+      "title": "caribbean premier league",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "Caribbean Premier League is a cricket tournament with no connection to climate, energy, environment, or sustainability topics.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:30:44.457048+00:00"
+    },
+    {
+      "id": "gtrends-now:ss retail ipo gmp",
+      "source": "google_trends",
+      "title": "ss retail ipo gmp",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "SS Retail IPO GMP is a financial/stock market query with no connection to climate, energy, environment, or sustainability topics.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:30:45.355901+00:00"
+    },
+    {
+      "id": "gtrends-now:sittong",
+      "source": "google_trends",
+      "title": "sittong",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "Sittong is a historical region in Darjeeling, West Bengal with no direct connection to climate, energy, environment, or sustainability topics.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:30:46.363240+00:00"
+    },
+    {
+      "id": "gtrends-now:mail",
+      "source": "google_trends",
+      "title": "mail",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "The search term 'mail' is generic and shows no connection to climate, energy, environment, or sustainability topics.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:30:47.193076+00:00"
+    },
+    {
+      "id": "gtrends-now:8th pay commission",
+      "source": "google_trends",
+      "title": "8th pay commission",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "The 8th Pay Commission is about government employee salaries and compensation structure; it has no substantive connection to climate, energy, environment, or sustainability.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:30:48.126523+00:00"
+    },
+    {
+      "id": "gtrends-now:salesforce",
+      "source": "google_trends",
+      "title": "salesforce",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "Salesforce is a customer relationship management software platform with no substantive connection to climate, energy, environment, or sustainability in India.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:30:49.098319+00:00"
+    },
+    {
+      "id": "gtrends-now:cindy crawford",
+      "source": "google_trends",
+      "title": "cindy crawford",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "A search for a celebrity model has no substantive connection to climate, energy, environment, or sustainability in India.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:30:50.039453+00:00"
+    },
+    {
+      "id": "gtrends-now:sbi",
+      "source": "google_trends",
+      "title": "sbi",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "SBI (State Bank of India) is a generic banking query with no substantive connection to climate, energy, environment, or sustainability unless paired with specific green finance/sustainable banking context.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:30:51.151561+00:00"
+    },
+    {
+      "id": "gtrends-now:inter miami vs",
+      "source": "google_trends",
+      "title": "inter miami vs",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "This is a sports-related search query about Inter Miami football club with no connection to climate, energy, environment, or sustainability.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:30:51.984387+00:00"
+    },
+    {
+      "id": "gtrends-now:jev",
+      "source": "google_trends",
+      "title": "jev",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "JEV (Japanese Encephalitis Virus) is a public health/disease topic with no connection to climate, energy, environment, or sustainability.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:30:52.924109+00:00"
+    },
+    {
+      "id": "gtrends-now:townsend",
+      "source": "google_trends",
+      "title": "townsend",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "The query 'townsend' is a common surname with no discernible connection to climate, energy, environment, or sustainability topics without additional context.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:30:53.792240+00:00"
+    },
+    {
+      "id": "gtrends-now:आज का राशिफल",
+      "source": "google_trends",
+      "title": "आज का राशिफल",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "This is a daily horoscope query with no connection to climate, energy, environment, or sustainability topics.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:30:54.622084+00:00"
+    },
+    {
+      "id": "gtrends-now:giorgia meloni",
+      "source": "google_trends",
+      "title": "giorgia meloni",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "Giorgia Meloni is Italy's Prime Minister; this query is about political personalities and has no substantive connection to Indian climate, energy, environment, or sustainability topics.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:30:55.599883+00:00"
+    },
+    {
+      "id": "gtrends-now:caleb williams",
+      "source": "google_trends",
+      "title": "caleb williams",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "Caleb Williams is an NFL quarterback; this query has no connection to climate, energy, environment, or sustainability.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:30:59.097001+00:00"
+    },
+    {
+      "id": "gtrends-now:aaj ka tula rashifal",
+      "source": "google_trends",
+      "title": "aaj ka tula rashifal",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "This is a daily horoscope query for the Libra zodiac sign in Hindi; it has no connection to climate, energy, environment, or sustainability topics.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:31:00.171509+00:00"
+    },
+    {
+      "id": "gtrends-now:real madrid",
+      "source": "google_trends",
+      "title": "real madrid",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "Real Madrid is a sports topic with no substantive connection to climate, energy, environment, or sustainability.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:31:01.057654+00:00"
+    },
+    {
+      "id": "gtrends-now:leo horoscope today",
+      "source": "google_trends",
+      "title": "leo horoscope today",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "A daily horoscope query has no connection to climate, energy, environment, or sustainability topics.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:31:01.775746+00:00"
+    },
+    {
+      "id": "gtrends-now:समाचार खबरें",
+      "source": "google_trends",
+      "title": "समाचार खबरें",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "This is a generic Hindi query for 'news/headlines' with no substantive climate, energy, environment, or sustainability content.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:31:02.725505+00:00"
+    },
+    {
+      "id": "gtrends-now:laliga",
+      "source": "google_trends",
+      "title": "laliga",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "La Liga is a Spanish football league with no connection to climate, energy, environment, or sustainability in India.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:31:03.575316+00:00"
+    },
+    {
+      "id": "gtrends-now:atlético vs real madrid",
+      "source": "google_trends",
+      "title": "atlético vs real madrid",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "This is a sports match query with no connection to climate, energy, environment, or sustainability.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:31:04.315881+00:00"
+    },
+    {
+      "id": "gtrends-now:email",
+      "source": "google_trends",
+      "title": "email",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "Email is a generic communication tool with no inherent connection to climate, energy, environment, or sustainability topics.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:31:05.150196+00:00"
+    },
+    {
+      "id": "gtrends-now:hanuman ansh movie",
+      "source": "google_trends",
+      "title": "hanuman ansh movie",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "A movie title query has no substantive connection to climate, energy, environment, or sustainability topics.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:31:05.924030+00:00"
+    },
+    {
+      "id": "gtrends-now:batman knightfall part 2",
+      "source": "google_trends",
+      "title": "batman knightfall part 2",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "This is a movie/entertainment query with no connection to climate, energy, environment, or sustainability topics.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:31:06.718225+00:00"
+    },
+    {
+      "id": "gtrends-now:man city",
+      "source": "google_trends",
+      "title": "man city",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "This is a search query about Manchester City Football Club, with no connection to climate, energy, environment, or sustainability in India.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:31:07.562572+00:00"
+    },
+    {
+      "id": "gtrends-now:rbi",
+      "source": "google_trends",
+      "title": "rbi",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "RBI (Reserve Bank of India) is a generic financial/banking query with no substantive connection to climate, energy, environment, or sustainability topics.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:31:12.011175+00:00"
+    },
+    {
+      "id": "gtrends-now:man utd",
+      "source": "google_trends",
+      "title": "man utd",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "Manchester United football club has no substantive connection to climate, energy, environment, or sustainability topics.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:31:12.798820+00:00"
+    },
+    {
+      "id": "gtrends-now:brentford fc",
+      "source": "google_trends",
+      "title": "brentford fc",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "Brentford FC is a football club; this query has no connection to climate, energy, environment, or sustainability topics.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:31:13.407810+00:00"
+    },
+    {
+      "id": "gtrends-now:varthur",
+      "source": "google_trends",
+      "title": "varthur",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "Varthur is a locality in Bangalore; without additional context, this appears to be a general geographic search query unrelated to climate, energy, environment, or sustainability topics.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:31:14.441798+00:00"
+    },
+    {
+      "id": "gtrends-now:jiohotstar",
+      "source": "google_trends",
+      "title": "jiohotstar",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "JioHotstar is a streaming platform merger/service; trending interest in it has no substantive connection to climate, energy, environment, or sustainability topics.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:31:15.386623+00:00"
+    },
+    {
+      "id": "gtrends-now:district",
+      "source": "google_trends",
+      "title": "district",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "The query 'district' is a generic administrative term with no substantive connection to climate, energy, environment, or sustainability topics.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:31:16.213435+00:00"
+    },
+    {
+      "id": "gtrends-now:world war z",
+      "source": "google_trends",
+      "title": "world war z",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "This is a fictional zombie apocalypse film/entertainment franchise with no substantive connection to climate, energy, environment, or sustainability topics.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:31:17.068597+00:00"
+    },
+    {
+      "id": "gtrends-now:clock",
+      "source": "google_trends",
+      "title": "clock",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "A generic search for 'clock' has no substantive connection to climate, energy, environment, or sustainability topics.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:31:17.817591+00:00"
+    },
+    {
+      "id": "gtrends-now:kite",
+      "source": "google_trends",
+      "title": "kite",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "The query 'kite' refers to the recreational object or sport, with no substantive connection to climate, energy, environment, or sustainability.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:31:18.787852+00:00"
+    },
+    {
+      "id": "gtrends-now:वीडियो",
+      "source": "google_trends",
+      "title": "वीडियो",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "The query 'वीडियो' (video) is a generic search term with no substantive connection to climate, energy, environment, or sustainability topics.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:31:19.649610+00:00"
+    },
+    {
+      "id": "gtrends-now:cag",
+      "source": "google_trends",
+      "title": "cag",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "CAG (Comptroller and Auditor General) is a constitutional office; the search term alone provides no context suggesting it relates to climate, energy, environment, or sustainability topics.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:31:20.574068+00:00"
+    },
+    {
+      "id": "gtrends-now:hindi",
+      "source": "google_trends",
+      "title": "hindi",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "A generic search for 'hindi' (the language) has no substantive connection to climate, energy, environment, or sustainability topics.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:31:21.473979+00:00"
+    },
+    {
+      "id": "gtrends-now:liverpool",
+      "source": "google_trends",
+      "title": "liverpool",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "Liverpool is a city name with no indication of climate, energy, environment, or sustainability content.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:31:22.245105+00:00"
+    },
+    {
+      "id": "gtrends-now:epl",
+      "source": "google_trends",
+      "title": "epl",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "EPL (English Premier League) is a sports league; this query has no connection to climate, energy, environment, or sustainability in India.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:31:23.070450+00:00"
+    },
+    {
+      "id": "gtrends-now:iim jammu",
+      "source": "google_trends",
+      "title": "iim jammu",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "IIM Jammu is a business school; this query has no substantive connection to climate, energy, environment, or sustainability topics.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:31:23.910629+00:00"
+    },
+    {
+      "id": "gtrends-now:airbnb",
+      "source": "google_trends",
+      "title": "airbnb",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "Airbnb is a hospitality platform with no substantive connection to climate, energy, environment, or sustainability topics.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:31:24.711816+00:00"
+    },
+    {
+      "id": "gtrends-now:epic",
+      "source": "google_trends",
+      "title": "epic",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "The query 'epic' is too generic and has no substantive connection to climate, energy, environment, or sustainability topics in India.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:31:25.577061+00:00"
+    },
+    {
+      "id": "gtrends-now:amit shah",
+      "source": "google_trends",
+      "title": "amit shah",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "A search for a political figure's name has no substantive connection to climate, energy, environment, or sustainability unless paired with specific policy content.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:31:27.724726+00:00"
+    },
+    {
+      "id": "gtrends-now:adidas",
+      "source": "google_trends",
+      "title": "adidas",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "A generic search for the sportswear brand Adidas has no substantive connection to climate, energy, environment, or sustainability unless paired with specific context about their environmental practices or supply chain.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:31:33.404699+00:00"
+    },
+    {
+      "id": "gtrends-now:fc barcelona match",
+      "source": "google_trends",
+      "title": "fc barcelona match",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "This is a sports entertainment query with no substantive connection to climate, energy, environment, or sustainability.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:31:34.300154+00:00"
+    },
+    {
+      "id": "gtrends-now:silver rate today",
+      "source": "google_trends",
+      "title": "silver rate today",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "A query about current silver prices is a commodity/financial market search with no connection to climate, energy, environment, or sustainability topics.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:31:37.698331+00:00"
+    },
+    {
+      "id": "gtrends-now:lenskart",
+      "source": "google_trends",
+      "title": "lenskart",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "Lenskart is an eyewear retail brand; this query has no substantive connection to climate, energy, environment, or sustainability.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:31:38.652245+00:00"
+    },
+    {
+      "id": "gtrends-now:सोना चांदी",
+      "source": "google_trends",
+      "title": "सोना चांदी",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "This is a search query about gold and silver prices/trading, with no connection to climate, energy, environment, or sustainability topics.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:31:39.561200+00:00"
+    },
+    {
+      "id": "gtrends-now:chess",
+      "source": "google_trends",
+      "title": "chess",
+      "url": null,
+      "metric_label": "trending now",
+      "metric_value": null,
+      "seed_keyword": null,
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "Chess is a strategic board game with no substantive connection to climate, energy, environment, or sustainability topics.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:31:40.384545+00:00"
+    },
+    {
+      "id": "youtube:o5HR-sQtMrc",
+      "source": "youtube",
+      "title": "Police ne kiya khtrnak stunt 😳😱😳 #shalukirar #ytshots #shorts",
+      "url": "https://www.youtube.com/watch?v=o5HR-sQtMrc",
+      "metric_label": "channel",
+      "metric_value": null,
+      "seed_keyword": "COP India",
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "This is a clickbait YouTube Shorts video about police performing a stunt, with no substantive connection to climate, energy, environment, or sustainability topics.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:34:14.980277+00:00"
+    },
+    {
+      "id": "youtube:olMe5Aq27Fg",
+      "source": "youtube",
+      "title": "Officer made the cutest arrest ever 😍 (@officerevansjr42.2)",
+      "url": "https://www.youtube.com/watch?v=olMe5Aq27Fg",
+      "metric_label": "channel",
+      "metric_value": null,
+      "seed_keyword": "COP India",
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "This is a lighthearted social media video about a police officer's interaction with a cute animal or person; it has no connection to climate, energy, environment, or sustainability.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:34:16.082958+00:00"
+    },
+    {
+      "id": "youtube:oVB3rJ_G5lY",
+      "source": "youtube",
+      "title": "Thief and Policeman - Get out of the hole 🕳️👮🏻🚨🤣🫣",
+      "url": "https://www.youtube.com/watch?v=oVB3rJ_G5lY",
+      "metric_label": "channel",
+      "metric_value": null,
+      "seed_keyword": "COP India",
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "This is a comedic entertainment video about a thief and policeman scenario, with no connection to climate, energy, environment, or sustainability.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:34:20.000155+00:00"
+    },
+    {
+      "id": "youtube:nkg-2-ecavw",
+      "source": "youtube",
+      "title": "Two Startups Are Fixing India&#39;s Battery Gap?",
+      "url": "https://www.youtube.com/watch?v=nkg-2-ecavw",
+      "metric_label": "channel",
+      "metric_value": null,
+      "seed_keyword": "battery storage India",
+      "is_relevant": false,
+      "ceew_area": null,
+      "rationale": "This is a promotional ad for Groww's investment/stockbroking app, not substantive content about battery technology or India's energy storage challenges.",
+      "confidence": "high",
+      "scorer_model": "claude-haiku-4-5-20251001",
+      "fetched_at": "2026-09-21T09:35:01.699097+00:00"
     }
   ]
 }
