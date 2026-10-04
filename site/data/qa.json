@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-27T10:29:42.588089+00:00",
+  "generated_at": "2026-10-04T11:04:52.112908+00:00",
   "source": "sansad.in (Lok Sabha / Rajya Sabha)",
   "entries": [
     {
@@ -18,15 +18,15 @@
       "url": null,
       "is_relevant": true,
       "ceew_area": "Sustainable Water",
-      "rationale": "Jal Jeevan Mission is a major water supply and sanitation programme directly relevant to sustainable water access and management.",
+      "rationale": "Jal Jeevan Mission is a central government scheme focused on providing piped water supply to rural households, directly relevant to sustainable water access and water security policy.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "first_seen_at": "2026-08-29T22:19:38.383460+00:00",
-      "last_scraped_at": "2026-09-27T10:27:39.754575+00:00",
+      "last_scraped_at": "2026-10-04T11:02:54.672804+00:00",
       "summary_bullets": [
-        "MPs asked about extension of Jal Jeevan Mission (water supply scheme)",
-        "No government answer provided yet"
+        "MPs asked about extension of Jal Jeevan Mission (a national water supply scheme)",
+        "No answer text yet available"
       ]
     },
     {
@@ -45,15 +45,15 @@
       "url": null,
       "is_relevant": true,
       "ceew_area": "Sustainable Water",
-      "rationale": "This question directly concerns water quality management within a major national water supply program, which falls squarely under sustainable water policy.",
+      "rationale": "The question directly addresses water quality management within India's flagship Jal Jeevan Mission, a key sustainable water and public health initiative.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "first_seen_at": "2026-08-29T22:19:39.909471+00:00",
-      "last_scraped_at": "2026-09-27T10:27:41.663095+00:00",
+      "last_scraped_at": "2026-10-04T11:02:56.091359+00:00",
       "summary_bullets": [
-        "MP Rao Rajendra Singh asks about water quality management under the Jal Jeevan Mission",
-        "No government answer has been provided yet"
+        "MP Rao Rajendra Singh asked about water quality management under the Jal Jeevan Mission",
+        "No government response has been provided yet"
       ]
     },
     {
@@ -72,16 +72,16 @@
       "url": null,
       "is_relevant": true,
       "ceew_area": "Sustainable Water",
-      "rationale": "The Jal Jeevan Mission is India's flagship program for household water supply and sanitation, directly falling under sustainable water access and management.",
+      "rationale": "Jal Jeevan Mission is India's flagship program for household water supply and directly concerns sustainable water access and management, a core CEEW research area.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "first_seen_at": "2026-08-29T22:19:41.868649+00:00",
-      "last_scraped_at": "2026-09-27T10:27:43.269284+00:00",
+      "last_scraped_at": "2026-10-04T11:02:57.774697+00:00",
       "summary_bullets": [
         "Question about FHTCs (Functional Household Tap Connections) under Jal Jeevan Mission in Rajasthan",
-        "Asked by Shri Bhajan Lal Jatav to the Ministry of Jal Shakti",
-        "No government response text available yet"
+        "Asked by Shri Bhajan Lal Jatav to Jal Shakti Ministry",
+        "No government answer text available yet"
       ]
     },
     {
@@ -100,15 +100,15 @@
       "url": null,
       "is_relevant": true,
       "ceew_area": "Sustainable Water",
-      "rationale": "Jal Jeevan Mission is India's flagship water supply scheme focused on providing piped water to rural households; questions about its implementation directly concern sustainable water access and management.",
+      "rationale": "Jal Jeevan Mission is a flagship government programme focused on providing safe and adequate drinking water to all households, directly relevant to sustainable water management and water access policy.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "first_seen_at": "2026-08-29T22:19:43.901747+00:00",
-      "last_scraped_at": "2026-09-27T10:27:44.860392+00:00",
+      "last_scraped_at": "2026-10-04T11:02:59.444901+00:00",
       "summary_bullets": [
-        "Shri Malaiyarasan D asked about implementation of Jal Jeevan Mission",
-        "No government answer has been provided yet"
+        "Question on implementation of Jal Jeevan Mission (national drinking water supply scheme)",
+        "No answer text provided yet"
       ]
     },
     {
@@ -127,15 +127,15 @@
       "url": null,
       "is_relevant": true,
       "ceew_area": "Sustainable Water",
-      "rationale": "Jal Jeevan Mission is a national water supply and sanitation program directly relevant to sustainable water access and management.",
+      "rationale": "Jal Jeevan Mission is a major national water supply program directly relevant to sustainable water access and water management policy.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "first_seen_at": "2026-08-29T22:19:46.070326+00:00",
-      "last_scraped_at": "2026-09-27T10:27:46.169345+00:00",
+      "last_scraped_at": "2026-10-04T11:03:00.799750+00:00",
       "summary_bullets": [
-        "Question raised by Shri Raja Ram Singh regarding Jal Jeevan Mission implementation in Bihar",
-        "No answer text available yet"
+        "Shri Raja Ram Singh asked about the Jal Jeevan Mission implementation in Bihar",
+        "No government answer has been provided yet"
       ]
     },
     {
@@ -154,14 +154,14 @@
       "url": null,
       "is_relevant": true,
       "ceew_area": "Sustainable Water",
-      "rationale": "Jal Jeevan Mission is a central government scheme focused on providing safe drinking water to all households, directly relevant to sustainable water access and management.",
+      "rationale": "Jal Jeevan Mission is a water supply and sanitation program directly relevant to sustainable water access and management.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "first_seen_at": "2026-08-29T22:19:48.406062+00:00",
-      "last_scraped_at": "2026-09-27T10:27:47.855285+00:00",
+      "last_scraped_at": "2026-10-04T11:03:01.935789+00:00",
       "summary_bullets": [
-        "Question about implementation of Jal Jeevan Mission in Rajasthan",
+        "Question on implementation of Jal Jeevan Mission in Rajasthan",
         "No answer text available yet"
       ]
     },
@@ -181,15 +181,16 @@
       "url": null,
       "is_relevant": true,
       "ceew_area": "Sustainable Water",
-      "rationale": "Jal Jeevan Mission concerns water supply and access, which falls directly under sustainable water management policy.",
+      "rationale": "Jal Jeevan Mission is a national water supply and sanitation program directly relevant to sustainable water access and management, falling squarely under CEEW's Sustainable Water research area.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "first_seen_at": "2026-08-29T22:19:50.454155+00:00",
-      "last_scraped_at": "2026-09-27T10:27:49.154302+00:00",
+      "last_scraped_at": "2026-10-04T11:03:03.645949+00:00",
       "summary_bullets": [
-        "MP asked about implementation of Jal Jeevan Mission 2.0 in Andhra Pradesh",
-        "No answer text available yet"
+        "MP Lavu Sri Krishna Devarayalu asked about the implementation of Jal Jeevan Mission 2.0 in Andhra Pradesh",
+        "Question directed to Ministry of Jal Shakti (Water Resources)",
+        "No government answer yet provided"
       ]
     },
     {
@@ -208,15 +209,15 @@
       "url": null,
       "is_relevant": true,
       "ceew_area": "Sustainable Water",
-      "rationale": "The Jal Jeevan Mission is a central water supply and access program directly relevant to sustainable water management and water security policy.",
+      "rationale": "Jal Jeevan Mission is India's flagship programme for household water supply and directly concerns sustainable water access and management.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "first_seen_at": "2026-08-29T22:19:52.400185+00:00",
-      "last_scraped_at": "2026-09-27T10:27:50.659077+00:00",
+      "last_scraped_at": "2026-10-04T11:03:04.997873+00:00",
       "summary_bullets": [
-        "MP Saptagiri Sankar Ulaka raised concerns about delays in implementation of the Jal Jeevan Mission",
-        "No government response text available yet"
+        "MP Shri Saptagiri Sankar Ulaka raised concerns about delays in implementation of the Jal Jeevan Mission",
+        "No government answer has been provided yet"
       ]
     },
     {
@@ -501,15 +502,15 @@
       "url": null,
       "is_relevant": true,
       "ceew_area": "Sustainable Water",
-      "rationale": "The Jal Jeevan Mission is a major government program focused on water supply and access, directly relevant to sustainable water management and policy.",
+      "rationale": "The Jal Jeevan Mission is India's flagship program for household water supply and falls directly under sustainable water management and access.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "first_seen_at": "2026-08-29T22:22:27.349577+00:00",
-      "last_scraped_at": "2026-09-27T10:29:28.620284+00:00",
+      "last_scraped_at": "2026-10-04T11:04:38.989437+00:00",
       "summary_bullets": [
-        "Shri K.R.N. Rajeshkumar raised a question requesting a review of the Jal Jeevan Mission",
-        "No answer text is currently available"
+        "Shri K.R.N. Rajeshkumar seeks a review of the Jal Jeevan Mission",
+        "No answer text available — question likely not yet answered"
       ]
     },
     {
@@ -528,15 +529,15 @@
       "url": null,
       "is_relevant": true,
       "ceew_area": "Sustainable Water",
-      "rationale": "Jal Jeevan Mission is India's flagship programme for universal household water supply and directly concerns sustainable water access and management, a core CEEW research area.",
+      "rationale": "The Jal Jeevan Mission is a water supply and infrastructure programme directly relevant to sustainable water management and access.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "first_seen_at": "2026-08-29T22:22:29.278471+00:00",
-      "last_scraped_at": "2026-09-27T10:29:30.491864+00:00",
+      "last_scraped_at": "2026-10-04T11:04:40.710290+00:00",
       "summary_bullets": [
-        "Question on Jal Jeevan Mission (national water supply programme) raised by Shri G.C. Chandrashekhar to the Ministry of Jal Shakti",
-        "No answer text currently available"
+        "Question asked by Shri G.C. Chandrashekhar to the Jal Shakti Ministry regarding the Jal Jeevan Mission (a major central government programme for universal household water supply)",
+        "No answer text available yet"
       ]
     },
     {
@@ -609,15 +610,15 @@
       "url": null,
       "is_relevant": true,
       "ceew_area": "Sustainable Water",
-      "rationale": "This question directly concerns access to drinking water and the Jal Jeevan Mission, a major national water supply program — core topics under sustainable water management and water security.",
+      "rationale": "This question directly concerns drinking water access and the Jal Jeevan Mission, which are core sustainable water and water security issues within CEEW's mandate.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "first_seen_at": "2026-08-30T10:27:25.289053+00:00",
-      "last_scraped_at": "2026-09-27T10:29:32.017359+00:00",
+      "last_scraped_at": "2026-10-04T11:04:42.186266+00:00",
       "summary_bullets": [
-        "Dr. Jyoti Nagnath Waghmare asked about drinking water problems and the Jal Jeevan Mission",
-        "No answer text available yet"
+        "Question raised by Dr. Jyoti Nagnath Waghmare regarding drinking water problems and the Jal Jeevan Mission",
+        "No answer text yet available"
       ]
     },
     {
@@ -636,15 +637,15 @@
       "url": null,
       "is_relevant": true,
       "ceew_area": "Sustainable Water",
-      "rationale": "The Jal Jeevan Mission is a central government program focused on providing safe drinking water to all households, directly relevant to sustainable water management and access.",
+      "rationale": "The Jal Jeevan Mission is a central government scheme focused on providing safe drinking water to all households, which directly concerns sustainable water access and management.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "first_seen_at": "2026-08-30T10:27:26.701545+00:00",
-      "last_scraped_at": "2026-09-27T10:29:33.496365+00:00",
+      "last_scraped_at": "2026-10-04T11:04:43.671769+00:00",
       "summary_bullets": [
-        "Question asked about the Jal Jeevan Mission implementation in Assam",
-        "No answer text available yet"
+        "Shri Jogen Mohan asks about the Jal Jeevan Mission implementation in Assam",
+        "No government answer has been provided yet"
       ]
     },
     {
@@ -663,14 +664,14 @@
       "url": null,
       "is_relevant": true,
       "ceew_area": "Sustainable Water",
-      "rationale": "Jal Jeevan Mission is India's flagship water supply and sanitation program, directly relevant to sustainable water access and management.",
+      "rationale": "Jal Jeevan Mission is a central government scheme focused on providing safe drinking water to rural households, directly relevant to sustainable water access and management.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "first_seen_at": "2026-08-30T10:27:28.265414+00:00",
-      "last_scraped_at": "2026-09-27T10:29:34.842471+00:00",
+      "last_scraped_at": "2026-10-04T11:04:45.054159+00:00",
       "summary_bullets": [
-        "MP Ajay Makan asked about funds released for Jal Jeevan Mission in Karnataka",
+        "MP Ajay Makan asked about funds released for Jal Jeevan Mission (water supply scheme) in Karnataka",
         "No answer text available yet"
       ]
     },
@@ -690,15 +691,15 @@
       "url": null,
       "is_relevant": true,
       "ceew_area": "Sustainable Water",
-      "rationale": "The Jal Jeevan Mission is a central government scheme focused on providing safe and adequate drinking water to all rural households, directly addressing water access and sustainable water management.",
+      "rationale": "Jal Jeevan Mission is India's flagship program for providing tap water connections to rural households; this directly concerns water access and sustainable water resource management.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "first_seen_at": "2026-08-30T10:27:30.354266+00:00",
-      "last_scraped_at": "2026-09-27T10:29:36.382174+00:00",
+      "last_scraped_at": "2026-10-04T11:04:46.510069+00:00",
       "summary_bullets": [
-        "Dr. Jyoti Nagnath Waghmare asked about the current status of the Jal Jeevan Mission",
-        "No government answer has been provided yet"
+        "Dr. Jyoti Nagnath Waghmare asks about the current status of the Jal Jeevan Mission",
+        "No government answer provided yet"
       ]
     },
     {
@@ -717,14 +718,14 @@
       "url": null,
       "is_relevant": true,
       "ceew_area": "Sustainable Water",
-      "rationale": "The Jal Jeevan Mission is a government scheme focused on providing safe and adequate drinking water to households, which directly relates to sustainable water management and access.",
+      "rationale": "Jal Jeevan Mission is a central government scheme focused on providing safe and adequate drinking water supply to rural households, directly relevant to sustainable water management and access.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "first_seen_at": "2026-08-30T10:27:31.675583+00:00",
-      "last_scraped_at": "2026-09-27T10:29:37.777032+00:00",
+      "last_scraped_at": "2026-10-04T11:04:47.923801+00:00",
       "summary_bullets": [
-        "Dr. Satish Poonia asked about the progress of Jal Jeevan Mission in Rajasthan",
+        "Dr. Satish Poonia asked about progress of Jal Jeevan Mission (piped water supply scheme) in Rajasthan",
         "No answer text available yet"
       ]
     },
@@ -744,15 +745,15 @@
       "url": null,
       "is_relevant": true,
       "ceew_area": "Sustainable Water",
-      "rationale": "The Jal Jeevan Mission is India's flagship programme for providing safe drinking water to all households, directly relevant to CEEW's Sustainable Water research area.",
+      "rationale": "Jal Jeevan Mission is a major central government program focused on providing safe and adequate drinking water to all households, directly addressing sustainable water access and management.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "first_seen_at": "2026-08-30T10:27:33.335642+00:00",
-      "last_scraped_at": "2026-09-27T10:29:39.401914+00:00",
+      "last_scraped_at": "2026-10-04T11:04:49.322339+00:00",
       "summary_bullets": [
-        "Shri Rajeev Kumar asked about challenges in implementing the Jal Jeevan Mission (likely addressing water supply, access, or service delivery issues).",
-        "No government response has been provided yet."
+        "MP Rajeev Kumar asked about challenges in the implementation of Jal Jeevan Mission",
+        "No government answer has been provided yet"
       ]
     },
     {
@@ -771,15 +772,15 @@
       "url": null,
       "is_relevant": true,
       "ceew_area": "Sustainable Water",
-      "rationale": "Jal Jeevan Mission 2.0 directly concerns water supply infrastructure and sustainable water management, a core CEEW research area.",
+      "rationale": "Jal Jeevan Mission 2.0 is a water supply and access program directly relevant to sustainable water management and water security policy.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "first_seen_at": "2026-08-30T10:27:38.105681+00:00",
-      "last_scraped_at": "2026-09-27T10:29:41.190923+00:00",
+      "last_scraped_at": "2026-10-04T11:04:50.567840+00:00",
       "summary_bullets": [
-        "MP asked about implementation, funding, and sustainability framework under Jal Jeevan Mission 2.0",
-        "No answer text available yet"
+        "MP asks about implementation, funding, and sustainability framework under Jal Jeevan Mission 2.0",
+        "No government answer provided yet"
       ]
     },
     {
@@ -798,15 +799,15 @@
       "url": null,
       "is_relevant": true,
       "ceew_area": "Sustainable Water",
-      "rationale": "Jal Jeevan Mission concerns water access and management, directly falling under sustainable water policy.",
+      "rationale": "Jal Jeevan Mission is a major centrally-sponsored water supply and sanitation programme directly relevant to sustainable water management and access to clean water.",
       "confidence": "high",
       "scorer_model": "claude-haiku-4-5-20251001",
       "is_manual_override": false,
       "first_seen_at": "2026-08-30T10:27:40.082119+00:00",
-      "last_scraped_at": "2026-09-27T10:29:42.547554+00:00",
+      "last_scraped_at": "2026-10-04T11:04:52.074452+00:00",
       "summary_bullets": [
-        "MP asks about key features of Jal Jeevan Mission 2.0 and proposed reforms",
-        "No answer text available yet"
+        "MP Seema Dwivedi asked about key features of Jal Jeevan Mission 2.0 and proposed reforms",
+        "No answer text yet available from the Jal Shakti Ministry"
       ]
     }
   ]
